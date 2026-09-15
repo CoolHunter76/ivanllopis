@@ -48,7 +48,7 @@ jobs:
           from pathlib import Path
           from jinja2 import Environment, FileSystemLoader
 
-          expected_languages = {"es", "ca", "eu", "en", "fr", "uk", "it"}
+          expected_languages = {"es", "ca", "eu", "en", "fr", "it", "tr", "uk"}
           translation_files = {path.stem for path in Path("translations").glob("*.json")}
 
           if translation_files != expected_languages:
@@ -64,7 +64,12 @@ jobs:
               if reference_keys is None:
                   reference_keys = keys
               elif keys != reference_keys:
-                  raise SystemExit(f"Translation keys differ in {path}")
+                  missing = sorted(reference_keys - keys)
+                  extra = sorted(keys - reference_keys)
+                  raise SystemExit(
+                      f"Translation keys differ in {path}. "
+                      f"Missing: {missing}. Extra: {extra}."
+                  )
               print(f"Translation OK: {path}")
 
           environment = Environment(loader=FileSystemLoader("templates"))
