@@ -1,0 +1,56 @@
+name: GitFlow Policy
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - master
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - edited
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  policy:
+    name: gitflow-policy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validate source and target branches
+        env:
+          BASE_BRANCH: ${{ github.base_ref }}
+          HEAD_BRANCH: ${{ github.head_ref }}
+        run: |
+          echo "Validating $HEAD_BRANCH -> $BASE_BRANCH"
+
+          if [ "$BASE_BRANCH" = "develop" ]; then
+            case "$HEAD_BRANCH" in
+              feature/*|bugfix/*|release/*|hotfix/*|master)
+                exit 0
+                ;;
+              *)
+                echo "Pull requests to develop must come from feature/*, bugfix/*, release/*, hotfix/* or master."
+                exit 1
+                ;;
+            esac
+          fi
+
+          if [ "$BASE_BRANCH" = "master" ]; then
+            case "$HEAD_BRANCH" in
+              release/*|hotfix/*)
+                exit 0
+                ;;
+              *)
+                echo "Production pull requests to master must come from release/* or hotfix/*."
+                exit 1
+                ;;
+            esac
+          fi
+
+          echo "Unsupported target branch: $BASE_BRANCH"
+          exit 1

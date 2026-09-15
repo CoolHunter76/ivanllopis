@@ -1,0 +1,39 @@
+name: Release Tag Guard
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: read
+
+jobs:
+  validate-tag:
+    name: validate-release-tag
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify semantic version and master ancestry
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+
+          if ! printf '%s' "$TAG" | grep -Eq '^v[0-9]+\.[0-9]+\.[0-9]+$'; then
+            echo "Tag must use semantic versioning, for example v1.8.0."
+            exit 1
+          fi
+
+          git fetch origin master
+          TAG_COMMIT="$(git rev-list -n 1 "$TAG")"
+
+          if ! git merge-base --is-ancestor "$TAG_COMMIT" origin/master; then
+            echo "Tag $TAG is not based on master."
+            exit 1
+          fi
+
+          echo "Valid production tag: $TAG"
