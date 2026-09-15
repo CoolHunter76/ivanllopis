@@ -1,0 +1,36 @@
+{
+  "language": "English",
+  "flag": "🇬🇧",
+  "nav": [
+    "Home",
+    "About",
+    "Technologies",
+    "Projects",
+    "Hobbies",
+    "Contact"
+  ],
+  "role": "Software Analyst & Developer",
+  "hero": "Analysis, development, and Microsoft AI solutions",
+  "lead": "I turn business needs into modern digital solutions with .NET, Azure, APIs, data, and Microsoft Copilot.",
+  "about_title": "Technology with a functional perspective",
+  "about_text": "I combine functional analysis, software development, and technical vision to create clear, maintainable, and scalable solutions.",
+  "tech_title": "Core technologies",
+  "ai_title": "Generative AI ecosystem",
+  "ai_intro": "Current tools and engines for productivity, reasoning, development, research, and content creation.",
+  "projects_title": "Featured projects",
+  "contact_title": "Shall we build something interesting?",
+  "contact_text": "Contact me by email or connect on LinkedIn.",
+  "buttons": [
+    "View projects",
+    "Contact",
+    "Send email",
+    "View LinkedIn"
+  ],
+  "hobbies_title": "Hobbies that bring balance, rhythm, and new perspectives",
+  "back": "Back to the home page",
+  "projects": [
+    "Event platform",
+    "Generative AI agents",
+    "Cloud architectures"
+  ]
+}

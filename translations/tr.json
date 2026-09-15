@@ -1,0 +1,36 @@
+{
+  "language": "Türkçe",
+  "flag": "🇹🇷",
+  "nav": [
+    "Ana Sayfa",
+    "Hakkımda",
+    "Teknolojiler",
+    "Projeler",
+    "Hobiler",
+    "İletişim"
+  ],
+  "role": "Yazılım Analisti ve Geliştirici",
+  "hero": "Analiz, geliştirme, Microsoft ve yapay zekâ çözümleri",
+  "lead": "İş ihtiyaçlarını .NET, Azure, API’ler, veri ve Microsoft Copilot ile modern dijital çözümlere dönüştürüyorum.",
+  "about_title": "İşlevsel bakış açısıyla teknoloji",
+  "about_text": "Açık, sürdürülebilir ve ölçeklenebilir çözümler üretmek için işlevsel analiz, yazılım geliştirme ve teknik vizyonu birleştiriyorum.",
+  "tech_title": "Temel teknolojiler",
+  "ai_title": "Üretken yapay zekâ ekosistemi",
+  "ai_intro": "Verimlilik, muhakeme, geliştirme, araştırma ve içerik üretimi için güncel araçlar ve modeller.",
+  "projects_title": "Öne çıkan projeler",
+  "contact_title": "Birlikte ilginç bir şey geliştirelim mi?",
+  "contact_text": "E-posta ile iletişime geçin veya LinkedIn üzerinden bağlantı kurun.",
+  "buttons": [
+    "Projeleri görüntüle",
+    "İletişim",
+    "E-posta gönder",
+    "LinkedIn’i görüntüle"
+  ],
+  "hobbies_title": "Denge, ritim ve yeni bakış açıları kazandıran hobiler",
+  "back": "Ana sayfaya dön",
+  "projects": [
+    "Etkinlik platformu",
+    "Üretken yapay zekâ ajanları",
+    "Bulut mimarileri"
+  ]
+}

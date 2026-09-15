@@ -1,0 +1,36 @@
+{
+  "language": "Italiano",
+  "flag": "🇮🇹",
+  "nav": [
+    "Home",
+    "Chi sono",
+    "Tecnologie",
+    "Progetti",
+    "Hobby",
+    "Contatti"
+  ],
+  "role": "Analista e sviluppatore software",
+  "hero": "Analisi, sviluppo e soluzioni Microsoft e IA",
+  "lead": "Trasformo le esigenze aziendali in soluzioni digitali moderne con .NET, Azure, API, dati e Microsoft Copilot.",
+  "about_title": "Tecnologia con una visione funzionale",
+  "about_text": "Combino analisi funzionale, sviluppo software e visione tecnica per creare soluzioni chiare, manutenibili e scalabili.",
+  "tech_title": "Tecnologie principali",
+  "ai_title": "Ecosistema di IA generativa",
+  "ai_intro": "Strumenti e motori attuali per produttività, ragionamento, sviluppo, ricerca e creazione di contenuti.",
+  "projects_title": "Progetti in evidenza",
+  "contact_title": "Costruiamo qualcosa di interessante?",
+  "contact_text": "Contattami via e-mail o collegati su LinkedIn.",
+  "buttons": [
+    "Vedi progetti",
+    "Contatti",
+    "Invia e-mail",
+    "Vedi LinkedIn"
+  ],
+  "hobbies_title": "Hobby che offrono equilibrio, ritmo e nuove prospettive",
+  "back": "Torna alla pagina principale",
+  "projects": [
+    "Piattaforma per eventi",
+    "Agenti di IA generativa",
+    "Architetture cloud"
+  ]
+}

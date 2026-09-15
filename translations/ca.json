@@ -1,0 +1,36 @@
+{
+  "language": "Català",
+  "flag": "🇦🇩",
+  "nav": [
+    "Inici",
+    "Sobre mi",
+    "Tecnologies",
+    "Projectes",
+    "Aficions",
+    "Contacte"
+  ],
+  "role": "Analista i desenvolupador de programari",
+  "hero": "Anàlisi, desenvolupament i solucions Microsoft i IA",
+  "lead": "Transformo necessitats de negoci en solucions digitals modernes amb .NET, Azure, APIs, dades i Microsoft Copilot.",
+  "about_title": "Tecnologia amb visió funcional",
+  "about_text": "Combino anàlisi funcional, desenvolupament de programari i visió tècnica per crear solucions clares, mantenibles i escalables.",
+  "tech_title": "Tecnologies principals",
+  "ai_title": "Ecosistema d’IA generativa",
+  "ai_intro": "Eines i motors actuals per a productivitat, raonament, desenvolupament, recerca i creació de contingut.",
+  "projects_title": "Projectes destacats",
+  "contact_title": "Construïm alguna cosa interessant?",
+  "contact_text": "Contacta amb mi per correu o connecta a LinkedIn.",
+  "buttons": [
+    "Veure projectes",
+    "Contactar",
+    "Enviar correu",
+    "Veure LinkedIn"
+  ],
+  "hobbies_title": "Aficions que aporten equilibri, ritme i noves perspectives",
+  "back": "Tornar a la pàgina principal",
+  "projects": [
+    "Plataforma d’esdeveniments",
+    "Agents d’IA generativa",
+    "Arquitectures cloud"
+  ]
+}

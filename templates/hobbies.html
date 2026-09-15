@@ -1,0 +1,1 @@
+{% extends "base.html" %}{% block content %}<section class="hobbies"><small>{{t.nav[4]}}</small><h1>{{t.hobbies_title}}</h1><div class="projects">{% for icon,name in hobbies %}<article><span>{{icon}}</span><h3>{{name}}</h3></article>{% endfor %}</div><a href="/{{lang}}" class="secondary">← {{t.back}}</a></section>{% endblock %}
