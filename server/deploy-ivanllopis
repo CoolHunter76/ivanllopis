@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+ENVIRONMENT="${1:-}"
+BRANCH="${2:-}"
+APP_DIR="/opt/ivanllopis/app"
+REPOSITORY="https://github.com/CoolHunter76/ivanllopis.git"
+
+if [[ "$ENVIRONMENT" != "production" ]]; then
+    echo "Unsupported environment: $ENVIRONMENT"
+    exit 1
+fi
+
+if [[ "$BRANCH" != "master" ]]; then
+    echo "Production can only deploy master."
+    exit 1
+fi
+
+if [[ ! -d "$APP_DIR/.git" ]]; then
+    mkdir -p "$(dirname "$APP_DIR")"
+    git clone --branch "$BRANCH" "$REPOSITORY" "$APP_DIR"
+fi
+
+cd "$APP_DIR"
+
+git fetch --prune origin "$BRANCH"
+git checkout "$BRANCH"
+git reset --hard "origin/$BRANCH"
+
+docker compose build --pull
+docker compose up -d --remove-orphans
+
+for attempt in {1..10}; do
+    if curl --fail --silent http://127.0.0.1:8000/health > /dev/null; then
+        docker image prune -f
+        echo "Production deployment completed successfully."
+        exit 0
+    fi
+    sleep 3
+done
+
+docker compose logs --tail=150 web
+exit 1

@@ -1,0 +1,2 @@
+# Replace deploy with the Linux CI/CD account if you choose another name.
+deploy ALL=(root) NOPASSWD: /usr/local/sbin/deploy-ivanllopis

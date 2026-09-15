@@ -1,0 +1,97 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - master
+  push:
+    branches:
+      - develop
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Compile Python
+        run: python -m compileall -q main.py
+
+      - name: Validate translations and templates
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from jinja2 import Environment, FileSystemLoader
+
+          expected_languages = {"es", "ca", "eu", "en", "fr", "it", "tr", "uk"}
+          translation_files = {path.stem for path in Path("translations").glob("*.json")}
+
+          if translation_files != expected_languages:
+              raise SystemExit(
+                  f"Translation mismatch. Expected {sorted(expected_languages)}, "
+                  f"found {sorted(translation_files)}"
+              )
+
+          reference_keys = None
+          for path in sorted(Path("translations").glob("*.json")):
+              content = json.loads(path.read_text(encoding="utf-8"))
+              keys = set(content)
+              if reference_keys is None:
+                  reference_keys = keys
+              elif keys != reference_keys:
+                  missing = sorted(reference_keys - keys)
+                  extra = sorted(keys - reference_keys)
+                  raise SystemExit(
+                      f"Translation keys differ in {path}. "
+                      f"Missing: {missing}. Extra: {extra}."
+                  )
+              print(f"Translation OK: {path}")
+
+          environment = Environment(loader=FileSystemLoader("templates"))
+          for path in sorted(Path("templates").glob("*.html")):
+              environment.get_template(path.name)
+              print(f"Template OK: {path}")
+          PY
+
+      - name: Build Docker image
+        run: docker build --tag ivanllopis-ci:${{ github.sha }} .
+
+      - name: Run container smoke test
+        run: |
+          docker run --detach --name ivanllopis-ci --publish 127.0.0.1:18000:8000 ivanllopis-ci:${{ github.sha }}
+          trap 'docker logs ivanllopis-ci; docker rm --force ivanllopis-ci' EXIT
+
+          for attempt in 1 2 3 4 5 6 7 8 9 10; do
+            if curl --fail --silent http://127.0.0.1:18000/health > /tmp/health.json; then
+              cat /tmp/health.json
+              exit 0
+            fi
+            sleep 2
+          done
+
+          exit 1
