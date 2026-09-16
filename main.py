@@ -6,10 +6,13 @@ from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
+from seo import configure_seo
+
 BASE = Path(__file__).resolve().parent
 SUPPORTED = ("es", "ca", "eu", "en", "fr", "uk", "it", "tr")
 
 app = FastAPI(title="IvanLlopis.net", version="1.8.0")
+configure_seo(app)
 app.mount("/static", StaticFiles(directory=BASE / "static"), name="static")
 templates = Jinja2Templates(directory=BASE / "templates")
 
@@ -57,12 +60,12 @@ PROJECTS = [
 ]
 
 HOBBIES = [
-    ("🏊", "Swimming"),
-    ("🥾", "Trekking"),
-    ("🎮", "Gaming"),
-    ("🥁", "Drums"),
-    ("✈️", "Travel"),
-    ("💃", "Latin Dance"),
+    ("ðŸŠ", "Swimming"),
+    ("ðŸ¥¾", "Trekking"),
+    ("ðŸŽ®", "Gaming"),
+    ("ðŸ¥", "Drums"),
+    ("âœˆï¸", "Travel"),
+    ("ðŸ’ƒ", "Latin Dance"),
 ]
 
 
