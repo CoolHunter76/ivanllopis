@@ -1,0 +1,24 @@
+name: Uptime Monitor
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "7,37 * * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  monitor:
+    name: monitor-environments
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify production
+        run: |
+          curl --fail --silent --show-error --max-time 20 https://ivanllopis.net/health | tee production-health.json
+          grep -q '"status"[[:space:]]*:[[:space:]]*"ok"' production-health.json
+      - name: Verify staging
+        run: |
+          curl --fail --silent --show-error --max-time 20 https://staging.ivanllopis.net/health | tee staging-health.json
+          grep -q '"status"[[:space:]]*:[[:space:]]*"ok"' staging-health.json
