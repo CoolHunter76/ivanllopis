@@ -5,7 +5,7 @@ base = Path(__file__).resolve().parents[1]
 assistant_path = base / "assistant.py"
 css_path = base / "static/css/assistant.css"
 patch_css_path = base / "static/robot-sidecar-v5.css"
-image_path = base / "static/images/ai-robot-sidecar.webp"
+image_path = base / "static/images/ai-robot-transparent.png"
 
 for path in (assistant_path, css_path, patch_css_path, image_path):
     if not path.is_file():
@@ -57,7 +57,7 @@ if count != 1:
 shell = (
     '<div id="ai-chat-shell" class="ai-chat-shell" hidden>'
     '<aside class="ai-chat-sidecar" aria-label="Presentación visual del asistente">'
-    '<img src="/static/images/ai-robot-sidecar.webp" '
+    '<img src="/static/images/ai-robot-transparent.png" '
     'alt="Asistente robótico junto a un mensaje de presentación" loading="lazy">'
     "</aside>"
     f"{panel}"
