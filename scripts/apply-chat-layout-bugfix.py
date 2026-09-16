@@ -22,13 +22,19 @@ while start_marker in assistant:
 
 # Ensure a visible accessible close button exists inside the chat header.
 if 'id="ai-close"' not in assistant:
-    header_marker = '<header><strong>Asistente de Ivan</strong>'
-    replacement = header_marker + '<button id="ai-close" type="button" aria-label="Cerrar asistente" title="Cerrar">&#215;</button>'
+    header_marker = "<header><strong>Asistente de Ivan</strong>"
+    replacement = (
+        header_marker
+        + '<button id="ai-close" type="button" aria-label="Cerrar asistente" title="Cerrar">&#215;</button>'
+    )
     if header_marker not in assistant:
         raise SystemExit("No se encontró la cabecera del chat para añadir el botón de cierre")
     assistant = assistant.replace(header_marker, replacement, 1)
 else:
-    assistant = assistant.replace('id="ai-close" aria-label="Cerrar"', 'id="ai-close" type="button" aria-label="Cerrar asistente" title="Cerrar"')
+    assistant = assistant.replace(
+        'id="ai-close" aria-label="Cerrar"',
+        'id="ai-close" type="button" aria-label="Cerrar asistente" title="Cerrar"',
+    )
 
 assistant_path.write_text(assistant, encoding="utf-8", newline="\n")
 
