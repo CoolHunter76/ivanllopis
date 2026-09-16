@@ -1,0 +1,94 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+PROD_DIR="/opt/ivanllopis/app"
+STAGING_DIR="/opt/ivanllopis/staging"
+PROD_BRANCH="master"
+STAGING_BRANCH="develop"
+PROD_PORT="8000"
+STAGING_PORT="8001"
+PROD_URL="https://ivanllopis.net/health"
+STAGING_URL="https://staging.ivanllopis.net/health"
+FAILURES=0
+
+pass() { printf '\033[32m[PASS]\033[0m %s\n' "$1"; }
+fail() { printf '\033[31m[FAIL]\033[0m %s\n' "$1"; FAILURES=$((FAILURES + 1)); }
+info() { printf '\033[36m[INFO]\033[0m %s\n' "$1"; }
+
+check_equal() {
+    local label="$1" actual="$2" expected="$3"
+    if [[ "$actual" == "$expected" ]]; then pass "$label = $expected"; else fail "$label: expected '$expected', got '$actual'"; fi
+}
+
+check_http() {
+    local label="$1" url="$2"
+    local code
+    code="$(curl --silent --show-error --location --output /tmp/isolation-body.json --write-out '%{http_code}' --max-time 15 "$url" || true)"
+    if [[ "$code" == "200" ]] && grep -q '"status"[[:space:]]*:[[:space:]]*"ok"' /tmp/isolation-body.json; then
+        pass "$label returned 200 and status ok"
+    else
+        fail "$label failed: HTTP $code, body: $(head -c 200 /tmp/isolation-body.json 2>/dev/null || true)"
+    fi
+}
+
+info "Checking Git repositories"
+[[ -d "$PROD_DIR/.git" ]] || fail "Production repository missing: $PROD_DIR"
+[[ -d "$STAGING_DIR/.git" ]] || fail "Staging repository missing: $STAGING_DIR"
+
+if [[ -d "$PROD_DIR/.git" ]]; then
+    PROD_OWNER="$(stat -c '%U' "$PROD_DIR")"
+    PROD_ACTUAL_BRANCH="$(sudo -u "$PROD_OWNER" git -C "$PROD_DIR" branch --show-current 2>/dev/null || true)"
+    check_equal "Production branch" "$PROD_ACTUAL_BRANCH" "$PROD_BRANCH"
+    PROD_SHA="$(sudo -u "$PROD_OWNER" git -C "$PROD_DIR" rev-parse HEAD 2>/dev/null || true)"
+    info "Production SHA: $PROD_SHA"
+fi
+
+if [[ -d "$STAGING_DIR/.git" ]]; then
+    STAGING_OWNER="$(stat -c '%U' "$STAGING_DIR")"
+    STAGING_ACTUAL_BRANCH="$(sudo -u "$STAGING_OWNER" git -C "$STAGING_DIR" branch --show-current 2>/dev/null || true)"
+    check_equal "Staging branch" "$STAGING_ACTUAL_BRANCH" "$STAGING_BRANCH"
+    STAGING_SHA="$(sudo -u "$STAGING_OWNER" git -C "$STAGING_DIR" rev-parse HEAD 2>/dev/null || true)"
+    info "Staging SHA: $STAGING_SHA"
+fi
+
+if [[ "$PROD_DIR" != "$STAGING_DIR" ]]; then pass "Repository paths are different"; else fail "Repository paths are identical"; fi
+
+info "Checking local listeners"
+if ss -lntH | awk '{print $4}' | grep -Eq "127\.0\.0\.1:${PROD_PORT}$"; then pass "Production listens only on localhost:$PROD_PORT"; else fail "Production listener missing on localhost:$PROD_PORT"; fi
+if ss -lntH | awk '{print $4}' | grep -Eq "127\.0\.0\.1:${STAGING_PORT}$"; then pass "Staging listens only on localhost:$STAGING_PORT"; else fail "Staging listener missing on localhost:$STAGING_PORT"; fi
+if ss -lntH | awk '{print $4}' | grep -Eq "(^|\[::\]:|0\.0\.0\.0:)(${PROD_PORT}|${STAGING_PORT})$"; then fail "An application port is publicly exposed"; else pass "Application ports are not publicly exposed"; fi
+
+info "Checking Docker isolation"
+PROD_CONTAINERS="$(docker ps --filter publish=$PROD_PORT --format '{{.ID}}' | sort -u)"
+STAGING_CONTAINERS="$(docker ps --filter publish=$STAGING_PORT --format '{{.ID}}' | sort -u)"
+[[ -n "$PROD_CONTAINERS" ]] && pass "Production container found" || fail "No production container publishes $PROD_PORT"
+[[ -n "$STAGING_CONTAINERS" ]] && pass "Staging container found" || fail "No staging container publishes $STAGING_PORT"
+if [[ -n "$PROD_CONTAINERS" && -n "$STAGING_CONTAINERS" && "$PROD_CONTAINERS" != "$STAGING_CONTAINERS" ]]; then pass "Production and staging use different containers"; else fail "Container isolation could not be proven"; fi
+
+STAGING_PROJECTS="$(docker ps --filter publish=$STAGING_PORT --format '{{.Label "com.docker.compose.project"}}' | sort -u)"
+check_equal "Staging Compose project" "$STAGING_PROJECTS" "ivanllopis-staging"
+
+info "Checking HTTP health"
+check_http "Production local health" "http://127.0.0.1:${PROD_PORT}/health"
+check_http "Staging local health" "http://127.0.0.1:${STAGING_PORT}/health"
+check_http "Production public health" "$PROD_URL"
+check_http "Staging public health" "$STAGING_URL"
+
+info "Checking Nginx routing"
+NGINX_CONFIG="$(nginx -T 2>/dev/null || true)"
+if grep -q 'server_name staging\.ivanllopis\.net' <<< "$NGINX_CONFIG" && grep -q 'proxy_pass http://127\.0\.0\.1:8001' <<< "$NGINX_CONFIG"; then pass "Staging Nginx route points to 8001"; else fail "Staging Nginx route is incorrect"; fi
+if grep -q 'server_name .*ivanllopis\.net' <<< "$NGINX_CONFIG" && grep -q 'proxy_pass http://127\.0\.0\.1:8000' <<< "$NGINX_CONFIG"; then pass "Production Nginx route points to 8000"; else fail "Production Nginx route is incorrect"; fi
+
+info "Checking TLS names"
+for host in ivanllopis.net staging.ivanllopis.net; do
+    SAN="$(echo | openssl s_client -connect "$host:443" -servername "$host" 2>/dev/null | openssl x509 -noout -ext subjectAltName 2>/dev/null || true)"
+    if grep -q "DNS:$host" <<< "$SAN"; then pass "TLS certificate covers $host"; else fail "TLS certificate does not cover $host"; fi
+done
+
+printf '\n'
+if (( FAILURES == 0 )); then
+    printf '\033[32mIsolation verification completed successfully.\033[0m\n'
+    exit 0
+fi
+printf '\033[31mIsolation verification failed with %d error(s).\033[0m\n' "$FAILURES"
+exit 1
