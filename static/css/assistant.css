@@ -1,3 +1,95 @@
 .ai-toggle{position:fixed;right:1rem;bottom:1rem;z-index:1000;width:56px;height:56px;border:1px solid #25ff78;border-radius:50%;background:#07120b;color:#25ff78;font-weight:800;box-shadow:0 0 24px #25ff7866;cursor:pointer}.ai-panel{position:fixed;right:1rem;bottom:5rem;z-index:1000;width:min(390px,calc(100vw - 2rem));height:min(560px,70vh);background:#07100b;color:#e9fff0;border:1px solid #25ff78;border-radius:16px;box-shadow:0 18px 70px #000c;padding:1rem}.ai-panel:not([hidden]){display:grid;grid-template-rows:auto 1fr auto auto;gap:.75rem}.ai-panel header{display:flex;justify-content:space-between}.ai-panel header button{background:none;border:0;color:#fff;font-size:1.5rem}.ai-panel #ai-messages{overflow:auto}.ai-panel form{display:flex;gap:.5rem}.ai-panel textarea{flex:1;resize:none;background:#020704;color:#fff;border:1px solid #25ff7866;border-radius:10px;padding:.7rem}.ai-panel form button{background:#25ff78;border:0;border-radius:10px;padding:.7rem;font-weight:700}.ai-user{text-align:right;color:#b7ffd0}.ai-error{color:#ff9a9a}.ai-panel small{color:#9fc9aa}
 
 .ai-companion{position:absolute;right:370px;bottom:12px;width:280px;pointer-events:none;filter:drop-shadow(0 20px 35px rgba(0,0,0,.75));transition:opacity .2s ease,transform .2s ease}.ai-companion img{display:block;width:100%;height:auto;border-radius:30px;mask-image:linear-gradient(to bottom,#000 84%,transparent 100%)}.ai-panel[hidden]+.ai-companion{opacity:0}.ai-powered{display:flex;justify-content:flex-end;align-items:center;gap:.4rem;margin-top:.25rem;color:#91b59c;font-size:.72rem}.ai-powered-mark{display:inline-grid;place-items:center;width:1.2rem;height:1.2rem;border:1px solid #25ff78;border-radius:50%;color:#25ff78;font-size:.72rem;font-weight:800}.ai-powered a{color:inherit;text-decoration:none}.ai-powered a:hover{text-decoration:underline}@media(max-width:900px){.ai-companion{display:none}}
+
+/* Sprint 9 bugfix: background belongs only to the chat panel. */
+.ai-companion {
+    display: none !important;
+}
+
+.ai-panel {
+    position: fixed !important;
+    right: 1rem !important;
+    bottom: 5rem !important;
+    width: min(390px, calc(100vw - 2rem)) !important;
+    height: min(560px, 70vh) !important;
+    padding: 1rem !important;
+    overflow: hidden !important;
+    background-color: #06100a !important;
+    background-image:
+        linear-gradient(rgba(2, 10, 5, 0.78), rgba(2, 10, 5, 0.92)),
+        url("/static/images/ai-chat-background.webp") !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.ai-panel[hidden] {
+    display: none !important;
+}
+
+.ai-panel:not([hidden]) {
+    display: grid !important;
+    grid-template-rows: auto minmax(0, 1fr) auto auto auto !important;
+    gap: 0.75rem !important;
+}
+
+.ai-panel header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    min-height: 2.5rem !important;
+    padding-bottom: 0.5rem !important;
+    border-bottom: 1px solid rgba(37, 255, 120, 0.3) !important;
+}
+
+#ai-close {
+    display: inline-grid !important;
+    place-items: center !important;
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+    padding: 0 !important;
+    border: 1px solid rgba(37, 255, 120, 0.5) !important;
+    border-radius: 50% !important;
+    background: rgba(3, 15, 8, 0.88) !important;
+    color: #ffffff !important;
+    font-size: 1.45rem !important;
+    line-height: 1 !important;
+    cursor: pointer !important;
+}
+
+#ai-close:hover,
+#ai-close:focus-visible {
+    color: #25ff78 !important;
+    border-color: #25ff78 !important;
+    outline: 2px solid rgba(37, 255, 120, 0.25) !important;
+    outline-offset: 2px !important;
+}
+
+#ai-messages {
+    min-height: 0 !important;
+    overflow-y: auto !important;
+    padding: 0.5rem !important;
+    border-radius: 10px !important;
+    background: rgba(2, 9, 5, 0.58) !important;
+}
+
+.ai-powered {
+    position: static !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 0.35rem !important;
+    margin: 0 !important;
+    color: #9fc9aa !important;
+    font-size: 0.7rem !important;
+}
+
+@media (max-width: 600px) {
+    .ai-panel {
+        right: 0.75rem !important;
+        bottom: 4.75rem !important;
+        width: calc(100vw - 1.5rem) !important;
+        height: min(620px, calc(100vh - 6rem)) !important;
+    }
+}
