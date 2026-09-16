@@ -16,9 +16,7 @@
     padding: 1rem !important;
     overflow: hidden !important;
     background-color: #06100a !important;
-    background-image:
-        linear-gradient(rgba(2, 10, 5, 0.78), rgba(2, 10, 5, 0.92)),
-        url("/static/images/ai-chat-background.webp") !important;
+    background-image: none !important;
     background-position: center !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
