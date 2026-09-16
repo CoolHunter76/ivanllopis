@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+APP_DIR="/opt/ivanllopis/staging"
+BRANCH="develop"
+REPOSITORY="https://github.com/CoolHunter76/ivanllopis.git"
+COMPOSE_FILE="deploy/staging/compose.staging.yaml"
+PROJECT_NAME="ivanllopis-staging"
+
+if [[ ! -d "$APP_DIR/.git" ]]; then
+    mkdir -p "$(dirname "$APP_DIR")"
+    git clone --branch "$BRANCH" "$REPOSITORY" "$APP_DIR"
+fi
+
+cd "$APP_DIR"
+git fetch --prune origin "$BRANCH"
+git checkout "$BRANCH"
+git reset --hard "origin/$BRANCH"
+
+docker compose \
+  --project-name "$PROJECT_NAME" \
+  --file "$COMPOSE_FILE" \
+  build --pull
+
+docker compose \
+  --project-name "$PROJECT_NAME" \
+  --file "$COMPOSE_FILE" \
+  up -d --remove-orphans
+
+for attempt in {1..10}; do
+    if curl --fail --silent http://127.0.0.1:8001/health > /dev/null; then
+        docker image prune -f
+        echo "Staging deployment completed successfully."
+        exit 0
+    fi
+    sleep 3
+done
+
+docker compose \
+  --project-name "$PROJECT_NAME" \
+  --file "$COMPOSE_FILE" \
+  logs --tail=150 web
+exit 1
