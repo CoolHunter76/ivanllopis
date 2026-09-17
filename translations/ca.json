@@ -49,5 +49,8 @@
   "personal_title": "Tecnología con perspectiva humana.",
   "personal_text": "Natación, senderismo, videojuegos, batería, viajes y bailes latinos completan una forma de aprender, crear y conectar.",
   "discover_hobbies": "Descubrir aficiones",
-  "footer": "Construït amb FastAPI, curiositat i millora contínua."
+  "footer": "Construït amb FastAPI, curiositat i millora contínua.",
+  "hobbies_title": "Aficions i interessos",
+  "hobbies_intro": "Activitats que aporten equilibri, creativitat, energia i noves perspectives fora de la feina.",
+  "back_home": "Tornar a la pàgina principal"
 }
