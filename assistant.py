@@ -213,17 +213,7 @@ WIDGET_HTML = """
             </p>
         </div>
 
-        <form id="ai-form">
-            <label class="sr-only" for="ai-input">Escribe una pregunta</label>
-            <textarea
-                id="ai-input"
-                maxlength="500"
-                rows="2"
-                placeholder="Escribe una pregunta..."
-                required
-            ></textarea>
-            <button type="submit">Enviar</button>
-        </form>
+WIDGET = """<button id="ai-toggle" class="ai-toggle" aria-label="Abrir asistente">IA</button><div id="ai-chat-shell" class="ai-chat-shell" hidden><aside class="ai-chat-sidecar" aria-label="Presentación visual del asistente"><img src="/static/images/ai-robot-floating.png" alt="Asistente robótico junto a un mensaje de presentación" loading="lazy"></aside><section id="ai-panel" class="ai-panel" hidden><header class="ai-header"><div class="ai-title-wrap"><strong class="ai-title">Asistente de Ivan</strong><span class="ai-subtitle">IA local - Información pública</span></div><button id="ai-close" type="button" aria-label="Cerrar asistente" title="Cerrar">&#215;</button></header><div id="ai-messages"><p>Hola. Pregúntame por el perfil, tecnologías o proyectos publicados.</p></div><form id="ai-form"><textarea id="ai-input" maxlength="500" placeholder="Escribe una pregunta..." required></textarea><button>Enviar</button></form><small>IA local. Las respuestas pueden contener errores. No se guardan conversaciones.</small><div class="ai-powered"><img class="meta-ai-icon" src="/static/images/meta-ai-icon.png?v=1" alt="" width="20" height="20" loading="lazy"><span>Powered by Llama 3.2 by Meta</span></div></section></div><link rel="stylesheet" href="/static/css/assistant.css"><script src="/static/js/assistant.js" defer></script>"""
 
         <small class="ai-disclaimer">
             IA local. Las respuestas pueden contener errores. No se guardan conversaciones.

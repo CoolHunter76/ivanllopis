@@ -30,7 +30,7 @@ jobs:
 
           if [ "$BASE_BRANCH" = "develop" ]; then
             case "$HEAD_BRANCH" in
-              feature/*|bugfix/*|release/*|hotfix/*|master)
+              feature/*|bugfix/*|docs/*|release/*|hotfix/*|master)
                 exit 0
                 ;;
               *)
