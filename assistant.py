@@ -15,9 +15,7 @@ from starlette.middleware.base import BaseHTTPMiddleware
 
 BASE = Path(__file__).resolve().parent
 KNOWLEDGE_FILE = BASE / "knowledge" / "profile.md"
-OLLAMA_URL = os.getenv(
-    "OLLAMA_URL", "http://host.docker.internal:11434"
-).rstrip("/")
+OLLAMA_URL = os.getenv("OLLAMA_URL", "http://host.docker.internal:11434").rstrip("/")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.2:1b")
 TIMEOUT_SECONDS = int(os.getenv("OLLAMA_TIMEOUT_SECONDS", "60"))
 MAX_HISTORY = 6
