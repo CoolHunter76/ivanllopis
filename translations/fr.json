@@ -21,16 +21,16 @@
     "lead": "Je suis Ivan Llopis. Je dirige des solutions logicielles, cloud et IA, de l’architecture à une livraison sûre, observable et durable.",
     "projects": "Voir les projets",
     "explore": "Explorer le profil",
-    "image_alt": "Professional portrait of Ivan Llopis",
-    "status_title": "Open to connect",
+    "image_alt": "Portrait professionnel d’Ivan Llopis",
+    "status_title": "Disponible pour échanger",
     "status_text": "Software · Cloud · AI"
   },
   "metrics": {
-    "label": "Resumen profesional",
-    "languages": "idiomas del portfolio",
-    "focus": "áreas de especialización",
-    "quality": "mentalidad de calidad",
-    "learning": "aprendizaje continuo"
+    "label": "Présentation professionnelle",
+    "languages": "langues du portfolio",
+    "focus": "domaines d’expertise",
+    "quality": "culture de la qualité",
+    "learning": "apprentissage continu"
   },
   "expertise": {
     "eyebrow": "Compétences",
@@ -38,20 +38,20 @@
     "intro": "Un profil combinant leadership technique, développement, automatisation et expérimentation appliquée en IA.",
     "items": [
       {
-        "title": "Software & APIs",
-        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
+        "title": "Logiciel et API",
+        "text": "Solutions maintenables, services et API reposant sur de solides bases de qualité."
       },
       {
-        "title": "Cloud & Data",
-        "text": "Azure, containers and data platforms suited to context and growth."
+        "title": "Cloud et données",
+        "text": "Azure, conteneurs et plateformes de données adaptés au contexte et à la croissance."
       },
       {
-        "title": "AI Engineering",
-        "text": "Assistants, local models and generative AI workflows."
+        "title": "Ingénierie IA",
+        "text": "Assistants, modèles locaux et flux d’IA générative."
       },
       {
-        "title": "Engineering Delivery",
-        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
+        "title": "Livraison logicielle",
+        "text": "GitFlow, CI/CD, tests et automatisation pour des livraisons fiables."
       }
     ]
   },
@@ -68,83 +68,83 @@
   "projects": {
     "eyebrow": "Projets",
     "title": "Des projets reliant produit et plateforme.",
-    "intro": "Outils et plateformes pour construire, intégrer, déployer et faire évoluer des solutions.",
+    "intro": "Initiatives couvrant produits numériques, IA et infrastructure.",
     "items": {
       "events": {
-        "title": "Plataforma de eventos",
-        "text": "Gestión de eventos, talleres, asistentes y operaciones."
+        "title": "Plateforme événementielle",
+        "text": "Gestion d’événements, ateliers, participants et opérations."
       },
       "ai": {
-        "title": "Agentes de IA",
-        "text": "Asistentes, conocimiento controlado y modelos locales."
+        "title": "Agents IA",
+        "text": "Assistants, connaissances contrôlées et modèles locaux."
       },
       "cloud": {
-        "title": "Arquitecturas cloud",
-        "text": "Patrones de arquitectura, automatización y despliegue."
+        "title": "Architectures cloud",
+        "text": "Modèles d’architecture, d’automatisation et de déploiement."
       },
       "portfolio": {
         "title": "IvanLlopis.net",
-        "text": "Portfolio multilingüe con FastAPI, SEO, CI/CD y asistente local."
+        "text": "Portfolio multilingue avec FastAPI, SEO, CI/CD et assistant local."
       }
     }
   },
   "process": {
     "eyebrow": "Approach",
-    "title": "Claridad, construcción y mejora continua.",
+    "title": "Clarté, construction et amélioration continue.",
     "items": [
       {
-        "title": "Entender",
-        "text": "Alinear problema, usuario, restricciones y resultado."
+        "title": "Comprendre",
+        "text": "Aligner le problème, l’utilisateur, les contraintes et le résultat."
       },
       {
-        "title": "Construir",
-        "text": "Diseñar una solución modular, comprobable y evolutiva."
+        "title": "Construire",
+        "text": "Concevoir une solution modulaire, testable et évolutive."
       },
       {
-        "title": "Operar",
-        "text": "Automatizar, observar y mejorar con evidencia."
+        "title": "Exploiter",
+        "text": "Automatiser, observer et améliorer à partir de faits."
       }
     ]
   },
   "personal": {
-    "eyebrow": "Loisirs",
-    "title": "Tecnología con perspectiva humana.",
-    "text": "Natación, senderismo, videojuegos, batería, viajes y bailes latinos completan una forma de aprender y conectar.",
-    "action": "Loisirs et centres d’intérêt"
+    "eyebrow": "Au-delà du code",
+    "title": "La technologie avec une perspective humaine.",
+    "text": "Natation, randonnée, jeux vidéo, batterie, voyages et danses latines enrichissent une façon d’apprendre et de créer des liens.",
+    "action": "Découvrir les loisirs"
   },
   "hobbies": {
     "title": "Loisirs et centres d’intérêt",
-    "intro": "Actividades que aportan equilibrio, creatividad, energía y nuevas perspectivas.",
-    "back": "Volver a la página principal",
+    "intro": "Des activités qui apportent équilibre, créativité, énergie et nouvelles perspectives.",
+    "back": "Retour à la page d’accueil",
     "items": {
       "swimming": {
-        "title": "Natación",
-        "text": "Constancia, técnica y bienestar."
+        "title": "Natation",
+        "text": "Régularité, technique et bien-être."
       },
       "trekking": {
-        "title": "Senderismo",
-        "text": "Naturaleza, exploración y perspectiva."
+        "title": "Randonnée",
+        "text": "Nature, exploration et perspective."
       },
       "gaming": {
-        "title": "Videojuegos",
-        "text": "Estrategia, narrativas y tecnología."
+        "title": "Jeux vidéo",
+        "text": "Stratégie, narration et technologie."
       },
       "drums": {
-        "title": "Batería",
-        "text": "Ritmo, coordinación y creatividad."
+        "title": "Batterie",
+        "text": "Rythme, coordination et créativité."
       },
       "travel": {
-        "title": "Viajes",
-        "text": "Culturas, lugares y aprendizaje."
+        "title": "Voyages",
+        "text": "Cultures, lieux et apprentissage."
       },
       "dance": {
-        "title": "Bailes latinos",
-        "text": "Música, conexión y movimiento."
+        "title": "Danses latines",
+        "text": "Musique, connexion et mouvement."
       }
     }
   },
   "common": {
-    "official_site": "Official website"
+    "official_site": "Site officiel"
   },
-  "footer": "Built with FastAPI, curiosity and continuous improvement."
+  "footer": "Construit avec FastAPI, curiosité et amélioration continue."
 }

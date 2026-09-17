@@ -21,16 +21,16 @@
     "lead": "Soc Ivan Llopis. Lidero solucions de programari, cloud i intel·ligència artificial des de l’arquitectura fins a un lliurament segur, observable i sostenible.",
     "projects": "Veure projectes",
     "explore": "Explorar el perfil",
-    "image_alt": "Professional portrait of Ivan Llopis",
-    "status_title": "Open to connect",
+    "image_alt": "Retrat professional d’Ivan Llopis",
+    "status_title": "Disponible per connectar",
     "status_text": "Software · Cloud · AI"
   },
   "metrics": {
-    "label": "Resumen profesional",
-    "languages": "idiomas del portfolio",
-    "focus": "áreas de especialización",
-    "quality": "mentalidad de calidad",
-    "learning": "aprendizaje continuo"
+    "label": "Resum professional",
+    "languages": "idiomes del portafolis",
+    "focus": "àrees d’especialització",
+    "quality": "mentalitat de qualitat",
+    "learning": "aprenentatge continu"
   },
   "expertise": {
     "eyebrow": "Capacitats",
@@ -38,20 +38,20 @@
     "intro": "Un perfil que combina lideratge tècnic, desenvolupament, automatització i experimentació aplicada amb IA.",
     "items": [
       {
-        "title": "Software & APIs",
-        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
+        "title": "Programari i APIs",
+        "text": "Solucions mantenibles, serveis i APIs amb bases sòlides de qualitat."
       },
       {
-        "title": "Cloud & Data",
-        "text": "Azure, containers and data platforms suited to context and growth."
+        "title": "Cloud i dades",
+        "text": "Azure, contenidors i plataformes de dades adaptades al context i al creixement."
       },
       {
-        "title": "AI Engineering",
-        "text": "Assistants, local models and generative AI workflows."
+        "title": "Enginyeria d’IA",
+        "text": "Assistents, models locals i fluxos d’intel·ligència artificial generativa."
       },
       {
-        "title": "Engineering Delivery",
-        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
+        "title": "Lliurament d’enginyeria",
+        "text": "GitFlow, CI/CD, proves i automatització per a lliuraments fiables."
       }
     ]
   },
@@ -68,83 +68,83 @@
   "projects": {
     "eyebrow": "Projectes",
     "title": "Projectes que connecten producte i plataforma.",
-    "intro": "Eines i plataformes per construir, integrar, desplegar i evolucionar solucions.",
+    "intro": "Iniciatives de producte digital, IA i infraestructura.",
     "items": {
       "events": {
-        "title": "Plataforma de eventos",
-        "text": "Gestión de eventos, talleres, asistentes y operaciones."
+        "title": "Plataforma d’esdeveniments",
+        "text": "Gestió d’esdeveniments, tallers, assistents i operacions."
       },
       "ai": {
-        "title": "Agentes de IA",
-        "text": "Asistentes, conocimiento controlado y modelos locales."
+        "title": "Agents d’IA",
+        "text": "Assistents, coneixement controlat i models locals."
       },
       "cloud": {
-        "title": "Arquitecturas cloud",
-        "text": "Patrones de arquitectura, automatización y despliegue."
+        "title": "Arquitectures cloud",
+        "text": "Patrons d’arquitectura, automatització i desplegament."
       },
       "portfolio": {
         "title": "IvanLlopis.net",
-        "text": "Portfolio multilingüe con FastAPI, SEO, CI/CD y asistente local."
+        "text": "Portafolis multilingüe amb FastAPI, SEO, CI/CD i assistent local."
       }
     }
   },
   "process": {
     "eyebrow": "Approach",
-    "title": "Claridad, construcción y mejora continua.",
+    "title": "Claredat, construcció i millora contínua.",
     "items": [
       {
-        "title": "Entender",
-        "text": "Alinear problema, usuario, restricciones y resultado."
+        "title": "Entendre",
+        "text": "Alinear el problema, l’usuari, les restriccions i el resultat."
       },
       {
         "title": "Construir",
-        "text": "Diseñar una solución modular, comprobable y evolutiva."
+        "text": "Dissenyar una solució modular, comprovable i evolutiva."
       },
       {
         "title": "Operar",
-        "text": "Automatizar, observar y mejorar con evidencia."
+        "text": "Automatitzar, observar i millorar amb evidències."
       }
     ]
   },
   "personal": {
-    "eyebrow": "Aficions",
-    "title": "Tecnología con perspectiva humana.",
-    "text": "Natación, senderismo, videojuegos, batería, viajes y bailes latinos completan una forma de aprender y conectar.",
-    "action": "Aficions i interessos"
+    "eyebrow": "Més enllà del codi",
+    "title": "Tecnologia amb perspectiva humana.",
+    "text": "Natació, senderisme, videojocs, bateria, viatges i balls llatins completen una manera d’aprendre i connectar.",
+    "action": "Descobrir les aficions"
   },
   "hobbies": {
     "title": "Aficions i interessos",
-    "intro": "Actividades que aportan equilibrio, creatividad, energía y nuevas perspectivas.",
-    "back": "Volver a la página principal",
+    "intro": "Activitats que aporten equilibri, creativitat, energia i noves perspectives.",
+    "back": "Tornar a la pàgina principal",
     "items": {
       "swimming": {
-        "title": "Natación",
-        "text": "Constancia, técnica y bienestar."
+        "title": "Natació",
+        "text": "Constància, tècnica i benestar."
       },
       "trekking": {
-        "title": "Senderismo",
-        "text": "Naturaleza, exploración y perspectiva."
+        "title": "Senderisme",
+        "text": "Natura, exploració i perspectiva."
       },
       "gaming": {
-        "title": "Videojuegos",
-        "text": "Estrategia, narrativas y tecnología."
+        "title": "Videojocs",
+        "text": "Estratègia, narratives i tecnologia."
       },
       "drums": {
-        "title": "Batería",
-        "text": "Ritmo, coordinación y creatividad."
+        "title": "Bateria",
+        "text": "Ritme, coordinació i creativitat."
       },
       "travel": {
-        "title": "Viajes",
-        "text": "Culturas, lugares y aprendizaje."
+        "title": "Viatges",
+        "text": "Cultures, llocs i aprenentatge."
       },
       "dance": {
-        "title": "Bailes latinos",
-        "text": "Música, conexión y movimiento."
+        "title": "Balls llatins",
+        "text": "Música, connexió i moviment."
       }
     }
   },
   "common": {
-    "official_site": "Official website"
+    "official_site": "Lloc web oficial"
   },
-  "footer": "Built with FastAPI, curiosity and continuous improvement."
+  "footer": "Construït amb FastAPI, curiositat i millora contínua."
 }

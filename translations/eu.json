@@ -21,16 +21,16 @@
     "lead": "Ivan Llopis naiz. Software, hodei eta AA soluzioak gidatzen ditut, arkitekturatik entrega seguru, behagarri eta jasangarrira.",
     "projects": "Ikusi proiektuak",
     "explore": "Aztertu profila",
-    "image_alt": "Professional portrait of Ivan Llopis",
-    "status_title": "Open to connect",
+    "image_alt": "Ivan Llopisen erretratu profesionala",
+    "status_title": "Harremanetan jartzeko prest",
     "status_text": "Software · Cloud · AI"
   },
   "metrics": {
-    "label": "Resumen profesional",
-    "languages": "idiomas del portfolio",
-    "focus": "áreas de especialización",
-    "quality": "mentalidad de calidad",
-    "learning": "aprendizaje continuo"
+    "label": "Laburpen profesionala",
+    "languages": "portfolioaren hizkuntzak",
+    "focus": "espezializazio arloak",
+    "quality": "kalitate ikuspegia",
+    "learning": "etengabeko ikaskuntza"
   },
   "expertise": {
     "eyebrow": "Gaitasunak",
@@ -38,20 +38,20 @@
     "intro": "Lidergo teknikoa, garapena, automatizazioa eta AA aplikatuko esperimentazioa uztartzen dituen profila.",
     "items": [
       {
-        "title": "Software & APIs",
-        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
+        "title": "Softwarea eta APIak",
+        "text": "Kalitate oinarri sendoak dituzten soluzio, zerbitzu eta API mantengarriak."
       },
       {
-        "title": "Cloud & Data",
-        "text": "Azure, containers and data platforms suited to context and growth."
+        "title": "Hodeia eta datuak",
+        "text": "Testuingurura eta hazkundera egokitutako Azure, edukiontziak eta datu plataformak."
       },
       {
-        "title": "AI Engineering",
-        "text": "Assistants, local models and generative AI workflows."
+        "title": "AA ingeniaritza",
+        "text": "Laguntzaileak, eredu lokalak eta AA sortzaileko lan fluxuak."
       },
       {
-        "title": "Engineering Delivery",
-        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
+        "title": "Ingeniaritza entrega",
+        "text": "GitFlow, CI/CD, probak eta automatizazioa entrega fidagarrietarako."
       }
     ]
   },
@@ -68,83 +68,83 @@
   "projects": {
     "eyebrow": "Proiektuak",
     "title": "Produktua eta plataforma lotzen dituzten proiektuak.",
-    "intro": "Soluzioak eraiki, integratu, hedatu eta eboluzionatzeko tresnak eta plataformak.",
+    "intro": "Produktu digitala, AA eta azpiegitura uztartzen dituzten ekimenak.",
     "items": {
       "events": {
-        "title": "Plataforma de eventos",
-        "text": "Gestión de eventos, talleres, asistentes y operaciones."
+        "title": "Ekitaldi plataforma",
+        "text": "Ekitaldi, tailer, parte-hartzaile eta eragiketen kudeaketa."
       },
       "ai": {
-        "title": "Agentes de IA",
-        "text": "Asistentes, conocimiento controlado y modelos locales."
+        "title": "AA agenteak",
+        "text": "Laguntzaileak, ezagutza kontrolatua eta eredu lokalak."
       },
       "cloud": {
-        "title": "Arquitecturas cloud",
-        "text": "Patrones de arquitectura, automatización y despliegue."
+        "title": "Hodei arkitekturak",
+        "text": "Arkitektura, automatizazio eta hedapen ereduak."
       },
       "portfolio": {
         "title": "IvanLlopis.net",
-        "text": "Portfolio multilingüe con FastAPI, SEO, CI/CD y asistente local."
+        "text": "FastAPI, SEO, CI/CD eta laguntzaile lokala dituen portfolio eleanitza."
       }
     }
   },
   "process": {
     "eyebrow": "Approach",
-    "title": "Claridad, construcción y mejora continua.",
+    "title": "Argitasuna, eraikuntza eta etengabeko hobekuntza.",
     "items": [
       {
-        "title": "Entender",
-        "text": "Alinear problema, usuario, restricciones y resultado."
+        "title": "Ulertu",
+        "text": "Arazoa, erabiltzailea, mugak eta emaitza lerrokatu."
       },
       {
-        "title": "Construir",
-        "text": "Diseñar una solución modular, comprobable y evolutiva."
+        "title": "Eraiki",
+        "text": "Soluzio modular, frogagarri eta ebolutiboa diseinatu."
       },
       {
-        "title": "Operar",
-        "text": "Automatizar, observar y mejorar con evidencia."
+        "title": "Operatu",
+        "text": "Automatizatu, behatu eta ebidentziarekin hobetu."
       }
     ]
   },
   "personal": {
-    "eyebrow": "Zaletasunak",
-    "title": "Tecnología con perspectiva humana.",
-    "text": "Natación, senderismo, videojuegos, batería, viajes y bailes latinos completan una forma de aprender y conectar.",
-    "action": "Zaletasunak eta interesak"
+    "eyebrow": "Kodetik harago",
+    "title": "Teknologia ikuspegi humanoarekin.",
+    "text": "Igeriketak, mendi ibiliek, bideojokoek, bateriak, bidaiek eta dantza latinoek ikaskuntza eta lotura aberasten dituzte.",
+    "action": "Ezagutu zaletasunak"
   },
   "hobbies": {
     "title": "Zaletasunak eta interesak",
-    "intro": "Actividades que aportan equilibrio, creatividad, energía y nuevas perspectivas.",
-    "back": "Volver a la página principal",
+    "intro": "Oreka, sormena, energia eta ikuspegi berriak ematen dituzten jarduerak.",
+    "back": "Itzuli orri nagusira",
     "items": {
       "swimming": {
-        "title": "Natación",
-        "text": "Constancia, técnica y bienestar."
+        "title": "Igeriketa",
+        "text": "Konstantzia, teknika eta ongizatea."
       },
       "trekking": {
-        "title": "Senderismo",
-        "text": "Naturaleza, exploración y perspectiva."
+        "title": "Mendi ibilaldiak",
+        "text": "Natura, esplorazioa eta ikuspegia."
       },
       "gaming": {
-        "title": "Videojuegos",
-        "text": "Estrategia, narrativas y tecnología."
+        "title": "Bideojokoak",
+        "text": "Estrategia, narrazioa eta teknologia."
       },
       "drums": {
-        "title": "Batería",
-        "text": "Ritmo, coordinación y creatividad."
+        "title": "Bateria",
+        "text": "Erritmoa, koordinazioa eta sormena."
       },
       "travel": {
-        "title": "Viajes",
-        "text": "Culturas, lugares y aprendizaje."
+        "title": "Bidaiak",
+        "text": "Kulturak, lekuak eta ikaskuntza."
       },
       "dance": {
-        "title": "Bailes latinos",
-        "text": "Música, conexión y movimiento."
+        "title": "Dantza latinoak",
+        "text": "Musika, lotura eta mugimendua."
       }
     }
   },
   "common": {
-    "official_site": "Official website"
+    "official_site": "Webgune ofiziala"
   },
-  "footer": "Built with FastAPI, curiosity and continuous improvement."
+  "footer": "FastAPIrekin, jakin-minarekin eta etengabeko hobekuntzarekin eraikia."
 }
