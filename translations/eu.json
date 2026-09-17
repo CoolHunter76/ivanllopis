@@ -1,56 +1,150 @@
 {
-  "skip": "Joan edukira",
-  "nav_label": "Navegación principal",
-  "nav_profile": "Profila",
-  "nav_capabilities": "Gaitasunak",
-  "nav_projects": "Proiektuak",
-  "nav_journey": "Ikuspegia",
-  "nav_hobbies": "Zaletasunak",
-  "language": "Hizkuntza",
-  "eyebrow": "Software Engineering Lead · Barcelona",
-  "hero_title": "Software ingeniaritza ikuspegiz, zorroztasunez eta helburuz.",
-  "hero_lead": "Soy Ivan Llopis. Lidero soluciones de software, cloud e inteligencia artificial desde la arquitectura hasta una entrega segura, observable y sostenible.",
-  "view_projects": "Ikusi proiektuak",
-  "explore_profile": "Explorar perfil",
-  "hero_image_alt": "Retrato profesional de Ivan Llopis",
-  "status_title": "Disponible para conectar",
-  "status_text": "Software · Cloud · IA",
-  "metrics_label": "Resumen profesional",
-  "metric_languages": "idiomas del portfolio",
-  "metric_focus": "áreas de especialización",
-  "metric_delivery": "mentalidad de calidad",
-  "metric_learning": "aprendizaje continuo",
-  "capabilities_eyebrow": "Capacidades",
-  "capabilities_title": "De la estrategia técnica a producción.",
-  "capabilities_intro": "Una combinación de liderazgo técnico, desarrollo, automatización y experimentación aplicada con IA.",
-  "software_title": "Software & APIs",
-  "software_text": "Diseño y construcción de soluciones mantenibles, APIs y servicios con bases sólidas de calidad.",
-  "cloud_title": "Cloud & Data",
-  "cloud_text": "Arquitecturas sobre Azure, contenedores y persistencia adaptadas al contexto y al crecimiento.",
-  "ai_title": "AI Engineering",
-  "ai_text": "Prototipos y experiencias con asistentes, modelos locales, Copilot y flujos de IA generativa.",
-  "delivery_title": "Engineering Delivery",
-  "delivery_text": "GitFlow, CI/CD, automatización, pruebas y controles que convierten los cambios en entregas confiables.",
-  "projects_eyebrow": "Trabajo seleccionado",
-  "projects_title": "Proyectos que conectan producto y plataforma.",
-  "projects_intro": "Iniciativas que resumen el enfoque aplicado a producto digital, IA e infraestructura.",
-  "project_events": "Plataforma orientada a eventos, talleres, asistentes, operaciones y experiencias digitales.",
-  "project_ai": "Experimentación con agentes, asistentes locales, conocimiento público controlado y FastAPI.",
-  "project_cloud": "Patrones de arquitectura, automatización y despliegue con Azure, Docker y DevOps.",
-  "journey_eyebrow": "Cómo trabajo",
-  "journey_title": "Claridad, construcción y mejora continua.",
-  "journey_1_title": "01 · Entender",
-  "journey_1_text": "Alinear problema, usuario, restricciones, riesgos y resultado esperado.",
-  "journey_2_title": "02 · Construir",
-  "journey_2_text": "Diseñar una solución pragmática, modular, comprobable y preparada para evolucionar.",
-  "journey_3_title": "03 · Operar",
-  "journey_3_text": "Automatizar entrega, observar comportamiento y mejorar con evidencia.",
-  "personal_eyebrow": "Más allá del código",
-  "personal_title": "Tecnología con perspectiva humana.",
-  "personal_text": "Natación, senderismo, videojuegos, batería, viajes y bailes latinos completan una forma de aprender, crear y conectar.",
-  "discover_hobbies": "Descubrir aficiones",
-  "footer": "Construido con FastAPI, curiosidad y mejora continua.",
-  "hobbies_title": "Zaletasunak eta interesak",
-  "hobbies_intro": "Lanetik kanpo oreka, sormena, energia eta ikuspegi berriak ematen dituzten jarduerak.",
-  "back_home": "Itzuli orri nagusira"
+  "language": {
+    "name": "Euskara",
+    "flag": "🟩"
+  },
+  "a11y": {
+    "skip": "Skip to content"
+  },
+  "nav": {
+    "menu": "Menua",
+    "label": "Nabigazio nagusia",
+    "profile": "Profila",
+    "expertise": "Gaitasunak",
+    "technology": "Teknologiak",
+    "projects": "Proiektuak",
+    "hobbies": "Zaletasunak"
+  },
+  "hero": {
+    "eyebrow": "Software Engineering Lead · Barcelona",
+    "title": "Software ingeniaritza ikuspegiz, zorroztasunez eta helburuz.",
+    "lead": "Ivan Llopis naiz. Software, hodei eta AA soluzioak gidatzen ditut, arkitekturatik entrega seguru, behagarri eta jasangarrira.",
+    "projects": "Ikusi proiektuak",
+    "explore": "Aztertu profila",
+    "image_alt": "Professional portrait of Ivan Llopis",
+    "status_title": "Open to connect",
+    "status_text": "Software · Cloud · AI"
+  },
+  "metrics": {
+    "label": "Resumen profesional",
+    "languages": "idiomas del portfolio",
+    "focus": "áreas de especialización",
+    "quality": "mentalidad de calidad",
+    "learning": "aprendizaje continuo"
+  },
+  "expertise": {
+    "eyebrow": "Gaitasunak",
+    "title": "Estrategia teknikotik produkziora.",
+    "intro": "Lidergo teknikoa, garapena, automatizazioa eta AA aplikatuko esperimentazioa uztartzen dituen profila.",
+    "items": [
+      {
+        "title": "Software & APIs",
+        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
+      },
+      {
+        "title": "Cloud & Data",
+        "text": "Azure, containers and data platforms suited to context and growth."
+      },
+      {
+        "title": "AI Engineering",
+        "text": "Assistants, local models and generative AI workflows."
+      },
+      {
+        "title": "Engineering Delivery",
+        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
+      }
+    ]
+  },
+  "technology": {
+    "eyebrow": "Teknologiak",
+    "title": "Ideiak produktu bihurtzen dituzten teknologiak.",
+    "intro": "Soluzioak eraiki, integratu, hedatu eta eboluzionatzeko tresnak eta plataformak."
+  },
+  "ai": {
+    "eyebrow": "AI",
+    "title": "AA ekosistema",
+    "intro": "Gaitasunak zabaltzeko ereduak, laguntzaileak eta tresnak."
+  },
+  "projects": {
+    "eyebrow": "Proiektuak",
+    "title": "Produktua eta plataforma lotzen dituzten proiektuak.",
+    "intro": "Soluzioak eraiki, integratu, hedatu eta eboluzionatzeko tresnak eta plataformak.",
+    "items": {
+      "events": {
+        "title": "Plataforma de eventos",
+        "text": "Gestión de eventos, talleres, asistentes y operaciones."
+      },
+      "ai": {
+        "title": "Agentes de IA",
+        "text": "Asistentes, conocimiento controlado y modelos locales."
+      },
+      "cloud": {
+        "title": "Arquitecturas cloud",
+        "text": "Patrones de arquitectura, automatización y despliegue."
+      },
+      "portfolio": {
+        "title": "IvanLlopis.net",
+        "text": "Portfolio multilingüe con FastAPI, SEO, CI/CD y asistente local."
+      }
+    }
+  },
+  "process": {
+    "eyebrow": "Approach",
+    "title": "Claridad, construcción y mejora continua.",
+    "items": [
+      {
+        "title": "Entender",
+        "text": "Alinear problema, usuario, restricciones y resultado."
+      },
+      {
+        "title": "Construir",
+        "text": "Diseñar una solución modular, comprobable y evolutiva."
+      },
+      {
+        "title": "Operar",
+        "text": "Automatizar, observar y mejorar con evidencia."
+      }
+    ]
+  },
+  "personal": {
+    "eyebrow": "Zaletasunak",
+    "title": "Tecnología con perspectiva humana.",
+    "text": "Natación, senderismo, videojuegos, batería, viajes y bailes latinos completan una forma de aprender y conectar.",
+    "action": "Zaletasunak eta interesak"
+  },
+  "hobbies": {
+    "title": "Zaletasunak eta interesak",
+    "intro": "Actividades que aportan equilibrio, creatividad, energía y nuevas perspectivas.",
+    "back": "Volver a la página principal",
+    "items": {
+      "swimming": {
+        "title": "Natación",
+        "text": "Constancia, técnica y bienestar."
+      },
+      "trekking": {
+        "title": "Senderismo",
+        "text": "Naturaleza, exploración y perspectiva."
+      },
+      "gaming": {
+        "title": "Videojuegos",
+        "text": "Estrategia, narrativas y tecnología."
+      },
+      "drums": {
+        "title": "Batería",
+        "text": "Ritmo, coordinación y creatividad."
+      },
+      "travel": {
+        "title": "Viajes",
+        "text": "Culturas, lugares y aprendizaje."
+      },
+      "dance": {
+        "title": "Bailes latinos",
+        "text": "Música, conexión y movimiento."
+      }
+    }
+  },
+  "common": {
+    "official_site": "Official website"
+  },
+  "footer": "Built with FastAPI, curiosity and continuous improvement."
 }
