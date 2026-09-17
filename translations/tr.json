@@ -21,16 +21,16 @@
     "lead": "Ben Ivan Llopis. Yazılım, bulut ve yapay zekâ çözümlerini mimariden güvenli, gözlemlenebilir ve sürdürülebilir teslimata kadar yönetiyorum.",
     "projects": "Projeleri gör",
     "explore": "Profili keşfet",
-    "image_alt": "Professional portrait of Ivan Llopis",
-    "status_title": "Open to connect",
+    "image_alt": "Ivan Llopis profesyonel portresi",
+    "status_title": "Bağlantı kurmaya açık",
     "status_text": "Software · Cloud · AI"
   },
   "metrics": {
-    "label": "Resumen profesional",
-    "languages": "idiomas del portfolio",
-    "focus": "áreas de especialización",
-    "quality": "mentalidad de calidad",
-    "learning": "aprendizaje continuo"
+    "label": "Profesyonel özet",
+    "languages": "portföy dili",
+    "focus": "uzmanlık alanı",
+    "quality": "kalite yaklaşımı",
+    "learning": "sürekli öğrenme"
   },
   "expertise": {
     "eyebrow": "Yetkinlikler",
@@ -38,20 +38,20 @@
     "intro": "Teknik liderlik, geliştirme, otomasyon ve uygulamalı yapay zekâ deneylerini birleştiren bir profil.",
     "items": [
       {
-        "title": "Software & APIs",
-        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
+        "title": "Yazılım ve API’ler",
+        "text": "Güçlü kalite temelleri üzerinde sürdürülebilir çözümler, hizmetler ve API’ler."
       },
       {
-        "title": "Cloud & Data",
-        "text": "Azure, containers and data platforms suited to context and growth."
+        "title": "Bulut ve veri",
+        "text": "Bağlama ve büyümeye uygun Azure, container ve veri platformları."
       },
       {
-        "title": "AI Engineering",
-        "text": "Assistants, local models and generative AI workflows."
+        "title": "Yapay zekâ mühendisliği",
+        "text": "Asistanlar, yerel modeller ve üretken yapay zekâ iş akışları."
       },
       {
-        "title": "Engineering Delivery",
-        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
+        "title": "Mühendislik teslimatı",
+        "text": "Güvenilir teslimatlar için GitFlow, CI/CD, test ve otomasyon."
       }
     ]
   },
@@ -68,83 +68,83 @@
   "projects": {
     "eyebrow": "Projeler",
     "title": "Ürün ile platformu birleştiren projeler.",
-    "intro": "Çözümleri oluşturmak, entegre etmek, dağıtmak ve geliştirmek için araçlar ve platformlar.",
+    "intro": "Dijital ürün, yapay zekâ ve altyapıyı kapsayan girişimler.",
     "items": {
       "events": {
-        "title": "Plataforma de eventos",
-        "text": "Gestión de eventos, talleres, asistentes y operaciones."
+        "title": "Etkinlik platformu",
+        "text": "Etkinlik, atölye, katılımcı ve operasyon yönetimi."
       },
       "ai": {
-        "title": "Agentes de IA",
-        "text": "Asistentes, conocimiento controlado y modelos locales."
+        "title": "Yapay zekâ ajanları",
+        "text": "Asistanlar, kontrollü bilgi ve yerel modeller."
       },
       "cloud": {
-        "title": "Arquitecturas cloud",
-        "text": "Patrones de arquitectura, automatización y despliegue."
+        "title": "Bulut mimarileri",
+        "text": "Mimari, otomasyon ve dağıtım kalıpları."
       },
       "portfolio": {
         "title": "IvanLlopis.net",
-        "text": "Portfolio multilingüe con FastAPI, SEO, CI/CD y asistente local."
+        "text": "FastAPI, SEO, CI/CD ve yerel asistan içeren çok dilli portföy."
       }
     }
   },
   "process": {
     "eyebrow": "Approach",
-    "title": "Claridad, construcción y mejora continua.",
+    "title": "Netlik, geliştirme ve sürekli iyileştirme.",
     "items": [
       {
-        "title": "Entender",
-        "text": "Alinear problema, usuario, restricciones y resultado."
+        "title": "Anla",
+        "text": "Problemi, kullanıcıyı, kısıtları ve sonucu hizala."
       },
       {
-        "title": "Construir",
-        "text": "Diseñar una solución modular, comprobable y evolutiva."
+        "title": "Oluştur",
+        "text": "Modüler, test edilebilir ve gelişebilir bir çözüm tasarla."
       },
       {
-        "title": "Operar",
-        "text": "Automatizar, observar y mejorar con evidencia."
+        "title": "İşlet",
+        "text": "Otomatikleştir, gözlemle ve kanıtlarla iyileştir."
       }
     ]
   },
   "personal": {
-    "eyebrow": "Hobiler",
-    "title": "Tecnología con perspectiva humana.",
-    "text": "Natación, senderismo, videojuegos, batería, viajes y bailes latinos completan una forma de aprender y conectar.",
-    "action": "Hobiler ve ilgi alanları"
+    "eyebrow": "Kodun ötesinde",
+    "title": "İnsan odaklı teknoloji.",
+    "text": "Yüzme, doğa yürüyüşü, video oyunları, davul, seyahat ve Latin dansları öğrenme ve bağlantı kurma biçimine denge katar.",
+    "action": "Hobileri keşfet"
   },
   "hobbies": {
     "title": "Hobiler ve ilgi alanları",
-    "intro": "Actividades que aportan equilibrio, creatividad, energía y nuevas perspectivas.",
-    "back": "Volver a la página principal",
+    "intro": "Denge, yaratıcılık, enerji ve yeni bakış açıları kazandıran etkinlikler.",
+    "back": "Ana sayfaya dön",
     "items": {
       "swimming": {
-        "title": "Natación",
-        "text": "Constancia, técnica y bienestar."
+        "title": "Yüzme",
+        "text": "Tutarlılık, teknik ve esenlik."
       },
       "trekking": {
-        "title": "Senderismo",
-        "text": "Naturaleza, exploración y perspectiva."
+        "title": "Doğa yürüyüşü",
+        "text": "Doğa, keşif ve perspektif."
       },
       "gaming": {
-        "title": "Videojuegos",
-        "text": "Estrategia, narrativas y tecnología."
+        "title": "Video oyunları",
+        "text": "Strateji, anlatı ve teknoloji."
       },
       "drums": {
-        "title": "Batería",
-        "text": "Ritmo, coordinación y creatividad."
+        "title": "Davul",
+        "text": "Ritim, koordinasyon ve yaratıcılık."
       },
       "travel": {
-        "title": "Viajes",
-        "text": "Culturas, lugares y aprendizaje."
+        "title": "Seyahat",
+        "text": "Kültürler, yerler ve öğrenme."
       },
       "dance": {
-        "title": "Bailes latinos",
-        "text": "Música, conexión y movimiento."
+        "title": "Latin dansları",
+        "text": "Müzik, bağlantı ve hareket."
       }
     }
   },
   "common": {
-    "official_site": "Official website"
+    "official_site": "Resmî web sitesi"
   },
-  "footer": "Built with FastAPI, curiosity and continuous improvement."
+  "footer": "FastAPI, merak ve sürekli iyileştirme ile geliştirildi."
 }

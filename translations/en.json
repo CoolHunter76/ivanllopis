@@ -26,11 +26,11 @@
     "status_text": "Software · Cloud · AI"
   },
   "metrics": {
-    "label": "Resumen profesional",
-    "languages": "idiomas del portfolio",
-    "focus": "áreas de especialización",
-    "quality": "mentalidad de calidad",
-    "learning": "aprendizaje continuo"
+    "label": "Professional overview",
+    "languages": "portfolio languages",
+    "focus": "areas of expertise",
+    "quality": "quality mindset",
+    "learning": "continuous learning"
   },
   "expertise": {
     "eyebrow": "Capabilities",
@@ -38,19 +38,19 @@
     "intro": "A profile combining technical leadership, development, automation and applied AI experimentation.",
     "items": [
       {
-        "title": "Software & APIs",
+        "title": "Software and APIs",
         "text": "Maintainable solutions, services and APIs built on strong quality foundations."
       },
       {
-        "title": "Cloud & Data",
+        "title": "Cloud and data",
         "text": "Azure, containers and data platforms suited to context and growth."
       },
       {
-        "title": "AI Engineering",
+        "title": "AI engineering",
         "text": "Assistants, local models and generative AI workflows."
       },
       {
-        "title": "Engineering Delivery",
+        "title": "Engineering delivery",
         "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
       }
     ]
@@ -68,78 +68,78 @@
   "projects": {
     "eyebrow": "Projects",
     "title": "Projects connecting product and platform.",
-    "intro": "Tools and platforms used to build, integrate, deploy and evolve solutions.",
+    "intro": "Initiatives spanning digital products, AI and infrastructure.",
     "items": {
       "events": {
-        "title": "Plataforma de eventos",
-        "text": "Gestión de eventos, talleres, asistentes y operaciones."
+        "title": "Event platform",
+        "text": "Management of events, workshops, attendees and operations."
       },
       "ai": {
-        "title": "Agentes de IA",
-        "text": "Asistentes, conocimiento controlado y modelos locales."
+        "title": "AI agents",
+        "text": "Assistants, controlled knowledge and local models."
       },
       "cloud": {
-        "title": "Arquitecturas cloud",
-        "text": "Patrones de arquitectura, automatización y despliegue."
+        "title": "Cloud architectures",
+        "text": "Architecture, automation and deployment patterns."
       },
       "portfolio": {
         "title": "IvanLlopis.net",
-        "text": "Portfolio multilingüe con FastAPI, SEO, CI/CD y asistente local."
+        "text": "Multilingual portfolio with FastAPI, SEO, CI/CD and a local assistant."
       }
     }
   },
   "process": {
     "eyebrow": "Approach",
-    "title": "Claridad, construcción y mejora continua.",
+    "title": "Clarity, delivery and continuous improvement.",
     "items": [
       {
-        "title": "Entender",
-        "text": "Alinear problema, usuario, restricciones y resultado."
+        "title": "Understand",
+        "text": "Align the problem, user, constraints and expected outcome."
       },
       {
-        "title": "Construir",
-        "text": "Diseñar una solución modular, comprobable y evolutiva."
+        "title": "Build",
+        "text": "Design a modular, testable and evolvable solution."
       },
       {
-        "title": "Operar",
-        "text": "Automatizar, observar y mejorar con evidencia."
+        "title": "Operate",
+        "text": "Automate, observe and improve using evidence."
       }
     ]
   },
   "personal": {
-    "eyebrow": "Hobbies",
-    "title": "Tecnología con perspectiva humana.",
-    "text": "Natación, senderismo, videojuegos, batería, viajes y bailes latinos completan una forma de aprender y conectar.",
-    "action": "Hobbies and interests"
+    "eyebrow": "Beyond code",
+    "title": "Technology with a human perspective.",
+    "text": "Swimming, hiking, gaming, drums, travel and Latin dance add balance to learning and connecting.",
+    "action": "Discover hobbies"
   },
   "hobbies": {
     "title": "Hobbies and interests",
-    "intro": "Actividades que aportan equilibrio, creatividad, energía y nuevas perspectivas.",
-    "back": "Volver a la página principal",
+    "intro": "Activities that bring balance, creativity, energy and new perspectives.",
+    "back": "Back to the home page",
     "items": {
       "swimming": {
-        "title": "Natación",
-        "text": "Constancia, técnica y bienestar."
+        "title": "Swimming",
+        "text": "Consistency, technique and wellbeing."
       },
       "trekking": {
-        "title": "Senderismo",
-        "text": "Naturaleza, exploración y perspectiva."
+        "title": "Hiking",
+        "text": "Nature, exploration and perspective."
       },
       "gaming": {
-        "title": "Videojuegos",
-        "text": "Estrategia, narrativas y tecnología."
+        "title": "Gaming",
+        "text": "Strategy, storytelling and technology."
       },
       "drums": {
-        "title": "Batería",
-        "text": "Ritmo, coordinación y creatividad."
+        "title": "Drums",
+        "text": "Rhythm, coordination and creativity."
       },
       "travel": {
-        "title": "Viajes",
-        "text": "Culturas, lugares y aprendizaje."
+        "title": "Travel",
+        "text": "Cultures, places and learning."
       },
       "dance": {
-        "title": "Bailes latinos",
-        "text": "Música, conexión y movimiento."
+        "title": "Latin dance",
+        "text": "Music, connection and movement."
       }
     }
   },
