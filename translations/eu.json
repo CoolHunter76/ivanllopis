@@ -1,45 +1,36 @@
 {
-  "language_name": "Euskara",
-  "nav": {
-    "home": "Hasiera",
-    "about": "Niri buruz",
-    "technologies": "Teknologiak",
-    "projects": "Proiektuak",
-    "hobbies": "Zaletasunak",
-    "contact": "Kontaktua"
-  },
-  "hero": {
-    "eyebrow": "Software analista eta garatzailea",
-    "title": "Analisia, garapena eta Microsoft zein AA soluzioak",
-    "description": "Negozio-beharrak soluzio digital moderno bihurtzen ditut .NET, Azure, APIak, datuak eta Microsoft Copilot erabiliz.",
-    "projects_button": "Ikusi proiektuak",
-    "contact_button": "Kontaktatu"
-  },
-  "sections": {
-    "about_title": "Niri buruz",
-    "about_text": "Arkitekturan, kalitatean, automatizazioan eta etengabeko entregan oinarritutako Software Engineer Lead.",
-    "technologies_title": "Teknologiak",
-    "projects_title": "Proiektuak",
-    "hobbies_title": "Zaletasunak",
-    "contact_title": "Kontaktua"
-  },
-  "assistant": {
-    "title": "Ivanen laguntzailea",
-    "subtitle": "Tokiko AA · Informazio publikoa",
-    "welcome": "Kaixo. Galdetu argitaratutako profilari, teknologiei edo proiektuei buruz.",
-    "placeholder": "Idatzi galdera bat...",
-    "send": "Bidali",
-    "close": "Itxi laguntzailea",
-    "thinking": "Pentsatzen...",
-    "disclaimer": "Tokiko AA. Erantzunek akatsak izan ditzakete. Elkarrizketak ez dira gordetzen.",
-    "powered_by": "Powered by Llama 3.2 by Meta",
-    "error": "Ezin izan da erantzunik lortu."
-  },
-  "footer": {
-    "rights": "Eskubide guztiak erreserbatuta."
-  },
+  "language": "Euskara",
+  "flag": "🏴",
+  "nav": [
+    "Hasiera",
+    "Niri buruz",
+    "Teknologiak",
+    "Proiektuak",
+    "Zaletasunak",
+    "Kontaktua"
+  ],
+  "role": "Software analista eta garatzailea",
+  "hero": "Analisia, garapena eta Microsoft zein IA soluzioak",
+  "lead": "Negozio-beharrak soluzio digital moderno bihurtzen ditut .NET, Azure, APIak, datuak eta Microsoft Copilot erabiliz.",
+  "about_title": "Ikuspegi funtzionaleko teknologia",
+  "about_text": "Analisi funtzionala, software-garapena eta ikuspegi teknikoa uztartzen ditut soluzio argi, mantengarri eta eskalagarriak sortzeko.",
+  "tech_title": "Teknologia nagusiak",
+  "ai_title": "IA sortzailearen ekosistema",
+  "ai_intro": "Produktibitaterako, arrazoiketarako, garapenerako, ikerketarako eta edukien sorkuntzarako egungo tresnak eta motorrak.",
+  "projects_title": "Proiektu nabarmenak",
+  "contact_title": "Zerbait interesgarria eraikiko dugu?",
+  "contact_text": "Jarri nirekin harremanetan posta elektronikoz edo LinkedIn bidez.",
   "buttons": [
     "Ikusi proiektuak",
-    "Kontaktatu"
+    "Kontaktua",
+    "Bidali posta",
+    "Ikusi LinkedIn"
+  ],
+  "hobbies_title": "Oreka, erritmoa eta ikuspegi berriak ematen dituzten zaletasunak",
+  "back": "Itzuli orri nagusira",
+  "projects": [
+    "Ekitaldien plataforma",
+    "IA sortzaileko agenteak",
+    "Cloud arkitekturak"
   ]
 }

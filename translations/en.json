@@ -1,45 +1,36 @@
 {
-  "language_name": "English",
-  "nav": {
-    "home": "Home",
-    "about": "About me",
-    "technologies": "Technologies",
-    "projects": "Projects",
-    "hobbies": "Hobbies",
-    "contact": "Contact"
-  },
-  "hero": {
-    "eyebrow": "Software analyst and developer",
-    "title": "Analysis, development, Microsoft solutions and AI",
-    "description": "I transform business needs into modern digital solutions with .NET, Azure, APIs, data and Microsoft Copilot.",
-    "projects_button": "View projects",
-    "contact_button": "Contact"
-  },
-  "sections": {
-    "about_title": "About me",
-    "about_text": "Software Engineer Lead focused on architecture, quality, automation and continuous delivery.",
-    "technologies_title": "Technologies",
-    "projects_title": "Projects",
-    "hobbies_title": "Hobbies",
-    "contact_title": "Contact"
-  },
-  "assistant": {
-    "title": "Ivan's assistant",
-    "subtitle": "Local AI · Public information",
-    "welcome": "Hello. Ask me about the published profile, technologies or projects.",
-    "placeholder": "Type a question...",
-    "send": "Send",
-    "close": "Close assistant",
-    "thinking": "Thinking...",
-    "disclaimer": "Local AI. Responses may contain errors. Conversations are not stored.",
-    "powered_by": "Powered by Llama 3.2 by Meta",
-    "error": "A response could not be obtained."
-  },
-  "footer": {
-    "rights": "All rights reserved."
-  },
+  "language": "English",
+  "flag": "🇬🇧",
+  "nav": [
+    "Home",
+    "About",
+    "Technologies",
+    "Projects",
+    "Hobbies",
+    "Contact"
+  ],
+  "role": "Software Analyst & Developer",
+  "hero": "Analysis, development, and Microsoft AI solutions",
+  "lead": "I turn business needs into modern digital solutions with .NET, Azure, APIs, data, and Microsoft Copilot.",
+  "about_title": "Technology with a functional perspective",
+  "about_text": "I combine functional analysis, software development, and technical vision to create clear, maintainable, and scalable solutions.",
+  "tech_title": "Core technologies",
+  "ai_title": "Generative AI ecosystem",
+  "ai_intro": "Current tools and engines for productivity, reasoning, development, research, and content creation.",
+  "projects_title": "Featured projects",
+  "contact_title": "Shall we build something interesting?",
+  "contact_text": "Contact me by email or connect on LinkedIn.",
   "buttons": [
     "View projects",
-    "Contact"
+    "Contact",
+    "Send email",
+    "View LinkedIn"
+  ],
+  "hobbies_title": "Hobbies that bring balance, rhythm, and new perspectives",
+  "back": "Back to the home page",
+  "projects": [
+    "Event platform",
+    "Generative AI agents",
+    "Cloud architectures"
   ]
 }
