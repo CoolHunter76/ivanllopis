@@ -1,1 +1,50 @@
-<!doctype html><html lang="{{lang}}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#010703"><title>{% block title %}Ivan Llopis{% endblock %}</title><link rel="icon" href="/static/images/favicon.ico"><link rel="apple-touch-icon" href="/static/images/apple-touch-icon.png"><link rel="manifest" href="/static/site.webmanifest"><script src="https://cdn.tailwindcss.com"></script><link rel="stylesheet" href="/static/css/site.css"><script src="/static/js/site.js" defer></script></head><body><canvas id="matrix-background"></canvas><div class="matrix-overlay"></div><header><nav><a href="/{{lang}}" class="brand"><img src="/static/images/avatar.webp" alt="Ivan Llopis"><span>IvanLlopis<span class="green">.net</span></span></a><div class="desktop-nav">{% for label,a in [(t.nav[0],'inicio'),(t.nav[1],'sobre-mi'),(t.nav[2],'tecnologias'),(t.nav[3],'proyectos'),(t.nav[4],'hobbies'),(t.nav[5],'contacto')] %}<a href="{% if a=='hobbies'%}/{{lang}}/hobbies{% else %}/{{lang}}#{{a}}{% endif %}">{{label}}</a>{% endfor %}<div class="lang-wrap"><span class="flag-wave" title="{{t.language}}">{{t.flag}}</span><select class="lang-select" title="{{t.language}}" aria-label="{{t.language}}" onchange="switchLanguage(this.value)">{% for code,data in language_data.items() %}<option value="/{{code}}" {% if code==lang%}selected{%endif%}>{{data.flag}} {{data.language}}</option>{% endfor %}</select></div></div><button id="menu-button">☰</button><div id="mobile-menu" class="hidden">{% for label,a in [(t.nav[0],'inicio'),(t.nav[1],'sobre-mi'),(t.nav[2],'tecnologias'),(t.nav[3],'proyectos'),(t.nav[4],'hobbies'),(t.nav[5],'contacto')] %}<a href="{% if a=='hobbies'%}/{{lang}}/hobbies{% else %}/{{lang}}#{{a}}{% endif %}">{{label}}</a>{% endfor %}<div class="lang-wrap"><span class="flag-wave" title="{{t.language}}">{{t.flag}}</span><select class="lang-select" title="{{t.language}}" onchange="switchLanguage(this.value)">{% for code,data in language_data.items() %}<option value="/{{code}}" {% if code==lang%}selected{%endif%}>{{data.flag}} {{data.language}}</option>{% endfor %}</select></div></div></nav></header><main>{% block content %}{% endblock %}</main><footer><img src="/static/images/avatar.webp" alt=""><span>© 2026 Ivan Llopis</span><a href="mailto:illopis@gmail.com">Email</a><a href="https://www.linkedin.com/in/ivan-llopis-2347aa355" target="_blank" rel="noopener noreferrer">LinkedIn</a></footer></body></html>
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#010703">
+<title>{% block title %}Ivan Llopis{% endblock %}</title>
+<meta name="description" content="Software Engineering Lead specialized in Cloud, DevOps, Architecture and Artificial Intelligence.">
+<link rel="icon" href="/static/images/favicon.ico">
+<link rel="apple-touch-icon" href="/static/images/apple-touch-icon.png">
+<link rel="manifest" href="/static/site.webmanifest">
+<link rel="stylesheet" href="/static/css/site.css">
+<script src="/static/js/site.js" defer></script>
+{% block extra_head %}{% endblock %}
+</head>
+<body>
+<canvas id="matrix-background"></canvas>
+<div class="matrix-overlay"></div>
+<header>
+<nav>
+<a href="/{{lang}}" class="brand">
+<img src="/static/images/avatar.webp" alt="Ivan Llopis">
+<span>IvanLlopis<span class="green">.net</span></span>
+</a>
+<div class="desktop-nav">
+<a href="/{{lang}}#inicio">{{t.nav[0]}}</a>
+<a href="/{{lang}}#executive-profile">{{t.nav[1]}}</a>
+<a href="/{{lang}}#tecnologias">{{t.nav[2]}}</a>
+<a href="/{{lang}}#featured-areas">{{t.nav[3]}}</a>
+<a href="/{{lang}}/hobbies">{{t.nav[4]}}</a>
+<a href="/{{lang}}#contacto">{{t.nav[5]}}</a>
+<div class="lang-wrap">
+<span class="flag-wave">{{t.flag}}</span>
+<select class="lang-select" onchange="switchLanguage(this.value)">{% for code,data in language_data.items() %}<option value="/{{code}}" {% if code==lang %}selected{% endif %}>{{data.flag}} {{data.language}}</option>{% endfor %}</select>
+</div>
+</div>
+<button id="menu-button">☰</button>
+<div id="mobile-menu" class="hidden"></div>
+</nav>
+</header>
+<main>{% block content %}{% endblock %}</main>
+<footer>
+<img src="/static/images/avatar.webp" alt="">
+<span>© 2026 Ivan Llopis</span>
+<a href="mailto:illopis@gmail.com">Email</a>
+<a href="https://www.linkedin.com/in/ivan-llopis-2347aa355" target="_blank">LinkedIn</a>
+<a href="https://github.com/CoolHunter76" target="_blank">GitHub</a>
+</footer>
+</body>
+</html>

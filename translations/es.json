@@ -1,36 +1,45 @@
 {
-  "language": "Español",
-  "flag": "🇪🇸",
-  "nav": [
-    "Inicio",
-    "Sobre mí",
-    "Tecnologías",
-    "Proyectos",
-    "Hobbies",
-    "Contacto"
-  ],
-  "role": "Analista y desarrollador de software",
-  "hero": "Análisis, desarrollo y soluciones Microsoft e IA",
-  "lead": "Transformo necesidades de negocio en soluciones digitales modernas con .NET, Azure, APIs, datos y Microsoft Copilot.",
-  "about_title": "Tecnología con visión funcional",
-  "about_text": "Combino análisis funcional, desarrollo de software y visión técnica para crear soluciones claras, mantenibles y escalables.",
-  "tech_title": "Tecnologías principales",
-  "ai_title": "Ecosistema de IA generativa",
-  "ai_intro": "Herramientas y motores actuales para productividad, razonamiento, desarrollo, investigación y creación de contenido.",
-  "projects_title": "Proyectos destacados",
-  "contact_title": "¿Construimos algo interesante?",
-  "contact_text": "Contacta conmigo por correo o conecta en LinkedIn.",
+  "language_name": "Español",
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "technologies": "Tecnologías",
+    "projects": "Proyectos",
+    "hobbies": "Hobbies",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "eyebrow": "Analista y desarrollador de software",
+    "title": "Análisis, desarrollo y soluciones Microsoft e IA",
+    "description": "Transformo necesidades de negocio en soluciones digitales modernas con .NET, Azure, APIs, datos y Microsoft Copilot.",
+    "projects_button": "Ver proyectos",
+    "contact_button": "Contactar"
+  },
+  "sections": {
+    "about_title": "Sobre mí",
+    "about_text": "Software Engineer Lead orientado a arquitectura, calidad, automatización y entrega continua.",
+    "technologies_title": "Tecnologías",
+    "projects_title": "Proyectos",
+    "hobbies_title": "Hobbies",
+    "contact_title": "Contacto"
+  },
+  "assistant": {
+    "title": "Asistente de Ivan",
+    "subtitle": "IA local · Información pública",
+    "welcome": "Hola. Pregúntame por el perfil, tecnologías o proyectos publicados.",
+    "placeholder": "Escribe una pregunta...",
+    "send": "Enviar",
+    "close": "Cerrar asistente",
+    "thinking": "Pensando...",
+    "disclaimer": "IA local. Las respuestas pueden contener errores. No se guardan conversaciones.",
+    "powered_by": "Powered by Llama 3.2 by Meta",
+    "error": "No se pudo obtener una respuesta."
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados."
+  },
   "buttons": [
     "Ver proyectos",
-    "Contactar",
-    "Enviar correo",
-    "Ver LinkedIn"
-  ],
-  "hobbies_title": "Hobbies que aportan equilibrio, ritmo y nuevas perspectivas",
-  "back": "Volver a la página principal",
-  "projects": [
-    "Plataforma de eventos",
-    "Agentes de IA generativa",
-    "Arquitecturas cloud"
+    "Contactar"
   ]
 }

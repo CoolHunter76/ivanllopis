@@ -1,36 +1,45 @@
 {
-  "language": "Català",
-  "flag": "🇦🇩",
-  "nav": [
-    "Inici",
-    "Sobre mi",
-    "Tecnologies",
-    "Projectes",
-    "Aficions",
-    "Contacte"
-  ],
-  "role": "Analista i desenvolupador de programari",
-  "hero": "Anàlisi, desenvolupament i solucions Microsoft i IA",
-  "lead": "Transformo necessitats de negoci en solucions digitals modernes amb .NET, Azure, APIs, dades i Microsoft Copilot.",
-  "about_title": "Tecnologia amb visió funcional",
-  "about_text": "Combino anàlisi funcional, desenvolupament de programari i visió tècnica per crear solucions clares, mantenibles i escalables.",
-  "tech_title": "Tecnologies principals",
-  "ai_title": "Ecosistema d’IA generativa",
-  "ai_intro": "Eines i motors actuals per a productivitat, raonament, desenvolupament, recerca i creació de contingut.",
-  "projects_title": "Projectes destacats",
-  "contact_title": "Construïm alguna cosa interessant?",
-  "contact_text": "Contacta amb mi per correu o connecta a LinkedIn.",
+  "language_name": "Català",
+  "nav": {
+    "home": "Inici",
+    "about": "Sobre mi",
+    "technologies": "Tecnologies",
+    "projects": "Projectes",
+    "hobbies": "Aficions",
+    "contact": "Contacte"
+  },
+  "hero": {
+    "eyebrow": "Analista i desenvolupador de programari",
+    "title": "Anàlisi, desenvolupament i solucions Microsoft i IA",
+    "description": "Transformo necessitats de negoci en solucions digitals modernes amb .NET, Azure, APIs, dades i Microsoft Copilot.",
+    "projects_button": "Veure projectes",
+    "contact_button": "Contactar"
+  },
+  "sections": {
+    "about_title": "Sobre mi",
+    "about_text": "Software Engineer Lead orientat a arquitectura, qualitat, automatització i lliurament continu.",
+    "technologies_title": "Tecnologies",
+    "projects_title": "Projectes",
+    "hobbies_title": "Aficions",
+    "contact_title": "Contacte"
+  },
+  "assistant": {
+    "title": "Assistent d'Ivan",
+    "subtitle": "IA local · Informació pública",
+    "welcome": "Hola. Pregunta’m pel perfil, les tecnologies o els projectes publicats.",
+    "placeholder": "Escriu una pregunta...",
+    "send": "Envia",
+    "close": "Tanca l'assistent",
+    "thinking": "Pensant...",
+    "disclaimer": "IA local. Les respostes poden contenir errors. No es desen converses.",
+    "powered_by": "Powered by Llama 3.2 by Meta",
+    "error": "No s’ha pogut obtenir una resposta."
+  },
+  "footer": {
+    "rights": "Tots els drets reservats."
+  },
   "buttons": [
     "Veure projectes",
-    "Contactar",
-    "Enviar correu",
-    "Veure LinkedIn"
-  ],
-  "hobbies_title": "Aficions que aporten equilibri, ritme i noves perspectives",
-  "back": "Tornar a la pàgina principal",
-  "projects": [
-    "Plataforma d’esdeveniments",
-    "Agents d’IA generativa",
-    "Arquitectures cloud"
+    "Contactar"
   ]
 }
