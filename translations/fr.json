@@ -1,45 +1,36 @@
 {
-  "language_name": "Français",
-  "nav": {
-    "home": "Accueil",
-    "about": "À propos",
-    "technologies": "Technologies",
-    "projects": "Projets",
-    "hobbies": "Loisirs",
-    "contact": "Contact"
-  },
-  "hero": {
-    "eyebrow": "Analyste et développeur logiciel",
-    "title": "Analyse, développement, solutions Microsoft et IA",
-    "description": "Je transforme les besoins métiers en solutions numériques modernes avec .NET, Azure, les API, les données et Microsoft Copilot.",
-    "projects_button": "Voir les projets",
-    "contact_button": "Contacter"
-  },
-  "sections": {
-    "about_title": "À propos",
-    "about_text": "Software Engineer Lead spécialisé dans l’architecture, la qualité, l’automatisation et la livraison continue.",
-    "technologies_title": "Technologies",
-    "projects_title": "Projets",
-    "hobbies_title": "Loisirs",
-    "contact_title": "Contact"
-  },
-  "assistant": {
-    "title": "Assistant d'Ivan",
-    "subtitle": "IA locale · Informations publiques",
-    "welcome": "Bonjour. Posez-moi des questions sur le profil, les technologies ou les projets publiés.",
-    "placeholder": "Écrivez une question...",
-    "send": "Envoyer",
-    "close": "Fermer l'assistant",
-    "thinking": "Réflexion...",
-    "disclaimer": "IA locale. Les réponses peuvent contenir des erreurs. Les conversations ne sont pas enregistrées.",
-    "powered_by": "Powered by Llama 3.2 by Meta",
-    "error": "Impossible d’obtenir une réponse."
-  },
-  "footer": {
-    "rights": "Tous droits réservés."
-  },
+  "language": "Français",
+  "flag": "🇫🇷",
+  "nav": [
+    "Accueil",
+    "À propos",
+    "Technologies",
+    "Projets",
+    "Loisirs",
+    "Contact"
+  ],
+  "role": "Analyste et développeur logiciel",
+  "hero": "Analyse, développement et solutions Microsoft et IA",
+  "lead": "Je transforme les besoins métier en solutions numériques modernes avec .NET, Azure, les API, les données et Microsoft Copilot.",
+  "about_title": "La technologie avec une vision fonctionnelle",
+  "about_text": "Je combine analyse fonctionnelle, développement logiciel et vision technique pour créer des solutions claires, maintenables et évolutives.",
+  "tech_title": "Technologies principales",
+  "ai_title": "Écosystème d’IA générative",
+  "ai_intro": "Outils et moteurs actuels pour la productivité, le raisonnement, le développement, la recherche et la création de contenu.",
+  "projects_title": "Projets phares",
+  "contact_title": "Construisons-nous quelque chose d’intéressant ?",
+  "contact_text": "Contactez-moi par e-mail ou retrouvez-moi sur LinkedIn.",
   "buttons": [
     "Voir les projets",
-    "Contacter"
+    "Contacter",
+    "Envoyer un e-mail",
+    "Voir LinkedIn"
+  ],
+  "hobbies_title": "Des loisirs qui apportent équilibre, rythme et nouvelles perspectives",
+  "back": "Retour à l’accueil",
+  "projects": [
+    "Plateforme d’événements",
+    "Agents d’IA générative",
+    "Architectures cloud"
   ]
 }

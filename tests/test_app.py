@@ -31,8 +31,7 @@ def test_all_language_routes():
 
 def test_all_hobbies_routes():
     for language in SUPPORTED:
-        response = client.get(f"/{language}/hobbies")
-        assert response.status_code == 200, language
+        assert client.get(f"/{language}/hobbies").status_code == 200
 
 
 def test_unknown_language_redirects():

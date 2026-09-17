@@ -1,45 +1,36 @@
 {
-  "language_name": "Türkçe",
-  "nav": {
-    "home": "Ana sayfa",
-    "about": "Hakkımda",
-    "technologies": "Teknolojiler",
-    "projects": "Projeler",
-    "hobbies": "Hobiler",
-    "contact": "İletişim"
-  },
-  "hero": {
-    "eyebrow": "Yazılım analisti ve geliştiricisi",
-    "title": "Analiz, geliştirme, Microsoft çözümleri ve yapay zekâ",
-    "description": "İş ihtiyaçlarını .NET, Azure, API’ler, veri ve Microsoft Copilot ile modern dijital çözümlere dönüştürüyorum.",
-    "projects_button": "Projeleri görüntüle",
-    "contact_button": "İletişime geç"
-  },
-  "sections": {
-    "about_title": "Hakkımda",
-    "about_text": "Mimari, kalite, otomasyon ve sürekli teslimata odaklanan Software Engineer Lead.",
-    "technologies_title": "Teknolojiler",
-    "projects_title": "Projeler",
-    "hobbies_title": "Hobiler",
-    "contact_title": "İletişim"
-  },
-  "assistant": {
-    "title": "Ivan'ın asistanı",
-    "subtitle": "Yerel yapay zekâ · Herkese açık bilgiler",
-    "welcome": "Merhaba. Yayınlanan profil, teknolojiler veya projeler hakkında soru sorabilirsiniz.",
-    "placeholder": "Bir soru yazın...",
-    "send": "Gönder",
-    "close": "Asistanı kapat",
-    "thinking": "Düşünüyor...",
-    "disclaimer": "Yerel yapay zekâ. Yanıtlar hata içerebilir. Konuşmalar kaydedilmez.",
-    "powered_by": "Powered by Llama 3.2 by Meta",
-    "error": "Yanıt alınamadı."
-  },
-  "footer": {
-    "rights": "Tüm hakları saklıdır."
-  },
+  "language": "Türkçe",
+  "flag": "🇹🇷",
+  "nav": [
+    "Ana Sayfa",
+    "Hakkımda",
+    "Teknolojiler",
+    "Projeler",
+    "Hobiler",
+    "İletişim"
+  ],
+  "role": "Yazılım Analisti ve Geliştirici",
+  "hero": "Analiz, geliştirme, Microsoft ve yapay zekâ çözümleri",
+  "lead": "İş ihtiyaçlarını .NET, Azure, API’ler, veri ve Microsoft Copilot ile modern dijital çözümlere dönüştürüyorum.",
+  "about_title": "İşlevsel bakış açısıyla teknoloji",
+  "about_text": "Açık, sürdürülebilir ve ölçeklenebilir çözümler üretmek için işlevsel analiz, yazılım geliştirme ve teknik vizyonu birleştiriyorum.",
+  "tech_title": "Temel teknolojiler",
+  "ai_title": "Üretken yapay zekâ ekosistemi",
+  "ai_intro": "Verimlilik, muhakeme, geliştirme, araştırma ve içerik üretimi için güncel araçlar ve modeller.",
+  "projects_title": "Öne çıkan projeler",
+  "contact_title": "Birlikte ilginç bir şey geliştirelim mi?",
+  "contact_text": "E-posta ile iletişime geçin veya LinkedIn üzerinden bağlantı kurun.",
   "buttons": [
     "Projeleri görüntüle",
-    "İletişime geç"
+    "İletişim",
+    "E-posta gönder",
+    "LinkedIn’i görüntüle"
+  ],
+  "hobbies_title": "Denge, ritim ve yeni bakış açıları kazandıran hobiler",
+  "back": "Ana sayfaya dön",
+  "projects": [
+    "Etkinlik platformu",
+    "Üretken yapay zekâ ajanları",
+    "Bulut mimarileri"
   ]
 }
