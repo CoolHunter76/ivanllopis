@@ -1,1 +1,31 @@
-{% extends "base.html" %}{% block title %}Ivan Llopis | {{t.role}}{% endblock %}{% block content %}<section id="inicio" class="hero"><div class="hero-text reveal"><span class="badge">{{t.role}}</span><h1>{{t.hero}}</h1><p>{{t.lead}}</p><div class="actions"><a href="#proyectos" class="primary">{{t.buttons[0]}}</a><a href="#contacto" class="secondary">{{t.buttons[1]}}</a></div></div><div class="photo reveal"><img src="/static/images/ivan-hero.webp" alt="Ivan Llopis"></div></section><section id="sobre-mi"><div><small>{{t.nav[1]}}</small><h2>{{t.about_title}}</h2></div><p>{{t.about_text}}</p></section><section id="tecnologias"><small>STACK</small><h2>{{t.tech_title}}</h2><div class="grid-tech">{% for icon,name in technologies %}<article><img src="/static/icons/{{icon}}" alt="{{name}}"><b>{{name}}</b></article>{% endfor %}</div></section><section id="ia-generativa"><small>GENERATIVE AI</small><h2>{{t.ai_title}}</h2><p class="intro">{{t.ai_intro}}</p><div class="grid-ai">{% for icon,name in ai_engines %}<article><img src="/static/icons/{{icon}}" alt="{{name}}"><b>{{name}}</b></article>{% endfor %}</div></section><section id="proyectos"><small>PORTFOLIO</small><h2>{{t.projects_title}}</h2><div class="projects">{% for name in t.projects %}<article><span>0{{loop.index}}</span><h3>{{name}}</h3></article>{% endfor %}</div></section><section id="contacto" class="contact"><small>{{t.nav[5]}}</small><h2>{{t.contact_title}}</h2><p>{{t.contact_text}}</p><div class="actions"><a href="mailto:illopis@gmail.com" class="primary">{{t.buttons[2]}}</a><a href="https://www.linkedin.com/in/ivan-llopis-2347aa355" class="secondary" target="_blank" rel="noopener noreferrer">{{t.buttons[3]}}</a></div></section>{% endblock %}
+{% extends "base.html" %}{% block content %}
+<section class="hero section reveal" id="profile">
+  <div class="hero-copy">
+    <p class="eyebrow">{{ t.eyebrow }}</p>
+    <h1>{{ t.hero_title }}</h1>
+    <p class="hero-lead">{{ t.hero_lead }}</p>
+    <div class="hero-actions"><a class="button primary" href="#projects">{{ t.view_projects }}</a><a class="button secondary" href="#capabilities">{{ t.explore_profile }}</a></div>
+    <ul class="signal-list"><li>Software Engineering</li><li>Cloud & Azure</li><li>AI Engineering</li><li>DevOps & CI/CD</li></ul>
+  </div>
+  <div class="hero-visual" aria-label="{{ t.hero_image_alt }}"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><img src="/static/images/ivan-hero.webp" alt="{{ t.hero_image_alt }}"><div class="status-card"><span class="pulse"></span><div><strong>{{ t.status_title }}</strong><small>{{ t.status_text }}</small></div></div></div>
+</section>
+
+<section class="metrics section reveal" aria-label="{{ t.metrics_label }}">
+  <article><strong>8</strong><span>{{ t.metric_languages }}</span></article><article><strong>3</strong><span>{{ t.metric_focus }}</span></article><article><strong>100%</strong><span>{{ t.metric_delivery }}</span></article><article><strong>24/7</strong><span>{{ t.metric_learning }}</span></article>
+</section>
+
+<section class="section reveal" id="capabilities"><div class="section-heading"><p class="eyebrow">{{ t.capabilities_eyebrow }}</p><h2>{{ t.capabilities_title }}</h2><p>{{ t.capabilities_intro }}</p></div>
+<div class="capability-grid">
+<article class="feature-card"><span>01</span><h3>{{ t.software_title }}</h3><p>{{ t.software_text }}</p><div class="chips"><b>.NET</b><b>C#</b><b>Python</b><b>FastAPI</b><b>APIs</b></div></article>
+<article class="feature-card"><span>02</span><h3>{{ t.cloud_title }}</h3><p>{{ t.cloud_text }}</p><div class="chips"><b>Azure</b><b>Docker</b><b>SQL</b><b>PostgreSQL</b><b>MongoDB</b></div></article>
+<article class="feature-card"><span>03</span><h3>{{ t.ai_title }}</h3><p>{{ t.ai_text }}</p><div class="chips"><b>Copilot</b><b>Ollama</b><b>Llama</b><b>Agents</b><b>RAG</b></div></article>
+<article class="feature-card"><span>04</span><h3>{{ t.delivery_title }}</h3><p>{{ t.delivery_text }}</p><div class="chips"><b>GitHub</b><b>Actions</b><b>GitFlow</b><b>CI/CD</b><b>Quality</b></div></article>
+</div></section>
+
+<section class="section dark-band reveal" id="projects"><div class="section-heading"><p class="eyebrow">{{ t.projects_eyebrow }}</p><h2>{{ t.projects_title }}</h2><p>{{ t.projects_intro }}</p></div>
+<div class="project-grid">{% for number, title, tags in projects %}<article class="project-card"><div class="project-number">{{ number }}</div><h3>{{ title }}</h3><p>{% if number == '01' %}{{ t.project_events }}{% elif number == '02' %}{{ t.project_ai }}{% else %}{{ t.project_cloud }}{% endif %}</p><div class="chips">{% for tag in tags %}<b>{{ tag }}</b>{% endfor %}</div></article>{% endfor %}</div></section>
+
+<section class="section reveal" id="journey"><div class="section-heading"><p class="eyebrow">{{ t.journey_eyebrow }}</p><h2>{{ t.journey_title }}</h2></div><div class="journey-grid"><article><strong>{{ t.journey_1_title }}</strong><p>{{ t.journey_1_text }}</p></article><article><strong>{{ t.journey_2_title }}</strong><p>{{ t.journey_2_text }}</p></article><article><strong>{{ t.journey_3_title }}</strong><p>{{ t.journey_3_text }}</p></article></div></section>
+
+<section class="section personal reveal"><div><p class="eyebrow">{{ t.personal_eyebrow }}</p><h2>{{ t.personal_title }}</h2><p>{{ t.personal_text }}</p></div><a class="button secondary" href="/{{ lang }}/hobbies">{{ t.discover_hobbies }}</a></section>
+{% endblock %}
