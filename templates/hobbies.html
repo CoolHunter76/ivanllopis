@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-<section class="section hobbies-page reveal visible">
-    <div class="section-heading">
+<section class="hobbies-hero section" data-page-version="hobbies-v2.2">
+    <div class="hobbies-heading">
         <p class="eyebrow">{{ t.nav_hobbies }}</p>
         <h1>{{ t.hobbies_title }}</h1>
         <p>{{ t.hobbies_intro }}</p>
@@ -16,6 +16,8 @@
         {% endfor %}
     </div>
 
-    <a href="/{{ lang }}" class="button secondary">{{ t.back_home }}</a>
+    <a href="/{{ lang }}" class="button secondary hobbies-back">
+        {{ t.back_home }}
+    </a>
 </section>
 {% endblock %}
