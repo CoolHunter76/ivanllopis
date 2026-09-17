@@ -244,11 +244,7 @@ class AssistantWidgetMiddleware(BaseHTTPMiddleware):
         response = await call_next(request)
 
         content_type = response.headers.get("content-type", "")
-        if (
-            not enabled()
-            or response.status_code != 200
-            or "text/html" not in content_type
-        ):
+        if not enabled() or response.status_code != 200 or "text/html" not in content_type:
             return response
 
         body = b"".join([chunk async for chunk in response.body_iterator])

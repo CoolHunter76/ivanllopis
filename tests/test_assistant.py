@@ -36,10 +36,13 @@ def test_success(monkeypatch):
 
 def test_limits(monkeypatch):
     monkeypatch.setenv("AI_ASSISTANT_ENABLED", "true")
-    assert client.post(
-        "/api/assistant/chat",
-        json={"message": "x" * 501},
-    ).status_code == 422
+    assert (
+        client.post(
+            "/api/assistant/chat",
+            json={"message": "x" * 501},
+        ).status_code
+        == 422
+    )
 
     history = [{"role": "user", "content": str(index)} for index in range(7)]
     response = client.post(

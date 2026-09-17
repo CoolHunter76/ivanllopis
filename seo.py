@@ -24,9 +24,7 @@ SEO_TEXT = {
             "arquitectura cloud, Azure, .NET, Python e inteligencia artificial."
         ),
         "hobbies_title": "Aficiones de Ivan Llopis",
-        "hobbies_description": (
-            "Aficiones, intereses y actividades personales de Ivan Llopis."
-        ),
+        "hobbies_description": ("Aficiones, intereses y actividades personales de Ivan Llopis."),
         "locale": "es_ES",
     },
     "ca": {
@@ -36,9 +34,7 @@ SEO_TEXT = {
             "arquitectura cloud, Azure, .NET, Python i intel·ligència artificial."
         ),
         "hobbies_title": "Aficions d'Ivan Llopis",
-        "hobbies_description": (
-            "Aficions, interessos i activitats personals d'Ivan Llopis."
-        ),
+        "hobbies_description": ("Aficions, interessos i activitats personals d'Ivan Llopis."),
         "locale": "ca_ES",
     },
     "eu": {
@@ -48,9 +44,7 @@ SEO_TEXT = {
             "arkitektura, Azure, .NET, Python eta adimen artifiziala."
         ),
         "hobbies_title": "Ivan Llopisen zaletasunak",
-        "hobbies_description": (
-            "Ivan Llopisen zaletasunak, interesak eta jarduera pertsonalak."
-        ),
+        "hobbies_description": ("Ivan Llopisen zaletasunak, interesak eta jarduera pertsonalak."),
         "locale": "eu_ES",
     },
     "en": {
@@ -73,8 +67,7 @@ SEO_TEXT = {
         ),
         "hobbies_title": "Loisirs d'Ivan Llopis",
         "hobbies_description": (
-            "Découvrez les loisirs, centres d'intérêt et activités personnelles "
-            "d'Ivan Llopis."
+            "Découvrez les loisirs, centres d'intérêt et activités personnelles d'Ivan Llopis."
         ),
         "locale": "fr_FR",
     },
@@ -85,9 +78,7 @@ SEO_TEXT = {
             "архітектура, Azure, .NET, Python і штучний інтелект."
         ),
         "hobbies_title": "Захоплення Ivan Llopis",
-        "hobbies_description": (
-            "Захоплення, інтереси та особисті заняття Ivan Llopis."
-        ),
+        "hobbies_description": ("Захоплення, інтереси та особисті заняття Ivan Llopis."),
         "locale": "uk_UA",
     },
     "it": {
@@ -110,8 +101,7 @@ SEO_TEXT = {
         ),
         "hobbies_title": "Ivan Llopis'in Hobileri",
         "hobbies_description": (
-            "Ivan Llopis'in hobilerini, ilgi alanlarını ve kişisel etkinliklerini "
-            "keşfedin."
+            "Ivan Llopis'in hobilerini, ilgi alanlarını ve kişisel etkinliklerini keşfedin."
         ),
         "locale": "tr_TR",
     },
@@ -127,11 +117,7 @@ def is_staging(request: Request) -> bool:
 
 def page_data(path: str) -> tuple[str, str, str, str]:
     parts = [part for part in path.split("/") if part]
-    language = (
-        parts[0]
-        if parts and parts[0] in SUPPORTED_LANGUAGES
-        else DEFAULT_LANGUAGE
-    )
+    language = parts[0] if parts and parts[0] in SUPPORTED_LANGUAGES else DEFAULT_LANGUAGE
     suffix = "/hobbies" if len(parts) > 1 and parts[1] == "hobbies" else ""
     page_key = "hobbies" if suffix else "home"
     text = SEO_TEXT[language]
@@ -146,15 +132,10 @@ def page_data(path: str) -> tuple[str, str, str, str]:
 def seo_head(request: Request) -> str:
     language, suffix, title, description = page_data(request.url.path)
     canonical = f"{PRODUCTION_ORIGIN}/{language}{suffix}"
-    robots = (
-        "noindex, nofollow, noarchive" if is_staging(request) else "index, follow"
-    )
+    robots = "noindex, nofollow, noarchive" if is_staging(request) else "index, follow"
 
     alternates = "\n".join(
-        (
-            f'<link rel="alternate" hreflang="{code}" '
-            f'href="{PRODUCTION_ORIGIN}/{code}{suffix}">' 
-        )
+        (f'<link rel="alternate" hreflang="{code}" href="{PRODUCTION_ORIGIN}/{code}{suffix}">')
         for code in SUPPORTED_LANGUAGES
     )
     alternates += (
@@ -188,29 +169,20 @@ def seo_head(request: Request) -> str:
         [
             "<!-- SEO managed by seo.py -->",
             f"<title>{escape(title)}</title>",
-            (
-                '<meta name="description" '
-                f'content="{escape(description, quote=True)}">'
-            ),
+            (f'<meta name="description" content="{escape(description, quote=True)}">'),
             f'<meta name="robots" content="{robots}">',
             f'<link rel="canonical" href="{canonical}">',
             alternates,
             '<meta property="og:type" content="website">',
             '<meta property="og:site_name" content="IvanLlopis.net">',
             f'<meta property="og:title" content="{escape(title, quote=True)}">',
-            (
-                '<meta property="og:description" '
-                f'content="{escape(description, quote=True)}">'
-            ),
+            (f'<meta property="og:description" content="{escape(description, quote=True)}">'),
             f'<meta property="og:url" content="{canonical}">',
             f'<meta property="og:image" content="{SEO_IMAGE}">',
             f'<meta property="og:locale" content="{SEO_TEXT[language]["locale"]}">',
             '<meta name="twitter:card" content="summary_large_image">',
             f'<meta name="twitter:title" content="{escape(title, quote=True)}">',
-            (
-                '<meta name="twitter:description" '
-                f'content="{escape(description, quote=True)}">'
-            ),
+            (f'<meta name="twitter:description" content="{escape(description, quote=True)}">'),
             f'<meta name="twitter:image" content="{SEO_IMAGE}">',
             f'<script type="application/ld+json">{json_ld}</script>',
         ]
@@ -265,11 +237,7 @@ def robots(request: Request) -> PlainTextResponse:
     if is_staging(request):
         content = "User-agent: *\nDisallow: /\n"
     else:
-        content = (
-            "User-agent: *\n"
-            "Allow: /\n\n"
-            f"Sitemap: {PRODUCTION_ORIGIN}/sitemap.xml\n"
-        )
+        content = f"User-agent: *\nAllow: /\n\nSitemap: {PRODUCTION_ORIGIN}/sitemap.xml\n"
     return PlainTextResponse(content)
 
 

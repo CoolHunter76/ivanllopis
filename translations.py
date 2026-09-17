@@ -13,9 +13,7 @@ SUPPORTED_LANGUAGES = ("es", "ca", "eu", "en", "fr", "uk", "it", "tr")
 
 @lru_cache(maxsize=len(SUPPORTED_LANGUAGES))
 def load_translations(language: str) -> dict[str, Any]:
-    selected_language = (
-        language if language in SUPPORTED_LANGUAGES else DEFAULT_LANGUAGE
-    )
+    selected_language = language if language in SUPPORTED_LANGUAGES else DEFAULT_LANGUAGE
     path = TRANSLATIONS_DIR / f"{selected_language}.json"
 
     if not path.is_file():
