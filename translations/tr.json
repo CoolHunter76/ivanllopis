@@ -1,36 +1,234 @@
 {
-  "language": "Türkçe",
-  "flag": "🇹🇷",
-  "nav": [
-    "Ana Sayfa",
-    "Hakkımda",
-    "Teknolojiler",
-    "Projeler",
-    "Hobiler",
-    "İletişim"
-  ],
-  "role": "Yazılım Analisti ve Geliştirici",
-  "hero": "Analiz, geliştirme, Microsoft ve yapay zekâ çözümleri",
-  "lead": "İş ihtiyaçlarını .NET, Azure, API’ler, veri ve Microsoft Copilot ile modern dijital çözümlere dönüştürüyorum.",
-  "about_title": "İşlevsel bakış açısıyla teknoloji",
-  "about_text": "Açık, sürdürülebilir ve ölçeklenebilir çözümler üretmek için işlevsel analiz, yazılım geliştirme ve teknik vizyonu birleştiriyorum.",
-  "tech_title": "Temel teknolojiler",
-  "ai_title": "Üretken yapay zekâ ekosistemi",
-  "ai_intro": "Verimlilik, muhakeme, geliştirme, araştırma ve içerik üretimi için güncel araçlar ve modeller.",
-  "projects_title": "Öne çıkan projeler",
-  "contact_title": "Birlikte ilginç bir şey geliştirelim mi?",
-  "contact_text": "E-posta ile iletişime geçin veya LinkedIn üzerinden bağlantı kurun.",
-  "buttons": [
-    "Projeleri görüntüle",
-    "İletişim",
-    "E-posta gönder",
-    "LinkedIn’i görüntüle"
-  ],
-  "hobbies_title": "Denge, ritim ve yeni bakış açıları kazandıran hobiler",
-  "back": "Ana sayfaya dön",
-  "projects": [
-    "Etkinlik platformu",
-    "Üretken yapay zekâ ajanları",
-    "Bulut mimarileri"
-  ]
+  "language": {
+    "name": "Türkçe",
+    "flag": "🇹🇷"
+  },
+  "a11y": {
+    "skip": "Skip to content"
+  },
+  "nav": {
+    "menu": "Menü",
+    "label": "Ana navigasyon",
+    "profile": "Profil",
+    "expertise": "Yetkinlikler",
+    "technology": "Teknolojiler",
+    "projects": "Projeler",
+    "hobbies": "Hobiler",
+    "home": "Ana sayfa",
+    "work_life": "Kariyer"
+  },
+  "hero": {
+    "eyebrow": "Software Engineering Lead · Barcelona",
+    "title": "Vizyon, titizlik ve amaç odaklı yazılım mühendisliği.",
+    "lead": "Ben Ivan Llopis. Yazılım, bulut ve yapay zekâ çözümlerini mimariden güvenli, gözlemlenebilir ve sürdürülebilir teslimata kadar yönetiyorum.",
+    "projects": "Projeleri gör",
+    "explore": "Profili keşfet",
+    "image_alt": "Professional portrait of Ivan Llopis",
+    "status_title": "Open to connect",
+    "status_text": "Software · Cloud · AI"
+  },
+  "metrics": {
+    "label": "Resumen profesional",
+    "languages": "idiomas del portfolio",
+    "focus": "áreas de especialización",
+    "quality": "mentalidad de calidad",
+    "learning": "aprendizaje continuo"
+  },
+  "expertise": {
+    "eyebrow": "Yetkinlikler",
+    "title": "Teknik stratejiden üretime.",
+    "intro": "Teknik liderlik, geliştirme, otomasyon ve uygulamalı yapay zekâ deneylerini birleştiren bir profil.",
+    "items": [
+      {
+        "title": "Software & APIs",
+        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
+      },
+      {
+        "title": "Cloud & Data",
+        "text": "Azure, containers and data platforms suited to context and growth."
+      },
+      {
+        "title": "AI Engineering",
+        "text": "Assistants, local models and generative AI workflows."
+      },
+      {
+        "title": "Engineering Delivery",
+        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
+      }
+    ]
+  },
+  "technology": {
+    "eyebrow": "Teknolojiler",
+    "title": "Fikirleri ürüne dönüştüren teknolojiler.",
+    "intro": "Çözümleri oluşturmak, entegre etmek, dağıtmak ve geliştirmek için araçlar ve platformlar."
+  },
+  "ai": {
+    "eyebrow": "AI",
+    "title": "Yapay zekâ ekosistemi",
+    "intro": "Yetenekleri genişleten modeller, asistanlar ve araçlar."
+  },
+  "projects": {
+    "eyebrow": "Projeler",
+    "title": "Ürün ile platformu birleştiren projeler.",
+    "intro": "Çözümleri oluşturmak, entegre etmek, dağıtmak ve geliştirmek için araçlar ve platformlar.",
+    "items": {
+      "events": {
+        "title": "Etkinlik platformu",
+        "text": "Etkinliklerin, atölyelerin, katılımcıların ve operasyonların yönetimi."
+      },
+      "ai": {
+        "title": "Yapay zekâ ajanları",
+        "text": "Asistanlar, kontrollü bilgi ve yerel modeller."
+      },
+      "cloud": {
+        "title": "Arquitecturas cloud",
+        "text": "Mimari kalıplar, otomasyon ve dağıtım."
+      },
+      "portfolio": {
+        "title": "IvanLlopis.net",
+        "text": "Portfolio multilingüe con FastAPI, SEO, CI/CD y asistente local."
+      }
+    }
+  },
+  "process": {
+    "eyebrow": "Approach",
+    "title": "Netlik, uygulama y mejora continua.",
+    "items": [
+      {
+        "title": "Entender",
+        "text": "Alinear problema, usuario, restricciones y resultado."
+      },
+      {
+        "title": "Construir",
+        "text": "Diseñar una solución modular, comprobable y evolutiva."
+      },
+      {
+        "title": "Operar",
+        "text": "Automatizar, observar y mejorar con evidencia."
+      }
+    ]
+  },
+  "personal": {
+    "eyebrow": "Hobiler",
+    "title": "Tecnología con perspectiva humana.",
+    "text": "Yüzme, senderismo, videojuegos, batería, viajes y bailes latinos completan una forma de aprender y conectar.",
+    "action": "Hobiler ve ilgi alanları"
+  },
+  "hobbies": {
+    "title": "Hobiler ve ilgi alanları",
+    "intro": "Actividades que aportan equilibrio, creatividad, energía y nuevas perspectivas.",
+    "back": "Ana sayfaya dön",
+    "items": {
+      "swimming": {
+        "title": "Yüzme",
+        "text": "Constancia, técnica y bienestar."
+      },
+      "trekking": {
+        "title": "Doğa yürüyüşü",
+        "text": "Naturaleza, exploración y perspectiva."
+      },
+      "gaming": {
+        "title": "Video oyunları",
+        "text": "Estrategia, narrativas y tecnología."
+      },
+      "drums": {
+        "title": "Batería",
+        "text": "Ritmo, coordinación y creatividad."
+      },
+      "travel": {
+        "title": "Viajes",
+        "text": "Culturas, lugares y aprendizaje."
+      },
+      "dance": {
+        "title": "Bailes latinos",
+        "text": "Música, conexión y movimiento."
+      }
+    }
+  },
+  "common": {
+    "official_site": "Official website"
+  },
+  "footer": "Built with FastAPI, curiosity and continuous improvement.",
+  "work_life": {
+    "kicker": "Profesyonel özgeçmiş",
+    "profile_title": "Profil",
+    "profile_text": "Kalite, sürdürülebilirlik ve güvenilir teslimata odaklanan yazılım, bulut, veri, DevOps ve yapay zekâ çözümlerinde uzman Software Engineer Lead.",
+    "core_title": "Temel yetkinlikler",
+    "core": [
+      "Teknik liderlik",
+      "Yazılım mimarisi",
+      "API tasarımı",
+      "Bulut ve Azure",
+      "Üretken yapay zekâ",
+      "CI/CD ve otomasyon"
+    ],
+    "stack_title": "Teknolojiler",
+    "languages_title": "Çok dilli portföy",
+    "languages_text": "İspanyolca, Katalanca, Baskça, İngilizce, Fransızca, Ukraynaca, İtalyanca ve Türkçe.",
+    "experience_title": "Profesyonel deneyim",
+    "current": "Mevcut rol",
+    "current_text": "Tanım ve mimariden teslimat ve gelişime kadar teknik çözümlerde mühendislik ve liderlik sorumluluğu.",
+    "responsibilities": [
+      "Ürün ve iş ihtiyaçlarını net teknik kararlara dönüştürmek.",
+      "Mimari, geliştirme, kalite ve otomasyona yön vermek.",
+      "GitFlow, test ve CI/CD uygulamalarını geliştirmek.",
+      "Üretken yapay zekânın sorumlu uygulamalarını araştırmak."
+    ],
+    "focus_title": "Katkı alanları",
+    "focus": [
+      [
+        "Mühendislik",
+        ".NET, C#, Python, FastAPI ve APIlerle sürdürülebilir çözümler."
+      ],
+      [
+        "Bulut ve veri",
+        "Azure, Docker, SQL Server, PostgreSQL ve MongoDB."
+      ],
+      [
+        "Uygulamalı yapay zekâ",
+        "Copilot, asistanlar, ajanlar, Ollama ve yerel modeller."
+      ],
+      [
+        "Teslimat",
+        "GitHub Actions, otomasyon, test ve gözlemlenebilirlik."
+      ]
+    ],
+    "projects_title": "Temsilî projeler",
+    "projects": [
+      [
+        "Etkinlik platformu",
+        "Etkinlik, atölye, katılımcı ve operasyonlar için dijital ürün."
+      ],
+      [
+        "Yapay zekâ ajanları",
+        "Kontrollü bilgi, FastAPI, Ollama ve Copilot kullanan asistanlar."
+      ],
+      [
+        "Bulut mimarileri",
+        "Azure, Docker ve DevOps ile otomasyon ve dağıtım."
+      ],
+      [
+        "IvanLlopis.net",
+        "SEO, CI/CD ve yerel asistan içeren çok dilli portföy."
+      ]
+    ],
+    "cta_kicker": "Tam profil",
+    "cta_title": "Kariyer yolculuğunu daha ayrıntılı öğrenmek ister misiniz?",
+    "cta_text": "Güncel CV sürümünü istemek için benimle iletişime geçin.",
+    "cta_button": "CV iste",
+    "stack": [
+      "Microsoft Azure",
+      ".NET",
+      "C#",
+      "Python",
+      "FastAPI",
+      "Docker",
+      "SQL Server",
+      "PostgreSQL",
+      "MongoDB",
+      "GitHub Actions",
+      "Microsoft Copilot",
+      "Ollama"
+    ]
+  }
 }

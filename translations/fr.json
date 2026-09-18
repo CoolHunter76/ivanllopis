@@ -1,36 +1,234 @@
 {
-  "language": "Français",
-  "flag": "🇫🇷",
-  "nav": [
-    "Accueil",
-    "À propos",
-    "Technologies",
-    "Projets",
-    "Loisirs",
-    "Contact"
-  ],
-  "role": "Analyste et développeur logiciel",
-  "hero": "Analyse, développement et solutions Microsoft et IA",
-  "lead": "Je transforme les besoins métier en solutions numériques modernes avec .NET, Azure, les API, les données et Microsoft Copilot.",
-  "about_title": "La technologie avec une vision fonctionnelle",
-  "about_text": "Je combine analyse fonctionnelle, développement logiciel et vision technique pour créer des solutions claires, maintenables et évolutives.",
-  "tech_title": "Technologies principales",
-  "ai_title": "Écosystème d’IA générative",
-  "ai_intro": "Outils et moteurs actuels pour la productivité, le raisonnement, le développement, la recherche et la création de contenu.",
-  "projects_title": "Projets phares",
-  "contact_title": "Construisons-nous quelque chose d’intéressant ?",
-  "contact_text": "Contactez-moi par e-mail ou retrouvez-moi sur LinkedIn.",
-  "buttons": [
-    "Voir les projets",
-    "Contacter",
-    "Envoyer un e-mail",
-    "Voir LinkedIn"
-  ],
-  "hobbies_title": "Des loisirs qui apportent équilibre, rythme et nouvelles perspectives",
-  "back": "Retour à l’accueil",
-  "projects": [
-    "Plateforme d’événements",
-    "Agents d’IA générative",
-    "Architectures cloud"
-  ]
+  "language": {
+    "name": "Français",
+    "flag": "🇫🇷"
+  },
+  "a11y": {
+    "skip": "Skip to content"
+  },
+  "nav": {
+    "menu": "Menu",
+    "label": "Navigation principale",
+    "profile": "Profil",
+    "expertise": "Compétences",
+    "technology": "Technologies",
+    "projects": "Projets",
+    "hobbies": "Loisirs",
+    "home": "Accueil",
+    "work_life": "Parcours"
+  },
+  "hero": {
+    "eyebrow": "Software Engineering Lead · Barcelona",
+    "title": "Ingénierie logicielle avec vision, rigueur et sens.",
+    "lead": "Je suis Ivan Llopis. Je dirige des solutions logicielles, cloud et IA, de l’architecture à une livraison sûre, observable et durable.",
+    "projects": "Voir les projets",
+    "explore": "Explorer le profil",
+    "image_alt": "Professional portrait of Ivan Llopis",
+    "status_title": "Open to connect",
+    "status_text": "Software · Cloud · AI"
+  },
+  "metrics": {
+    "label": "Resumen profesional",
+    "languages": "idiomas del portfolio",
+    "focus": "áreas de especialización",
+    "quality": "mentalidad de calidad",
+    "learning": "aprendizaje continuo"
+  },
+  "expertise": {
+    "eyebrow": "Compétences",
+    "title": "De la stratégie technique à la production.",
+    "intro": "Un profil combinant leadership technique, développement, automatisation et expérimentation appliquée en IA.",
+    "items": [
+      {
+        "title": "Software & APIs",
+        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
+      },
+      {
+        "title": "Cloud & Data",
+        "text": "Azure, containers and data platforms suited to context and growth."
+      },
+      {
+        "title": "AI Engineering",
+        "text": "Assistants, local models and generative AI workflows."
+      },
+      {
+        "title": "Engineering Delivery",
+        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
+      }
+    ]
+  },
+  "technology": {
+    "eyebrow": "Technologies",
+    "title": "Des technologies qui transforment les idées en produits.",
+    "intro": "Outils et plateformes pour construire, intégrer, déployer et faire évoluer des solutions."
+  },
+  "ai": {
+    "eyebrow": "AI",
+    "title": "Écosystème IA",
+    "intro": "Modèles, assistants et outils pour étendre les capacités."
+  },
+  "projects": {
+    "eyebrow": "Projets",
+    "title": "Des projets reliant produit et plateforme.",
+    "intro": "Outils et plateformes pour construire, intégrer, déployer et faire évoluer des solutions.",
+    "items": {
+      "events": {
+        "title": "Plateforme événementielle",
+        "text": "Gestion des événements, des ateliers, des participants et des opérations."
+      },
+      "ai": {
+        "title": "Agents d’IA",
+        "text": "Assistants, connaissances contrôlées et modèles locaux."
+      },
+      "cloud": {
+        "title": "Arquitecturas cloud",
+        "text": "Modèles d’architecture, automatisation et déploiement."
+      },
+      "portfolio": {
+        "title": "IvanLlopis.net",
+        "text": "Portfolio multilingüe con FastAPI, SEO, CI/CD y asistente local."
+      }
+    }
+  },
+  "process": {
+    "eyebrow": "Approach",
+    "title": "Clarté, réalisation y mejora continua.",
+    "items": [
+      {
+        "title": "Entender",
+        "text": "Alinear problema, usuario, restricciones y resultado."
+      },
+      {
+        "title": "Construir",
+        "text": "Diseñar una solución modular, comprobable y evolutiva."
+      },
+      {
+        "title": "Operar",
+        "text": "Automatizar, observar y mejorar con evidencia."
+      }
+    ]
+  },
+  "personal": {
+    "eyebrow": "Loisirs",
+    "title": "Tecnología con perspectiva humana.",
+    "text": "Natation, senderismo, videojuegos, batería, viajes y bailes latinos completan una forma de aprender y conectar.",
+    "action": "Loisirs et centres d’intérêt"
+  },
+  "hobbies": {
+    "title": "Loisirs et centres d’intérêt",
+    "intro": "Actividades que aportan equilibrio, creatividad, energía y nuevas perspectivas.",
+    "back": "Retour à la page d’accueil",
+    "items": {
+      "swimming": {
+        "title": "Natation",
+        "text": "Constancia, técnica y bienestar."
+      },
+      "trekking": {
+        "title": "Randonnée",
+        "text": "Naturaleza, exploración y perspectiva."
+      },
+      "gaming": {
+        "title": "Jeux vidéo",
+        "text": "Estrategia, narrativas y tecnología."
+      },
+      "drums": {
+        "title": "Batería",
+        "text": "Ritmo, coordinación y creatividad."
+      },
+      "travel": {
+        "title": "Viajes",
+        "text": "Culturas, lugares y aprendizaje."
+      },
+      "dance": {
+        "title": "Bailes latinos",
+        "text": "Música, conexión y movimiento."
+      }
+    }
+  },
+  "common": {
+    "official_site": "Official website"
+  },
+  "footer": "Built with FastAPI, curiosity and continuous improvement.",
+  "work_life": {
+    "kicker": "Curriculum professionnel",
+    "profile_title": "Profil",
+    "profile_text": "Software Engineer Lead spécialisé dans les solutions logicielles, cloud, données, DevOps et IA, avec une attention portée à la qualité, la maintenabilité et la livraison durable.",
+    "core_title": "Compétences clés",
+    "core": [
+      "Leadership technique",
+      "Architecture logicielle",
+      "Conception d’API",
+      "Cloud et Azure",
+      "IA générative",
+      "CI/CD et automatisation"
+    ],
+    "stack_title": "Technologies",
+    "languages_title": "Portfolio multilingue",
+    "languages_text": "Espagnol, catalan, basque, anglais, français, ukrainien, italien et turc.",
+    "experience_title": "Expérience professionnelle",
+    "current": "Poste actuel",
+    "current_text": "Responsabilité d’ingénierie et de leadership sur les solutions techniques, de la définition et l’architecture à la livraison et l’évolution.",
+    "responsibilities": [
+      "Traduire les besoins produit et métier en décisions techniques claires.",
+      "Guider l’architecture, le développement, la qualité et l’automatisation.",
+      "Promouvoir GitFlow, les tests et les pratiques CI/CD.",
+      "Explorer des usages responsables de l’IA générative."
+    ],
+    "focus_title": "Domaines de contribution",
+    "focus": [
+      [
+        "Ingénierie",
+        "Solutions maintenables avec .NET, C#, Python, FastAPI et API."
+      ],
+      [
+        "Cloud et données",
+        "Azure, Docker, SQL Server, PostgreSQL et MongoDB."
+      ],
+      [
+        "IA appliquée",
+        "Copilot, assistants, agents, Ollama et modèles locaux."
+      ],
+      [
+        "Livraison",
+        "GitHub Actions, automatisation, tests et observabilité."
+      ]
+    ],
+    "projects_title": "Projets représentatifs",
+    "projects": [
+      [
+        "Plateforme événementielle",
+        "Produit numérique pour événements, ateliers, participants et opérations."
+      ],
+      [
+        "Agents IA",
+        "Assistants avec connaissances contrôlées, FastAPI, Ollama et Copilot."
+      ],
+      [
+        "Architectures cloud",
+        "Automatisation et déploiement avec Azure, Docker et DevOps."
+      ],
+      [
+        "IvanLlopis.net",
+        "Portfolio multilingue avec SEO, CI/CD et assistant local."
+      ]
+    ],
+    "cta_kicker": "Profil complet",
+    "cta_title": "Vous souhaitez découvrir le parcours plus en détail ?",
+    "cta_text": "Contactez-moi pour demander une version actualisée du CV.",
+    "cta_button": "Demander le CV",
+    "stack": [
+      "Microsoft Azure",
+      ".NET",
+      "C#",
+      "Python",
+      "FastAPI",
+      "Docker",
+      "SQL Server",
+      "PostgreSQL",
+      "MongoDB",
+      "GitHub Actions",
+      "Microsoft Copilot",
+      "Ollama"
+    ]
+  }
 }

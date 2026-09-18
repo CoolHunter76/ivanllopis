@@ -1,0 +1,42 @@
+
+/* Landing V2 hobbies page */
+.hobbies-page {
+    min-height: calc(100vh - 72px);
+}
+
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 0 0 2rem;
+}
+
+.hobby-card {
+    padding: 2rem;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.025), rgba(57, 255, 136, 0.025));
+}
+
+.hobby-icon {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.hobby-card h2 {
+    margin: 0;
+    font: 600 1.15rem "Space Grotesk", sans-serif;
+}
+
+@media (max-width: 800px) {
+    .hobbies-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .hobbies-grid {
+        grid-template-columns: 1fr;
+    }
+}
