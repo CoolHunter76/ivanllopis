@@ -285,5 +285,40 @@
     "eyebrow": "Compétences",
     "title": "Compétences professionnelles",
     "lead": "Une expertise technique appliquée à des problèmes réels."
+  },
+  "cv_request": {
+    "eyebrow": "CV",
+    "title": "Demander le CV",
+    "intro": "Envoyez vos coordonnées et un court message pour demander une copie actualisée du CV.",
+    "name": "Nom ou entreprise",
+    "email": "Adresse e-mail",
+    "phone": "Téléphone",
+    "optional": "Facultatif",
+    "message": "Message court",
+    "consent": "J’ai lu et j’accepte les informations de confidentialité et j’autorise le traitement uniquement pour gérer ma demande de CV.",
+    "privacy_link": "Informations de confidentialité",
+    "official_link": "Règles officielles de protection des données",
+    "official_url": "https://www.aepd.es/informes-y-resoluciones/normativa",
+    "submit": "Envoyer la demande",
+    "success": "Demande envoyée. Une réponse sera adressée à l’e-mail fourni.",
+    "error": "La demande n’a pas pu être envoyée. Réessayez plus tard."
+  },
+  "privacy": {
+    "eyebrow": "Informations de confidentialité",
+    "title": "Informations de confidentialité",
+    "intro": "Envoyez vos coordonnées et un court message pour demander une copie actualisée du CV.",
+    "controller_title": "Responsable",
+    "controller": "Ivan Llopis / IvanLlopis.net.",
+    "purpose_title": "Finalidad",
+    "purpose": "Envoyez vos coordonnées et un court message pour demander une copie actualisée du CV.",
+    "data_title": "Datos",
+    "data": "Nom ou entreprise, Adresse e-mail, Téléphone y Message court.",
+    "legal_title": "Base legal",
+    "legal": "J’ai lu et j’accepte les informations de confidentialité et j’autorise le traitement uniquement pour gérer ma demande de CV.",
+    "retention_title": "Conservación",
+    "retention": "Solo durante el tiempo necesario para responder y cumplir obligaciones legales.",
+    "rights_title": "Derechos",
+    "rights": "Acceso, rectificación, supresión, limitación, oposición, portabilidad y retirada del consentimiento.",
+    "note": "Traducción informativa. Las referencias jurídicas oficiales son el RGPD y la Ley Orgánica 3/2018."
   }
 }

@@ -285,5 +285,40 @@
     "eyebrow": "Competenze",
     "title": "Competenze professionali",
     "lead": "Profondità tecnica applicata a problemi reali."
+  },
+  "cv_request": {
+    "eyebrow": "CV",
+    "title": "Richiedi il CV",
+    "intro": "Invia i tuoi dati e un breve messaggio per richiedere una copia aggiornata del CV.",
+    "name": "Nome o azienda",
+    "email": "Indirizzo e-mail",
+    "phone": "Telefono",
+    "optional": "Facoltativo",
+    "message": "Breve messaggio",
+    "consent": "Ho letto e accetto le informazioni sulla privacy e autorizzo il trattamento esclusivamente per gestire la richiesta del CV.",
+    "privacy_link": "Informazioni sulla privacy",
+    "official_link": "Normativa ufficiale sulla protezione dei dati",
+    "official_url": "https://www.aepd.es/informes-y-resoluciones/normativa",
+    "submit": "Invia richiesta",
+    "success": "Richiesta inviata. Riceverai una risposta all’indirizzo indicato.",
+    "error": "Non è stato possibile inviare la richiesta. Riprova più tardi."
+  },
+  "privacy": {
+    "eyebrow": "Informazioni sulla privacy",
+    "title": "Informazioni sulla privacy",
+    "intro": "Invia i tuoi dati e un breve messaggio per richiedere una copia aggiornata del CV.",
+    "controller_title": "Responsable",
+    "controller": "Ivan Llopis / IvanLlopis.net.",
+    "purpose_title": "Finalidad",
+    "purpose": "Invia i tuoi dati e un breve messaggio per richiedere una copia aggiornata del CV.",
+    "data_title": "Datos",
+    "data": "Nome o azienda, Indirizzo e-mail, Telefono y Breve messaggio.",
+    "legal_title": "Base legal",
+    "legal": "Ho letto e accetto le informazioni sulla privacy e autorizzo il trattamento esclusivamente per gestire la richiesta del CV.",
+    "retention_title": "Conservación",
+    "retention": "Solo durante el tiempo necesario para responder y cumplir obligaciones legales.",
+    "rights_title": "Derechos",
+    "rights": "Acceso, rectificación, supresión, limitación, oposición, portabilidad y retirada del consentimiento.",
+    "note": "Traducción informativa. Las referencias jurídicas oficiales son el RGPD y la Ley Orgánica 3/2018."
   }
 }

@@ -1,29 +1,29 @@
 {
   "language": {
-    "name": "Español",
-    "flag": "🇪🇸"
+    "name": "Aranés",
+    "flag": "🏳️"
   },
   "a11y": {
     "skip": "Saltar al contenido"
   },
   "nav": {
     "menu": "Menú",
-    "label": "Navegación principal",
+    "label": "Navegacion principau",
     "profile": "Perfil",
-    "expertise": "Capacidades",
-    "technology": "Tecnologías",
-    "projects": "Proyectos",
-    "hobbies": "Aficiones",
-    "home": "Inicio",
-    "work_life": "Vida laboral"
+    "expertise": "Capacitats",
+    "technology": "Tecnologies",
+    "projects": "Projèctes",
+    "hobbies": "Aficions",
+    "home": "Inici",
+    "work_life": "Vida laborau"
   },
   "hero": {
     "eyebrow": "Software Engineering Lead · Barcelona",
-    "title": "Ingeniería de software con visión, rigor y propósito.",
-    "lead": "Soy Ivan Llopis. Lidero soluciones de software, cloud e inteligencia artificial desde la arquitectura hasta una entrega segura, observable y sostenible.",
-    "projects": "Ver proyectos",
-    "explore": "Explorar perfil",
-    "image_alt": "Retrato profesional de Ivan Llopis",
+    "title": "Enginharia de logiciau damb vision, rigor e finalitat.",
+    "lead": "Sò Ivan Llopis. Dirigissi solucions de logiciau, cloud e intelligéncia artificiau dera arquitectura enquiara liurança segura, observabla e sostenibla.",
+    "projects": "Veir projèctes",
+    "explore": "Explorar eth perfil",
+    "image_alt": "Retrat professionau de Ivan Llopis",
     "status_title": "Disponible para conectar",
     "status_text": "Software · Cloud · AI"
   },
@@ -35,42 +35,42 @@
     "learning": "aprendizaje continuo"
   },
   "expertise": {
-    "eyebrow": "Capacidades",
-    "title": "De la estrategia técnica a producción.",
-    "intro": "Un perfil que combina liderazgo técnico, desarrollo, automatización y experimentación aplicada con IA.",
+    "eyebrow": "Capacitats",
+    "title": "Dera estrategia tecnica ara produccion.",
+    "intro": "Un perfil que combine lideratge tecnic, desvolopament, automatizacion e experimentacion aplicada damb IA.",
     "items": [
       {
-        "title": "Software & APIs",
-        "text": "Soluciones mantenibles, servicios y APIs con bases sólidas de calidad."
+        "title": "Logiciau e APIs",
+        "text": "Solucions mantengables, servicis e APIs bastides sus bases solides de qualitat."
       },
       {
-        "title": "Cloud & Data",
-        "text": "Azure, contenedores y datos adaptados al contexto y al crecimiento."
+        "title": "Cloud e donades",
+        "text": "Azure, contenedors e plataformes de donades adaptades ath contèxte e ath creishement."
       },
       {
-        "title": "AI Engineering",
-        "text": "Asistentes, modelos locales y flujos de inteligencia artificial generativa."
+        "title": "Enginharia d’IA",
+        "text": "Assistents, modèls locaus e fluxes d’intelligéncia artificiau generativa."
       },
       {
-        "title": "Engineering Delivery",
-        "text": "GitFlow, CI/CD, pruebas y automatización para entregas confiables."
+        "title": "Liurança d’enginharia",
+        "text": "GitFlow, CI/CD, pròves e automatizacion entà liurances fiables."
       }
     ]
   },
   "technology": {
-    "eyebrow": "Tecnologías",
-    "title": "Tecnologías que convierten ideas en productos.",
-    "intro": "Herramientas y plataformas utilizadas para construir, integrar, desplegar y evolucionar soluciones."
+    "eyebrow": "Tecnologies",
+    "title": "Tecnologies que convertissen idèes en productes.",
+    "intro": "Estruments e plataformes entà bastir, integrar, desplegar e evolucionar solucions."
   },
   "ai": {
     "eyebrow": "AI",
-    "title": "Ecosistema de IA",
-    "intro": "Modelos, asistentes y herramientas para ampliar capacidades."
+    "title": "Ecosistèma d’IA",
+    "intro": "Modèls, assistents e estruments entà ampliar capacitats."
   },
   "projects": {
-    "eyebrow": "Proyectos",
-    "title": "Proyectos que conectan producto y plataforma.",
-    "intro": "Herramientas y plataformas utilizadas para construir, integrar, desplegar y evolucionar soluciones.",
+    "eyebrow": "Projèctes",
+    "title": "Projèctes que connecten producte e plataforma.",
+    "intro": "Solucions reaus de producte, automatizacion, cloud e intelligéncia artificiau.",
     "items": {
       "events": {
         "title": "Plataforma de eventos",
@@ -109,46 +109,46 @@
     ]
   },
   "personal": {
-    "eyebrow": "Aficiones",
-    "title": "Tecnología con perspectiva humana.",
-    "text": "Natación, senderismo, videojuegos, batería, viajes y bailes latinos completan una forma de aprender y conectar.",
-    "action": "Aficiones e intereses"
+    "eyebrow": "Aficions",
+    "title": "Tecnologia damb perspectiva umana.",
+    "text": "Natacion, senderisme, videojòcs, bateria, viatges e dances latines complèten ua manèra d’apréner e connectar.",
+    "action": "Aficions e interèssi"
   },
   "hobbies": {
-    "title": "Aficiones e intereses",
-    "intro": "Actividades que aportan equilibrio, creatividad, energía y nuevas perspectivas.",
-    "back": "Volver a la página principal",
+    "title": "Aficions e interèssi",
+    "intro": "Activitats qu’apòrten equilibri, creativitat, energia e naues perspectives.",
+    "back": "Tornar ara pagina principau",
     "items": {
       "swimming": {
-        "title": "Natación",
-        "text": "Constancia, técnica y bienestar."
+        "title": "Natacion",
+        "text": "Constància, tecnica e benèster."
       },
       "trekking": {
-        "title": "Senderismo",
-        "text": "Naturaleza, exploración y perspectiva."
+        "title": "Senderisme",
+        "text": "Natura, exploracion e perspectiva."
       },
       "gaming": {
-        "title": "Videojuegos",
-        "text": "Estrategia, narrativas y tecnología."
+        "title": "Videojòcs",
+        "text": "Estrategia, narracions e tecnologia."
       },
       "drums": {
-        "title": "Batería",
-        "text": "Ritmo, coordinación y creatividad."
+        "title": "Bateria",
+        "text": "Ritme, coordinacion e creativitat."
       },
       "travel": {
-        "title": "Viajes",
-        "text": "Culturas, lugares y aprendizaje."
+        "title": "Viatges",
+        "text": "Cultures, lòcs e aprenedissatge."
       },
       "dance": {
-        "title": "Bailes latinos",
-        "text": "Música, conexión y movimiento."
+        "title": "Dances latines",
+        "text": "Musica, connexion e movement."
       }
     }
   },
   "common": {
     "official_site": "Sitio oficial"
   },
-  "footer": "Construido con FastAPI, curiosidad y mejora continua.",
+  "footer": "Bastit damb FastAPI, curiositat e melhora contínua.",
   "work_life": {
     "kicker": "Currículum profesional",
     "profile_title": "Perfil",
@@ -232,27 +232,27 @@
     ],
     "clients": {
       "hp": {
-        "type": "Proyecto para cliente",
+        "type": "Projècte entath client",
         "role": "Manager y mediador cliente-equipo",
         "text": "Aplicación web de acceso a manuales de instalación y uso de impresoras empresariales."
       },
       "repsol": {
-        "type": "Proyecto para cliente",
+        "type": "Projècte entath client",
         "role": "Colaboración en automatización y privacidad",
         "text": "Script para detectar, anonimizar y eliminar datos personales o sensibles de currículums para su catalogación masiva."
       },
       "mapfre": {
-        "type": "Proyecto para cliente",
+        "type": "Projècte entath client",
         "role": "Desarrollo cloud y procesamiento de datos",
         "text": "Azure Function para generar datos y estadísticas internas a partir de información almacenada en contenedores de datos."
       },
       "adif": {
-        "type": "Proyecto para cliente",
+        "type": "Projècte entath client",
         "role": "Asesoramiento técnico en ciberseguridad",
         "text": "Análisis de auditoría y definición de acciones técnicas para securizar productos en Azure."
       },
       "energyavm": {
-        "type": "Proyecto para cliente",
+        "type": "Projècte entath client",
         "role": "Análisis y desarrollo de APIs",
         "text": "API REST para ofrecer facturas, medidas e información operativa autorizada a clientes."
       }
@@ -260,65 +260,65 @@
   },
   "profile_page": {
     "eyebrow": "Perfil",
-    "title": "Perfil profesional",
-    "lead": "Una visión completa de la experiencia, el enfoque y la forma de trabajar.",
+    "title": "Perfil professionau",
+    "lead": "Ua vision complèta dera experiéncia, er enfocament e era manèra de trabalhar.",
     "items": [
       {
-        "title": "Software & APIs",
-        "text": "Soluciones mantenibles, servicios y APIs con bases sólidas de calidad."
+        "title": "Logiciau e APIs",
+        "text": "Solucions mantengables, servicis e APIs bastides sus bases solides de qualitat."
       },
       {
-        "title": "Cloud & Data",
-        "text": "Azure, contenedores y datos adaptados al contexto y al crecimiento."
+        "title": "Cloud e donades",
+        "text": "Azure, contenedors e plataformes de donades adaptades ath contèxte e ath creishement."
       },
       {
-        "title": "AI Engineering",
-        "text": "Asistentes, modelos locales y flujos de inteligencia artificial generativa."
+        "title": "Enginharia d’IA",
+        "text": "Assistents, modèls locaus e fluxes d’intelligéncia artificiau generativa."
       },
       {
-        "title": "Engineering Delivery",
-        "text": "GitFlow, CI/CD, pruebas y automatización para entregas confiables."
+        "title": "Liurança d’enginharia",
+        "text": "GitFlow, CI/CD, pròves e automatizacion entà liurances fiables."
       }
     ]
   },
   "capabilities_page": {
-    "eyebrow": "Capacidades",
-    "title": "Capacidades profesionales",
-    "lead": "Profundidad técnica aplicada a problemas reales."
+    "eyebrow": "Capacitats",
+    "title": "Capacitats professionaus",
+    "lead": "Prigondor tecnica aplicada a problèmes reaus."
   },
   "cv_request": {
-    "eyebrow": "CV",
-    "title": "Solicitar el CV",
-    "intro": "Envía tus datos y un breve mensaje para solicitar una copia actualizada del CV.",
-    "name": "Nombre o empresa",
-    "email": "Correo electrónico",
-    "phone": "Teléfono",
+    "eyebrow": "Curriculum vitae",
+    "title": "Solicitar o CV",
+    "intro": "Demandar eth CV",
+    "name": "Nòm o entrepresa",
+    "email": "Corrèu electronic",
+    "phone": "Telefòn",
     "optional": "Opcional",
-    "message": "Mensaje breve",
-    "consent": "He leído y acepto la información de protección de datos y autorizo el tratamiento de los datos exclusivamente para gestionar mi solicitud del CV.",
-    "privacy_link": "Información de privacidad",
-    "official_link": "Normativa oficial de protección de datos",
+    "message": "Messatge brèu",
+    "consent": "È liejut e accèpti era informacion de proteccion de donades e autorizi eth tractament des donades exclusivament entà gerir era mia sollicitud deth CV.",
+    "privacy_link": "Informacion de confidencialitat",
+    "official_link": "Normativa oficiau de proteccion de donades",
     "official_url": "https://www.aepd.es/informes-y-resoluciones/normativa",
-    "submit": "Enviar solicitud",
-    "success": "Solicitud enviada correctamente. Recibirás respuesta en el correo facilitado.",
-    "error": "No ha sido posible enviar la solicitud. Inténtalo de nuevo más tarde."
+    "submit": "Enviar sollicitud",
+    "success": "Sollicitud enviada corrèctament. Receberàs responsa en corrèu facilitat. Consulta tanben era informacion de confidencialitat e era normativa oficiau.",
+    "error": "Non a estat possible enviar era sollicitud. Torna-ac a provar mès tard."
   },
   "privacy": {
-    "eyebrow": "Información de privacidad",
-    "title": "Información de privacidad",
-    "intro": "Envía tus datos y un breve mensaje para solicitar una copia actualizada del CV.",
+    "eyebrow": "Proteccion de donades",
+    "title": "Informacion de confidencialitat",
+    "intro": "Informacion sus eth tractament des donades enviades mejançant eth formulari de sollicitud deth CV.",
     "controller_title": "Responsable",
     "controller": "Ivan Llopis / IvanLlopis.net.",
-    "purpose_title": "Finalidad",
-    "purpose": "Envía tus datos y un breve mensaje para solicitar una copia actualizada del CV.",
-    "data_title": "Datos",
-    "data": "Nombre o empresa, Correo electrónico, Teléfono y Mensaje breve.",
-    "legal_title": "Base legal",
-    "legal": "He leído y acepto la información de protección de datos y autorizo el tratamiento de los datos exclusivamente para gestionar mi solicitud del CV.",
-    "retention_title": "Conservación",
-    "retention": "Solo durante el tiempo necesario para responder y cumplir obligaciones legales.",
-    "rights_title": "Derechos",
-    "rights": "Acceso, rectificación, supresión, limitación, oposición, portabilidad y retirada del consentimiento.",
-    "note": "Traducción informativa. Las referencias jurídicas oficiales son el RGPD y la Ley Orgánica 3/2018."
+    "purpose_title": "Finalitat",
+    "purpose": "Gerir e respóner es sollicituds deth curriculum professionau.",
+    "data_title": "Donades tractades",
+    "data": "Nòm o entrepresa, corrèu electronic, telefòn opcionau e messatge.",
+    "legal_title": "Base juridica",
+    "legal": "Consentiment dera persona sollicitanta.",
+    "retention_title": "Conservacion",
+    "retention": "Pendent eth temps de besonh entà atier era sollicitud e complir es obligacions legaus aplicables.",
+    "rights_title": "Drets",
+    "rights": "Accès, rectificacion, supression, limitacion, oposicion, portabilitat e retirada deth consentiment.",
+    "note": "Aguesta traduccion ei informativa. Era referéncia juridica oficiau ei eth RGPD e era Lei organica 3/2018 publicada pes autoritats competentes."
   }
 }

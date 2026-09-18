@@ -1,29 +1,29 @@
 {
   "language": {
-    "name": "English",
-    "flag": "🇬🇧"
+    "name": "简体中文",
+    "flag": "🇨🇳"
   },
   "a11y": {
     "skip": "Skip to content"
   },
   "nav": {
-    "menu": "Menu",
-    "label": "Main navigation",
-    "profile": "Profile",
-    "expertise": "Capabilities",
-    "technology": "Technology",
-    "projects": "Projects",
-    "hobbies": "Hobbies",
-    "home": "Home",
-    "work_life": "Career"
+    "menu": "菜单",
+    "label": "主导航",
+    "profile": "个人简介",
+    "expertise": "专业能力",
+    "technology": "技术栈",
+    "projects": "项目",
+    "hobbies": "兴趣爱好",
+    "home": "首页",
+    "work_life": "职业经历"
   },
   "hero": {
-    "eyebrow": "Software Engineering Lead · Barcelona",
-    "title": "Software engineering with vision, rigor and purpose.",
-    "lead": "I am Ivan Llopis. I lead software, cloud and AI solutions from architecture to secure, observable and sustainable delivery.",
-    "projects": "View projects",
-    "explore": "Explore profile",
-    "image_alt": "Professional portrait of Ivan Llopis",
+    "eyebrow": "软件工程负责人 · 巴塞罗那",
+    "title": "以远见、严谨与目标驱动软件工程。",
+    "lead": "从架构设计到安全、可观测且可持续的交付，专注于软件、云平台与人工智能解决方案。",
+    "projects": "查看项目",
+    "explore": "查看简介",
+    "image_alt": "专业肖像",
     "status_title": "Open to connect",
     "status_text": "Software · Cloud · AI"
   },
@@ -35,25 +35,25 @@
     "learning": "aprendizaje continuo"
   },
   "expertise": {
-    "eyebrow": "Capabilities",
-    "title": "From technical strategy to production.",
-    "intro": "A profile combining technical leadership, development, automation and applied AI experimentation.",
+    "eyebrow": "专业能力",
+    "title": "从技术战略到生产环境。",
+    "intro": "融合技术领导力、开发、自动化与人工智能实践。",
     "items": [
       {
-        "title": "Software & APIs",
-        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
+        "title": "软件与 API",
+        "text": "以质量为基础构建易维护的解决方案、服务与 API。"
       },
       {
-        "title": "Cloud & Data",
-        "text": "Azure, containers and data platforms suited to context and growth."
+        "title": "云与数据",
+        "text": "结合业务场景与增长需求使用 Azure、容器和数据平台。"
       },
       {
-        "title": "AI Engineering",
-        "text": "Assistants, local models and generative AI workflows."
+        "title": "人工智能工程",
+        "text": "构建助手、本地模型与生成式人工智能工作流。"
       },
       {
-        "title": "Engineering Delivery",
-        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
+        "title": "工程交付",
+        "text": "通过 GitFlow、CI/CD、测试与自动化实现可靠交付。"
       }
     ]
   },
@@ -259,66 +259,66 @@
     }
   },
   "profile_page": {
-    "eyebrow": "Profile",
-    "title": "Professional profile",
-    "lead": "A complete view of experience, approach and ways of working.",
+    "eyebrow": "个人简介",
+    "title": "专业简介",
+    "lead": "全面展示经验、技术方法与工作方式。",
     "items": [
       {
-        "title": "Software & APIs",
-        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
+        "title": "软件与 API",
+        "text": "以质量为基础构建易维护的解决方案、服务与 API。"
       },
       {
-        "title": "Cloud & Data",
-        "text": "Azure, containers and data platforms suited to context and growth."
+        "title": "云与数据",
+        "text": "结合业务场景与增长需求使用 Azure、容器和数据平台。"
       },
       {
-        "title": "AI Engineering",
-        "text": "Assistants, local models and generative AI workflows."
+        "title": "人工智能工程",
+        "text": "构建助手、本地模型与生成式人工智能工作流。"
       },
       {
-        "title": "Engineering Delivery",
-        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
+        "title": "工程交付",
+        "text": "通过 GitFlow、CI/CD、测试与自动化实现可靠交付。"
       }
     ]
   },
   "capabilities_page": {
-    "eyebrow": "Capabilities",
-    "title": "Professional capabilities",
-    "lead": "Technical depth applied to real problems."
+    "eyebrow": "专业能力",
+    "title": "专业能力",
+    "lead": "将深度技术能力应用于真实问题。"
   },
   "cv_request": {
     "eyebrow": "CV",
-    "title": "Request the CV",
-    "intro": "Send your details and a short message to request an up-to-date copy of the CV.",
-    "name": "Name or company",
-    "email": "Email address",
-    "phone": "Phone",
-    "optional": "Optional",
-    "message": "Short message",
-    "consent": "I have read and accept the privacy information and authorise processing solely to manage my CV request.",
-    "privacy_link": "Privacy information",
-    "official_link": "Official data protection rules",
+    "title": "申请简历",
+    "intro": "请填写姓名或公司、电子邮件和简短留言。",
+    "name": "姓名或公司",
+    "email": "电子邮件",
+    "phone": "电话",
+    "optional": "选填",
+    "message": "简短留言",
+    "consent": "我已阅读并接受隐私说明，并授权仅为处理简历申请而使用所提供的数据。",
+    "privacy_link": "隐私说明",
+    "official_link": "官方数据保护法规",
     "official_url": "https://www.aepd.es/informes-y-resoluciones/normativa",
-    "submit": "Send request",
-    "success": "Request sent successfully. A reply will be sent to the email provided.",
-    "error": "The request could not be sent. Please try again later."
+    "submit": "发送申请",
+    "success": "申请已成功发送，回复将发送到您提供的邮箱。",
+    "error": "申请暂时无法发送，请稍后重试。"
   },
   "privacy": {
-    "eyebrow": "Privacy information",
-    "title": "Privacy information",
-    "intro": "Send your details and a short message to request an up-to-date copy of the CV.",
-    "controller_title": "Responsable",
+    "eyebrow": "隐私说明",
+    "title": "隐私说明",
+    "intro": "请填写姓名或公司、电子邮件和简短留言。",
+    "controller_title": "Controller",
     "controller": "Ivan Llopis / IvanLlopis.net.",
-    "purpose_title": "Finalidad",
-    "purpose": "Send your details and a short message to request an up-to-date copy of the CV.",
-    "data_title": "Datos",
-    "data": "Name or company, Email address, Phone y Short message.",
-    "legal_title": "Base legal",
-    "legal": "I have read and accept the privacy information and authorise processing solely to manage my CV request.",
-    "retention_title": "Conservación",
-    "retention": "Solo durante el tiempo necesario para responder y cumplir obligaciones legales.",
-    "rights_title": "Derechos",
-    "rights": "Acceso, rectificación, supresión, limitación, oposición, portabilidad y retirada del consentimiento.",
-    "note": "Traducción informativa. Las referencias jurídicas oficiales son el RGPD y la Ley Orgánica 3/2018."
+    "purpose_title": "Purpose",
+    "purpose": "请填写姓名或公司、电子邮件和简短留言。",
+    "data_title": "Data",
+    "data": "姓名或公司, 电子邮件, 电话, 简短留言.",
+    "legal_title": "Legal basis",
+    "legal": "我已阅读并接受隐私说明，并授权仅为处理简历申请而使用所提供的数据。",
+    "retention_title": "Retention",
+    "retention": "Only for the time needed to answer and comply with legal obligations.",
+    "rights_title": "Rights",
+    "rights": "Access, rectification, erasure, restriction, objection, portability and withdrawal of consent.",
+    "note": "Informative translation. The official legal references are the GDPR and Spanish Organic Law 3/2018."
   }
 }

@@ -47,6 +47,6 @@ def test_sitemap():
     root = ElementTree.fromstring(response.content)
     ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
     locations = [node.text for node in root.findall("s:url/s:loc", ns)]
-    assert len(locations) == 16
-    assert len(set(locations)) == 16
+    assert len(locations) == 117
+    assert len(set(locations)) == 117
     assert all(url.startswith(ORIGIN) and "staging." not in url for url in locations)

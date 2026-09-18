@@ -1,7 +1,7 @@
 {
   "language": {
-    "name": "Español",
-    "flag": "🇪🇸"
+    "name": "Galego",
+    "flag": "🏳️"
   },
   "a11y": {
     "skip": "Saltar al contenido"
@@ -11,18 +11,18 @@
     "label": "Navegación principal",
     "profile": "Perfil",
     "expertise": "Capacidades",
-    "technology": "Tecnologías",
-    "projects": "Proyectos",
-    "hobbies": "Aficiones",
+    "technology": "Tecnoloxías",
+    "projects": "Proxectos",
+    "hobbies": "Afeccións",
     "home": "Inicio",
     "work_life": "Vida laboral"
   },
   "hero": {
     "eyebrow": "Software Engineering Lead · Barcelona",
-    "title": "Ingeniería de software con visión, rigor y propósito.",
-    "lead": "Soy Ivan Llopis. Lidero soluciones de software, cloud e inteligencia artificial desde la arquitectura hasta una entrega segura, observable y sostenible.",
-    "projects": "Ver proyectos",
-    "explore": "Explorar perfil",
+    "title": "Enxeñaría de software con visión, rigor e propósito.",
+    "lead": "Son Ivan Llopis. Lidero solucións de software, nube e intelixencia artificial desde a arquitectura ata unha entrega segura, observable e sostible.",
+    "projects": "Ver proxectos",
+    "explore": "Explorar o perfil",
     "image_alt": "Retrato profesional de Ivan Llopis",
     "status_title": "Disponible para conectar",
     "status_text": "Software · Cloud · AI"
@@ -36,41 +36,41 @@
   },
   "expertise": {
     "eyebrow": "Capacidades",
-    "title": "De la estrategia técnica a producción.",
-    "intro": "Un perfil que combina liderazgo técnico, desarrollo, automatización y experimentación aplicada con IA.",
+    "title": "Da estratexia técnica á produción.",
+    "intro": "Un perfil que combina liderado técnico, desenvolvemento, automatización e experimentación aplicada con IA.",
     "items": [
       {
-        "title": "Software & APIs",
-        "text": "Soluciones mantenibles, servicios y APIs con bases sólidas de calidad."
+        "title": "Software e APIs",
+        "text": "Solucións mantibles, servizos e APIs construídos sobre bases sólidas de calidade."
       },
       {
-        "title": "Cloud & Data",
-        "text": "Azure, contenedores y datos adaptados al contexto y al crecimiento."
+        "title": "Nube e datos",
+        "text": "Azure, contedores e plataformas de datos adaptadas ao contexto e ao crecemento."
       },
       {
-        "title": "AI Engineering",
-        "text": "Asistentes, modelos locales y flujos de inteligencia artificial generativa."
+        "title": "Enxeñaría de IA",
+        "text": "Asistentes, modelos locais e fluxos de intelixencia artificial xerativa."
       },
       {
-        "title": "Engineering Delivery",
-        "text": "GitFlow, CI/CD, pruebas y automatización para entregas confiables."
+        "title": "Entrega de enxeñaría",
+        "text": "GitFlow, CI/CD, probas e automatización para entregas fiables."
       }
     ]
   },
   "technology": {
-    "eyebrow": "Tecnologías",
-    "title": "Tecnologías que convierten ideas en productos.",
-    "intro": "Herramientas y plataformas utilizadas para construir, integrar, desplegar y evolucionar soluciones."
+    "eyebrow": "Tecnoloxías",
+    "title": "Tecnoloxías que converten ideas en produtos.",
+    "intro": "Ferramentas e plataformas para construír, integrar, despregar e evolucionar solucións."
   },
   "ai": {
     "eyebrow": "AI",
     "title": "Ecosistema de IA",
-    "intro": "Modelos, asistentes y herramientas para ampliar capacidades."
+    "intro": "Modelos, asistentes e ferramentas para ampliar capacidades."
   },
   "projects": {
-    "eyebrow": "Proyectos",
-    "title": "Proyectos que conectan producto y plataforma.",
-    "intro": "Herramientas y plataformas utilizadas para construir, integrar, desplegar y evolucionar soluciones.",
+    "eyebrow": "Proxectos",
+    "title": "Proxectos que conectan produto e plataforma.",
+    "intro": "Solucións reais de produto, automatización, nube e intelixencia artificial.",
     "items": {
       "events": {
         "title": "Plataforma de eventos",
@@ -109,46 +109,46 @@
     ]
   },
   "personal": {
-    "eyebrow": "Aficiones",
-    "title": "Tecnología con perspectiva humana.",
-    "text": "Natación, senderismo, videojuegos, batería, viajes y bailes latinos completan una forma de aprender y conectar.",
-    "action": "Aficiones e intereses"
+    "eyebrow": "Afeccións",
+    "title": "Tecnoloxía con perspectiva humana.",
+    "text": "Natación, sendeirismo, videoxogos, batería, viaxes e bailes latinos completan unha forma de aprender e conectar.",
+    "action": "Afeccións e intereses"
   },
   "hobbies": {
-    "title": "Aficiones e intereses",
-    "intro": "Actividades que aportan equilibrio, creatividad, energía y nuevas perspectivas.",
-    "back": "Volver a la página principal",
+    "title": "Afeccións e intereses",
+    "intro": "Actividades que achegan equilibrio, creatividade, enerxía e novas perspectivas.",
+    "back": "Volver á páxina principal",
     "items": {
       "swimming": {
         "title": "Natación",
-        "text": "Constancia, técnica y bienestar."
+        "text": "Constancia, técnica e benestar."
       },
       "trekking": {
-        "title": "Senderismo",
-        "text": "Naturaleza, exploración y perspectiva."
+        "title": "Sendeirismo",
+        "text": "Natureza, exploración e perspectiva."
       },
       "gaming": {
-        "title": "Videojuegos",
-        "text": "Estrategia, narrativas y tecnología."
+        "title": "Videoxogos",
+        "text": "Estratexia, narrativas e tecnoloxía."
       },
       "drums": {
         "title": "Batería",
-        "text": "Ritmo, coordinación y creatividad."
+        "text": "Ritmo, coordinación e creatividade."
       },
       "travel": {
-        "title": "Viajes",
-        "text": "Culturas, lugares y aprendizaje."
+        "title": "Viaxes",
+        "text": "Culturas, lugares e aprendizaxe."
       },
       "dance": {
         "title": "Bailes latinos",
-        "text": "Música, conexión y movimiento."
+        "text": "Música, conexión e movemento."
       }
     }
   },
   "common": {
     "official_site": "Sitio oficial"
   },
-  "footer": "Construido con FastAPI, curiosidad y mejora continua.",
+  "footer": "Construído con FastAPI, curiosidade e mellora continua.",
   "work_life": {
     "kicker": "Currículum profesional",
     "profile_title": "Perfil",
@@ -232,27 +232,27 @@
     ],
     "clients": {
       "hp": {
-        "type": "Proyecto para cliente",
+        "type": "Proxecto para cliente",
         "role": "Manager y mediador cliente-equipo",
         "text": "Aplicación web de acceso a manuales de instalación y uso de impresoras empresariales."
       },
       "repsol": {
-        "type": "Proyecto para cliente",
+        "type": "Proxecto para cliente",
         "role": "Colaboración en automatización y privacidad",
         "text": "Script para detectar, anonimizar y eliminar datos personales o sensibles de currículums para su catalogación masiva."
       },
       "mapfre": {
-        "type": "Proyecto para cliente",
+        "type": "Proxecto para cliente",
         "role": "Desarrollo cloud y procesamiento de datos",
         "text": "Azure Function para generar datos y estadísticas internas a partir de información almacenada en contenedores de datos."
       },
       "adif": {
-        "type": "Proyecto para cliente",
+        "type": "Proxecto para cliente",
         "role": "Asesoramiento técnico en ciberseguridad",
         "text": "Análisis de auditoría y definición de acciones técnicas para securizar productos en Azure."
       },
       "energyavm": {
-        "type": "Proyecto para cliente",
+        "type": "Proxecto para cliente",
         "role": "Análisis y desarrollo de APIs",
         "text": "API REST para ofrecer facturas, medidas e información operativa autorizada a clientes."
       }
@@ -261,64 +261,64 @@
   "profile_page": {
     "eyebrow": "Perfil",
     "title": "Perfil profesional",
-    "lead": "Una visión completa de la experiencia, el enfoque y la forma de trabajar.",
+    "lead": "Unha visión completa da experiencia, o enfoque e a forma de traballar.",
     "items": [
       {
-        "title": "Software & APIs",
-        "text": "Soluciones mantenibles, servicios y APIs con bases sólidas de calidad."
+        "title": "Software e APIs",
+        "text": "Solucións mantibles, servizos e APIs construídos sobre bases sólidas de calidade."
       },
       {
-        "title": "Cloud & Data",
-        "text": "Azure, contenedores y datos adaptados al contexto y al crecimiento."
+        "title": "Nube e datos",
+        "text": "Azure, contedores e plataformas de datos adaptadas ao contexto e ao crecemento."
       },
       {
-        "title": "AI Engineering",
-        "text": "Asistentes, modelos locales y flujos de inteligencia artificial generativa."
+        "title": "Enxeñaría de IA",
+        "text": "Asistentes, modelos locais e fluxos de intelixencia artificial xerativa."
       },
       {
-        "title": "Engineering Delivery",
-        "text": "GitFlow, CI/CD, pruebas y automatización para entregas confiables."
+        "title": "Entrega de enxeñaría",
+        "text": "GitFlow, CI/CD, probas e automatización para entregas fiables."
       }
     ]
   },
   "capabilities_page": {
     "eyebrow": "Capacidades",
-    "title": "Capacidades profesionales",
-    "lead": "Profundidad técnica aplicada a problemas reales."
+    "title": "Capacidades profesionais",
+    "lead": "Profundidade técnica aplicada a problemas reais."
   },
   "cv_request": {
-    "eyebrow": "CV",
-    "title": "Solicitar el CV",
-    "intro": "Envía tus datos y un breve mensaje para solicitar una copia actualizada del CV.",
-    "name": "Nombre o empresa",
+    "eyebrow": "Curriculum vitae",
+    "title": "Solicitar o CV",
+    "intro": "Envía os teus datos e unha mensaxe breve para solicitar unha copia actualizada do CV.",
+    "name": "Nome ou empresa",
     "email": "Correo electrónico",
     "phone": "Teléfono",
     "optional": "Opcional",
-    "message": "Mensaje breve",
-    "consent": "He leído y acepto la información de protección de datos y autorizo el tratamiento de los datos exclusivamente para gestionar mi solicitud del CV.",
-    "privacy_link": "Información de privacidad",
+    "message": "Mensaxe breve",
+    "consent": "Lin e acepto a información de protección de datos e autorizo o tratamento dos datos exclusivamente para xestionar a miña solicitude do CV.",
+    "privacy_link": "Información de privacidade",
     "official_link": "Normativa oficial de protección de datos",
     "official_url": "https://www.aepd.es/informes-y-resoluciones/normativa",
-    "submit": "Enviar solicitud",
-    "success": "Solicitud enviada correctamente. Recibirás respuesta en el correo facilitado.",
-    "error": "No ha sido posible enviar la solicitud. Inténtalo de nuevo más tarde."
+    "submit": "Enviar solicitude",
+    "success": "Solicitude enviada correctamente. Recibirás resposta no correo facilitado. Consulta tamén a información de privacidade e a normativa oficial.",
+    "error": "Non foi posible enviar a solicitude. Téntao de novo máis tarde."
   },
   "privacy": {
-    "eyebrow": "Información de privacidad",
-    "title": "Información de privacidad",
-    "intro": "Envía tus datos y un breve mensaje para solicitar una copia actualizada del CV.",
+    "eyebrow": "Protección de datos",
+    "title": "Información de privacidade",
+    "intro": "Información sobre o tratamento dos datos enviados mediante o formulario de solicitude do CV.",
     "controller_title": "Responsable",
     "controller": "Ivan Llopis / IvanLlopis.net.",
-    "purpose_title": "Finalidad",
-    "purpose": "Envía tus datos y un breve mensaje para solicitar una copia actualizada del CV.",
-    "data_title": "Datos",
-    "data": "Nombre o empresa, Correo electrónico, Teléfono y Mensaje breve.",
-    "legal_title": "Base legal",
-    "legal": "He leído y acepto la información de protección de datos y autorizo el tratamiento de los datos exclusivamente para gestionar mi solicitud del CV.",
+    "purpose_title": "Finalidade",
+    "purpose": "Xestionar e responder solicitudes do currículo profesional.",
+    "data_title": "Datos tratados",
+    "data": "Nome ou empresa, correo electrónico, teléfono opcional e mensaxe.",
+    "legal_title": "Base xurídica",
+    "legal": "Consentimento da persoa solicitante.",
     "retention_title": "Conservación",
-    "retention": "Solo durante el tiempo necesario para responder y cumplir obligaciones legales.",
-    "rights_title": "Derechos",
-    "rights": "Acceso, rectificación, supresión, limitación, oposición, portabilidad y retirada del consentimiento.",
-    "note": "Traducción informativa. Las referencias jurídicas oficiales son el RGPD y la Ley Orgánica 3/2018."
+    "retention": "Durante o tempo necesario para atender a solicitude e cumprir as obrigas legais aplicables.",
+    "rights_title": "Dereitos",
+    "rights": "Acceso, rectificación, supresión, limitación, oposición, portabilidade e retirada do consentimento.",
+    "note": "Esta tradución é informativa. A referencia xurídica oficial é o RGPD e a Lei orgánica 3/2018 publicada polas autoridades competentes."
   }
 }

@@ -285,5 +285,40 @@
     "eyebrow": "Yetkinlikler",
     "title": "Profesyonel yetkinlikler",
     "lead": "Gerçek sorunlara uygulanan teknik derinlik."
+  },
+  "cv_request": {
+    "eyebrow": "CV",
+    "title": "CV iste",
+    "intro": "Güncel CV kopyasını istemek için bilgilerinizi ve kısa bir mesaj gönderin.",
+    "name": "Ad veya şirket",
+    "email": "E-posta adresi",
+    "phone": "Telefon",
+    "optional": "İsteğe bağlı",
+    "message": "Kısa mesaj",
+    "consent": "Gizlilik bilgisini okudum ve kabul ediyorum; verilerin yalnızca CV talebimi yönetmek için işlenmesine izin veriyorum.",
+    "privacy_link": "Gizlilik bilgisi",
+    "official_link": "Resmî veri koruma kuralları",
+    "official_url": "https://www.aepd.es/informes-y-resoluciones/normativa",
+    "submit": "Talebi gönder",
+    "success": "Talep başarıyla gönderildi. Yanıt verdiğiniz e-posta adresine gönderilecektir.",
+    "error": "Talep gönderilemedi. Lütfen daha sonra tekrar deneyin."
+  },
+  "privacy": {
+    "eyebrow": "Gizlilik bilgisi",
+    "title": "Gizlilik bilgisi",
+    "intro": "Güncel CV kopyasını istemek için bilgilerinizi ve kısa bir mesaj gönderin.",
+    "controller_title": "Responsable",
+    "controller": "Ivan Llopis / IvanLlopis.net.",
+    "purpose_title": "Finalidad",
+    "purpose": "Güncel CV kopyasını istemek için bilgilerinizi ve kısa bir mesaj gönderin.",
+    "data_title": "Datos",
+    "data": "Ad veya şirket, E-posta adresi, Telefon y Kısa mesaj.",
+    "legal_title": "Base legal",
+    "legal": "Gizlilik bilgisini okudum ve kabul ediyorum; verilerin yalnızca CV talebimi yönetmek için işlenmesine izin veriyorum.",
+    "retention_title": "Conservación",
+    "retention": "Solo durante el tiempo necesario para responder y cumplir obligaciones legales.",
+    "rights_title": "Derechos",
+    "rights": "Acceso, rectificación, supresión, limitación, oposición, portabilidad y retirada del consentimiento.",
+    "note": "Traducción informativa. Las referencias jurídicas oficiales son el RGPD y la Ley Orgánica 3/2018."
   }
 }
