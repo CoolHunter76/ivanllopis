@@ -1,1 +1,29 @@
-<!doctype html><html lang="{{ lang }}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/static/images/favicon.ico"><link rel="stylesheet" href="/static/css/site.css?v=5.0"><title>IvanLlopis.net</title></head><body><canvas id="matrix-rain" class="matrix-rain" aria-hidden="true"></canvas><a class="skip-link" href="#main">{{ t.a11y.skip }}</a><header class="site-header"><a class="brand" href="/{{ lang }}"><img src="/static/images/favicon-32x32.png" alt=""><span>IVANLLOPIS.NET</span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">{{ t.nav.menu }}</button><nav id="site-nav" class="site-nav" aria-label="{{ t.nav.label }}"><a href="/{{ lang }}">{{ t.nav.home }}</a><a href="/{{ lang }}/profile">{{ t.nav.profile }}</a><a href="/{{ lang }}/capabilities">{{ t.nav.expertise }}</a><a href="/{{ lang }}/technologies">{{ t.nav.technology }}</a><a href="/{{ lang }}/projects">{{ t.nav.projects }}</a><a href="/{{ lang }}/work-life">{{ t.nav.work_life }}</a><a href="/{{ lang }}/hobbies">{{ t.nav.hobbies }}</a></nav><div class="language-switcher" data-language-switcher><button class="language-current" type="button" aria-expanded="false"><img src="/static/icons/flags/{{ lang }}.svg" alt=""><strong>{{ lang|upper }}</strong><span>{{ t.language.name }}</span></button><div class="language-menu" hidden>{% for item in languages %}<a href="/{{ item.code }}" data-language="{{ item.code }}"{% if item.code == lang %} aria-current="page"{% endif %}><img src="/static/icons/flags/{{ item.code }}.svg" alt=""><strong>{{ item.code|upper }}</strong><span>{{ item.name }}</span></a>{% endfor %}</div></div></header><main id="main">{% block content %}{% endblock %}</main><footer class="site-footer"><span>© 2026 IvanLlopis.net</span><span>{{ t.footer }}</span></footer><script src="/static/js/site.js?v=5.0" defer></script></body></html>
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/static/images/favicon.ico">
+  <link rel="manifest" href="/static/site.webmanifest">
+  <link rel="stylesheet" href="/static/css/site.css?v=6.0">
+  <title>IvanLlopis.net</title>
+</head>
+<body>
+  <canvas id="matrix-rain" class="matrix-rain" aria-hidden="true"></canvas>
+  <a class="skip-link" href="#main">{{ t.a11y.skip }}</a>
+  <header class="site-header">
+    <a class="brand" href="/{{ lang }}"><img src="/static/images/favicon-32x32.png" alt=""><span>IVANLLOPIS.NET</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">{{ t.nav.menu }}</button>
+    <nav id="site-nav" class="site-nav" aria-label="{{ t.nav.label }}">
+      <a href="/{{ lang }}">{{ t.nav.home }}</a><a href="/{{ lang }}/profile">{{ t.nav.profile }}</a><a href="/{{ lang }}/capabilities">{{ t.nav.expertise }}</a><a href="/{{ lang }}/technologies">{{ t.nav.technology }}</a><a href="/{{ lang }}/projects">{{ t.nav.projects }}</a><a href="/{{ lang }}/work-life">{{ t.nav.work_life }}</a><a href="/{{ lang }}/hobbies">{{ t.nav.hobbies }}</a>
+    </nav>
+    <div class="language-switcher" data-language-switcher>
+      <button class="language-current" type="button" aria-expanded="false"><img src="/static/icons/flags/{{ lang }}.svg" alt=""><strong>{{ lang|upper }}</strong><span>{{ t.language.name }}</span></button>
+      <div class="language-menu" hidden>{% for item in languages %}<a href="/{{ item.code }}" data-language="{{ item.code }}"{% if item.code == lang %} aria-current="page"{% endif %}><img src="/static/icons/flags/{{ item.code }}.svg" alt=""><strong>{{ item.code|upper }}</strong><span>{{ item.name }}</span></a>{% endfor %}</div>
+    </div>
+  </header>
+  <main id="main">{% block content %}{% endblock %}</main>
+  <footer class="site-footer"><span>© 2026 IvanLlopis.net</span><span>{{ t.footer }}</span></footer>
+  <script src="/static/js/site.js?v=6.0" defer></script>
+</body>
+</html>

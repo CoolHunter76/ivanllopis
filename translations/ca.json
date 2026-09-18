@@ -40,20 +40,20 @@
     "intro": "Un perfil que combina lideratge tècnic, desenvolupament, automatització i experimentació aplicada amb IA.",
     "items": [
       {
-        "title": "Software & APIs",
-        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
+        "title": "Programari i APIs",
+        "text": "Solucions mantenibles, serveis i APIs construïts sobre bases sòlides de qualitat."
       },
       {
-        "title": "Cloud & Data",
-        "text": "Azure, containers and data platforms suited to context and growth."
+        "title": "Cloud i dades",
+        "text": "Azure, contenidors i plataformes de dades adaptades al context i al creixement."
       },
       {
-        "title": "AI Engineering",
-        "text": "Assistants, local models and generative AI workflows."
+        "title": "Enginyeria d’IA",
+        "text": "Assistents, models locals i fluxos de treball amb intel·ligència artificial generativa."
       },
       {
-        "title": "Engineering Delivery",
-        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
+        "title": "Lliurament d’enginyeria",
+        "text": "GitFlow, CI/CD, proves i automatització per a lliuraments fiables."
       }
     ]
   },
@@ -264,20 +264,20 @@
     "lead": "Una visió completa de l’experiència, l’enfocament i la manera de treballar.",
     "items": [
       {
-        "title": "Software & APIs",
-        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
+        "title": "Programari i APIs",
+        "text": "Solucions mantenibles, serveis i APIs construïts sobre bases sòlides de qualitat."
       },
       {
-        "title": "Cloud & Data",
-        "text": "Azure, containers and data platforms suited to context and growth."
+        "title": "Cloud i dades",
+        "text": "Azure, contenidors i plataformes de dades adaptades al context i al creixement."
       },
       {
-        "title": "AI Engineering",
-        "text": "Assistants, local models and generative AI workflows."
+        "title": "Enginyeria d’IA",
+        "text": "Assistents, models locals i fluxos de treball amb intel·ligència artificial generativa."
       },
       {
-        "title": "Engineering Delivery",
-        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
+        "title": "Lliurament d’enginyeria",
+        "text": "GitFlow, CI/CD, proves i automatització per a lliuraments fiables."
       }
     ]
   },
