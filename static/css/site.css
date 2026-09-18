@@ -40,3 +40,60 @@ body{padding-top:72px}.site-header{position:fixed;inset:0 0 auto 0}.brand{displa
 
 /* Neural Reveal: accessible glasses removal illusion. */
 .neural-reveal{isolation:isolate;overflow:visible;perspective:1000px}.neural-face{grid-area:1/1;z-index:2;width:min(100%,480px);max-height:640px;object-fit:contain;transform-origin:50% 48%}.neural-without-glasses{z-index:3;opacity:0;filter:drop-shadow(0 0 20px #39ff8838)}.neural-glasses{position:absolute;z-index:7;top:43%;left:50%;display:flex;align-items:center;width:46%;height:10%;opacity:0;transform:translateX(-50%);transform-origin:50% 50%;filter:drop-shadow(0 0 8px #39ff88)}.neural-glasses span{width:44%;height:100%;border:4px solid #050806;border-radius:48%;background:linear-gradient(170deg,#07100a 20%,#123820 48%,#020403 75%);box-shadow:inset 0 0 10px #39ff8866}.neural-glasses i{width:12%;height:4px;background:#050806}.cyber-hand{position:absolute;right:-32%;top:43%;z-index:8;width:38%;height:29%;opacity:0;transform:rotate(-14deg);filter:drop-shadow(0 0 10px #39ff8866)}.cyber-hand b{position:absolute;right:5%;bottom:0;width:48%;height:62%;border:2px solid #39ff8899;border-radius:48% 48% 42% 42%;background:linear-gradient(145deg,#a67a62,#6f4a3d);box-shadow:inset 0 0 18px #39ff8838}.cyber-hand i{position:absolute;right:35%;width:48%;height:16%;border:2px solid #39ff8877;border-radius:999px;background:linear-gradient(90deg,#9a6e58,#c6977d);transform-origin:right center}.cyber-hand i:nth-of-type(1){top:8%;transform:rotate(-22deg)}.cyber-hand i:nth-of-type(2){top:27%;transform:rotate(-12deg)}.cyber-hand i:nth-of-type(3){top:46%;transform:rotate(2deg)}.cyber-hand i:nth-of-type(4){top:65%;transform:rotate(13deg)}.neural-canvas,.neural-scan{position:absolute;inset:0;z-index:9;width:100%;height:100%;pointer-events:none}.neural-scan{height:4px;top:8%;opacity:0;background:linear-gradient(90deg,transparent,#39ff88,#fff,#39ff88,transparent);box-shadow:0 0 20px #39ff88}.neural-reveal.is-revealing .neural-with-glasses{animation:face-with-glasses 5.2s ease both}.neural-reveal.is-revealing .neural-without-glasses{animation:face-without-glasses 5.2s ease both}.neural-reveal.is-revealing .neural-glasses{animation:glasses-flight 5.2s cubic-bezier(.22,.75,.24,1) both}.neural-reveal.is-revealing .cyber-hand{animation:hand-flight 5.2s cubic-bezier(.22,.75,.24,1) both}.neural-reveal.is-revealing .neural-scan{animation:neural-scan 2.4s ease .9s both}@keyframes face-with-glasses{0%,20%{opacity:1;filter:none}27%,70%{opacity:0;filter:drop-shadow(5px 0 #00e5ff) drop-shadow(-5px 0 #ff2d75)}78%,100%{opacity:1;filter:none}}@keyframes face-without-glasses{0%,20%,78%,100%{opacity:0;transform:scale(.992)}30%,68%{opacity:1;transform:scale(1)}}@keyframes glasses-flight{0%,9%,92%,100%{opacity:0;transform:translateX(-50%) translate(0,0) rotate(0) scale(1)}14%{opacity:1}30%,68%{opacity:1;transform:translateX(-50%) translate(62%,28%) rotate(13deg) scale(.88)}82%{opacity:1;transform:translateX(-50%) translate(0,0) rotate(0) scale(1)}}@keyframes hand-flight{0%,7%,94%,100%{opacity:0;right:-32%;transform:rotate(-14deg)}14%,28%{opacity:.96;right:3%;transform:rotate(-4deg)}34%,66%{opacity:.94;right:-2%;transform:translate(30%,35%) rotate(8deg)}75%,88%{opacity:.96;right:3%;transform:rotate(-4deg)}}@keyframes neural-scan{0%{top:12%;opacity:0}15%,75%{opacity:.9}100%{top:86%;opacity:0}}@media(max-width:640px){.cyber-hand{width:45%}.neural-reveal.is-revealing .cyber-hand,.neural-reveal.is-revealing .neural-glasses,.neural-reveal.is-revealing .neural-face{animation-duration:4s}}@media(prefers-reduced-motion:reduce){.neural-without-glasses,.neural-glasses,.cyber-hand,.neural-canvas,.neural-scan{display:none!important}.neural-reveal *{animation:none!important}}
+
+
+/* Neural Reveal v2: smooth glasses dissolve, no hand or detached glasses. */
+.neural-glasses,
+.cyber-hand {
+    display: none !important;
+}
+
+.neural-reveal.is-revealing .neural-with-glasses {
+    animation: glasses-soft-dissolve 5.2s cubic-bezier(.4, 0, .2, 1) both;
+}
+
+.neural-reveal.is-revealing .neural-without-glasses {
+    animation: eyes-soft-reveal 5.2s cubic-bezier(.4, 0, .2, 1) both;
+}
+
+@keyframes glasses-soft-dissolve {
+    0%,
+    16%,
+    84%,
+    100% {
+        opacity: 1;
+        filter: none;
+        transform: scale(1);
+    }
+    30%,
+    70% {
+        opacity: 0;
+        filter: blur(2px) brightness(1.08);
+        transform: scale(1.004);
+    }
+}
+
+@keyframes eyes-soft-reveal {
+    0%,
+    16%,
+    84%,
+    100% {
+        opacity: 0;
+        filter: blur(3px) drop-shadow(0 0 0 transparent);
+        transform: scale(.996);
+    }
+    30%,
+    70% {
+        opacity: 1;
+        filter: blur(0) drop-shadow(0 0 18px rgba(57, 255, 136, .28));
+        transform: scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .neural-without-glasses,
+    .neural-canvas,
+    .neural-scan {
+        display: none !important;
+    }
+}
