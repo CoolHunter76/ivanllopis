@@ -19,7 +19,13 @@ def test_new_languages_and_flags():
 
 def test_source_vision_layers_and_accessibility():
     html = client.get("/es").text
-    for marker in ("source-vision", "source-base", "source-matrix", "source-canvas", "source-scan"):
+    for marker in (
+        "neural-reveal",
+        "neural-with-glasses",
+        "neural-without-glasses",
+        "neural-canvas",
+        "neural-scan",
+    ):
         assert marker in html
     css = Path("static/css/site.css").read_text(encoding="utf-8")
     assert "prefers-reduced-motion:reduce" in css
