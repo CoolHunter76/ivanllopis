@@ -277,10 +277,10 @@ def _check_cv_rate_limit(request: Request) -> None:
 def send_cv_request(body: CvRequest) -> None:
     host = os.getenv("CV_SMTP_HOST", "smtp.ionos.es")
     port = int(os.getenv("CV_SMTP_PORT", "465"))
-    username = os.getenv("CV_SMTP_USERNAME", "")
+    username = os.getenv("CV_SMTP_USERNAME", "contact@ivanllopis.net")
     password = os.getenv("CV_SMTP_PASSWORD", "")
     sender = os.getenv("CV_MAIL_FROM", username)
-    recipient = os.getenv("CV_MAIL_TO", "")
+    recipient = os.getenv("CV_MAIL_TO", "cv@ivanllopis.net")
     if not all((host, username, password, sender, recipient)):
         raise RuntimeError("CV email service is not configured")
 
