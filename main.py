@@ -1,4 +1,5 @@
 import json
+import os
 from pathlib import Path
 
 from fastapi import FastAPI, Request
@@ -27,6 +28,7 @@ def trn(lang_code: str) -> dict:
 def ctx(lang_code: str, **extra: object) -> dict:
     return {
         "lang": lang_code,
+        "contact_url": os.getenv("PUBLIC_CONTACT_URL", f"/{lang_code}#profile"),
         "t": trn(lang_code),
         "languages": [{"code": code, **trn(code)["language"]} for code in SUPPORTED],
         **extra,
@@ -165,11 +167,23 @@ AI_ENGINES = [
 ]
 HOBBIES = [
     {"id": "swimming", "name": "Natación", "icon": "/static/icons/hobbies/waves.svg"},
-    {"id": "trekking", "name": "Senderismo", "icon": "/static/icons/hobbies/mountain.svg"},
-    {"id": "gaming", "name": "Videojuegos", "icon": "/static/icons/hobbies/gamepad.svg"},
+    {
+        "id": "trekking",
+        "name": "Senderismo",
+        "icon": "/static/icons/hobbies/mountain.svg",
+    },
+    {
+        "id": "gaming",
+        "name": "Videojuegos",
+        "icon": "/static/icons/hobbies/gamepad.svg",
+    },
     {"id": "drums", "name": "Batería", "icon": "/static/icons/hobbies/drum.svg"},
     {"id": "travel", "name": "Viajes", "icon": "/static/icons/hobbies/plane.svg"},
-    {"id": "dance", "name": "Bailes latinos", "icon": "/static/icons/hobbies/music.svg"},
+    {
+        "id": "dance",
+        "name": "Bailes latinos",
+        "icon": "/static/icons/hobbies/music.svg",
+    },
 ]
 PROJECTS = [
     {"number": "01", "key": "events", "tags": [".NET", "APIs", "SQL", "Azure"]},
@@ -207,3 +221,10 @@ def hobbies(request: Request, lang: str):
     return templates.TemplateResponse(
         request=request, name="hobbies.html", context=ctx(lang, hobbies=HOBBIES)
     )
+
+
+@app.get("/{lang}/work-life", response_class=HTMLResponse, include_in_schema=False)
+def work_life(request: Request, lang: str):
+    if lang not in SUPPORTED:
+        return RedirectResponse("/es/work-life", status_code=307)
+    return templates.TemplateResponse(request=request, name="work_life.html", context=ctx(lang))

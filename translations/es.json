@@ -13,7 +13,9 @@
     "expertise": "Capacidades",
     "technology": "Tecnologías",
     "projects": "Proyectos",
-    "hobbies": "Aficiones"
+    "hobbies": "Aficiones",
+    "home": "Inicio",
+    "work_life": "Vida laboral"
   },
   "hero": {
     "eyebrow": "Software Engineering Lead · Barcelona",
@@ -146,5 +148,87 @@
   "common": {
     "official_site": "Sitio oficial"
   },
-  "footer": "Construido con FastAPI, curiosidad y mejora continua."
+  "footer": "Construido con FastAPI, curiosidad y mejora continua.",
+  "work_life": {
+    "kicker": "Currículum profesional",
+    "profile_title": "Perfil",
+    "profile_text": "Software Engineer Lead especializado en soluciones de software, cloud, datos, DevOps e inteligencia artificial, con foco en calidad, mantenibilidad y entrega sostenible.",
+    "core_title": "Competencias clave",
+    "core": [
+      "Liderazgo técnico",
+      "Arquitectura de software",
+      "Diseño de APIs",
+      "Cloud y Azure",
+      "IA generativa",
+      "CI/CD y automatización"
+    ],
+    "stack_title": "Tecnologías",
+    "languages_title": "Portfolio multilingüe",
+    "languages_text": "Español, catalán, euskera, inglés, francés, ucraniano, italiano y turco.",
+    "experience_title": "Experiencia profesional",
+    "current": "Rol actual",
+    "current_text": "Responsabilidad de liderazgo e ingeniería sobre soluciones técnicas, desde la definición y arquitectura hasta la entrega y evolución.",
+    "responsibilities": [
+      "Traducir necesidades de producto y negocio en decisiones técnicas claras.",
+      "Guiar arquitectura, desarrollo, calidad y automatización.",
+      "Impulsar prácticas de GitFlow, pruebas y CI/CD.",
+      "Explorar aplicaciones responsables de inteligencia artificial generativa."
+    ],
+    "focus_title": "Áreas de contribución",
+    "focus": [
+      [
+        "Ingeniería",
+        "Soluciones mantenibles con .NET, C#, Python, FastAPI y APIs."
+      ],
+      [
+        "Cloud y datos",
+        "Azure, Docker, SQL Server, PostgreSQL y MongoDB."
+      ],
+      [
+        "IA aplicada",
+        "Copilot, asistentes, agentes, Ollama y modelos locales."
+      ],
+      [
+        "Entrega",
+        "GitHub Actions, automatización, pruebas y observabilidad."
+      ]
+    ],
+    "projects_title": "Proyectos representativos",
+    "projects": [
+      [
+        "Plataforma de eventos",
+        "Producto digital para eventos, talleres, asistentes y operaciones."
+      ],
+      [
+        "Agentes de IA",
+        "Asistentes con conocimiento controlado, FastAPI, Ollama y Copilot."
+      ],
+      [
+        "Arquitecturas cloud",
+        "Automatización y despliegue con Azure, Docker y DevOps."
+      ],
+      [
+        "IvanLlopis.net",
+        "Portfolio multilingüe con SEO, CI/CD y asistente local."
+      ]
+    ],
+    "cta_kicker": "Perfil completo",
+    "cta_title": "¿Quieres conocer la trayectoria con más detalle?",
+    "cta_text": "Contacta conmigo para solicitar una versión actualizada del CV.",
+    "cta_button": "Solicitar CV",
+    "stack": [
+      "Microsoft Azure",
+      ".NET",
+      "C#",
+      "Python",
+      "FastAPI",
+      "Docker",
+      "SQL Server",
+      "PostgreSQL",
+      "MongoDB",
+      "GitHub Actions",
+      "Microsoft Copilot",
+      "Ollama"
+    ]
+  }
 }
