@@ -12,7 +12,15 @@ def test_work_life_routes_render_in_all_languages():
     for language in SUPPORTED:
         response = client.get(f"/{language}/work-life", follow_redirects=False)
         assert response.status_code == 200
-        for marker in ("career-list", "career-entry", "HP Hewlett-Packard", "Repsol", "MAPFRE", "ADIF", "EnergyaVM"):
+        for marker in (
+            "career-list",
+            "career-entry",
+            "HP Hewlett-Packard",
+            "Repsol",
+            "MAPFRE",
+            "ADIF",
+            "EnergyaVM",
+        ):
             assert marker in response.text
 
 

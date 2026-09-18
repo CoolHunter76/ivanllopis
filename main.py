@@ -232,7 +232,6 @@ CLIENT_EXPERIENCES = [
 ]
 
 
-
 @app.get("/health", include_in_schema=False)
 def health() -> dict:
     return {"status": "ok", "languages": SUPPORTED}

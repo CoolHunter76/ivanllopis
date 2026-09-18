@@ -6,7 +6,14 @@ from main import SUPPORTED, app
 
 client = TestClient(app)
 PAGES = ("profile", "capabilities", "technologies", "projects", "work-life", "hobbies")
-MARKERS = {"profile": "page-profile", "capabilities": "page-capabilities", "technologies": "page-technologies", "projects": "page-projects", "work-life": "career-list", "hobbies": "page-hobbies"}
+MARKERS = {
+    "profile": "page-profile",
+    "capabilities": "page-capabilities",
+    "technologies": "page-technologies",
+    "projects": "page-projects",
+    "work-life": "career-list",
+    "hobbies": "page-hobbies",
+}
 
 
 def test_independent_pages_render_for_every_language():
