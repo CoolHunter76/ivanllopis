@@ -44,49 +44,32 @@ def test_cv_request_validates_privacy_email_and_honeypot(monkeypatch):
     assert client.post("/api/cv-request", json=payload(website="spam")).status_code == 400
 
 
-def test_cv_mail_defaults_use_ionos_mailbox_and_cv_alias(monkeypatch):
+def test_send_cv_request_uses_resend(monkeypatch):
     captured = {}
+    monkeypatch.setenv("RESEND_API_KEY", "re_test")
+    monkeypatch.setenv("CV_MAIL_FROM", "IvanLlopis.net <cv@ivanllopis.net>")
+    monkeypatch.setenv("CV_MAIL_TO", "recipient@example.com")
 
-    class FakeSmtp:
-        def __init__(self, host, port, context, timeout):
-            captured.update(host=host, port=port, timeout=timeout)
+    def fake_send(params):
+        captured.update(params)
+        return {"id": "email_test"}
 
-        def __enter__(self):
-            return self
-
-        def __exit__(self, exc_type, exc_value, traceback):
-            return False
-
-        def login(self, username, password):
-            captured.update(username=username, password=password)
-
-        def send_message(self, message):
-            captured.update(
-                sender=message["From"],
-                recipient=message["To"],
-                reply_to=message["Reply-To"],
-            )
-
-    for variable in (
-        "CV_SMTP_HOST",
-        "CV_SMTP_PORT",
-        "CV_SMTP_USERNAME",
-        "CV_MAIL_FROM",
-        "CV_MAIL_TO",
-    ):
-        monkeypatch.delenv(variable, raising=False)
-    monkeypatch.setenv("CV_SMTP_PASSWORD", "test-password")
-    monkeypatch.setattr(main.smtplib, "SMTP_SSL", FakeSmtp)
-
+    monkeypatch.setattr(main.resend.Emails, "send", fake_send)
     main.send_cv_request(main.CvRequest(**payload()))
 
-    assert captured == {
-        "host": "smtp.ionos.es",
-        "port": 465,
-        "timeout": 15,
-        "username": "contact@ivanllopis.net",
-        "password": "test-password",
-        "sender": "contact@ivanllopis.net",
-        "recipient": "cv@ivanllopis.net",
-        "reply_to": "sender@example.com",
-    }
+    assert captured["from"] == "IvanLlopis.net <cv@ivanllopis.net>"
+    assert captured["to"] == ["recipient@example.com"]
+    assert captured["reply_to"] == "sender@example.com"
+    assert "Example Company" in captured["text"]
+
+
+def test_send_cv_request_requires_resend_configuration(monkeypatch):
+    monkeypatch.delenv("RESEND_API_KEY", raising=False)
+    monkeypatch.delenv("CV_MAIL_TO", raising=False)
+
+    try:
+        main.send_cv_request(main.CvRequest(**payload()))
+    except RuntimeError as error:
+        assert str(error) == "CV email service is not configured"
+    else:
+        raise AssertionError("Expected missing Resend configuration to fail")
