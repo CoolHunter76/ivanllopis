@@ -229,6 +229,61 @@
       "GitHub Actions",
       "Microsoft Copilot",
       "Ollama"
+    ],
+    "clients": {
+      "hp": {
+        "type": "Proyecto para cliente",
+        "role": "Manager y mediador cliente-equipo",
+        "text": "Aplicación web de acceso a manuales de instalación y uso de impresoras empresariales."
+      },
+      "repsol": {
+        "type": "Proyecto para cliente",
+        "role": "Colaboración en automatización y privacidad",
+        "text": "Script para detectar, anonimizar y eliminar datos personales o sensibles de currículums para su catalogación masiva."
+      },
+      "mapfre": {
+        "type": "Proyecto para cliente",
+        "role": "Desarrollo cloud y procesamiento de datos",
+        "text": "Azure Function para generar datos y estadísticas internas a partir de información almacenada en contenedores de datos."
+      },
+      "adif": {
+        "type": "Proyecto para cliente",
+        "role": "Asesoramiento técnico en ciberseguridad",
+        "text": "Análisis de auditoría y definición de acciones técnicas para securizar productos en Azure."
+      },
+      "energyavm": {
+        "type": "Proyecto para cliente",
+        "role": "Análisis y desarrollo de APIs",
+        "text": "API REST para ofrecer facturas, medidas e información operativa autorizada a clientes."
+      }
+    }
+  },
+  "profile_page": {
+    "eyebrow": "Perfil",
+    "title": "Perfil profesional",
+    "lead": "Una visión completa de la experiencia, el enfoque y la forma de trabajar.",
+    "items": [
+      {
+        "title": "Software & APIs",
+        "text": "Soluciones mantenibles, servicios y APIs con bases sólidas de calidad."
+      },
+      {
+        "title": "Cloud & Data",
+        "text": "Azure, contenedores y datos adaptados al contexto y al crecimiento."
+      },
+      {
+        "title": "AI Engineering",
+        "text": "Asistentes, modelos locales y flujos de inteligencia artificial generativa."
+      },
+      {
+        "title": "Engineering Delivery",
+        "text": "GitFlow, CI/CD, pruebas y automatización para entregas confiables."
+      }
     ]
+  },
+  "capabilities_page": {
+    "eyebrow": "Capacidades",
+    "title": "Capacidades profesionales",
+    "lead": "Profundidad técnica aplicada a problemas reales."
   }
 }

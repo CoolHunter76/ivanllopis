@@ -229,6 +229,61 @@
       "GitHub Actions",
       "Microsoft Copilot",
       "Ollama"
+    ],
+    "clients": {
+      "hp": {
+        "type": "Client project",
+        "role": "Client-team manager and mediator",
+        "text": "Web application providing access to installation and usage manuals for enterprise printers."
+      },
+      "repsol": {
+        "type": "Client project",
+        "role": "Automation and privacy collaboration",
+        "text": "Script to detect, anonymize and remove personal or sensitive data from résumés for bulk cataloguing."
+      },
+      "mapfre": {
+        "type": "Client project",
+        "role": "Cloud development and data processing",
+        "text": "Azure Function generating internal data and statistics from information stored in data containers."
+      },
+      "adif": {
+        "type": "Client project",
+        "role": "Cybersecurity technical advisory",
+        "text": "Audit analysis and technical remediation actions to secure products on Azure."
+      },
+      "energyavm": {
+        "type": "Client project",
+        "role": "API analysis and development",
+        "text": "REST API providing authorised invoices, measurements and operational information to customers."
+      }
+    }
+  },
+  "profile_page": {
+    "eyebrow": "Profile",
+    "title": "Professional profile",
+    "lead": "A complete view of experience, approach and ways of working.",
+    "items": [
+      {
+        "title": "Software & APIs",
+        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
+      },
+      {
+        "title": "Cloud & Data",
+        "text": "Azure, containers and data platforms suited to context and growth."
+      },
+      {
+        "title": "AI Engineering",
+        "text": "Assistants, local models and generative AI workflows."
+      },
+      {
+        "title": "Engineering Delivery",
+        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
+      }
     ]
+  },
+  "capabilities_page": {
+    "eyebrow": "Capabilities",
+    "title": "Professional capabilities",
+    "lead": "Technical depth applied to real problems."
   }
 }
