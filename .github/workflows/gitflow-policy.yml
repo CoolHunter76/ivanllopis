@@ -5,52 +5,48 @@ on:
     branches:
       - develop
       - master
-    types:
-      - opened
-      - synchronize
-      - reopened
-      - edited
 
 permissions:
   contents: read
-  pull-requests: read
 
 jobs:
-  policy:
+  gitflow-policy:
     name: gitflow-policy
     runs-on: ubuntu-latest
 
     steps:
       - name: Validate source and target branches
+        shell: bash
         env:
-          BASE_BRANCH: ${{ github.base_ref }}
           HEAD_BRANCH: ${{ github.head_ref }}
+          BASE_BRANCH: ${{ github.base_ref }}
         run: |
           echo "Validating $HEAD_BRANCH -> $BASE_BRANCH"
 
-          if [ "$BASE_BRANCH" = "develop" ]; then
-            case "$HEAD_BRANCH" in
-              feature/*|bugfix/*|release/*|hotfix/*|master)
-                exit 0
-                ;;
-              *)
-                echo "Pull requests to develop must come from feature/*, bugfix/*, release/*, hotfix/* or master."
+          case "$BASE_BRANCH" in
+            develop)
+              if [[ "$HEAD_BRANCH" == feature/* ||
+                    "$HEAD_BRANCH" == bugfix/* ||
+                    "$HEAD_BRANCH" == dependabot/* ]]; then
+                echo "Valid GitFlow pull request: $HEAD_BRANCH -> $BASE_BRANCH"
+              else
+                echo "Pull requests to develop must come from feature/*, bugfix/* or dependabot/*."
                 exit 1
-                ;;
-            esac
-          fi
+              fi
+              ;;
 
-          if [ "$BASE_BRANCH" = "master" ]; then
-            case "$HEAD_BRANCH" in
-              release/*|hotfix/*)
-                exit 0
-                ;;
-              *)
-                echo "Production pull requests to master must come from release/* or hotfix/*."
+            master)
+              if [[ "$HEAD_BRANCH" == release/* ||
+                    "$HEAD_BRANCH" == hotfix/* ]]; then
+                echo "Valid GitFlow pull request: $HEAD_BRANCH -> $BASE_BRANCH"
+              else
+                echo "Pull requests to master must come from release/* or hotfix/*."
                 exit 1
-                ;;
-            esac
-          fi
+              fi
+              ;;
 
-          echo "Unsupported target branch: $BASE_BRANCH"
-          exit 1
+            *)
+              echo "Unsupported target branch: $BASE_BRANCH"
+              exit 1
+              ;;
+          esac

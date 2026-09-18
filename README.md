@@ -1,3 +1,2 @@
-# Sprint 5 Final v2
-
-8 idiomas, selector descriptivo con bandera animada, IA generativa, Matrix, fotos, favicons y responsive.
+# Complete card translation fix
+Replaces all eight locale files and adds regression tests for Spanish text leakage in non-Spanish card content.
