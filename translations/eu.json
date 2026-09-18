@@ -285,5 +285,40 @@
     "eyebrow": "Gaitasunak",
     "title": "Gaitasun profesionalak",
     "lead": "Benetako arazoei aplikatutako sakontasun teknikoa."
+  },
+  "cv_request": {
+    "eyebrow": "CV",
+    "title": "CVa eskatu",
+    "intro": "Bidali zure datuak eta mezu labur bat CVaren kopia eguneratua eskatzeko.",
+    "name": "Izena edo enpresa",
+    "email": "Helbide elektronikoa",
+    "phone": "Telefonoa",
+    "optional": "Aukerakoa",
+    "message": "Mezu laburra",
+    "consent": "Pribatutasun-informazioa irakurri eta onartzen dut, eta datuak CV eskaera kudeatzeko soilik tratatzeko baimena ematen dut.",
+    "privacy_link": "Pribatutasun-informazioa",
+    "official_link": "Datu-babesaren araudi ofiziala",
+    "official_url": "https://www.aepd.es/informes-y-resoluciones/normativa",
+    "submit": "Bidali eskaera",
+    "success": "Eskaera behar bezala bidali da. Emandako helbidean jasoko duzu erantzuna.",
+    "error": "Ezin izan da eskaera bidali. Saiatu berriro geroago."
+  },
+  "privacy": {
+    "eyebrow": "Pribatutasun-informazioa",
+    "title": "Pribatutasun-informazioa",
+    "intro": "Bidali zure datuak eta mezu labur bat CVaren kopia eguneratua eskatzeko.",
+    "controller_title": "Responsable",
+    "controller": "Ivan Llopis / IvanLlopis.net.",
+    "purpose_title": "Finalidad",
+    "purpose": "Bidali zure datuak eta mezu labur bat CVaren kopia eguneratua eskatzeko.",
+    "data_title": "Datos",
+    "data": "Izena edo enpresa, Helbide elektronikoa, Telefonoa y Mezu laburra.",
+    "legal_title": "Base legal",
+    "legal": "Pribatutasun-informazioa irakurri eta onartzen dut, eta datuak CV eskaera kudeatzeko soilik tratatzeko baimena ematen dut.",
+    "retention_title": "Conservación",
+    "retention": "Solo durante el tiempo necesario para responder y cumplir obligaciones legales.",
+    "rights_title": "Derechos",
+    "rights": "Acceso, rectificación, supresión, limitación, oposición, portabilidad y retirada del consentimiento.",
+    "note": "Traducción informativa. Las referencias jurídicas oficiales son el RGPD y la Ley Orgánica 3/2018."
   }
 }

@@ -1,29 +1,29 @@
 {
   "language": {
-    "name": "English",
-    "flag": "🇬🇧"
+    "name": "Русский",
+    "flag": "🇷🇺"
   },
   "a11y": {
     "skip": "Skip to content"
   },
   "nav": {
-    "menu": "Menu",
-    "label": "Main navigation",
-    "profile": "Profile",
-    "expertise": "Capabilities",
-    "technology": "Technology",
-    "projects": "Projects",
-    "hobbies": "Hobbies",
-    "home": "Home",
-    "work_life": "Career"
+    "menu": "Меню",
+    "label": "Основная навигация",
+    "profile": "Профиль",
+    "expertise": "Компетенции",
+    "technology": "Технологии",
+    "projects": "Проекты",
+    "hobbies": "Увлечения",
+    "home": "Главная",
+    "work_life": "Опыт работы"
   },
   "hero": {
     "eyebrow": "Software Engineering Lead · Barcelona",
-    "title": "Software engineering with vision, rigor and purpose.",
-    "lead": "I am Ivan Llopis. I lead software, cloud and AI solutions from architecture to secure, observable and sustainable delivery.",
-    "projects": "View projects",
-    "explore": "Explore profile",
-    "image_alt": "Professional portrait of Ivan Llopis",
+    "title": "Программная инженерия с видением, точностью и целью.",
+    "lead": "Я создаю и развиваю решения в области программного обеспечения, облачных технологий и искусственного интеллекта: от архитектуры до безопасной и устойчивой эксплуатации.",
+    "projects": "Смотреть проекты",
+    "explore": "Открыть профиль",
+    "image_alt": "Профессиональный портрет",
     "status_title": "Open to connect",
     "status_text": "Software · Cloud · AI"
   },
@@ -35,25 +35,25 @@
     "learning": "aprendizaje continuo"
   },
   "expertise": {
-    "eyebrow": "Capabilities",
-    "title": "From technical strategy to production.",
-    "intro": "A profile combining technical leadership, development, automation and applied AI experimentation.",
+    "eyebrow": "Компетенции",
+    "title": "От технической стратегии до эксплуатации.",
+    "intro": "Техническое лидерство, разработка, автоматизация и практическое применение ИИ.",
     "items": [
       {
-        "title": "Software & APIs",
-        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
+        "title": "Программное обеспечение и API",
+        "text": "Поддерживаемые сервисы и API на прочной основе качества."
       },
       {
-        "title": "Cloud & Data",
-        "text": "Azure, containers and data platforms suited to context and growth."
+        "title": "Облако и данные",
+        "text": "Azure, контейнеры и платформы данных с учетом контекста и роста."
       },
       {
-        "title": "AI Engineering",
-        "text": "Assistants, local models and generative AI workflows."
+        "title": "Инженерия ИИ",
+        "text": "Ассистенты, локальные модели и процессы генеративного ИИ."
       },
       {
-        "title": "Engineering Delivery",
-        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
+        "title": "Поставка решений",
+        "text": "GitFlow, CI/CD, тестирование и автоматизация надежных поставок."
       }
     ]
   },
@@ -259,66 +259,66 @@
     }
   },
   "profile_page": {
-    "eyebrow": "Profile",
-    "title": "Professional profile",
-    "lead": "A complete view of experience, approach and ways of working.",
+    "eyebrow": "Профиль",
+    "title": "Профессиональный профиль",
+    "lead": "Полный обзор опыта, подхода и способа работы.",
     "items": [
       {
-        "title": "Software & APIs",
-        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
+        "title": "Программное обеспечение и API",
+        "text": "Поддерживаемые сервисы и API на прочной основе качества."
       },
       {
-        "title": "Cloud & Data",
-        "text": "Azure, containers and data platforms suited to context and growth."
+        "title": "Облако и данные",
+        "text": "Azure, контейнеры и платформы данных с учетом контекста и роста."
       },
       {
-        "title": "AI Engineering",
-        "text": "Assistants, local models and generative AI workflows."
+        "title": "Инженерия ИИ",
+        "text": "Ассистенты, локальные модели и процессы генеративного ИИ."
       },
       {
-        "title": "Engineering Delivery",
-        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
+        "title": "Поставка решений",
+        "text": "GitFlow, CI/CD, тестирование и автоматизация надежных поставок."
       }
     ]
   },
   "capabilities_page": {
-    "eyebrow": "Capabilities",
-    "title": "Professional capabilities",
-    "lead": "Technical depth applied to real problems."
+    "eyebrow": "Компетенции",
+    "title": "Профессиональные компетенции",
+    "lead": "Техническая глубина для решения реальных задач."
   },
   "cv_request": {
     "eyebrow": "CV",
-    "title": "Request the CV",
-    "intro": "Send your details and a short message to request an up-to-date copy of the CV.",
-    "name": "Name or company",
-    "email": "Email address",
-    "phone": "Phone",
-    "optional": "Optional",
-    "message": "Short message",
-    "consent": "I have read and accept the privacy information and authorise processing solely to manage my CV request.",
-    "privacy_link": "Privacy information",
-    "official_link": "Official data protection rules",
+    "title": "Запросить CV",
+    "intro": "Укажите имя или компанию, электронную почту и короткое сообщение.",
+    "name": "Имя или компания",
+    "email": "Электронная почта",
+    "phone": "Телефон",
+    "optional": "Необязательно",
+    "message": "Короткое сообщение",
+    "consent": "Я прочитал информацию о конфиденциальности и разрешаю обработку данных исключительно для ответа на запрос CV.",
+    "privacy_link": "Информация о конфиденциальности",
+    "official_link": "Официальные нормы защиты данных",
     "official_url": "https://www.aepd.es/informes-y-resoluciones/normativa",
-    "submit": "Send request",
-    "success": "Request sent successfully. A reply will be sent to the email provided.",
-    "error": "The request could not be sent. Please try again later."
+    "submit": "Отправить запрос",
+    "success": "Запрос успешно отправлен. Ответ будет направлен на указанный адрес.",
+    "error": "Не удалось отправить запрос. Повторите попытку позже."
   },
   "privacy": {
-    "eyebrow": "Privacy information",
-    "title": "Privacy information",
-    "intro": "Send your details and a short message to request an up-to-date copy of the CV.",
-    "controller_title": "Responsable",
+    "eyebrow": "Информация о конфиденциальности",
+    "title": "Информация о конфиденциальности",
+    "intro": "Укажите имя или компанию, электронную почту и короткое сообщение.",
+    "controller_title": "Controller",
     "controller": "Ivan Llopis / IvanLlopis.net.",
-    "purpose_title": "Finalidad",
-    "purpose": "Send your details and a short message to request an up-to-date copy of the CV.",
-    "data_title": "Datos",
-    "data": "Name or company, Email address, Phone y Short message.",
-    "legal_title": "Base legal",
-    "legal": "I have read and accept the privacy information and authorise processing solely to manage my CV request.",
-    "retention_title": "Conservación",
-    "retention": "Solo durante el tiempo necesario para responder y cumplir obligaciones legales.",
-    "rights_title": "Derechos",
-    "rights": "Acceso, rectificación, supresión, limitación, oposición, portabilidad y retirada del consentimiento.",
-    "note": "Traducción informativa. Las referencias jurídicas oficiales son el RGPD y la Ley Orgánica 3/2018."
+    "purpose_title": "Purpose",
+    "purpose": "Укажите имя или компанию, электронную почту и короткое сообщение.",
+    "data_title": "Data",
+    "data": "Имя или компания, Электронная почта, Телефон, Короткое сообщение.",
+    "legal_title": "Legal basis",
+    "legal": "Я прочитал информацию о конфиденциальности и разрешаю обработку данных исключительно для ответа на запрос CV.",
+    "retention_title": "Retention",
+    "retention": "Only for the time needed to answer and comply with legal obligations.",
+    "rights_title": "Rights",
+    "rights": "Access, rectification, erasure, restriction, objection, portability and withdrawal of consent.",
+    "note": "Informative translation. The official legal references are the GDPR and Spanish Organic Law 3/2018."
   }
 }

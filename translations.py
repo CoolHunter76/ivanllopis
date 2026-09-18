@@ -8,7 +8,21 @@ from typing import Any
 BASE_DIR = Path(__file__).resolve().parent
 TRANSLATIONS_DIR = BASE_DIR / "translations"
 DEFAULT_LANGUAGE = "es"
-SUPPORTED_LANGUAGES = ("es", "ca", "eu", "en", "fr", "uk", "it", "tr")
+SUPPORTED_LANGUAGES = (
+    "es",
+    "ca",
+    "gl",
+    "oc",
+    "eu",
+    "en",
+    "fr",
+    "uk",
+    "it",
+    "tr",
+    "ru",
+    "zh-Hans",
+    "ja",
+)
 
 
 @lru_cache(maxsize=len(SUPPORTED_LANGUAGES))

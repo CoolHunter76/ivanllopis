@@ -285,5 +285,40 @@
     "eyebrow": "Компетенції",
     "title": "Професійні компетенції",
     "lead": "Технічна глибина, застосована до реальних завдань."
+  },
+  "cv_request": {
+    "eyebrow": "CV",
+    "title": "Запросити CV",
+    "intro": "Надішліть свої дані та коротке повідомлення, щоб запросити актуальну копію CV.",
+    "name": "Ім’я або компанія",
+    "email": "Електронна пошта",
+    "phone": "Телефон",
+    "optional": "Необов’язково",
+    "message": "Коротке повідомлення",
+    "consent": "Я прочитав інформацію про конфіденційність і погоджуюся на обробку даних виключно для опрацювання запиту CV.",
+    "privacy_link": "Інформація про конфіденційність",
+    "official_link": "Офіційні правила захисту даних",
+    "official_url": "https://www.aepd.es/informes-y-resoluciones/normativa",
+    "submit": "Надіслати запит",
+    "success": "Запит успішно надіслано. Відповідь надійде на вказану адресу.",
+    "error": "Не вдалося надіслати запит. Спробуйте пізніше."
+  },
+  "privacy": {
+    "eyebrow": "Інформація про конфіденційність",
+    "title": "Інформація про конфіденційність",
+    "intro": "Надішліть свої дані та коротке повідомлення, щоб запросити актуальну копію CV.",
+    "controller_title": "Responsable",
+    "controller": "Ivan Llopis / IvanLlopis.net.",
+    "purpose_title": "Finalidad",
+    "purpose": "Надішліть свої дані та коротке повідомлення, щоб запросити актуальну копію CV.",
+    "data_title": "Datos",
+    "data": "Ім’я або компанія, Електронна пошта, Телефон y Коротке повідомлення.",
+    "legal_title": "Base legal",
+    "legal": "Я прочитав інформацію про конфіденційність і погоджуюся на обробку даних виключно для опрацювання запиту CV.",
+    "retention_title": "Conservación",
+    "retention": "Solo durante el tiempo necesario para responder y cumplir obligaciones legales.",
+    "rights_title": "Derechos",
+    "rights": "Acceso, rectificación, supresión, limitación, oposición, portabilidad y retirada del consentimiento.",
+    "note": "Traducción informativa. Las referencias jurídicas oficiales son el RGPD y la Ley Orgánica 3/2018."
   }
 }

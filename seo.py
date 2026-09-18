@@ -7,13 +7,27 @@ from fastapi.responses import PlainTextResponse, Response
 from starlette.middleware.base import BaseHTTPMiddleware
 
 ORIGIN = "https://ivanllopis.net"
-LANGUAGES = ("es", "ca", "eu", "en", "fr", "uk", "it", "tr")
+LANGUAGES = ("es", "ca", "gl", "oc", "eu", "en", "fr", "uk", "it", "tr", "ru", "zh-Hans", "ja")
 IMAGE = f"{ORIGIN}/static/images/ivan-hero-transparent.webp"
 TEXT = {
     "es": (
         "Portfolio profesional de Ivan Llopis sobre ingenieria de software, cloud, Azure, .NET, Python e inteligencia artificial.",
         "Aficiones, intereses y actividades personales de Ivan Llopis.",
     ),
+    "gl": (
+        "Portfolio profesional de Ivan Llopis sobre enxeñaría de software, cloud e IA.",
+        "Afeccións e intereses de Ivan Llopis.",
+    ),
+    "oc": (
+        "Portfolio professionau de Ivan Llopis sus enginharia de logiciau, cloud e IA.",
+        "Aficions e interèssi de Ivan Llopis.",
+    ),
+    "ru": (
+        "Профессиональное портфолио о разработке, облачных технологиях и ИИ.",
+        "Увлечения и интересы.",
+    ),
+    "zh-Hans": ("软件工程、云技术与人工智能专业作品集。", "个人爱好与兴趣。"),
+    "ja": ("ソフトウェア、クラウド、AIに関するプロフェッショナルポートフォリオ。", "趣味と関心。"),
     "ca": (
         "Portafolis professional d'Ivan Llopis sobre enginyeria de programari, cloud, Azure, .NET, Python i intel.ligencia artificial.",
         "Aficions, interessos i activitats personals d'Ivan Llopis.",
@@ -56,8 +70,9 @@ def is_staging(request):
 def page_info(path):
     parts = [part for part in path.split("/") if part]
     lang = parts[0] if parts and parts[0] in LANGUAGES else "es"
-    hobbies = len(parts) > 1 and parts[1] == "hobbies"
-    suffix = "/hobbies" if hobbies else ""
+    page = parts[1] if len(parts) > 1 else ""
+    suffix = f"/{page}" if page else ""
+    hobbies = page == "hobbies"
     title = (
         "Aficiones de Ivan Llopis"
         if hobbies and lang == "es"
@@ -161,7 +176,17 @@ def sitemap():
     urls = "\n".join(
         f"  <url><loc>{ORIGIN}/{lang}{suffix}</loc></url>"
         for lang in LANGUAGES
-        for suffix in ("", "/hobbies")
+        for suffix in (
+            "",
+            "/profile",
+            "/capabilities",
+            "/technologies",
+            "/projects",
+            "/work-life",
+            "/request-cv",
+            "/privacy",
+            "/hobbies",
+        )
     )
     xml = f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}\n</urlset>\n'
     return Response(xml, media_type="application/xml")

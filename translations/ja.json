@@ -1,29 +1,29 @@
 {
   "language": {
-    "name": "English",
-    "flag": "🇬🇧"
+    "name": "日本語",
+    "flag": "🇯🇵"
   },
   "a11y": {
     "skip": "Skip to content"
   },
   "nav": {
-    "menu": "Menu",
-    "label": "Main navigation",
-    "profile": "Profile",
-    "expertise": "Capabilities",
-    "technology": "Technology",
-    "projects": "Projects",
-    "hobbies": "Hobbies",
-    "home": "Home",
-    "work_life": "Career"
+    "menu": "メニュー",
+    "label": "メインナビゲーション",
+    "profile": "プロフィール",
+    "expertise": "専門能力",
+    "technology": "技術",
+    "projects": "プロジェクト",
+    "hobbies": "趣味",
+    "home": "ホーム",
+    "work_life": "職務経験"
   },
   "hero": {
     "eyebrow": "Software Engineering Lead · Barcelona",
-    "title": "Software engineering with vision, rigor and purpose.",
-    "lead": "I am Ivan Llopis. I lead software, cloud and AI solutions from architecture to secure, observable and sustainable delivery.",
-    "projects": "View projects",
-    "explore": "Explore profile",
-    "image_alt": "Professional portrait of Ivan Llopis",
+    "title": "ビジョン、精度、目的を備えたソフトウェアエンジニアリング。",
+    "lead": "アーキテクチャから安全で可観測性が高く持続可能な運用まで、ソフトウェア、クラウド、AIソリューションをリードします。",
+    "projects": "プロジェクトを見る",
+    "explore": "プロフィールを見る",
+    "image_alt": "プロフェッショナルポートレート",
     "status_title": "Open to connect",
     "status_text": "Software · Cloud · AI"
   },
@@ -35,25 +35,25 @@
     "learning": "aprendizaje continuo"
   },
   "expertise": {
-    "eyebrow": "Capabilities",
-    "title": "From technical strategy to production.",
-    "intro": "A profile combining technical leadership, development, automation and applied AI experimentation.",
+    "eyebrow": "専門能力",
+    "title": "技術戦略から本番運用まで。",
+    "intro": "技術リーダーシップ、開発、自動化、AI活用を組み合わせた専門性。",
     "items": [
       {
-        "title": "Software & APIs",
-        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
+        "title": "ソフトウェアと API",
+        "text": "品質を基盤とした保守性の高いソリューション、サービス、API。"
       },
       {
-        "title": "Cloud & Data",
-        "text": "Azure, containers and data platforms suited to context and growth."
+        "title": "クラウドとデータ",
+        "text": "状況と成長に適した Azure、コンテナ、データプラットフォーム。"
       },
       {
-        "title": "AI Engineering",
-        "text": "Assistants, local models and generative AI workflows."
+        "title": "AI エンジニアリング",
+        "text": "アシスタント、ローカルモデル、生成 AI ワークフロー。"
       },
       {
-        "title": "Engineering Delivery",
-        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
+        "title": "エンジニアリングデリバリー",
+        "text": "GitFlow、CI/CD、テスト、自動化による信頼性の高い提供。"
       }
     ]
   },
@@ -259,66 +259,66 @@
     }
   },
   "profile_page": {
-    "eyebrow": "Profile",
-    "title": "Professional profile",
-    "lead": "A complete view of experience, approach and ways of working.",
+    "eyebrow": "プロフィール",
+    "title": "プロフェッショナルプロフィール",
+    "lead": "経験、アプローチ、働き方を総合的に紹介します。",
     "items": [
       {
-        "title": "Software & APIs",
-        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
+        "title": "ソフトウェアと API",
+        "text": "品質を基盤とした保守性の高いソリューション、サービス、API。"
       },
       {
-        "title": "Cloud & Data",
-        "text": "Azure, containers and data platforms suited to context and growth."
+        "title": "クラウドとデータ",
+        "text": "状況と成長に適した Azure、コンテナ、データプラットフォーム。"
       },
       {
-        "title": "AI Engineering",
-        "text": "Assistants, local models and generative AI workflows."
+        "title": "AI エンジニアリング",
+        "text": "アシスタント、ローカルモデル、生成 AI ワークフロー。"
       },
       {
-        "title": "Engineering Delivery",
-        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
+        "title": "エンジニアリングデリバリー",
+        "text": "GitFlow、CI/CD、テスト、自動化による信頼性の高い提供。"
       }
     ]
   },
   "capabilities_page": {
-    "eyebrow": "Capabilities",
-    "title": "Professional capabilities",
-    "lead": "Technical depth applied to real problems."
+    "eyebrow": "専門能力",
+    "title": "専門能力",
+    "lead": "実際の課題に適用する技術的な深さ。"
   },
   "cv_request": {
     "eyebrow": "CV",
-    "title": "Request the CV",
-    "intro": "Send your details and a short message to request an up-to-date copy of the CV.",
-    "name": "Name or company",
-    "email": "Email address",
-    "phone": "Phone",
-    "optional": "Optional",
-    "message": "Short message",
-    "consent": "I have read and accept the privacy information and authorise processing solely to manage my CV request.",
-    "privacy_link": "Privacy information",
-    "official_link": "Official data protection rules",
+    "title": "CVを依頼する",
+    "intro": "氏名または会社名、メールアドレス、短いメッセージを入力してください。",
+    "name": "氏名または会社名",
+    "email": "メールアドレス",
+    "phone": "電話番号",
+    "optional": "任意",
+    "message": "短いメッセージ",
+    "consent": "プライバシー情報を確認し、CV依頼への対応のために限りデータを処理することに同意します。",
+    "privacy_link": "プライバシー情報",
+    "official_link": "公式データ保護規則",
     "official_url": "https://www.aepd.es/informes-y-resoluciones/normativa",
-    "submit": "Send request",
-    "success": "Request sent successfully. A reply will be sent to the email provided.",
-    "error": "The request could not be sent. Please try again later."
+    "submit": "依頼を送信",
+    "success": "依頼を送信しました。入力したメールアドレスに返信します。",
+    "error": "送信できませんでした。後でもう一度お試しください。"
   },
   "privacy": {
-    "eyebrow": "Privacy information",
-    "title": "Privacy information",
-    "intro": "Send your details and a short message to request an up-to-date copy of the CV.",
-    "controller_title": "Responsable",
+    "eyebrow": "プライバシー情報",
+    "title": "プライバシー情報",
+    "intro": "氏名または会社名、メールアドレス、短いメッセージを入力してください。",
+    "controller_title": "Controller",
     "controller": "Ivan Llopis / IvanLlopis.net.",
-    "purpose_title": "Finalidad",
-    "purpose": "Send your details and a short message to request an up-to-date copy of the CV.",
-    "data_title": "Datos",
-    "data": "Name or company, Email address, Phone y Short message.",
-    "legal_title": "Base legal",
-    "legal": "I have read and accept the privacy information and authorise processing solely to manage my CV request.",
-    "retention_title": "Conservación",
-    "retention": "Solo durante el tiempo necesario para responder y cumplir obligaciones legales.",
-    "rights_title": "Derechos",
-    "rights": "Acceso, rectificación, supresión, limitación, oposición, portabilidad y retirada del consentimiento.",
-    "note": "Traducción informativa. Las referencias jurídicas oficiales son el RGPD y la Ley Orgánica 3/2018."
+    "purpose_title": "Purpose",
+    "purpose": "氏名または会社名、メールアドレス、短いメッセージを入力してください。",
+    "data_title": "Data",
+    "data": "氏名または会社名, メールアドレス, 電話番号, 短いメッセージ.",
+    "legal_title": "Legal basis",
+    "legal": "プライバシー情報を確認し、CV依頼への対応のために限りデータを処理することに同意します。",
+    "retention_title": "Retention",
+    "retention": "Only for the time needed to answer and comply with legal obligations.",
+    "rights_title": "Rights",
+    "rights": "Access, rectification, erasure, restriction, objection, portability and withdrawal of consent.",
+    "note": "Informative translation. The official legal references are the GDPR and Spanish Organic Law 3/2018."
   }
 }

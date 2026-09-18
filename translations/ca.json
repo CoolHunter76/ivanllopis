@@ -40,20 +40,20 @@
     "intro": "Un perfil que combina lideratge tècnic, desenvolupament, automatització i experimentació aplicada amb IA.",
     "items": [
       {
-        "title": "Programari i APIs",
-        "text": "Solucions mantenibles, serveis i APIs construïts sobre bases sòlides de qualitat."
+        "title": "Software & APIs",
+        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
       },
       {
-        "title": "Cloud i dades",
-        "text": "Azure, contenidors i plataformes de dades adaptades al context i al creixement."
+        "title": "Cloud & Data",
+        "text": "Azure, containers and data platforms suited to context and growth."
       },
       {
-        "title": "Enginyeria d’IA",
-        "text": "Assistents, models locals i fluxos de treball amb intel·ligència artificial generativa."
+        "title": "AI Engineering",
+        "text": "Assistants, local models and generative AI workflows."
       },
       {
-        "title": "Lliurament d’enginyeria",
-        "text": "GitFlow, CI/CD, proves i automatització per a lliuraments fiables."
+        "title": "Engineering Delivery",
+        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
       }
     ]
   },
@@ -264,20 +264,20 @@
     "lead": "Una visió completa de l’experiència, l’enfocament i la manera de treballar.",
     "items": [
       {
-        "title": "Programari i APIs",
-        "text": "Solucions mantenibles, serveis i APIs construïts sobre bases sòlides de qualitat."
+        "title": "Software & APIs",
+        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
       },
       {
-        "title": "Cloud i dades",
-        "text": "Azure, contenidors i plataformes de dades adaptades al context i al creixement."
+        "title": "Cloud & Data",
+        "text": "Azure, containers and data platforms suited to context and growth."
       },
       {
-        "title": "Enginyeria d’IA",
-        "text": "Assistents, models locals i fluxos de treball amb intel·ligència artificial generativa."
+        "title": "AI Engineering",
+        "text": "Assistants, local models and generative AI workflows."
       },
       {
-        "title": "Lliurament d’enginyeria",
-        "text": "GitFlow, CI/CD, proves i automatització per a lliuraments fiables."
+        "title": "Engineering Delivery",
+        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
       }
     ]
   },
@@ -285,5 +285,40 @@
     "eyebrow": "Capacitats",
     "title": "Capacitats professionals",
     "lead": "Profunditat tècnica aplicada a problemes reals."
+  },
+  "cv_request": {
+    "eyebrow": "CV",
+    "title": "Sol·licitar el CV",
+    "intro": "Envia les teves dades i un missatge breu per sol·licitar una còpia actualitzada del CV.",
+    "name": "Nom o empresa",
+    "email": "Correu electrònic",
+    "phone": "Telèfon",
+    "optional": "Opcional",
+    "message": "Missatge breu",
+    "consent": "He llegit i accepto la informació de protecció de dades i autoritzo el tractament exclusivament per gestionar la sol·licitud del CV.",
+    "privacy_link": "Informació de privacitat",
+    "official_link": "Normativa oficial de protecció de dades",
+    "official_url": "https://www.aepd.es/informes-y-resoluciones/normativa",
+    "submit": "Enviar sol·licitud",
+    "success": "Sol·licitud enviada correctament. Rebràs resposta al correu facilitat.",
+    "error": "No ha estat possible enviar la sol·licitud. Torna-ho a provar més tard."
+  },
+  "privacy": {
+    "eyebrow": "Informació de privacitat",
+    "title": "Informació de privacitat",
+    "intro": "Envia les teves dades i un missatge breu per sol·licitar una còpia actualitzada del CV.",
+    "controller_title": "Responsable",
+    "controller": "Ivan Llopis / IvanLlopis.net.",
+    "purpose_title": "Finalidad",
+    "purpose": "Envia les teves dades i un missatge breu per sol·licitar una còpia actualitzada del CV.",
+    "data_title": "Datos",
+    "data": "Nom o empresa, Correu electrònic, Telèfon y Missatge breu.",
+    "legal_title": "Base legal",
+    "legal": "He llegit i accepto la informació de protecció de dades i autoritzo el tractament exclusivament per gestionar la sol·licitud del CV.",
+    "retention_title": "Conservación",
+    "retention": "Solo durante el tiempo necesario para responder y cumplir obligaciones legales.",
+    "rights_title": "Derechos",
+    "rights": "Acceso, rectificación, supresión, limitación, oposición, portabilidad y retirada del consentimiento.",
+    "note": "Traducción informativa. Las referencias jurídicas oficiales son el RGPD y la Ley Orgánica 3/2018."
   }
 }
