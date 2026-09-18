@@ -229,6 +229,61 @@
       "GitHub Actions",
       "Microsoft Copilot",
       "Ollama"
+    ],
+    "clients": {
+      "hp": {
+        "type": "Projet client",
+        "role": "Client-team manager and mediator",
+        "text": "Web application providing access to installation and usage manuals for enterprise printers."
+      },
+      "repsol": {
+        "type": "Projet client",
+        "role": "Automation and privacy collaboration",
+        "text": "Script to detect, anonymize and remove personal or sensitive data from résumés for bulk cataloguing."
+      },
+      "mapfre": {
+        "type": "Projet client",
+        "role": "Cloud development and data processing",
+        "text": "Azure Function generating internal data and statistics from information stored in data containers."
+      },
+      "adif": {
+        "type": "Projet client",
+        "role": "Cybersecurity technical advisory",
+        "text": "Audit analysis and technical remediation actions to secure products on Azure."
+      },
+      "energyavm": {
+        "type": "Projet client",
+        "role": "API analysis and development",
+        "text": "REST API providing authorised invoices, measurements and operational information to customers."
+      }
+    }
+  },
+  "profile_page": {
+    "eyebrow": "Profil",
+    "title": "Profil professionnel",
+    "lead": "Une vue complète de l’expérience, de l’approche et de la manière de travailler.",
+    "items": [
+      {
+        "title": "Software & APIs",
+        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
+      },
+      {
+        "title": "Cloud & Data",
+        "text": "Azure, containers and data platforms suited to context and growth."
+      },
+      {
+        "title": "AI Engineering",
+        "text": "Assistants, local models and generative AI workflows."
+      },
+      {
+        "title": "Engineering Delivery",
+        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
+      }
     ]
+  },
+  "capabilities_page": {
+    "eyebrow": "Compétences",
+    "title": "Compétences professionnelles",
+    "lead": "Une expertise technique appliquée à des problèmes réels."
   }
 }

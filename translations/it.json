@@ -229,6 +229,61 @@
       "GitHub Actions",
       "Microsoft Copilot",
       "Ollama"
+    ],
+    "clients": {
+      "hp": {
+        "type": "Progetto cliente",
+        "role": "Client-team manager and mediator",
+        "text": "Web application providing access to installation and usage manuals for enterprise printers."
+      },
+      "repsol": {
+        "type": "Progetto cliente",
+        "role": "Automation and privacy collaboration",
+        "text": "Script to detect, anonymize and remove personal or sensitive data from résumés for bulk cataloguing."
+      },
+      "mapfre": {
+        "type": "Progetto cliente",
+        "role": "Cloud development and data processing",
+        "text": "Azure Function generating internal data and statistics from information stored in data containers."
+      },
+      "adif": {
+        "type": "Progetto cliente",
+        "role": "Cybersecurity technical advisory",
+        "text": "Audit analysis and technical remediation actions to secure products on Azure."
+      },
+      "energyavm": {
+        "type": "Progetto cliente",
+        "role": "API analysis and development",
+        "text": "REST API providing authorised invoices, measurements and operational information to customers."
+      }
+    }
+  },
+  "profile_page": {
+    "eyebrow": "Profilo",
+    "title": "Profilo professionale",
+    "lead": "Una visione completa dell’esperienza, dell’approccio e del modo di lavorare.",
+    "items": [
+      {
+        "title": "Software & APIs",
+        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
+      },
+      {
+        "title": "Cloud & Data",
+        "text": "Azure, containers and data platforms suited to context and growth."
+      },
+      {
+        "title": "AI Engineering",
+        "text": "Assistants, local models and generative AI workflows."
+      },
+      {
+        "title": "Engineering Delivery",
+        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
+      }
     ]
+  },
+  "capabilities_page": {
+    "eyebrow": "Competenze",
+    "title": "Competenze professionali",
+    "lead": "Profondità tecnica applicata a problemi reali."
   }
 }

@@ -193,6 +193,52 @@ PROJECTS = [
 ]
 
 
+CLIENT_EXPERIENCES = [
+    {
+        "id": "hp",
+        "name": "HP Hewlett-Packard",
+        "logo": "/static/images/companies/hp.svg",
+        "url": "https://www.hp.com/",
+        "technologies": ["React", "JavaScript", "Azure DevOps"],
+    },
+    {
+        "id": "repsol",
+        "name": "Repsol",
+        "logo": "/static/images/companies/repsol.svg",
+        "url": "https://www.repsol.com/",
+        "technologies": ["Scripting", "Data anonymization"],
+    },
+    {
+        "id": "mapfre",
+        "name": "MAPFRE",
+        "logo": "/static/images/companies/mapfre.svg",
+        "url": "https://www.mapfre.com/",
+        "technologies": ["Azure Functions", ".NET", "C#"],
+    },
+    {
+        "id": "adif",
+        "name": "ADIF",
+        "logo": "/static/images/companies/adif.svg",
+        "url": "https://www.adif.es/",
+        "technologies": ["Microsoft Azure", "Cybersecurity", "Hardening"],
+    },
+    {
+        "id": "energyavm",
+        "name": "EnergyaVM",
+        "logo": "/static/images/companies/energyavm.svg",
+        "url": "https://www.energyavm.es/",
+        "technologies": [".NET", "C#", "REST API", "GitLab"],
+    },
+]
+
+PAGE_TEMPLATES = {
+    "profile": "profile.html",
+    "capabilities": "capabilities.html",
+    "technologies": "technologies.html",
+    "projects": "projects.html",
+}
+
+
 @app.get("/health", include_in_schema=False)
 def health() -> dict:
     return {"status": "ok", "languages": SUPPORTED}
@@ -210,7 +256,63 @@ def home(request: Request, lang: str):
     return templates.TemplateResponse(
         request=request,
         name="home.html",
-        context=ctx(lang, technologies=TECHNOLOGIES, ai_engines=AI_ENGINES, projects=PROJECTS),
+        context=ctx(
+            lang,
+            technologies=TECHNOLOGIES,
+            ai_engines=AI_ENGINES,
+            projects=PROJECTS,
+        ),
+    )
+
+
+@app.get("/{lang}/profile", response_class=HTMLResponse, include_in_schema=False)
+def profile(request: Request, lang: str):
+    if lang not in SUPPORTED:
+        return RedirectResponse("/es/profile", status_code=307)
+    return templates.TemplateResponse(request=request, name="profile.html", context=ctx(lang))
+
+
+@app.get("/{lang}/capabilities", response_class=HTMLResponse, include_in_schema=False)
+def capabilities(request: Request, lang: str):
+    if lang not in SUPPORTED:
+        return RedirectResponse("/es/capabilities", status_code=307)
+    return templates.TemplateResponse(
+        request=request,
+        name="capabilities.html",
+        context=ctx(lang),
+    )
+
+
+@app.get("/{lang}/technologies", response_class=HTMLResponse, include_in_schema=False)
+def technologies(request: Request, lang: str):
+    if lang not in SUPPORTED:
+        return RedirectResponse("/es/technologies", status_code=307)
+    return templates.TemplateResponse(
+        request=request,
+        name="technologies.html",
+        context=ctx(lang, technologies=TECHNOLOGIES, ai_engines=AI_ENGINES),
+    )
+
+
+@app.get("/{lang}/projects", response_class=HTMLResponse, include_in_schema=False)
+def projects(request: Request, lang: str):
+    if lang not in SUPPORTED:
+        return RedirectResponse("/es/projects", status_code=307)
+    return templates.TemplateResponse(
+        request=request,
+        name="projects.html",
+        context=ctx(lang, projects=PROJECTS),
+    )
+
+
+@app.get("/{lang}/work-life", response_class=HTMLResponse, include_in_schema=False)
+def work_life(request: Request, lang: str):
+    if lang not in SUPPORTED:
+        return RedirectResponse("/es/work-life", status_code=307)
+    return templates.TemplateResponse(
+        request=request,
+        name="work_life.html",
+        context=ctx(lang, experiences=CLIENT_EXPERIENCES),
     )
 
 
@@ -219,12 +321,7 @@ def hobbies(request: Request, lang: str):
     if lang not in SUPPORTED:
         return RedirectResponse("/es/hobbies", status_code=307)
     return templates.TemplateResponse(
-        request=request, name="hobbies.html", context=ctx(lang, hobbies=HOBBIES)
+        request=request,
+        name="hobbies.html",
+        context=ctx(lang, hobbies=HOBBIES),
     )
-
-
-@app.get("/{lang}/work-life", response_class=HTMLResponse, include_in_schema=False)
-def work_life(request: Request, lang: str):
-    if lang not in SUPPORTED:
-        return RedirectResponse("/es/work-life", status_code=307)
-    return templates.TemplateResponse(request=request, name="work_life.html", context=ctx(lang))
