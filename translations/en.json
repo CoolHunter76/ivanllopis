@@ -13,7 +13,9 @@
     "expertise": "Capabilities",
     "technology": "Technology",
     "projects": "Projects",
-    "hobbies": "Hobbies"
+    "hobbies": "Hobbies",
+    "home": "Home",
+    "work_life": "Career"
   },
   "hero": {
     "eyebrow": "Software Engineering Lead · Barcelona",
@@ -26,11 +28,11 @@
     "status_text": "Software · Cloud · AI"
   },
   "metrics": {
-    "label": "Professional overview",
-    "languages": "portfolio languages",
-    "focus": "areas of expertise",
-    "quality": "quality mindset",
-    "learning": "continuous learning"
+    "label": "Resumen profesional",
+    "languages": "idiomas del portfolio",
+    "focus": "áreas de especialización",
+    "quality": "mentalidad de calidad",
+    "learning": "aprendizaje continuo"
   },
   "expertise": {
     "eyebrow": "Capabilities",
@@ -38,19 +40,19 @@
     "intro": "A profile combining technical leadership, development, automation and applied AI experimentation.",
     "items": [
       {
-        "title": "Software and APIs",
+        "title": "Software & APIs",
         "text": "Maintainable solutions, services and APIs built on strong quality foundations."
       },
       {
-        "title": "Cloud and data",
+        "title": "Cloud & Data",
         "text": "Azure, containers and data platforms suited to context and growth."
       },
       {
-        "title": "AI engineering",
+        "title": "AI Engineering",
         "text": "Assistants, local models and generative AI workflows."
       },
       {
-        "title": "Engineering delivery",
+        "title": "Engineering Delivery",
         "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
       }
     ]
@@ -68,7 +70,7 @@
   "projects": {
     "eyebrow": "Projects",
     "title": "Projects connecting product and platform.",
-    "intro": "Initiatives spanning digital products, AI and infrastructure.",
+    "intro": "Tools and platforms used to build, integrate, deploy and evolve solutions.",
     "items": {
       "events": {
         "title": "Event platform",
@@ -79,72 +81,154 @@
         "text": "Assistants, controlled knowledge and local models."
       },
       "cloud": {
-        "title": "Cloud architectures",
-        "text": "Architecture, automation and deployment patterns."
+        "title": "Arquitecturas cloud",
+        "text": "Architecture patterns, automation and deployment."
       },
       "portfolio": {
         "title": "IvanLlopis.net",
-        "text": "Multilingual portfolio with FastAPI, SEO, CI/CD and a local assistant."
+        "text": "Portfolio multilingüe con FastAPI, SEO, CI/CD y asistente local."
       }
     }
   },
   "process": {
     "eyebrow": "Approach",
-    "title": "Clarity, delivery and continuous improvement.",
+    "title": "Clarity, implementation y mejora continua.",
     "items": [
       {
-        "title": "Understand",
-        "text": "Align the problem, user, constraints and expected outcome."
+        "title": "Entender",
+        "text": "Alinear problema, usuario, restricciones y resultado."
       },
       {
-        "title": "Build",
-        "text": "Design a modular, testable and evolvable solution."
+        "title": "Construir",
+        "text": "Diseñar una solución modular, comprobable y evolutiva."
       },
       {
-        "title": "Operate",
-        "text": "Automate, observe and improve using evidence."
+        "title": "Operar",
+        "text": "Automatizar, observar y mejorar con evidencia."
       }
     ]
   },
   "personal": {
-    "eyebrow": "Beyond code",
-    "title": "Technology with a human perspective.",
-    "text": "Swimming, hiking, gaming, drums, travel and Latin dance add balance to learning and connecting.",
-    "action": "Discover hobbies"
+    "eyebrow": "Hobbies",
+    "title": "Tecnología con perspectiva humana.",
+    "text": "Swimming, senderismo, videojuegos, batería, viajes y bailes latinos completan una forma de aprender y conectar.",
+    "action": "Hobbies and interests"
   },
   "hobbies": {
     "title": "Hobbies and interests",
-    "intro": "Activities that bring balance, creativity, energy and new perspectives.",
+    "intro": "Actividades que aportan equilibrio, creatividad, energía y nuevas perspectivas.",
     "back": "Back to the home page",
     "items": {
       "swimming": {
         "title": "Swimming",
-        "text": "Consistency, technique and wellbeing."
+        "text": "Constancia, técnica y bienestar."
       },
       "trekking": {
         "title": "Hiking",
-        "text": "Nature, exploration and perspective."
+        "text": "Naturaleza, exploración y perspectiva."
       },
       "gaming": {
-        "title": "Gaming",
-        "text": "Strategy, storytelling and technology."
+        "title": "Video games",
+        "text": "Estrategia, narrativas y tecnología."
       },
       "drums": {
-        "title": "Drums",
-        "text": "Rhythm, coordination and creativity."
+        "title": "Batería",
+        "text": "Ritmo, coordinación y creatividad."
       },
       "travel": {
-        "title": "Travel",
-        "text": "Cultures, places and learning."
+        "title": "Viajes",
+        "text": "Culturas, lugares y aprendizaje."
       },
       "dance": {
-        "title": "Latin dance",
-        "text": "Music, connection and movement."
+        "title": "Bailes latinos",
+        "text": "Música, conexión y movimiento."
       }
     }
   },
   "common": {
     "official_site": "Official website"
   },
-  "footer": "Built with FastAPI, curiosity and continuous improvement."
+  "footer": "Built with FastAPI, curiosity and continuous improvement.",
+  "work_life": {
+    "kicker": "Professional résumé",
+    "profile_title": "Profile",
+    "profile_text": "Software Engineer Lead focused on software, cloud, data, DevOps and AI solutions, with an emphasis on quality, maintainability and sustainable delivery.",
+    "core_title": "Core capabilities",
+    "core": [
+      "Technical leadership",
+      "Software architecture",
+      "API design",
+      "Cloud and Azure",
+      "Generative AI",
+      "CI/CD and automation"
+    ],
+    "stack_title": "Technology",
+    "languages_title": "Multilingual portfolio",
+    "languages_text": "Spanish, Catalan, Basque, English, French, Ukrainian, Italian and Turkish.",
+    "experience_title": "Professional experience",
+    "current": "Current role",
+    "current_text": "Engineering and leadership responsibility across technical solutions, from definition and architecture to delivery and evolution.",
+    "responsibilities": [
+      "Translate product and business needs into clear technical decisions.",
+      "Guide architecture, development, quality and automation.",
+      "Promote GitFlow, testing and CI/CD practices.",
+      "Explore responsible applications of generative AI."
+    ],
+    "focus_title": "Contribution areas",
+    "focus": [
+      [
+        "Engineering",
+        "Maintainable solutions with .NET, C#, Python, FastAPI and APIs."
+      ],
+      [
+        "Cloud and data",
+        "Azure, Docker, SQL Server, PostgreSQL and MongoDB."
+      ],
+      [
+        "Applied AI",
+        "Copilot, assistants, agents, Ollama and local models."
+      ],
+      [
+        "Delivery",
+        "GitHub Actions, automation, testing and observability."
+      ]
+    ],
+    "projects_title": "Representative projects",
+    "projects": [
+      [
+        "Event platform",
+        "Digital product for events, workshops, attendees and operations."
+      ],
+      [
+        "AI agents",
+        "Assistants with controlled knowledge, FastAPI, Ollama and Copilot."
+      ],
+      [
+        "Cloud architectures",
+        "Automation and deployment with Azure, Docker and DevOps."
+      ],
+      [
+        "IvanLlopis.net",
+        "Multilingual portfolio with SEO, CI/CD and a local assistant."
+      ]
+    ],
+    "cta_kicker": "Full profile",
+    "cta_title": "Would you like to explore the career in more detail?",
+    "cta_text": "Get in touch to request an up-to-date CV.",
+    "cta_button": "Request CV",
+    "stack": [
+      "Microsoft Azure",
+      ".NET",
+      "C#",
+      "Python",
+      "FastAPI",
+      "Docker",
+      "SQL Server",
+      "PostgreSQL",
+      "MongoDB",
+      "GitHub Actions",
+      "Microsoft Copilot",
+      "Ollama"
+    ]
+  }
 }

@@ -13,7 +13,9 @@
     "expertise": "Gaitasunak",
     "technology": "Teknologiak",
     "projects": "Proiektuak",
-    "hobbies": "Zaletasunak"
+    "hobbies": "Zaletasunak",
+    "home": "Hasiera",
+    "work_life": "Lan ibilbidea"
   },
   "hero": {
     "eyebrow": "Software Engineering Lead · Barcelona",
@@ -21,16 +23,16 @@
     "lead": "Ivan Llopis naiz. Software, hodei eta AA soluzioak gidatzen ditut, arkitekturatik entrega seguru, behagarri eta jasangarrira.",
     "projects": "Ikusi proiektuak",
     "explore": "Aztertu profila",
-    "image_alt": "Ivan Llopisen erretratu profesionala",
-    "status_title": "Harremanetan jartzeko prest",
+    "image_alt": "Professional portrait of Ivan Llopis",
+    "status_title": "Open to connect",
     "status_text": "Software · Cloud · AI"
   },
   "metrics": {
-    "label": "Laburpen profesionala",
-    "languages": "portfolioaren hizkuntzak",
-    "focus": "espezializazio arloak",
-    "quality": "kalitate ikuspegia",
-    "learning": "etengabeko ikaskuntza"
+    "label": "Resumen profesional",
+    "languages": "idiomas del portfolio",
+    "focus": "áreas de especialización",
+    "quality": "mentalidad de calidad",
+    "learning": "aprendizaje continuo"
   },
   "expertise": {
     "eyebrow": "Gaitasunak",
@@ -38,20 +40,20 @@
     "intro": "Lidergo teknikoa, garapena, automatizazioa eta AA aplikatuko esperimentazioa uztartzen dituen profila.",
     "items": [
       {
-        "title": "Softwarea eta APIak",
-        "text": "Kalitate oinarri sendoak dituzten soluzio, zerbitzu eta API mantengarriak."
+        "title": "Software & APIs",
+        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
       },
       {
-        "title": "Hodeia eta datuak",
-        "text": "Testuingurura eta hazkundera egokitutako Azure, edukiontziak eta datu plataformak."
+        "title": "Cloud & Data",
+        "text": "Azure, containers and data platforms suited to context and growth."
       },
       {
-        "title": "AA ingeniaritza",
-        "text": "Laguntzaileak, eredu lokalak eta AA sortzaileko lan fluxuak."
+        "title": "AI Engineering",
+        "text": "Assistants, local models and generative AI workflows."
       },
       {
-        "title": "Ingeniaritza entrega",
-        "text": "GitFlow, CI/CD, probak eta automatizazioa entrega fidagarrietarako."
+        "title": "Engineering Delivery",
+        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
       }
     ]
   },
@@ -68,83 +70,165 @@
   "projects": {
     "eyebrow": "Proiektuak",
     "title": "Produktua eta plataforma lotzen dituzten proiektuak.",
-    "intro": "Produktu digitala, AA eta azpiegitura uztartzen dituzten ekimenak.",
+    "intro": "Soluzioak eraiki, integratu, hedatu eta eboluzionatzeko tresnak eta plataformak.",
     "items": {
       "events": {
-        "title": "Ekitaldi plataforma",
-        "text": "Ekitaldi, tailer, parte-hartzaile eta eragiketen kudeaketa."
+        "title": "Ekitaldi-plataforma",
+        "text": "Ekitaldien, tailerren, parte-hartzaileen eta eragiketen kudeaketa."
       },
       "ai": {
         "title": "AA agenteak",
         "text": "Laguntzaileak, ezagutza kontrolatua eta eredu lokalak."
       },
       "cloud": {
-        "title": "Hodei arkitekturak",
-        "text": "Arkitektura, automatizazio eta hedapen ereduak."
+        "title": "Arquitecturas cloud",
+        "text": "Arkitektura-ereduak, automatizazioa eta hedapena."
       },
       "portfolio": {
         "title": "IvanLlopis.net",
-        "text": "FastAPI, SEO, CI/CD eta laguntzaile lokala dituen portfolio eleanitza."
+        "text": "Portfolio multilingüe con FastAPI, SEO, CI/CD y asistente local."
       }
     }
   },
   "process": {
     "eyebrow": "Approach",
-    "title": "Argitasuna, eraikuntza eta etengabeko hobekuntza.",
+    "title": "Argitasuna, eraikuntza y mejora continua.",
     "items": [
       {
-        "title": "Ulertu",
-        "text": "Arazoa, erabiltzailea, mugak eta emaitza lerrokatu."
+        "title": "Entender",
+        "text": "Alinear problema, usuario, restricciones y resultado."
       },
       {
-        "title": "Eraiki",
-        "text": "Soluzio modular, frogagarri eta ebolutiboa diseinatu."
+        "title": "Construir",
+        "text": "Diseñar una solución modular, comprobable y evolutiva."
       },
       {
-        "title": "Operatu",
-        "text": "Automatizatu, behatu eta ebidentziarekin hobetu."
+        "title": "Operar",
+        "text": "Automatizar, observar y mejorar con evidencia."
       }
     ]
   },
   "personal": {
-    "eyebrow": "Kodetik harago",
-    "title": "Teknologia ikuspegi humanoarekin.",
-    "text": "Igeriketak, mendi ibiliek, bideojokoek, bateriak, bidaiek eta dantza latinoek ikaskuntza eta lotura aberasten dituzte.",
-    "action": "Ezagutu zaletasunak"
+    "eyebrow": "Zaletasunak",
+    "title": "Tecnología con perspectiva humana.",
+    "text": "Igeriketa, senderismo, videojuegos, batería, viajes y bailes latinos completan una forma de aprender y conectar.",
+    "action": "Zaletasunak eta interesak"
   },
   "hobbies": {
     "title": "Zaletasunak eta interesak",
-    "intro": "Oreka, sormena, energia eta ikuspegi berriak ematen dituzten jarduerak.",
+    "intro": "Actividades que aportan equilibrio, creatividad, energía y nuevas perspectivas.",
     "back": "Itzuli orri nagusira",
     "items": {
       "swimming": {
         "title": "Igeriketa",
-        "text": "Konstantzia, teknika eta ongizatea."
+        "text": "Constancia, técnica y bienestar."
       },
       "trekking": {
-        "title": "Mendi ibilaldiak",
-        "text": "Natura, esplorazioa eta ikuspegia."
+        "title": "Mendi-ibilaldiak",
+        "text": "Naturaleza, exploración y perspectiva."
       },
       "gaming": {
         "title": "Bideojokoak",
-        "text": "Estrategia, narrazioa eta teknologia."
+        "text": "Estrategia, narrativas y tecnología."
       },
       "drums": {
-        "title": "Bateria",
-        "text": "Erritmoa, koordinazioa eta sormena."
+        "title": "Batería",
+        "text": "Ritmo, coordinación y creatividad."
       },
       "travel": {
-        "title": "Bidaiak",
-        "text": "Kulturak, lekuak eta ikaskuntza."
+        "title": "Viajes",
+        "text": "Culturas, lugares y aprendizaje."
       },
       "dance": {
-        "title": "Dantza latinoak",
-        "text": "Musika, lotura eta mugimendua."
+        "title": "Bailes latinos",
+        "text": "Música, conexión y movimiento."
       }
     }
   },
   "common": {
-    "official_site": "Webgune ofiziala"
+    "official_site": "Official website"
   },
-  "footer": "FastAPIrekin, jakin-minarekin eta etengabeko hobekuntzarekin eraikia."
+  "footer": "Built with FastAPI, curiosity and continuous improvement.",
+  "work_life": {
+    "kicker": "Curriculum profesionala",
+    "profile_title": "Profila",
+    "profile_text": "Software Engineer Lead, software, hodei, datu, DevOps eta AA soluzioetan espezializatua, kalitatea, mantengarritasuna eta entrega jasangarria ardatz.",
+    "core_title": "Gaitasun nagusiak",
+    "core": [
+      "Lidergo teknikoa",
+      "Software arkitektura",
+      "API diseinua",
+      "Hodeia eta Azure",
+      "AA sortzailea",
+      "CI/CD eta automatizazioa"
+    ],
+    "stack_title": "Teknologiak",
+    "languages_title": "Portfolio eleanitza",
+    "languages_text": "Gaztelania, katalana, euskara, ingelesa, frantsesa, ukrainera, italiera eta turkiera.",
+    "experience_title": "Esperientzia profesionala",
+    "current": "Egungo rola",
+    "current_text": "Soluzio teknikoen ingeniaritza eta lidergo erantzukizuna, definiziotik eta arkitekturatik entrega eta bilakaerara.",
+    "responsibilities": [
+      "Produktu eta negozio beharrak erabaki tekniko argietan bihurtzea.",
+      "Arkitektura, garapena, kalitatea eta automatizazioa gidatzea.",
+      "GitFlow, probak eta CI/CD praktikak sustatzea.",
+      "AA sortzailearen aplikazio arduratsuak aztertzea."
+    ],
+    "focus_title": "Ekarpen arloak",
+    "focus": [
+      [
+        "Ingeniaritza",
+        ".NET, C#, Python, FastAPI eta APIekin soluzio mantengarriak."
+      ],
+      [
+        "Hodeia eta datuak",
+        "Azure, Docker, SQL Server, PostgreSQL eta MongoDB."
+      ],
+      [
+        "AA aplikatua",
+        "Copilot, laguntzaileak, agenteak, Ollama eta eredu lokalak."
+      ],
+      [
+        "Entrega",
+        "GitHub Actions, automatizazioa, probak eta behagarritasuna."
+      ]
+    ],
+    "projects_title": "Proiektu adierazgarriak",
+    "projects": [
+      [
+        "Ekitaldi plataforma",
+        "Ekitaldi, tailer, parte-hartzaile eta eragiketetarako produktu digitala."
+      ],
+      [
+        "AA agenteak",
+        "Ezagutza kontrolatuko laguntzaileak, FastAPI, Ollama eta Copilot."
+      ],
+      [
+        "Hodei arkitekturak",
+        "Azure, Docker eta DevOps bidezko automatizazioa eta hedapena."
+      ],
+      [
+        "IvanLlopis.net",
+        "SEO, CI/CD eta laguntzaile lokala dituen portfolio eleanitza."
+      ]
+    ],
+    "cta_kicker": "Profil osoa",
+    "cta_title": "Ibilbidea xehetasun gehiagorekin ezagutu nahi duzu?",
+    "cta_text": "Jarri nirekin harremanetan CV eguneratua eskatzeko.",
+    "cta_button": "Eskatu CVa",
+    "stack": [
+      "Microsoft Azure",
+      ".NET",
+      "C#",
+      "Python",
+      "FastAPI",
+      "Docker",
+      "SQL Server",
+      "PostgreSQL",
+      "MongoDB",
+      "GitHub Actions",
+      "Microsoft Copilot",
+      "Ollama"
+    ]
+  }
 }

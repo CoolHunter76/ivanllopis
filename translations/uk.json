@@ -13,7 +13,9 @@
     "expertise": "Компетенції",
     "technology": "Технології",
     "projects": "Проєкти",
-    "hobbies": "Захоплення"
+    "hobbies": "Захоплення",
+    "home": "Головна",
+    "work_life": "Кар’єра"
   },
   "hero": {
     "eyebrow": "Software Engineering Lead · Barcelona",
@@ -21,16 +23,16 @@
     "lead": "Я Ivan Llopis. Я керую програмними, хмарними та ШІ-рішеннями від архітектури до безпечного, спостережуваного й сталого впровадження.",
     "projects": "Переглянути проєкти",
     "explore": "Дослідити профіль",
-    "image_alt": "Професійний портрет Ivan Llopis",
-    "status_title": "Відкритий до спілкування",
+    "image_alt": "Professional portrait of Ivan Llopis",
+    "status_title": "Open to connect",
     "status_text": "Software · Cloud · AI"
   },
   "metrics": {
-    "label": "Професійний огляд",
-    "languages": "мов портфоліо",
-    "focus": "сфери спеціалізації",
-    "quality": "налаштованість на якість",
-    "learning": "безперервне навчання"
+    "label": "Resumen profesional",
+    "languages": "idiomas del portfolio",
+    "focus": "áreas de especialización",
+    "quality": "mentalidad de calidad",
+    "learning": "aprendizaje continuo"
   },
   "expertise": {
     "eyebrow": "Компетенції",
@@ -38,20 +40,20 @@
     "intro": "Профіль, що поєднує технічне лідерство, розробку, автоматизацію та прикладні експерименти з ШІ.",
     "items": [
       {
-        "title": "Програмне забезпечення та API",
-        "text": "Підтримувані рішення, сервіси й API на міцній основі якості."
+        "title": "Software & APIs",
+        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
       },
       {
-        "title": "Хмара та дані",
-        "text": "Azure, контейнери й платформи даних, адаптовані до контексту та зростання."
+        "title": "Cloud & Data",
+        "text": "Azure, containers and data platforms suited to context and growth."
       },
       {
-        "title": "Інженерія ШІ",
-        "text": "Асистенти, локальні моделі та робочі процеси генеративного ШІ."
+        "title": "AI Engineering",
+        "text": "Assistants, local models and generative AI workflows."
       },
       {
-        "title": "Інженерна доставка",
-        "text": "GitFlow, CI/CD, тестування й автоматизація для надійних релізів."
+        "title": "Engineering Delivery",
+        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
       }
     ]
   },
@@ -68,10 +70,10 @@
   "projects": {
     "eyebrow": "Проєкти",
     "title": "Проєкти, що поєднують продукт і платформу.",
-    "intro": "Ініціативи у сферах цифрових продуктів, ШІ та інфраструктури.",
+    "intro": "Інструменти та платформи для створення, інтеграції, розгортання й розвитку рішень.",
     "items": {
       "events": {
-        "title": "Платформа подій",
+        "title": "Платформа для подій",
         "text": "Керування подіями, майстер-класами, учасниками та операціями."
       },
       "ai": {
@@ -79,72 +81,154 @@
         "text": "Асистенти, контрольовані знання та локальні моделі."
       },
       "cloud": {
-        "title": "Хмарні архітектури",
-        "text": "Шаблони архітектури, автоматизації та розгортання."
+        "title": "Arquitecturas cloud",
+        "text": "Архітектурні шаблони, автоматизація та розгортання."
       },
       "portfolio": {
         "title": "IvanLlopis.net",
-        "text": "Багатомовне портфоліо з FastAPI, SEO, CI/CD та локальним асистентом."
+        "text": "Portfolio multilingüe con FastAPI, SEO, CI/CD y asistente local."
       }
     }
   },
   "process": {
     "eyebrow": "Approach",
-    "title": "Ясність, створення та безперервне вдосконалення.",
+    "title": "Ясність, реалізація y mejora continua.",
     "items": [
       {
-        "title": "Зрозуміти",
-        "text": "Узгодити проблему, користувача, обмеження та результат."
+        "title": "Entender",
+        "text": "Alinear problema, usuario, restricciones y resultado."
       },
       {
-        "title": "Створити",
-        "text": "Спроєктувати модульне, перевірюване й еволюційне рішення."
+        "title": "Construir",
+        "text": "Diseñar una solución modular, comprobable y evolutiva."
       },
       {
-        "title": "Експлуатувати",
-        "text": "Автоматизувати, спостерігати та покращувати на основі даних."
+        "title": "Operar",
+        "text": "Automatizar, observar y mejorar con evidencia."
       }
     ]
   },
   "personal": {
-    "eyebrow": "Поза кодом",
-    "title": "Технології з людською перспективою.",
-    "text": "Плавання, походи, відеоігри, барабани, подорожі та латиноамериканські танці додають рівноваги навчанню й спілкуванню.",
-    "action": "Переглянути захоплення"
+    "eyebrow": "Захоплення",
+    "title": "Tecnología con perspectiva humana.",
+    "text": "Плавання, senderismo, videojuegos, batería, viajes y bailes latinos completan una forma de aprender y conectar.",
+    "action": "Захоплення та інтереси"
   },
   "hobbies": {
     "title": "Захоплення та інтереси",
-    "intro": "Заняття, що додають рівноваги, творчості, енергії та нових поглядів.",
+    "intro": "Actividades que aportan equilibrio, creatividad, energía y nuevas perspectivas.",
     "back": "Повернутися на головну сторінку",
     "items": {
       "swimming": {
         "title": "Плавання",
-        "text": "Послідовність, техніка та добробут."
+        "text": "Constancia, técnica y bienestar."
       },
       "trekking": {
-        "title": "Походи",
-        "text": "Природа, дослідження та перспектива."
+        "title": "Піші походи",
+        "text": "Naturaleza, exploración y perspectiva."
       },
       "gaming": {
         "title": "Відеоігри",
-        "text": "Стратегія, оповіді та технології."
+        "text": "Estrategia, narrativas y tecnología."
       },
       "drums": {
-        "title": "Барабани",
-        "text": "Ритм, координація та творчість."
+        "title": "Batería",
+        "text": "Ritmo, coordinación y creatividad."
       },
       "travel": {
-        "title": "Подорожі",
-        "text": "Культури, місця та навчання."
+        "title": "Viajes",
+        "text": "Culturas, lugares y aprendizaje."
       },
       "dance": {
-        "title": "Латиноамериканські танці",
-        "text": "Музика, зв’язок і рух."
+        "title": "Bailes latinos",
+        "text": "Música, conexión y movimiento."
       }
     }
   },
   "common": {
-    "official_site": "Офіційний сайт"
+    "official_site": "Official website"
   },
-  "footer": "Створено з FastAPI, допитливістю та безперервним вдосконаленням."
+  "footer": "Built with FastAPI, curiosity and continuous improvement.",
+  "work_life": {
+    "kicker": "Професійне резюме",
+    "profile_title": "Профіль",
+    "profile_text": "Software Engineer Lead, який спеціалізується на програмних, хмарних, data, DevOps та ШІ-рішеннях із фокусом на якості, підтримуваності та сталому впровадженні.",
+    "core_title": "Ключові компетенції",
+    "core": [
+      "Технічне лідерство",
+      "Архітектура ПЗ",
+      "Проєктування API",
+      "Хмара та Azure",
+      "Генеративний ШІ",
+      "CI/CD та автоматизація"
+    ],
+    "stack_title": "Технології",
+    "languages_title": "Багатомовне портфоліо",
+    "languages_text": "Іспанська, каталонська, баскська, англійська, французька, українська, італійська та турецька.",
+    "experience_title": "Професійний досвід",
+    "current": "Поточна роль",
+    "current_text": "Інженерна та лідерська відповідальність за технічні рішення, від визначення й архітектури до впровадження та розвитку.",
+    "responsibilities": [
+      "Перетворювати потреби продукту й бізнесу на чіткі технічні рішення.",
+      "Спрямовувати архітектуру, розробку, якість та автоматизацію.",
+      "Розвивати практики GitFlow, тестування та CI/CD.",
+      "Досліджувати відповідальні застосування генеративного ШІ."
+    ],
+    "focus_title": "Сфери внеску",
+    "focus": [
+      [
+        "Інженерія",
+        "Підтримувані рішення з .NET, C#, Python, FastAPI та API."
+      ],
+      [
+        "Хмара та дані",
+        "Azure, Docker, SQL Server, PostgreSQL та MongoDB."
+      ],
+      [
+        "Прикладний ШІ",
+        "Copilot, асистенти, агенти, Ollama та локальні моделі."
+      ],
+      [
+        "Впровадження",
+        "GitHub Actions, автоматизація, тестування та спостережуваність."
+      ]
+    ],
+    "projects_title": "Репрезентативні проєкти",
+    "projects": [
+      [
+        "Платформа подій",
+        "Цифровий продукт для подій, майстер-класів, учасників та операцій."
+      ],
+      [
+        "Агенти ШІ",
+        "Асистенти з контрольованими знаннями, FastAPI, Ollama та Copilot."
+      ],
+      [
+        "Хмарні архітектури",
+        "Автоматизація та розгортання з Azure, Docker і DevOps."
+      ],
+      [
+        "IvanLlopis.net",
+        "Багатомовне портфоліо з SEO, CI/CD та локальним асистентом."
+      ]
+    ],
+    "cta_kicker": "Повний профіль",
+    "cta_title": "Хочете дізнатися про кар’єру докладніше?",
+    "cta_text": "Зв’яжіться зі мною, щоб запросити актуальну версію CV.",
+    "cta_button": "Запросити CV",
+    "stack": [
+      "Microsoft Azure",
+      ".NET",
+      "C#",
+      "Python",
+      "FastAPI",
+      "Docker",
+      "SQL Server",
+      "PostgreSQL",
+      "MongoDB",
+      "GitHub Actions",
+      "Microsoft Copilot",
+      "Ollama"
+    ]
+  }
 }

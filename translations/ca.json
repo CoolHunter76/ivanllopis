@@ -13,7 +13,9 @@
     "expertise": "Capacitats",
     "technology": "Tecnologies",
     "projects": "Projectes",
-    "hobbies": "Aficions"
+    "hobbies": "Aficions",
+    "home": "Inici",
+    "work_life": "Vida laboral"
   },
   "hero": {
     "eyebrow": "Software Engineering Lead · Barcelona",
@@ -21,16 +23,16 @@
     "lead": "Soc Ivan Llopis. Lidero solucions de programari, cloud i intel·ligència artificial des de l’arquitectura fins a un lliurament segur, observable i sostenible.",
     "projects": "Veure projectes",
     "explore": "Explorar el perfil",
-    "image_alt": "Retrat professional d’Ivan Llopis",
-    "status_title": "Disponible per connectar",
+    "image_alt": "Professional portrait of Ivan Llopis",
+    "status_title": "Open to connect",
     "status_text": "Software · Cloud · AI"
   },
   "metrics": {
-    "label": "Resum professional",
-    "languages": "idiomes del portafolis",
-    "focus": "àrees d’especialització",
-    "quality": "mentalitat de qualitat",
-    "learning": "aprenentatge continu"
+    "label": "Resumen profesional",
+    "languages": "idiomas del portfolio",
+    "focus": "áreas de especialización",
+    "quality": "mentalidad de calidad",
+    "learning": "aprendizaje continuo"
   },
   "expertise": {
     "eyebrow": "Capacitats",
@@ -38,20 +40,20 @@
     "intro": "Un perfil que combina lideratge tècnic, desenvolupament, automatització i experimentació aplicada amb IA.",
     "items": [
       {
-        "title": "Programari i APIs",
-        "text": "Solucions mantenibles, serveis i APIs amb bases sòlides de qualitat."
+        "title": "Software & APIs",
+        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
       },
       {
-        "title": "Cloud i dades",
-        "text": "Azure, contenidors i plataformes de dades adaptades al context i al creixement."
+        "title": "Cloud & Data",
+        "text": "Azure, containers and data platforms suited to context and growth."
       },
       {
-        "title": "Enginyeria d’IA",
-        "text": "Assistents, models locals i fluxos d’intel·ligència artificial generativa."
+        "title": "AI Engineering",
+        "text": "Assistants, local models and generative AI workflows."
       },
       {
-        "title": "Lliurament d’enginyeria",
-        "text": "GitFlow, CI/CD, proves i automatització per a lliuraments fiables."
+        "title": "Engineering Delivery",
+        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
       }
     ]
   },
@@ -68,83 +70,165 @@
   "projects": {
     "eyebrow": "Projectes",
     "title": "Projectes que connecten producte i plataforma.",
-    "intro": "Iniciatives de producte digital, IA i infraestructura.",
+    "intro": "Eines i plataformes per construir, integrar, desplegar i evolucionar solucions.",
     "items": {
       "events": {
         "title": "Plataforma d’esdeveniments",
-        "text": "Gestió d’esdeveniments, tallers, assistents i operacions."
+        "text": "Gestió d’esdeveniments, talleres, asistentes y operaciones."
       },
       "ai": {
         "title": "Agents d’IA",
         "text": "Assistents, coneixement controlat i models locals."
       },
       "cloud": {
-        "title": "Arquitectures cloud",
+        "title": "Arquitecturas cloud",
         "text": "Patrons d’arquitectura, automatització i desplegament."
       },
       "portfolio": {
         "title": "IvanLlopis.net",
-        "text": "Portafolis multilingüe amb FastAPI, SEO, CI/CD i assistent local."
+        "text": "Portfolio multilingüe con FastAPI, SEO, CI/CD y asistente local."
       }
     }
   },
   "process": {
     "eyebrow": "Approach",
-    "title": "Claredat, construcció i millora contínua.",
+    "title": "Claredat, construcció y mejora continua.",
     "items": [
       {
-        "title": "Entendre",
-        "text": "Alinear el problema, l’usuari, les restriccions i el resultat."
+        "title": "Entender",
+        "text": "Alinear problema, usuario, restricciones y resultado."
       },
       {
         "title": "Construir",
-        "text": "Dissenyar una solució modular, comprovable i evolutiva."
+        "text": "Diseñar una solución modular, comprobable y evolutiva."
       },
       {
         "title": "Operar",
-        "text": "Automatitzar, observar i millorar amb evidències."
+        "text": "Automatizar, observar y mejorar con evidencia."
       }
     ]
   },
   "personal": {
-    "eyebrow": "Més enllà del codi",
-    "title": "Tecnologia amb perspectiva humana.",
-    "text": "Natació, senderisme, videojocs, bateria, viatges i balls llatins completen una manera d’aprendre i connectar.",
-    "action": "Descobrir les aficions"
+    "eyebrow": "Aficions",
+    "title": "Tecnología con perspectiva humana.",
+    "text": "Natació, senderismo, videojuegos, batería, viajes y bailes latinos completan una forma de aprender y conectar.",
+    "action": "Aficions i interessos"
   },
   "hobbies": {
     "title": "Aficions i interessos",
-    "intro": "Activitats que aporten equilibri, creativitat, energia i noves perspectives.",
+    "intro": "Actividades que aportan equilibrio, creatividad, energía y nuevas perspectivas.",
     "back": "Tornar a la pàgina principal",
     "items": {
       "swimming": {
         "title": "Natació",
-        "text": "Constància, tècnica i benestar."
+        "text": "Constancia, técnica y bienestar."
       },
       "trekking": {
         "title": "Senderisme",
-        "text": "Natura, exploració i perspectiva."
+        "text": "Naturaleza, exploración y perspectiva."
       },
       "gaming": {
         "title": "Videojocs",
-        "text": "Estratègia, narratives i tecnologia."
+        "text": "Estrategia, narrativas y tecnología."
       },
       "drums": {
-        "title": "Bateria",
-        "text": "Ritme, coordinació i creativitat."
+        "title": "Batería",
+        "text": "Ritmo, coordinación y creatividad."
       },
       "travel": {
-        "title": "Viatges",
-        "text": "Cultures, llocs i aprenentatge."
+        "title": "Viajes",
+        "text": "Culturas, lugares y aprendizaje."
       },
       "dance": {
-        "title": "Balls llatins",
-        "text": "Música, connexió i moviment."
+        "title": "Bailes latinos",
+        "text": "Música, conexión y movimiento."
       }
     }
   },
   "common": {
-    "official_site": "Lloc web oficial"
+    "official_site": "Official website"
   },
-  "footer": "Construït amb FastAPI, curiositat i millora contínua."
+  "footer": "Built with FastAPI, curiosity and continuous improvement.",
+  "work_life": {
+    "kicker": "Currículum professional",
+    "profile_title": "Perfil",
+    "profile_text": "Software Engineer Lead especialitzat en solucions de programari, cloud, dades, DevOps i intel·ligència artificial, amb focus en qualitat, mantenibilitat i lliurament sostenible.",
+    "core_title": "Competències clau",
+    "core": [
+      "Lideratge tècnic",
+      "Arquitectura de programari",
+      "Disseny d’APIs",
+      "Cloud i Azure",
+      "IA generativa",
+      "CI/CD i automatització"
+    ],
+    "stack_title": "Tecnologies",
+    "languages_title": "Portafolis multilingüe",
+    "languages_text": "Espanyol, català, euskera, anglès, francès, ucraïnès, italià i turc.",
+    "experience_title": "Experiència professional",
+    "current": "Rol actual",
+    "current_text": "Responsabilitat de lideratge i enginyeria sobre solucions tècniques, des de la definició i l’arquitectura fins al lliurament i l’evolució.",
+    "responsibilities": [
+      "Traduir necessitats de producte i negoci en decisions tècniques clares.",
+      "Guiar arquitectura, desenvolupament, qualitat i automatització.",
+      "Impulsar pràctiques de GitFlow, proves i CI/CD.",
+      "Explorar aplicacions responsables d’intel·ligència artificial generativa."
+    ],
+    "focus_title": "Àrees de contribució",
+    "focus": [
+      [
+        "Enginyeria",
+        "Solucions mantenibles amb .NET, C#, Python, FastAPI i APIs."
+      ],
+      [
+        "Cloud i dades",
+        "Azure, Docker, SQL Server, PostgreSQL i MongoDB."
+      ],
+      [
+        "IA aplicada",
+        "Copilot, assistents, agents, Ollama i models locals."
+      ],
+      [
+        "Lliurament",
+        "GitHub Actions, automatització, proves i observabilitat."
+      ]
+    ],
+    "projects_title": "Projectes representatius",
+    "projects": [
+      [
+        "Plataforma d’esdeveniments",
+        "Producte digital per a esdeveniments, tallers, assistents i operacions."
+      ],
+      [
+        "Agents d’IA",
+        "Assistents amb coneixement controlat, FastAPI, Ollama i Copilot."
+      ],
+      [
+        "Arquitectures cloud",
+        "Automatització i desplegament amb Azure, Docker i DevOps."
+      ],
+      [
+        "IvanLlopis.net",
+        "Portafolis multilingüe amb SEO, CI/CD i assistent local."
+      ]
+    ],
+    "cta_kicker": "Perfil complet",
+    "cta_title": "Vols conèixer la trajectòria amb més detall?",
+    "cta_text": "Contacta amb mi per sol·licitar una versió actualitzada del CV.",
+    "cta_button": "Sol·licitar CV",
+    "stack": [
+      "Microsoft Azure",
+      ".NET",
+      "C#",
+      "Python",
+      "FastAPI",
+      "Docker",
+      "SQL Server",
+      "PostgreSQL",
+      "MongoDB",
+      "GitHub Actions",
+      "Microsoft Copilot",
+      "Ollama"
+    ]
+  }
 }
