@@ -255,6 +255,26 @@
         "type": "Proyecto para cliente",
         "role": "Análisis y desarrollo de APIs",
         "text": "API REST para ofrecer facturas, medidas e información operativa autorizada a clientes."
+      },
+      "invercaixa": {
+        "type": "Ecosistema financiero",
+        "role": "Analista programador · Bases de datos relacionales",
+        "text": "Front de gestión de fondos SICAV y soporte de aplicaciones corporativas .NET, incluyendo análisis, toma de requerimientos y diseño funcional."
+      },
+      "fundacion_caixa": {
+        "type": "Ecosistema social",
+        "role": "Analista programador .NET · Bases de datos relacionales",
+        "text": "Desarrollo de una aplicación web de gestión de contactos para el envío de notas de prensa."
+      },
+      "servihabitat": {
+        "type": "Ecosistema inmobiliario",
+        "role": "Analista programador .NET con SSIS · Bases de datos relacionales",
+        "text": "SILK / WAPIS para Servihabitat: análisis, desarrollo, implantación de proyectos y evolutivos."
+      },
+      "food_sector": {
+        "type": "Sector alimentación",
+        "role": "Analista programador .NET · Bases de datos relacionales",
+        "text": "Creación, modificación y optimización de programas de gestión interna en el contexto histórico de Nutrexpa, cuya evolución empresarial posterior dio lugar a Idilia Foods y Adam Foods."
       }
     },
     "discovery_1": "Lo esencial está aquí. El contexto completo, en el CV.",
@@ -266,7 +286,14 @@
     "detail_link": "Qué puedes descubrir",
     "cta_point_1": "Responsabilidades y alcance con más contexto.",
     "cta_point_2": "Tecnologías conectadas a problemas reales.",
-    "cta_point_3": "Una base concreta para iniciar una conversación profesional."
+    "cta_point_3": "Una base concreta para iniciar una conversación profesional.",
+    "constellation_kicker": "Experiencia en contexto",
+    "constellation_title": "Un universo profesional construido sobre tecnología, sectores y retos reales.",
+    "constellation_text": "Explora cada marca. Las conexiones solo representan relaciones profesionales reales; CaixaBank destaca por el peso de este ecosistema en mi trayectoria.",
+    "constellation_hint": "Selecciona una marca para descubrir su contexto.",
+    "explore_label": "Descubrir experiencia",
+    "food_context_title": "Contexto histórico",
+    "caixa_context": "Ecosistema Caixa"
   },
   "profile_page": {
     "eyebrow": "Perfil",
