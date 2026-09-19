@@ -2,6 +2,7 @@ import json
 import os
 import re
 import time
+from html import escape
 from collections import defaultdict, deque
 from pathlib import Path
 
@@ -273,30 +274,69 @@ def _check_cv_rate_limit(request: Request) -> None:
     queue.append(now)
 
 
+def _email_copy(language: str) -> dict[str, str]:
+    copies = {
+        "es": {
+            "admin_subject": "Nueva solicitud de CV - IvanLlopis.net",
+            "receipt_subject": "He recibido tu solicitud - IvanLlopis.net",
+            "receipt_title": "Solicitud recibida",
+            "receipt_text": "Gracias por tu interés profesional. He recibido tu solicitud y responderé personalmente al correo facilitado.",
+        },
+        "en": {
+            "admin_subject": "New CV request - IvanLlopis.net",
+            "receipt_subject": "Your request has been received - IvanLlopis.net",
+            "receipt_title": "Request received",
+            "receipt_text": "Thank you for your professional interest. Your request has been received and I will reply personally to the email provided.",
+        },
+    }
+    return copies.get(language, copies["en"])
+
+
+def _email_shell(title: str, intro: str, content: str) -> str:
+    return f"""<!doctype html><html><body style="margin:0;background:#060a08;color:#effff3;font-family:Arial,sans-serif"><div style="max-width:640px;margin:0 auto;padding:32px 20px"><div style="border:1px solid #225b38;border-radius:20px;overflow:hidden;background:#0d1611"><div style="padding:26px 30px;border-bottom:1px solid #225b38"><div style="color:#39ff88;font-size:12px;font-weight:700;letter-spacing:2px">IVANLLOPIS.NET</div><h1 style="margin:10px 0 8px;font-size:28px;color:#fff">{escape(title)}</h1><p style="margin:0;color:#a7b9ac;line-height:1.6">{escape(intro)}</p></div><div style="padding:28px 30px;line-height:1.65">{content}</div></div><p style="color:#789080;font-size:12px;text-align:center">IvanLlopis.net · Software · Cloud · AI</p></div></body></html>"""
+
+
 def send_cv_request(body: CvRequest) -> None:
     api_key = os.getenv("RESEND_API_KEY", "")
     sender = os.getenv("CV_MAIL_FROM", "IvanLlopis.net <cv@ivanllopis.net>")
     recipient = os.getenv("CV_MAIL_TO", "")
     if not all((api_key, sender, recipient)):
         raise RuntimeError("CV email service is not configured")
-
     resend.api_key = api_key
-    params: resend.Emails.SendParams = {
+    copy = _email_copy(body.language)
+    safe_name = escape(body.name.strip())
+    safe_email = escape(body.email.strip())
+    safe_phone = escape(body.phone.strip() or "Not provided")
+    safe_message = escape(body.message.strip()).replace("\n", "<br>")
+    admin_content = f"""<p><strong style="color:#39ff88">Name / company</strong><br>{safe_name}</p><p><strong style="color:#39ff88">Email</strong><br><a style="color:#79ffae" href="mailto:{safe_email}">{safe_email}</a></p><p><strong style="color:#39ff88">Phone</strong><br>{safe_phone}</p><p><strong style="color:#39ff88">Language</strong><br>{escape(body.language)}</p><p><strong style="color:#39ff88">Message</strong></p><div style="padding:18px;border-left:3px solid #39ff88;background:#071008;color:#dff5e5">{safe_message}</div>"""
+    admin: resend.Emails.SendParams = {
         "from": sender,
         "to": [recipient],
-        "subject": "New CV request - IvanLlopis.net",
-        "reply_to": body.email,
-        "text": (
-            "New CV request\n\n"
-            f"Name or company: {body.name}\n"
-            f"Email: {body.email}\n"
-            f"Phone: {body.phone or 'Not provided'}\n"
-            f"Language: {body.language}\n\n"
-            f"Message:\n{body.message}\n"
+        "subject": copy["admin_subject"],
+        "reply_to": body.email.strip(),
+        "html": _email_shell(
+            copy["admin_subject"],
+            "Professional contact received through the CV request form.",
+            admin_content,
         ),
+        "text": f"Name or company: {body.name}\nEmail: {body.email}\nPhone: {body.phone or 'Not provided'}\nLanguage: {body.language}\n\nMessage:\n{body.message}\n",
+    }
+    receipt_content = (
+        '<p style="color:#cfe7d5">'
+        + escape(copy["receipt_text"])
+        + '</p><p style="margin-top:22px;color:#8fa596;font-size:13px">Your details are used only to manage this professional request. No subscriptions or marketing communications.</p>'
+    )
+    receipt: resend.Emails.SendParams = {
+        "from": sender,
+        "to": [body.email.strip()],
+        "subject": copy["receipt_subject"],
+        "reply_to": recipient,
+        "html": _email_shell(copy["receipt_title"], copy["receipt_text"], receipt_content),
+        "text": copy["receipt_text"],
     }
     try:
-        resend.Emails.send(params)
+        resend.Emails.send(admin)
+        resend.Emails.send(receipt)
     except ResendError as error:
         raise RuntimeError("The CV request could not be sent") from error
 

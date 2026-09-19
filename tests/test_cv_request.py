@@ -73,3 +73,26 @@ def test_send_cv_request_requires_resend_configuration(monkeypatch):
         assert str(error) == "CV email service is not configured"
     else:
         raise AssertionError("Expected missing Resend configuration to fail")
+
+
+def test_send_cv_request_sends_admin_and_requester_receipt(monkeypatch):
+    captured = []
+    monkeypatch.setenv("RESEND_API_KEY", "re_test")
+    monkeypatch.setenv("CV_MAIL_FROM", "IvanLlopis.net <cv@ivanllopis.net>")
+    monkeypatch.setenv("CV_MAIL_TO", "owner@example.com")
+    monkeypatch.setattr(
+        main.resend.Emails, "send", lambda params: captured.append(params) or {"id": "ok"}
+    )
+    main.send_cv_request(main.CvRequest(**payload(message="Hello <script>alert(1)</script>")))
+    assert len(captured) == 2
+    assert captured[0]["reply_to"] == "sender@example.com"
+    assert captured[1]["to"] == ["sender@example.com"]
+    assert "<script>" not in captured[0]["html"]
+    assert "&lt;script&gt;" in captured[0]["html"]
+
+
+def test_cv_page_has_trust_and_success_experience():
+    html = client.get("/es/request-cv").text
+    assert "request-trust" in html
+    assert 'id="cv-form-success"' in html
+    assert "request-reassurance" in html
