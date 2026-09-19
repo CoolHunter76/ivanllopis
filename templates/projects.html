@@ -1,1 +1,18 @@
-{% extends "base.html" %}{% block content %}<section class="section page-hero"><p class="eyebrow">{{ t.projects.eyebrow }}</p><h1>{{ t.projects.title }}</h1><p class="lead">{{ t.projects.intro }}</p></section><section class="section project-zones">{% for project in projects %}<article class="project-zone"><span>{{ project.number }}</span><div><h2>{{ t.projects["items"][project.key].title }}</h2><p>{{ t.projects["items"][project.key].text }}</p><div class="chips">{% for tag in project.tags %}<b>{{ tag }}</b>{% endfor %}</div></div></article>{% endfor %}</section>{% endblock %}
+{% extends "base.html" %}{% block content %}
+<section class="section projects-gateway">
+  <p class="eyebrow">{{ t.projects.eyebrow }} / ENGINEERING LAB</p>
+  <h1>{{ t.projects.title }}</h1>
+  <p class="lead">{{ t.projects.intro }}</p>
+  <a class="flagship-project" href="/{{ lang }}/projects/ivanllopis-net" aria-label="{{ t.projects.world.enter }} IvanLlopis.net">
+    <div class="flagship-grid" aria-hidden="true"></div>
+    <div class="flagship-copy"><span class="project-state"><i></i>{{ t.projects.world.live }}</span><p class="eyebrow">00 / FLAGSHIP PROJECT</p>
+      <h2>IvanLlopis.net</h2><p>{{ t.projects.world.teaser }}</p>
+      <div class="chips"><b>Python</b><b>FastAPI</b><b>Docker</b><b>GitHub Actions</b><b>CI/CD</b><b>i18n</b><b>AI</b></div>
+    </div>
+    <div class="project-orb"><span>&lt;/&gt;</span><small>PROJECT://WORLD</small></div>
+    <strong class="enter-world">{{ t.projects.world.enter }} <span>↗</span></strong>
+  </a>
+</section>
+<section class="section engineering-lab"><div class="section-heading"><p class="eyebrow">R&D / NEXT</p><h2>{{ t.projects.world.lab }}</h2><p>{{ t.projects.world.lab_text }}</p></div>
+  <div class="project-zones future-projects">{% for project in projects %}{% if project.key != "portfolio" %}<article class="project-zone"><span>{{ project.number }}</span><div><small>CONCEPT / EXPLORATION</small><h2>{{ t.projects["items"][project.key].title }}</h2><p>{{ t.projects["items"][project.key].text }}</p><div class="chips">{% for tag in project.tags %}<b>{{ tag }}</b>{% endfor %}</div></div></article>{% endif %}{% endfor %}</div>
+</section>{% endblock %}

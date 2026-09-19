@@ -88,6 +88,22 @@
         "title": "IvanLlopis.net",
         "text": "Portfolio multilingüe con FastAPI, SEO, CI/CD y asistente local."
       }
+    },
+    "world": {
+      "live": "LIVE · ACTIVE DEVELOPMENT",
+      "teaser": "Un portfolio que se construye, prueba y despliega a la vista. Entra para recorrer arquitectura, código, GitFlow, CI/CD y actividad pública del repositorio.",
+      "enter": "ENTRAR AL PROJECT WORLD",
+      "lab": "Engineering Lab",
+      "lab_text": "Ideas y productos en exploración. IvanLlopis.net va primero porque es el sistema real, público y en evolución que estás usando ahora.",
+      "exit": "Salir del Project World",
+      "hero": "No estás leyendo una ficha de proyecto. Estás entrando en el sistema que sirve esta misma página: arquitectura, delivery, código y evolución conectados.",
+      "explore": "Explorar sistema",
+      "pulse": "El proyecto, ahora",
+      "architecture": "Arquitectura",
+      "architecture_text": "Una lectura interactiva y simplificada del camino desde una petición web hasta la aplicación y sus servicios.",
+      "pipeline_text": "La entrega no depende de memoria ni pasos manuales: calidad, pruebas, contenedor, staging y producción forman el recorrido.",
+      "source_text": "Una ventana de solo lectura al diseño del repositorio. El código completo continúa en GitHub, su fuente pública de verdad.",
+      "closing": "IvanLlopis.net es producto, portfolio y laboratorio. Este espacio evoluciona con el mismo repositorio que estás explorando."
     }
   },
   "process": {
@@ -234,47 +250,47 @@
       "hp": {
         "type": "Proyecto para cliente",
         "role": "Manager y mediador cliente-equipo",
-        "text": "Aplicación web de acceso a manuales de instalación y uso de impresoras empresariales."
+        "text": "Aplicaci├│n web de acceso a manuales de instalaci├│n y uso de impresoras empresariales."
       },
       "repsol": {
         "type": "Proyecto para cliente",
-        "role": "Colaboración en automatización y privacidad",
-        "text": "Script para detectar, anonimizar y eliminar datos personales o sensibles de currículums para su catalogación masiva."
+        "role": "Colaboraci├│n en automatizaci├│n y privacidad",
+        "text": "Script para detectar, anonimizar y eliminar datos personales o sensibles de curr├¡culums para su catalogaci├│n masiva."
       },
       "mapfre": {
         "type": "Proyecto para cliente",
         "role": "Desarrollo cloud y procesamiento de datos",
-        "text": "Azure Function para generar datos y estadísticas internas a partir de información almacenada en contenedores de datos."
+        "text": "Azure Function para generar datos y estad├¡sticas internas a partir de informaci├│n almacenada en contenedores de datos."
       },
       "adif": {
         "type": "Proyecto para cliente",
-        "role": "Asesoramiento técnico en ciberseguridad",
-        "text": "Análisis de auditoría y definición de acciones técnicas para securizar productos en Azure."
+        "role": "Asesoramiento t├⌐cnico en ciberseguridad",
+        "text": "An├ílisis de auditor├¡a y definici├│n de acciones t├⌐cnicas para securizar productos en Azure."
       },
       "energyavm": {
         "type": "Proyecto para cliente",
-        "role": "Análisis y desarrollo de APIs",
-        "text": "API REST para ofrecer facturas, medidas e información operativa autorizada a clientes."
+        "role": "An├ílisis y desarrollo de APIs",
+        "text": "API REST para ofrecer facturas, medidas e informaci├│n operativa autorizada a clientes."
       },
       "invercaixa": {
         "type": "Ecosistema financiero",
-        "role": "Analista programador · Bases de datos relacionales",
-        "text": "Front de gestión de fondos SICAV y soporte de aplicaciones corporativas .NET, incluyendo análisis, toma de requerimientos y diseño funcional."
+        "role": "Analista programador ┬╖ Bases de datos relacionales",
+        "text": "Front de gesti├│n de fondos SICAV y soporte de aplicaciones corporativas .NET, incluyendo an├ílisis, toma de requerimientos y dise├▒o funcional."
       },
       "fundacion_caixa": {
         "type": "Ecosistema social",
-        "role": "Analista programador .NET · Bases de datos relacionales",
-        "text": "Desarrollo de una aplicación web de gestión de contactos para el envío de notas de prensa."
+        "role": "Analista programador .NET ┬╖ Bases de datos relacionales",
+        "text": "Desarrollo de una aplicaci├│n web de gesti├│n de contactos para el env├¡o de notas de prensa."
       },
       "servihabitat": {
         "type": "Ecosistema inmobiliario",
-        "role": "Analista programador .NET con SSIS · Bases de datos relacionales",
-        "text": "SILK / WAPIS para Servihabitat: análisis, desarrollo, implantación de proyectos y evolutivos."
+        "role": "Analista programador .NET con SSIS ┬╖ Bases de datos relacionales",
+        "text": "SILK / WAPIS para Servihabitat: an├ílisis, desarrollo, implantaci├│n de proyectos y evolutivos."
       },
       "food_sector": {
-        "type": "Sector alimentación",
-        "role": "Analista programador .NET · Bases de datos relacionales",
-        "text": "Creación, modificación y optimización de programas de gestión interna en el contexto histórico de Nutrexpa, cuya evolución empresarial posterior dio lugar a Idilia Foods y Adam Foods."
+        "type": "Sector alimentaci├│n",
+        "role": "Analista programador .NET ┬╖ Bases de datos relacionales",
+        "text": "Creaci├│n, modificaci├│n y optimizaci├│n de programas de gesti├│n interna en el contexto hist├│rico de Nutrexpa, cuya evoluci├│n empresarial posterior dio lugar a Idilia Foods y Adam Foods."
       }
     },
     "discovery_1": "Lo esencial está aquí. El contexto completo, en el CV.",
@@ -286,14 +302,7 @@
     "detail_link": "Qué puedes descubrir",
     "cta_point_1": "Responsabilidades y alcance con más contexto.",
     "cta_point_2": "Tecnologías conectadas a problemas reales.",
-    "cta_point_3": "Una base concreta para iniciar una conversación profesional.",
-    "constellation_kicker": "Experiencia en contexto",
-    "constellation_title": "Un universo profesional construido sobre tecnología, sectores y retos reales.",
-    "constellation_text": "Explora cada marca. Las conexiones solo representan relaciones profesionales reales; CaixaBank destaca por el peso de este ecosistema en mi trayectoria.",
-    "constellation_hint": "Selecciona una marca para descubrir su contexto.",
-    "explore_label": "Descubrir experiencia",
-    "food_context_title": "Contexto histórico",
-    "caixa_context": "Ecosistema Caixa"
+    "cta_point_3": "Una base concreta para iniciar una conversación profesional."
   },
   "profile_page": {
     "eyebrow": "Perfil",
