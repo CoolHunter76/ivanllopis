@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from fastapi.testclient import TestClient
 
 import main
@@ -98,3 +100,13 @@ def test_cv_page_has_trust_and_success_experience():
     assert "request-trust" in html
     assert 'id="cv-form-success"' in html
     assert "request-reassurance" in html
+
+
+def test_cv_form_is_protected_from_visibility_regressions():
+    css = Path("static/css/site.css").read_text(encoding="utf-8")
+    assert "Request-CV visibility regression guard" in css
+    assert ".form-shell" in css
+    html = client.get("/es/request-cv").text
+    assert 'id="cv-request-form"' in html
+    assert 'name="email"' in html
+    assert 'name="message"' in html
