@@ -15,6 +15,7 @@ from pydantic import BaseModel, Field
 from resend.exceptions import ResendError
 
 from assistant import configure_assistant
+from project_github import REPOSITORY_URL, project_world_data
 from seo import configure_seo
 
 BASE = Path(__file__).resolve().parent
@@ -196,58 +197,15 @@ PROJECTS = [
     {"number": "01", "key": "events", "tags": [".NET", "APIs", "SQL", "Azure"]},
     {"number": "02", "key": "ai", "tags": ["Python", "FastAPI", "Ollama", "Copilot"]},
     {"number": "03", "key": "cloud", "tags": ["Azure", "Docker", "Cloud", "DevOps"]},
-    {"number": "04", "key": "portfolio", "tags": ["FastAPI", "i18n", "SEO", "CI/CD"]},
+    {
+        "number": "00",
+        "key": "portfolio",
+        "tags": ["Python", "FastAPI", "Docker", "GitHub Actions", "CI/CD"],
+    },
 ]
 
 
 CLIENT_EXPERIENCES = [
-    {
-        "id": "invercaixa",
-        "name": "InverCaixa · CaixaBank Asset Management",
-        "logo": "/static/images/companies/caixabank.svg",
-        "context_logo": "/static/images/companies/caixabank.svg",
-        "url": "https://www.caixabankassetmanagement.com/",
-        "technologies": [
-            ".NET Framework",
-            "SQL Server",
-            "SICAV",
-            "Relational Databases",
-            "Functional analysis",
-        ],
-    },
-    {
-        "id": "fundacion_caixa",
-        "name": "Fundación ”la Caixa”",
-        "logo": "/static/images/companies/fundacion-la-caixa.svg",
-        "context_logo": "/static/images/companies/caixabank.svg",
-        "url": "https://fundacionlacaixa.org/",
-        "technologies": [
-            "C#",
-            "VB.NET",
-            ".NET Framework 3.5",
-            "MVC",
-            "ASP.NET",
-            "jQuery",
-            "SQL Server 2008",
-            "Relational Databases",
-        ],
-    },
-    {
-        "id": "servihabitat",
-        "name": "SILK · Servihabitat",
-        "logo": "/static/images/companies/servihabitat.svg",
-        "context_logo": "/static/images/companies/caixabank.svg",
-        "url": "https://www.servihabitat.com/",
-        "technologies": [
-            "C#",
-            "VB.NET",
-            ".NET Framework 3.5",
-            "ASP.NET",
-            "SQL Server 2008",
-            "SSIS",
-            "Relational Databases",
-        ],
-    },
     {
         "id": "food_sector",
         "name": "Sector alimentación",
@@ -672,7 +630,24 @@ def projects(request: Request, lang: str):
     if lang not in SUPPORTED:
         return RedirectResponse("/es/projects", status_code=307)
     return templates.TemplateResponse(
-        request=request, name="projects.html", context=ctx(lang, projects=PROJECTS)
+        request=request,
+        name="projects.html",
+        context=ctx(lang, projects=PROJECTS, github_url=REPOSITORY_URL),
+    )
+
+
+@app.get(
+    "/{lang}/projects/ivanllopis-net",
+    response_class=HTMLResponse,
+    include_in_schema=False,
+)
+def project_world(request: Request, lang: str):
+    if lang not in SUPPORTED:
+        return RedirectResponse("/es/projects/ivanllopis-net", status_code=307)
+    return templates.TemplateResponse(
+        request=request,
+        name="project_world.html",
+        context=ctx(lang, project=project_world_data()),
     )
 
 
