@@ -1,6 +1,51 @@
 {% extends "base.html" %}{% block content %}
-<section class="section page-hero career-hero reveal"><p class="eyebrow">{{ t.work_life.kicker }}</p><h1>{{ t.work_life.experience_title }}</h1><p class="lead">{{ t.work_life.profile_text }}</p><div class="career-promise"><span>01</span><p>{{ t.work_life.discovery_1 }}</p><span>02</span><p>{{ t.work_life.discovery_2 }}</p><span>03</span><p>{{ t.work_life.discovery_3 }}</p></div><a class="button primary career-hero-cta" href="/{{ lang }}/request-cv">{{ t.work_life.cta_button }}</a></section>
-<section class="section career-story reveal"><p class="eyebrow">{{ t.work_life.story_kicker }}</p><h2>{{ t.work_life.story_title }}</h2><p class="lead">{{ t.work_life.story_text }}</p></section>
-<section class="section career-list">{% for item in experiences %}<article class="career-entry reveal"><a class="company-mark" href="{{ item.url }}" target="_blank" rel="noopener noreferrer"><img src="{{ item.logo }}" alt="{{ item.name }}"></a><div><p class="eyebrow">{{ t.work_life.clients[item.id].type }}</p><h2>{{ item.name }}</h2><h3>{{ t.work_life.clients[item.id].role }}</h3><p>{{ t.work_life.clients[item.id].text }}</p><div class="chips">{% for technology in item.technologies %}<b>{{ technology }}</b>{% endfor %}</div><a class="career-detail-link" href="/{{ lang }}/request-cv">{{ t.work_life.detail_link }} <span aria-hidden="true">→</span></a></div></article>{% endfor %}</section>
-<section class="section career-curiosity reveal"><div><p class="eyebrow">{{ t.work_life.cta_kicker }}</p><h2>{{ t.work_life.cta_title }}</h2><p>{{ t.work_life.cta_text }}</p><ul><li>{{ t.work_life.cta_point_1 }}</li><li>{{ t.work_life.cta_point_2 }}</li><li>{{ t.work_life.cta_point_3 }}</li></ul></div><a class="button primary" href="/{{ lang }}/request-cv">{{ t.work_life.cta_button }}</a></section>
+<section class="section page-hero work-life-hero">
+  <p class="eyebrow">{{ t.work_life.kicker }}</p>
+  <h1>{{ t.work_life.experience_title }}</h1>
+  <p class="lead">{{ t.work_life.profile_text }}</p>
+  <div class="work-life-signals" aria-label="Professional highlights">
+    <span>Software Engineering</span><span>Cloud & Azure</span><span>AI Engineering</span><span>Technical Leadership</span>
+  </div>
+  <div class="actions work-life-actions">
+    <a class="button primary" href="#career-story">Ver experiencia</a>
+    <a class="button secondary" href="/{{ lang }}/request-cv">{{ t.work_life.cta_button }}</a>
+  </div>
+  <a class="career-scroll-cue" href="#career-story" aria-label="Continuar hacia la experiencia profesional">
+    <span>Explora la trayectoria</span><b aria-hidden="true">↓</b>
+  </a>
+</section>
+
+<section id="career-story" class="section career-story">
+  <div class="section-heading career-heading">
+    <p class="eyebrow">Experience / impact / evolution</p>
+    <h2>Una trayectoria construida sobre retos reales.</h2>
+    <p>Explora algunos contextos profesionales, responsabilidades y tecnologías. El CV completo añade el contexto que no cabe en una tarjeta.</p>
+  </div>
+  <div class="career-list">
+    {% for item in experiences %}
+    <article class="career-entry">
+      <a class="company-mark" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
+        <img src="{{ item.logo }}" alt="{{ item.name }}" loading="lazy">
+      </a>
+      <div class="career-copy">
+        <p class="eyebrow">{{ t.work_life.clients[item.id].type }}</p>
+        <h2>{{ item.name }}</h2>
+        <h3>{{ t.work_life.clients[item.id].role }}</h3>
+        <p>{{ t.work_life.clients[item.id].text }}</p>
+        <div class="chips">{% for technology in item.technologies %}<b>{{ technology }}</b>{% endfor %}</div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section cv-request work-life-conversion">
+  <p class="eyebrow">{{ t.work_life.cta_kicker }}</p>
+  <h2>{{ t.work_life.cta_title }}</h2>
+  <p>{{ t.work_life.cta_text }}</p>
+  <div class="work-life-conversion-points">
+    <span>01 · Conversación directa</span><span>02 · Contexto profesional ampliado</span><span>03 · Respuesta al correo facilitado</span>
+  </div>
+  <a class="button primary" href="/{{ lang }}/request-cv">{{ t.work_life.cta_button }}</a>
+</section>
 {% endblock %}
