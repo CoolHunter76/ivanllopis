@@ -2,8 +2,8 @@ import json
 import os
 import re
 import time
-from html import escape
 from collections import defaultdict, deque
+from html import escape
 from pathlib import Path
 
 import resend

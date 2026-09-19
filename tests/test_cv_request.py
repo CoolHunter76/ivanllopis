@@ -45,22 +45,24 @@ def test_cv_request_validates_privacy_email_and_honeypot(monkeypatch):
 
 
 def test_send_cv_request_uses_resend(monkeypatch):
-    captured = {}
+    captured = []
     monkeypatch.setenv("RESEND_API_KEY", "re_test")
     monkeypatch.setenv("CV_MAIL_FROM", "IvanLlopis.net <cv@ivanllopis.net>")
     monkeypatch.setenv("CV_MAIL_TO", "recipient@example.com")
 
     def fake_send(params):
-        captured.update(params)
+        captured.append(params)
         return {"id": "email_test"}
 
     monkeypatch.setattr(main.resend.Emails, "send", fake_send)
     main.send_cv_request(main.CvRequest(**payload()))
 
-    assert captured["from"] == "IvanLlopis.net <cv@ivanllopis.net>"
-    assert captured["to"] == ["recipient@example.com"]
-    assert captured["reply_to"] == "sender@example.com"
-    assert "Example Company" in captured["text"]
+    assert len(captured) == 2
+    assert captured[0]["from"] == "IvanLlopis.net <cv@ivanllopis.net>"
+    assert captured[0]["to"] == ["recipient@example.com"]
+    assert captured[0]["reply_to"] == "sender@example.com"
+    assert "Example Company" in captured[0]["text"]
+    assert captured[1]["to"] == ["sender@example.com"]
 
 
 def test_send_cv_request_requires_resend_configuration(monkeypatch):
