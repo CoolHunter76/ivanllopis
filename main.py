@@ -245,6 +245,191 @@ PAGE_TEMPLATES = {
     "projects": "projects.html",
 }
 
+EMAIL_COPY = {
+    "es": (
+        "Nueva solicitud de CV - IvanLlopis.net",
+        "Nueva solicitud de CV",
+        "Contacto profesional recibido desde el formulario de solicitud de CV.",
+        "Nombre / empresa",
+        "Correo electrónico",
+        "Teléfono",
+        "Idioma",
+        "Mensaje",
+        "Solicitud de CV recibida - IvanLlopis.net",
+        "Solicitud recibida",
+        "Tu solicitud se ha recibido correctamente. Responderé al correo facilitado.",
+        "Gracias por tu interés en mi perfil profesional.",
+    ),
+    "ca": (
+        "Nova sol·licitud de CV - IvanLlopis.net",
+        "Nova sol·licitud de CV",
+        "Contacte professional rebut des del formulari de sol·licitud del CV.",
+        "Nom / empresa",
+        "Correu electrònic",
+        "Telèfon",
+        "Idioma",
+        "Missatge",
+        "Sol·licitud de CV rebuda - IvanLlopis.net",
+        "Sol·licitud rebuda",
+        "La teva sol·licitud s'ha rebut correctament. Respondré al correu facilitat.",
+        "Gràcies pel teu interès en el meu perfil professional.",
+    ),
+    "en": (
+        "New CV request - IvanLlopis.net",
+        "New CV request",
+        "Professional contact received through the CV request form.",
+        "Name / company",
+        "Email",
+        "Phone",
+        "Language",
+        "Message",
+        "CV request received - IvanLlopis.net",
+        "Request received",
+        "Your request has been received successfully. I will reply to the email address provided.",
+        "Thank you for your interest in my professional profile.",
+    ),
+    "fr": (
+        "Nouvelle demande de CV - IvanLlopis.net",
+        "Nouvelle demande de CV",
+        "Contact professionnel reçu via le formulaire de demande de CV.",
+        "Nom / entreprise",
+        "E-mail",
+        "Téléphone",
+        "Langue",
+        "Message",
+        "Demande de CV reçue - IvanLlopis.net",
+        "Demande reçue",
+        "Votre demande a bien été reçue. Je répondrai à l'adresse e-mail indiquée.",
+        "Merci de votre intérêt pour mon profil professionnel.",
+    ),
+    "gl": (
+        "Nova solicitude de CV - IvanLlopis.net",
+        "Nova solicitude de CV",
+        "Contacto profesional recibido desde o formulario de solicitude do CV.",
+        "Nome / empresa",
+        "Correo electrónico",
+        "Teléfono",
+        "Idioma",
+        "Mensaxe",
+        "Solicitude de CV recibida - IvanLlopis.net",
+        "Solicitude recibida",
+        "A túa solicitude recibiuse correctamente. Responderei ao correo facilitado.",
+        "Grazas polo teu interese no meu perfil profesional.",
+    ),
+    "oc": (
+        "Naua sollicitud de CV - IvanLlopis.net",
+        "Naua sollicitud de CV",
+        "Contacte professionau recebut deth formulari de sollicitud deth CV.",
+        "Nòm / entrepresa",
+        "Corrèu electronic",
+        "Telefòn",
+        "Lengua",
+        "Messatge",
+        "Sollicitud de CV recebut - IvanLlopis.net",
+        "Sollicitud recebut",
+        "Era tua sollicitud s'a recebut corrèctament. Responerè ath corrèu facilitat.",
+        "Gràcies peth tòn interès en mèn perfil professionau.",
+    ),
+    "eu": (
+        "CV eskaera berria - IvanLlopis.net",
+        "CV eskaera berria",
+        "CV eskaera formulariotik jasotako harreman profesionala.",
+        "Izena / enpresa",
+        "Helbide elektronikoa",
+        "Telefonoa",
+        "Hizkuntza",
+        "Mezua",
+        "CV eskaera jaso da - IvanLlopis.net",
+        "Eskaera jasota",
+        "Zure eskaera behar bezala jaso da. Emandako helbide elektronikora erantzungo dut.",
+        "Eskerrik asko nire profil profesionalean interesa izateagatik.",
+    ),
+    "it": (
+        "Nuova richiesta CV - IvanLlopis.net",
+        "Nuova richiesta CV",
+        "Contatto professionale ricevuto tramite il modulo di richiesta CV.",
+        "Nome / azienda",
+        "E-mail",
+        "Telefono",
+        "Lingua",
+        "Messaggio",
+        "Richiesta CV ricevuta - IvanLlopis.net",
+        "Richiesta ricevuta",
+        "La richiesta è stata ricevuta correttamente. Risponderò all'indirizzo e-mail indicato.",
+        "Grazie per l'interesse nel mio profilo professionale.",
+    ),
+    "tr": (
+        "Yeni CV talebi - IvanLlopis.net",
+        "Yeni CV talebi",
+        "CV talep formu üzerinden profesyonel iletişim alındı.",
+        "Ad / şirket",
+        "E-posta",
+        "Telefon",
+        "Dil",
+        "Mesaj",
+        "CV talebi alındı - IvanLlopis.net",
+        "Talep alındı",
+        "Talebiniz başarıyla alındı. Verdiğiniz e-posta adresine yanıt vereceğim.",
+        "Profesyonel profilime gösterdiğiniz ilgi için teşekkür ederim.",
+    ),
+    "uk": (
+        "Новий запит CV - IvanLlopis.net",
+        "Новий запит CV",
+        "Професійний контакт отримано через форму запиту CV.",
+        "Ім’я / компанія",
+        "Електронна пошта",
+        "Телефон",
+        "Мова",
+        "Повідомлення",
+        "Запит CV отримано - IvanLlopis.net",
+        "Запит отримано",
+        "Ваш запит успішно отримано. Я відповім на вказану електронну адресу.",
+        "Дякую за інтерес до мого професійного профілю.",
+    ),
+    "ru": (
+        "Новый запрос CV - IvanLlopis.net",
+        "Новый запрос CV",
+        "Профессиональный запрос получен через форму CV.",
+        "Имя / компания",
+        "Электронная почта",
+        "Телефон",
+        "Язык",
+        "Сообщение",
+        "Запрос CV получен - IvanLlopis.net",
+        "Запрос получен",
+        "Ваш запрос успешно получен. Я отвечу на указанный адрес электронной почты.",
+        "Спасибо за интерес к моему профессиональному профилю.",
+    ),
+    "zh-Hans": (
+        "新的简历申请 - IvanLlopis.net",
+        "新的简历申请",
+        "已通过简历申请表收到专业联系信息。",
+        "姓名 / 公司",
+        "电子邮件",
+        "电话",
+        "语言",
+        "留言",
+        "已收到简历申请 - IvanLlopis.net",
+        "申请已收到",
+        "您的申请已成功收到。我会回复您提供的电子邮件地址。",
+        "感谢您对我的专业资料感兴趣。",
+    ),
+    "ja": (
+        "新しいCVリクエスト - IvanLlopis.net",
+        "新しいCVリクエスト",
+        "CVリクエストフォームからプロフェッショナルなお問い合わせを受け取りました。",
+        "氏名 / 会社",
+        "メール",
+        "電話",
+        "言語",
+        "メッセージ",
+        "CVリクエストを受信しました - IvanLlopis.net",
+        "リクエストを受信しました",
+        "リクエストを正常に受信しました。ご入力いただいたメールアドレスに返信します。",
+        "プロフィールにご関心をお寄せいただきありがとうございます。",
+    ),
+}
+
 EMAIL_PATTERN = re.compile(r"^[^\s@]+@[^\s@]+\.[^\s@]+$")
 CV_REQUESTS_BY_IP: dict[str, deque[float]] = defaultdict(deque)
 
@@ -302,41 +487,55 @@ def send_cv_request(body: CvRequest) -> None:
     recipient = os.getenv("CV_MAIL_TO", "")
     if not all((api_key, sender, recipient)):
         raise RuntimeError("CV email service is not configured")
+
     resend.api_key = api_key
-    copy = _email_copy(body.language)
-    safe_name = escape(body.name.strip())
-    safe_email = escape(body.email.strip())
-    safe_phone = escape(body.phone.strip() or "Not provided")
-    safe_message = escape(body.message.strip()).replace("\n", "<br>")
-    admin_content = f"""<p><strong style="color:#39ff88">Name / company</strong><br>{safe_name}</p><p><strong style="color:#39ff88">Email</strong><br><a style="color:#79ffae" href="mailto:{safe_email}">{safe_email}</a></p><p><strong style="color:#39ff88">Phone</strong><br>{safe_phone}</p><p><strong style="color:#39ff88">Language</strong><br>{escape(body.language)}</p><p><strong style="color:#39ff88">Message</strong></p><div style="padding:18px;border-left:3px solid #39ff88;background:#071008;color:#dff5e5">{safe_message}</div>"""
-    admin: resend.Emails.SendParams = {
+    language = body.language if body.language in EMAIL_COPY else "en"
+    copy = EMAIL_COPY[language]
+    safe_name = escape(body.name)
+    safe_email = escape(body.email)
+    safe_phone = escape(body.phone or "-")
+    safe_message = escape(body.message).replace("\n", "<br>")
+
+    def card(title: str, intro: str, content: str) -> str:
+        return (
+            '<div style="background:#050b07;padding:32px;color:#effff3;font-family:Arial,sans-serif">'
+            '<div style="max-width:640px;margin:auto;border:1px solid #1b6b3b;border-radius:18px;overflow:hidden;background:#0a1710">'
+            '<div style="padding:28px;border-bottom:1px solid #1b6b3b">'
+            '<div style="color:#39ff88;font-size:12px;letter-spacing:2px">IVANLLOPIS.NET</div>'
+            f'<h1 style="margin:14px 0 8px">{title}</h1><p style="color:#a8b9ad">{intro}</p></div>'
+            f'<div style="padding:28px">{content}</div></div></div>'
+        )
+
+    admin_content = (
+        f'<p><b style="color:#39ff88">{copy[3]}</b><br>{safe_name}</p>'
+        f'<p><b style="color:#39ff88">{copy[4]}</b><br>{safe_email}</p>'
+        f'<p><b style="color:#39ff88">{copy[5]}</b><br>{safe_phone}</p>'
+        f'<p><b style="color:#39ff88">{copy[6]}</b><br>{language}</p>'
+        f'<p><b style="color:#39ff88">{copy[7]}</b></p>'
+        f'<div style="border-left:3px solid #39ff88;padding:14px 18px;background:#061009">{safe_message}</div>'
+    )
+    receipt_content = (
+        f"<h2>{copy[9]}</h2><p>{copy[10]}</p><p>{copy[11]}</p>"
+        '<p style="margin-top:28px;color:#39ff88"><b>IvanLlopis.net</b></p>'
+    )
+    admin_params: resend.Emails.SendParams = {
         "from": sender,
         "to": [recipient],
-        "subject": copy["admin_subject"],
-        "reply_to": body.email.strip(),
-        "html": _email_shell(
-            copy["admin_subject"],
-            "Professional contact received through the CV request form.",
-            admin_content,
-        ),
-        "text": f"Name or company: {body.name}\nEmail: {body.email}\nPhone: {body.phone or 'Not provided'}\nLanguage: {body.language}\n\nMessage:\n{body.message}\n",
+        "subject": copy[0],
+        "reply_to": body.email,
+        "html": card(copy[1], copy[2], admin_content),
+        "text": f"{copy[1]}\n\n{copy[3]}: {body.name}\n{copy[4]}: {body.email}\n{copy[5]}: {body.phone or '-'}\n{copy[6]}: {language}\n\n{copy[7]}:\n{body.message}\n",
     }
-    receipt_content = (
-        '<p style="color:#cfe7d5">'
-        + escape(copy["receipt_text"])
-        + '</p><p style="margin-top:22px;color:#8fa596;font-size:13px">Your details are used only to manage this professional request. No subscriptions or marketing communications.</p>'
-    )
-    receipt: resend.Emails.SendParams = {
+    receipt_params: resend.Emails.SendParams = {
         "from": sender,
-        "to": [body.email.strip()],
-        "subject": copy["receipt_subject"],
-        "reply_to": recipient,
-        "html": _email_shell(copy["receipt_title"], copy["receipt_text"], receipt_content),
-        "text": copy["receipt_text"],
+        "to": [body.email],
+        "subject": copy[8],
+        "html": card(copy[9], copy[10], receipt_content),
+        "text": f"{copy[9]}\n\n{copy[10]}\n\n{copy[11]}\n\nIvanLlopis.net\n",
     }
     try:
-        resend.Emails.send(admin)
-        resend.Emails.send(receipt)
+        resend.Emails.send(admin_params)
+        resend.Emails.send(receipt_params)
     except ResendError as error:
         raise RuntimeError("The CV request could not be sent") from error
 

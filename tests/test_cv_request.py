@@ -110,3 +110,21 @@ def test_cv_form_is_protected_from_visibility_regressions():
     assert 'id="cv-request-form"' in html
     assert 'name="email"' in html
     assert 'name="message"' in html
+
+
+def test_cv_emails_follow_request_language(monkeypatch):
+    captured = []
+    monkeypatch.setenv("RESEND_API_KEY", "re_test")
+    monkeypatch.setenv("CV_MAIL_FROM", "IvanLlopis.net <cv@ivanllopis.net>")
+    monkeypatch.setenv("CV_MAIL_TO", "owner@example.com")
+    monkeypatch.setattr(
+        main.resend.Emails, "send", lambda params: captured.append(params) or {"id": "ok"}
+    )
+    main.send_cv_request(main.CvRequest(**payload(language="es")))
+    assert len(captured) == 2
+    assert captured[0]["to"] == ["owner@example.com"]
+    assert captured[0]["reply_to"] == "sender@example.com"
+    assert captured[1]["to"] == ["sender@example.com"]
+    assert captured[0]["subject"] == "Nueva solicitud de CV - IvanLlopis.net"
+    assert "Nombre / empresa" in captured[0]["html"]
+    assert captured[1]["subject"] == "Solicitud de CV recibida - IvanLlopis.net"
