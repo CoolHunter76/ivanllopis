@@ -5,6 +5,8 @@ services:
     build:
       context: ../..
       dockerfile: Dockerfile
+    env_file:
+      - /opt/ivanllopis/staging/shared/.env.cv
 
     restart: unless-stopped
 
