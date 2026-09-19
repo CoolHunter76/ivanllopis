@@ -256,7 +256,17 @@
         "role": "API analysis and development",
         "text": "REST API providing authorised invoices, measurements and operational information to customers."
       }
-    }
+    },
+    "discovery_1": "The essentials are here. The full context is in the CV.",
+    "discovery_2": "Real experience across product, cloud, security and AI.",
+    "discovery_3": "A conversation can reveal the fit that a technology list cannot.",
+    "story_kicker": "Beyond job titles",
+    "story_title": "Decisions, challenges and learning matter more than a timeline. This page opens the door; the CV provides the complete professional context.",
+    "story_text": "I want the full context →",
+    "detail_link": "What you can discover",
+    "cta_point_1": "Responsibilities and scope with more context.",
+    "cta_point_2": "Technologies connected to real problems.",
+    "cta_point_3": "A concrete starting point for a professional conversation."
   },
   "profile_page": {
     "eyebrow": "Perfil",
@@ -301,7 +311,16 @@
     "official_url": "https://www.aepd.es/informes-y-resoluciones/normativa",
     "submit": "Enviar sol·licitud",
     "success": "Sol·licitud enviada correctament. Rebràs resposta al correu facilitat.",
-    "error": "No ha estat possible enviar la sol·licitud. Torna-ho a provar més tard."
+    "error": "No ha estat possible enviar la sol·licitud. Torna-ho a provar més tard.",
+    "trust_1": "A conversation starts with context.",
+    "trust_2": "Direct access to the up-to-date professional profile.",
+    "trust_3": "A personal reply, not an automated sales flow.",
+    "context_kicker": "Your data is used only to manage this request.",
+    "context_title": "Before you send",
+    "context_text": "What would you like to discover?",
+    "message_hint": "An opportunity, collaboration, project or simply a professional connection. Share the context so the reply can be more useful.",
+    "reassurance": "For example: I would like to learn more about your cloud, technical leadership or AI experience...",
+    "success_title": "No subscriptions or marketing messages."
   },
   "privacy": {
     "eyebrow": "Informació de privacitat",
