@@ -441,7 +441,7 @@ class CvRequest(BaseModel):
     message: str = Field(min_length=10, max_length=1500)
     consent: bool
     website: str = Field(default="", max_length=200)
-    language: str = Field(default="es", max_length=5)
+    language: str = Field(default="es", max_length=7)
 
 
 def _client_ip(request: Request) -> str:

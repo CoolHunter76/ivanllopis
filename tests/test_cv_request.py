@@ -128,3 +128,33 @@ def test_cv_emails_follow_request_language(monkeypatch):
     assert captured[0]["subject"] == "Nueva solicitud de CV - IvanLlopis.net"
     assert "Nombre / empresa" in captured[0]["html"]
     assert captured[1]["subject"] == "Solicitud de CV recibida - IvanLlopis.net"
+
+
+def test_cjk_language_codes_and_unicode_email_content(monkeypatch):
+    monkeypatch.setenv("RESEND_API_KEY", "re_test")
+    monkeypatch.setenv("CV_MAIL_FROM", "IvanLlopis.net <cv@ivanllopis.net>")
+    monkeypatch.setenv("CV_MAIL_TO", "owner@example.com")
+
+    for language, expected_text in (("zh-Hans", "简历"), ("ja", "リクエスト")):
+        captured = []
+        monkeypatch.setattr(
+            main.resend.Emails,
+            "send",
+            lambda params, target=captured: target.append(params) or {"id": "ok"},
+        )
+        body = main.CvRequest(**payload(language=language))
+        main.send_cv_request(body)
+
+        assert body.language == language
+        assert len(captured) == 2
+        assert captured[0]["to"] == ["owner@example.com"]
+        assert captured[0]["reply_to"] == "sender@example.com"
+        assert captured[1]["to"] == ["sender@example.com"]
+        assert expected_text in captured[0]["subject"] or expected_text in captured[0]["html"]
+        assert expected_text in captured[1]["subject"] or expected_text in captured[1]["html"]
+
+
+def test_zh_hans_api_request_is_not_rejected_by_language_length(monkeypatch):
+    monkeypatch.setattr(main, "send_cv_request", lambda body: None)
+    response = client.post("/api/cv-request", json=payload(language="zh-Hans"))
+    assert response.status_code == 200
