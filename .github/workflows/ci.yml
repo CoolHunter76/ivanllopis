@@ -48,7 +48,19 @@ jobs:
           from pathlib import Path
           from jinja2 import Environment, FileSystemLoader
 
-          expected_languages = {"es", "ca", "eu", "en", "fr", "it", "tr", "uk"}
+          import ast
+
+          main_tree = ast.parse(Path("main.py").read_text(encoding="utf-8"))
+          supported_assignment = next(
+              node
+              for node in main_tree.body
+              if isinstance(node, ast.Assign)
+              and any(
+                  isinstance(target, ast.Name) and target.id == "SUPPORTED"
+                  for target in node.targets
+              )
+          )
+          expected_languages = set(ast.literal_eval(supported_assignment.value))
           translation_files = {path.stem for path in Path("translations").glob("*.json")}
 
           if translation_files != expected_languages:

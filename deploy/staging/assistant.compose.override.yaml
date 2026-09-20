@@ -1,0 +1,9 @@
+services:
+  web:
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      AI_ASSISTANT_ENABLED: "true"
+      OLLAMA_URL: "http://host.docker.internal:11434"
+      OLLAMA_MODEL: "llama3.2:1b"
+      OLLAMA_TIMEOUT_SECONDS: "60"

@@ -1,36 +1,386 @@
 {
-  "language": "Español",
-  "flag": "🇪🇸",
-  "nav": [
-    "Inicio",
-    "Sobre mí",
-    "Tecnologías",
-    "Proyectos",
-    "Hobbies",
-    "Contacto"
-  ],
-  "role": "Analista y desarrollador de software",
-  "hero": "Análisis, desarrollo y soluciones Microsoft e IA",
-  "lead": "Transformo necesidades de negocio en soluciones digitales modernas con .NET, Azure, APIs, datos y Microsoft Copilot.",
-  "about_title": "Tecnología con visión funcional",
-  "about_text": "Combino análisis funcional, desarrollo de software y visión técnica para crear soluciones claras, mantenibles y escalables.",
-  "tech_title": "Tecnologías principales",
-  "ai_title": "Ecosistema de IA generativa",
-  "ai_intro": "Herramientas y motores actuales para productividad, razonamiento, desarrollo, investigación y creación de contenido.",
-  "projects_title": "Proyectos destacados",
-  "contact_title": "¿Construimos algo interesante?",
-  "contact_text": "Contacta conmigo por correo o conecta en LinkedIn.",
-  "buttons": [
-    "Ver proyectos",
-    "Contactar",
-    "Enviar correo",
-    "Ver LinkedIn"
-  ],
-  "hobbies_title": "Hobbies que aportan equilibrio, ritmo y nuevas perspectivas",
-  "back": "Volver a la página principal",
-  "projects": [
-    "Plataforma de eventos",
-    "Agentes de IA generativa",
-    "Arquitecturas cloud"
-  ]
+  "language": {
+    "name": "Español",
+    "flag": "🇪🇸"
+  },
+  "a11y": {
+    "skip": "Saltar al contenido"
+  },
+  "nav": {
+    "menu": "Menú",
+    "label": "Navegación principal",
+    "profile": "Perfil",
+    "expertise": "Capacidades",
+    "technology": "Tecnologías",
+    "projects": "Proyectos",
+    "hobbies": "Aficiones",
+    "home": "Inicio",
+    "work_life": "Vida laboral"
+  },
+  "hero": {
+    "eyebrow": "Software Engineering Lead · Barcelona",
+    "title": "Ingeniería de software con visión, rigor y propósito.",
+    "lead": "Soy Ivan Llopis. Lidero soluciones de software, cloud e inteligencia artificial desde la arquitectura hasta una entrega segura, observable y sostenible.",
+    "projects": "Ver proyectos",
+    "explore": "Explorar perfil",
+    "image_alt": "Retrato profesional de Ivan Llopis",
+    "status_title": "Disponible para conectar",
+    "status_text": "Software · Cloud · AI"
+  },
+  "metrics": {
+    "label": "Resumen profesional",
+    "languages": "idiomas del portfolio",
+    "focus": "áreas de especialización",
+    "quality": "mentalidad de calidad",
+    "learning": "aprendizaje continuo"
+  },
+  "expertise": {
+    "eyebrow": "Capacidades",
+    "title": "De la estrategia técnica a producción.",
+    "intro": "Un perfil que combina liderazgo técnico, desarrollo, automatización y experimentación aplicada con IA.",
+    "items": [
+      {
+        "title": "Software & APIs",
+        "text": "Soluciones mantenibles, servicios y APIs con bases sólidas de calidad."
+      },
+      {
+        "title": "Cloud & Data",
+        "text": "Azure, contenedores y datos adaptados al contexto y al crecimiento."
+      },
+      {
+        "title": "AI Engineering",
+        "text": "Asistentes, modelos locales y flujos de inteligencia artificial generativa."
+      },
+      {
+        "title": "Engineering Delivery",
+        "text": "GitFlow, CI/CD, pruebas y automatización para entregas confiables."
+      }
+    ]
+  },
+  "technology": {
+    "eyebrow": "Tecnologías",
+    "title": "Tecnologías que convierten ideas en productos.",
+    "intro": "Herramientas y plataformas utilizadas para construir, integrar, desplegar y evolucionar soluciones."
+  },
+  "ai": {
+    "eyebrow": "AI",
+    "title": "Ecosistema de IA",
+    "intro": "Modelos, asistentes y herramientas para ampliar capacidades."
+  },
+  "projects": {
+    "eyebrow": "Proyectos",
+    "title": "Proyectos que conectan producto y plataforma.",
+    "intro": "Herramientas y plataformas utilizadas para construir, integrar, desplegar y evolucionar soluciones.",
+    "items": {
+      "events": {
+        "title": "Plataforma de eventos",
+        "text": "Gestión de eventos, talleres, asistentes y operaciones."
+      },
+      "ai": {
+        "title": "Agentes de IA",
+        "text": "Asistentes, conocimiento controlado y modelos locales."
+      },
+      "cloud": {
+        "title": "Arquitecturas cloud",
+        "text": "Patrones de arquitectura, automatización y despliegue."
+      },
+      "portfolio": {
+        "title": "IvanLlopis.net",
+        "text": "Portfolio multilingüe con FastAPI, SEO, CI/CD y asistente local."
+      }
+    },
+    "world": {
+      "live": "LIVE · ACTIVE DEVELOPMENT",
+      "teaser": "Un portfolio que se construye, prueba y despliega a la vista. Entra para recorrer arquitectura, código, GitFlow, CI/CD y actividad pública del repositorio.",
+      "enter": "ENTRAR AL PROJECT WORLD",
+      "lab": "Engineering Lab",
+      "lab_text": "Ideas y productos en exploración. IvanLlopis.net va primero porque es el sistema real, público y en evolución que estás usando ahora.",
+      "exit": "Salir del Project World",
+      "hero": "No estás leyendo una ficha de proyecto. Estás entrando en el sistema que sirve esta misma página: arquitectura, delivery, código y evolución conectados.",
+      "explore": "Explorar sistema",
+      "pulse": "El proyecto, ahora",
+      "architecture": "Arquitectura",
+      "architecture_text": "Una lectura interactiva y simplificada del camino desde una petición web hasta la aplicación y sus servicios.",
+      "pipeline_text": "La entrega no depende de memoria ni pasos manuales: calidad, pruebas, contenedor, staging y producción forman el recorrido.",
+      "source_text": "Una ventana de solo lectura al diseño del repositorio. El código completo continúa en GitHub, su fuente pública de verdad.",
+      "closing": "IvanLlopis.net es producto, portfolio y laboratorio. Este espacio evoluciona con el mismo repositorio que estás explorando."
+    }
+  },
+  "process": {
+    "eyebrow": "Approach",
+    "title": "Claridad, construcción y mejora continua.",
+    "items": [
+      {
+        "title": "Entender",
+        "text": "Alinear problema, usuario, restricciones y resultado."
+      },
+      {
+        "title": "Construir",
+        "text": "Diseñar una solución modular, comprobable y evolutiva."
+      },
+      {
+        "title": "Operar",
+        "text": "Automatizar, observar y mejorar con evidencia."
+      }
+    ]
+  },
+  "personal": {
+    "eyebrow": "Aficiones",
+    "title": "Tecnología con perspectiva humana.",
+    "text": "Natación, senderismo, videojuegos, batería, viajes y bailes latinos completan una forma de aprender y conectar.",
+    "action": "Aficiones e intereses"
+  },
+  "hobbies": {
+    "title": "Aficiones e intereses",
+    "intro": "Actividades que aportan equilibrio, creatividad, energía y nuevas perspectivas.",
+    "back": "Volver a la página principal",
+    "items": {
+      "swimming": {
+        "title": "Natación",
+        "text": "Constancia, técnica y bienestar."
+      },
+      "trekking": {
+        "title": "Senderismo",
+        "text": "Naturaleza, exploración y perspectiva."
+      },
+      "gaming": {
+        "title": "Videojuegos",
+        "text": "Estrategia, narrativas y tecnología."
+      },
+      "drums": {
+        "title": "Batería",
+        "text": "Ritmo, coordinación y creatividad."
+      },
+      "travel": {
+        "title": "Viajes",
+        "text": "Culturas, lugares y aprendizaje."
+      },
+      "dance": {
+        "title": "Bailes latinos",
+        "text": "Música, conexión y movimiento."
+      }
+    }
+  },
+  "common": {
+    "official_site": "Sitio oficial"
+  },
+  "footer": "Construido con FastAPI, curiosidad y mejora continua.",
+  "work_life": {
+    "kicker": "Currículum profesional",
+    "profile_title": "Perfil",
+    "profile_text": "Software Engineer Lead especializado en soluciones de software, cloud, datos, DevOps e inteligencia artificial, con foco en calidad, mantenibilidad y entrega sostenible.",
+    "core_title": "Competencias clave",
+    "core": [
+      "Liderazgo técnico",
+      "Arquitectura de software",
+      "Diseño de APIs",
+      "Cloud y Azure",
+      "IA generativa",
+      "CI/CD y automatización"
+    ],
+    "stack_title": "Tecnologías",
+    "languages_title": "Portfolio multilingüe",
+    "languages_text": "Español, catalán, euskera, inglés, francés, ucraniano, italiano y turco.",
+    "experience_title": "Experiencia profesional",
+    "current": "Rol actual",
+    "current_text": "Responsabilidad de liderazgo e ingeniería sobre soluciones técnicas, desde la definición y arquitectura hasta la entrega y evolución.",
+    "responsibilities": [
+      "Traducir necesidades de producto y negocio en decisiones técnicas claras.",
+      "Guiar arquitectura, desarrollo, calidad y automatización.",
+      "Impulsar prácticas de GitFlow, pruebas y CI/CD.",
+      "Explorar aplicaciones responsables de inteligencia artificial generativa."
+    ],
+    "focus_title": "Áreas de contribución",
+    "focus": [
+      [
+        "Ingeniería",
+        "Soluciones mantenibles con .NET, C#, Python, FastAPI y APIs."
+      ],
+      [
+        "Cloud y datos",
+        "Azure, Docker, SQL Server, PostgreSQL y MongoDB."
+      ],
+      [
+        "IA aplicada",
+        "Copilot, asistentes, agentes, Ollama y modelos locales."
+      ],
+      [
+        "Entrega",
+        "GitHub Actions, automatización, pruebas y observabilidad."
+      ]
+    ],
+    "projects_title": "Proyectos representativos",
+    "projects": [
+      [
+        "Plataforma de eventos",
+        "Producto digital para eventos, talleres, asistentes y operaciones."
+      ],
+      [
+        "Agentes de IA",
+        "Asistentes con conocimiento controlado, FastAPI, Ollama y Copilot."
+      ],
+      [
+        "Arquitecturas cloud",
+        "Automatización y despliegue con Azure, Docker y DevOps."
+      ],
+      [
+        "IvanLlopis.net",
+        "Portfolio multilingüe con SEO, CI/CD y asistente local."
+      ]
+    ],
+    "cta_kicker": "Perfil completo",
+    "cta_title": "¿Quieres conocer la trayectoria con más detalle?",
+    "cta_text": "Contacta conmigo para solicitar una versión actualizada del CV.",
+    "cta_button": "Solicitar CV",
+    "stack": [
+      "Microsoft Azure",
+      ".NET",
+      "C#",
+      "Python",
+      "FastAPI",
+      "Docker",
+      "SQL Server",
+      "PostgreSQL",
+      "MongoDB",
+      "GitHub Actions",
+      "Microsoft Copilot",
+      "Ollama"
+    ],
+    "clients": {
+      "hp": {
+        "type": "Proyecto para cliente",
+        "role": "Manager y mediador cliente-equipo",
+        "text": "Aplicación web de acceso a manuales de instalación y uso de impresoras empresariales."
+      },
+      "repsol": {
+        "type": "Proyecto para cliente",
+        "role": "Colaboración en automatización y privacidad",
+        "text": "Script para detectar, anonimizar y eliminar datos personales o sensibles de currículums para su catalogación masiva."
+      },
+      "mapfre": {
+        "type": "Proyecto para cliente",
+        "role": "Desarrollo cloud y procesamiento de datos",
+        "text": "Azure Function para generar datos y estadísticas internas a partir de información almacenada en contenedores de datos."
+      },
+      "adif": {
+        "type": "Proyecto para cliente",
+        "role": "Asesoramiento técnico en ciberseguridad",
+        "text": "Análisis de auditoría y definición de acciones técnicas para securizar productos en Azure."
+      },
+      "energyavm": {
+        "type": "Proyecto para cliente",
+        "role": "Análisis y desarrollo de APIs",
+        "text": "API REST para ofrecer facturas, medidas e información operativa autorizada a clientes."
+      },
+      "invercaixa": {
+        "type": "Ecosistema financiero",
+        "role": "Analista programador · Bases de datos relacionales",
+        "text": "Front de gestión de fondos SICAV y soporte de aplicaciones corporativas .NET, incluyendo análisis, toma de requerimientos y diseño funcional."
+      },
+      "fundacion_caixa": {
+        "type": "Ecosistema social",
+        "role": "Analista programador .NET · Bases de datos relacionales",
+        "text": "Desarrollo de una aplicación web de gestión de contactos para el envío de notas de prensa."
+      },
+      "servihabitat": {
+        "type": "Ecosistema inmobiliario",
+        "role": "Analista programador .NET con SSIS · Bases de datos relacionales",
+        "text": "SILK / WAPIS para Servihabitat: análisis, desarrollo, implantación de proyectos y evolutivos."
+      },
+      "food_sector": {
+        "type": "Sector alimentación",
+        "role": "Analista programador .NET · Bases de datos relacionales",
+        "text": "Creación, modificación y optimización de programas de gestión interna en el contexto histórico de Nutrexpa, cuya evolución empresarial posterior dio lugar a Idilia Foods y Adam Foods."
+      }
+    },
+    "discovery_1": "Lo esencial está aquí. El contexto completo, en el CV.",
+    "discovery_2": "Experiencia real en producto, cloud, seguridad e IA.",
+    "discovery_3": "Una conversación puede revelar el encaje que una lista de tecnologías no muestra.",
+    "story_kicker": "Más allá de los cargos",
+    "story_title": "Las decisiones, retos y aprendizajes cuentan más que una cronología. Esta página abre la puerta; el CV aporta el contexto profesional completo.",
+    "story_text": "Quiero conocer el contexto completo →",
+    "detail_link": "Qué puedes descubrir",
+    "cta_point_1": "Responsabilidades y alcance con más contexto.",
+    "cta_point_2": "Tecnologías conectadas a problemas reales.",
+    "cta_point_3": "Una base concreta para iniciar una conversación profesional.",
+    "constellation_kicker": "Experiencia en contexto",
+    "constellation_title": "Un universo profesional construido sobre tecnología, sectores y retos reales.",
+    "constellation_text": "Explora cada marca. Las conexiones solo representan relaciones profesionales reales; CaixaBank destaca por el peso de este ecosistema en mi trayectoria.",
+    "constellation_hint": "Selecciona una marca para descubrir su contexto.",
+    "explore_label": "Descubrir experiencia",
+    "food_context_title": "Contexto histórico",
+    "caixa_context": "Ecosistema Caixa"
+  },
+  "profile_page": {
+    "eyebrow": "Perfil",
+    "title": "Perfil profesional",
+    "lead": "Una visión completa de la experiencia, el enfoque y la forma de trabajar.",
+    "items": [
+      {
+        "title": "Software & APIs",
+        "text": "Soluciones mantenibles, servicios y APIs con bases sólidas de calidad."
+      },
+      {
+        "title": "Cloud & Data",
+        "text": "Azure, contenedores y datos adaptados al contexto y al crecimiento."
+      },
+      {
+        "title": "AI Engineering",
+        "text": "Asistentes, modelos locales y flujos de inteligencia artificial generativa."
+      },
+      {
+        "title": "Engineering Delivery",
+        "text": "GitFlow, CI/CD, pruebas y automatización para entregas confiables."
+      }
+    ]
+  },
+  "capabilities_page": {
+    "eyebrow": "Capacidades",
+    "title": "Capacidades profesionales",
+    "lead": "Profundidad técnica aplicada a problemas reales."
+  },
+  "cv_request": {
+    "eyebrow": "CV",
+    "title": "Solicitar el CV",
+    "intro": "Envía tus datos y un breve mensaje para solicitar una copia actualizada del CV.",
+    "name": "Nombre o empresa",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "optional": "Opcional",
+    "message": "Mensaje breve",
+    "consent": "He leído y acepto la información de protección de datos y autorizo el tratamiento de los datos exclusivamente para gestionar mi solicitud del CV.",
+    "privacy_link": "Información de privacidad",
+    "official_link": "Normativa oficial de protección de datos",
+    "official_url": "https://www.aepd.es/informes-y-resoluciones/normativa",
+    "submit": "Enviar solicitud",
+    "success": "Solicitud enviada correctamente. Recibirás respuesta en el correo facilitado.",
+    "error": "No ha sido posible enviar la solicitud. Inténtalo de nuevo más tarde.",
+    "trust_1": "Una conversación empieza con contexto.",
+    "trust_2": "Acceso directo al perfil profesional actualizado.",
+    "trust_3": "Respuesta personal, no automatizada.",
+    "context_kicker": "Tus datos se usan solo para gestionar esta solicitud.",
+    "context_title": "Antes de enviar",
+    "context_text": "¿Qué te gustaría descubrir?",
+    "message_hint": "Una oportunidad, colaboración, proyecto o simplemente un punto de conexión profesional. Cuéntame el contexto y podré responder de forma más útil.",
+    "reassurance": "Por ejemplo: me gustaría conocer más sobre tu experiencia en cloud, liderazgo técnico o IA...",
+    "success_title": "Sin suscripciones ni comunicaciones comerciales."
+  },
+  "privacy": {
+    "eyebrow": "Información de privacidad",
+    "title": "Información de privacidad",
+    "intro": "Envía tus datos y un breve mensaje para solicitar una copia actualizada del CV.",
+    "controller_title": "Responsable",
+    "controller": "Ivan Llopis / IvanLlopis.net.",
+    "purpose_title": "Finalidad",
+    "purpose": "Envía tus datos y un breve mensaje para solicitar una copia actualizada del CV.",
+    "data_title": "Datos",
+    "data": "Nombre o empresa, Correo electrónico, Teléfono y Mensaje breve.",
+    "legal_title": "Base legal",
+    "legal": "He leído y acepto la información de protección de datos y autorizo el tratamiento de los datos exclusivamente para gestionar mi solicitud del CV.",
+    "retention_title": "Conservación",
+    "retention": "Solo durante el tiempo necesario para responder y cumplir obligaciones legales.",
+    "rights_title": "Derechos",
+    "rights": "Acceso, rectificación, supresión, limitación, oposición, portabilidad y retirada del consentimiento.",
+    "note": "Traducción informativa. Las referencias jurídicas oficiales son el RGPD y la Ley Orgánica 3/2018."
+  }
 }
