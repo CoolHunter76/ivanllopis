@@ -255,7 +255,7 @@
       "repsol": {
         "type": "Progetto cliente",
         "role": "Automation and privacy collaboration",
-        "text": "Script to detect, anonymize and remove personal or sensitive data from r├⌐sum├⌐s for bulk cataloguing."
+        "text": "Script to detect, anonymize and remove personal or sensitive data from résumés for bulk cataloguing."
       },
       "mapfre": {
         "type": "Progetto cliente",
@@ -274,22 +274,22 @@
       },
       "invercaixa": {
         "type": "Professional project",
-        "role": "Analyst Programmer ┬╖ Relational Databases",
+        "role": "Analyst Programmer · Relational Databases",
         "text": "Professional experience covering analysis, development and internal business applications. Historical company names are preserved as context."
       },
       "fundacion_caixa": {
         "type": "Professional project",
-        "role": "Analyst Programmer .NET ┬╖ Relational Databases",
+        "role": "Analyst Programmer .NET · Relational Databases",
         "text": "Professional experience covering analysis, development and internal business applications. Historical company names are preserved as context."
       },
       "servihabitat": {
         "type": "Professional project",
-        "role": "Analyst Programmer .NET con SSIS ┬╖ Relational Databases",
+        "role": "Analyst Programmer .NET con SSIS · Relational Databases",
         "text": "Professional experience covering analysis, development and internal business applications. Historical company names are preserved as context."
       },
       "food_sector": {
         "type": "Professional project",
-        "role": "Analyst Programmer .NET ┬╖ Relational Databases",
+        "role": "Analyst Programmer .NET · Relational Databases",
         "text": "Professional experience covering analysis, development and internal business applications. Historical company names are preserved as context."
       }
     },

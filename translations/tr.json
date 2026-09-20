@@ -248,48 +248,48 @@
     ],
     "clients": {
       "hp": {
-        "type": "M├╝┼ƒteri projesi",
+        "type": "Müşteri projesi",
         "role": "Client-team manager and mediator",
         "text": "Web application providing access to installation and usage manuals for enterprise printers."
       },
       "repsol": {
-        "type": "M├╝┼ƒteri projesi",
+        "type": "Müşteri projesi",
         "role": "Automation and privacy collaboration",
-        "text": "Script to detect, anonymize and remove personal or sensitive data from r├⌐sum├⌐s for bulk cataloguing."
+        "text": "Script to detect, anonymize and remove personal or sensitive data from résumés for bulk cataloguing."
       },
       "mapfre": {
-        "type": "M├╝┼ƒteri projesi",
+        "type": "Müşteri projesi",
         "role": "Cloud development and data processing",
         "text": "Azure Function generating internal data and statistics from information stored in data containers."
       },
       "adif": {
-        "type": "M├╝┼ƒteri projesi",
+        "type": "Müşteri projesi",
         "role": "Cybersecurity technical advisory",
         "text": "Audit analysis and technical remediation actions to secure products on Azure."
       },
       "energyavm": {
-        "type": "M├╝┼ƒteri projesi",
+        "type": "Müşteri projesi",
         "role": "API analysis and development",
         "text": "REST API providing authorised invoices, measurements and operational information to customers."
       },
       "invercaixa": {
         "type": "Professional project",
-        "role": "Analyst Programmer ┬╖ Relational Databases",
+        "role": "Analyst Programmer · Relational Databases",
         "text": "Professional experience covering analysis, development and internal business applications. Historical company names are preserved as context."
       },
       "fundacion_caixa": {
         "type": "Professional project",
-        "role": "Analyst Programmer .NET ┬╖ Relational Databases",
+        "role": "Analyst Programmer .NET · Relational Databases",
         "text": "Professional experience covering analysis, development and internal business applications. Historical company names are preserved as context."
       },
       "servihabitat": {
         "type": "Professional project",
-        "role": "Analyst Programmer .NET con SSIS ┬╖ Relational Databases",
+        "role": "Analyst Programmer .NET con SSIS · Relational Databases",
         "text": "Professional experience covering analysis, development and internal business applications. Historical company names are preserved as context."
       },
       "food_sector": {
         "type": "Professional project",
-        "role": "Analyst Programmer .NET ┬╖ Relational Databases",
+        "role": "Analyst Programmer .NET · Relational Databases",
         "text": "Professional experience covering analysis, development and internal business applications. Historical company names are preserved as context."
       }
     },
