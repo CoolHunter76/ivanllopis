@@ -15,7 +15,6 @@ from pydantic import BaseModel, Field
 from resend.exceptions import ResendError
 
 from assistant import configure_assistant
-from project_github import REPOSITORY_URL, project_world_data
 from seo import configure_seo
 
 BASE = Path(__file__).resolve().parent
@@ -197,12 +196,9 @@ PROJECTS = [
     {"number": "01", "key": "events", "tags": [".NET", "APIs", "SQL", "Azure"]},
     {"number": "02", "key": "ai", "tags": ["Python", "FastAPI", "Ollama", "Copilot"]},
     {"number": "03", "key": "cloud", "tags": ["Azure", "Docker", "Cloud", "DevOps"]},
-    {
-        "number": "00",
-        "key": "portfolio",
-        "tags": ["Python", "FastAPI", "Docker", "GitHub Actions", "CI/CD"],
-    },
+    {"number": "04", "key": "portfolio", "tags": ["FastAPI", "i18n", "SEO", "CI/CD"]},
 ]
+
 
 CLIENT_EXPERIENCES = [
     {
@@ -676,24 +672,7 @@ def projects(request: Request, lang: str):
     if lang not in SUPPORTED:
         return RedirectResponse("/es/projects", status_code=307)
     return templates.TemplateResponse(
-        request=request,
-        name="projects.html",
-        context=ctx(lang, projects=PROJECTS, github_url=REPOSITORY_URL),
-    )
-
-
-@app.get(
-    "/{lang}/projects/ivanllopis-net",
-    response_class=HTMLResponse,
-    include_in_schema=False,
-)
-def project_world(request: Request, lang: str):
-    if lang not in SUPPORTED:
-        return RedirectResponse("/es/projects/ivanllopis-net", status_code=307)
-    return templates.TemplateResponse(
-        request=request,
-        name="project_world.html",
-        context=ctx(lang, project=project_world_data()),
+        request=request, name="projects.html", context=ctx(lang, projects=PROJECTS)
     )
 
 

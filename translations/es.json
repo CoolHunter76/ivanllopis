@@ -302,7 +302,14 @@
     "detail_link": "Qué puedes descubrir",
     "cta_point_1": "Responsabilidades y alcance con más contexto.",
     "cta_point_2": "Tecnologías conectadas a problemas reales.",
-    "cta_point_3": "Una base concreta para iniciar una conversación profesional."
+    "cta_point_3": "Una base concreta para iniciar una conversación profesional.",
+    "constellation_kicker": "Experiencia en contexto",
+    "constellation_title": "Un universo profesional construido sobre tecnolog├¡a, sectores y retos reales.",
+    "constellation_text": "Explora cada marca. Las conexiones solo representan relaciones profesionales reales; CaixaBank destaca por el peso de este ecosistema en mi trayectoria.",
+    "constellation_hint": "Selecciona una marca para descubrir su contexto.",
+    "explore_label": "Descubrir experiencia",
+    "food_context_title": "Contexto hist├│rico",
+    "caixa_context": "Ecosistema Caixa"
   },
   "profile_page": {
     "eyebrow": "Perfil",
