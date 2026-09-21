@@ -33,12 +33,17 @@ def trn(lang_code: str) -> dict:
     return json.loads((BASE / "translations" / f"{language}.json").read_text(encoding="utf-8"))
 
 
-def ctx(lang_code: str, **extra: object) -> dict:
+def ctx(lang_code: str, page: str = "", **extra: object) -> dict:
+    portal_enabled = (
+        os.getenv("V3_PORTAL_ENABLED", os.getenv("V3_LANDING_ENABLED", "false")).lower() == "true"
+    )
     return {
         "lang": lang_code,
         "contact_url": os.getenv("PUBLIC_CONTACT_URL", f"/{lang_code}#profile"),
         "t": trn(lang_code),
         "languages": [{"code": code, **trn(code)["language"]} for code in SUPPORTED],
+        "current_page": page,
+        "v3_portal": portal_enabled,
         **extra,
     }
 
@@ -640,7 +645,7 @@ def home(request: Request, lang: str):
             technologies=TECHNOLOGIES,
             ai_engines=AI_ENGINES,
             projects=PROJECTS,
-            v3_landing=os.getenv("V3_LANDING_ENABLED", "false").lower() == "true",
+            page="home",
         ),
     )
 
@@ -652,7 +657,7 @@ def technologies(request: Request, lang: str):
     return templates.TemplateResponse(
         request=request,
         name="technologies.html",
-        context=ctx(lang, technologies=TECHNOLOGIES, ai_engines=AI_ENGINES),
+        context=ctx(lang, page="technologies", technologies=TECHNOLOGIES, ai_engines=AI_ENGINES),
     )
 
 
@@ -663,7 +668,7 @@ def projects(request: Request, lang: str):
     return templates.TemplateResponse(
         request=request,
         name="projects.html",
-        context=ctx(lang, projects=PROJECTS, github_url=REPOSITORY_URL),
+        context=ctx(lang, page="projects", projects=PROJECTS, github_url=REPOSITORY_URL),
     )
 
 
@@ -678,7 +683,7 @@ def project_world(request: Request, lang: str):
     return templates.TemplateResponse(
         request=request,
         name="project_world.html",
-        context=ctx(lang, project=project_world_data()),
+        context=ctx(lang, page="projects", project=project_world_data()),
     )
 
 
@@ -687,7 +692,9 @@ def work_life(request: Request, lang: str):
     if lang not in SUPPORTED:
         return RedirectResponse("/es/work-life", status_code=307)
     return templates.TemplateResponse(
-        request=request, name="work_life.html", context=ctx(lang, experiences=CLIENT_EXPERIENCES)
+        request=request,
+        name="work_life.html",
+        context=ctx(lang, page="work-life", experiences=CLIENT_EXPERIENCES),
     )
 
 
@@ -695,14 +702,18 @@ def work_life(request: Request, lang: str):
 def request_cv(request: Request, lang: str):
     if lang not in SUPPORTED:
         return RedirectResponse("/es/request-cv", status_code=307)
-    return templates.TemplateResponse(request=request, name="request_cv.html", context=ctx(lang))
+    return templates.TemplateResponse(
+        request=request, name="request_cv.html", context=ctx(lang, page="work-life")
+    )
 
 
 @app.get("/{lang}/privacy", response_class=HTMLResponse, include_in_schema=False)
 def privacy(request: Request, lang: str):
     if lang not in SUPPORTED:
         return RedirectResponse("/es/privacy", status_code=307)
-    return templates.TemplateResponse(request=request, name="privacy.html", context=ctx(lang))
+    return templates.TemplateResponse(
+        request=request, name="privacy.html", context=ctx(lang, page="work-life")
+    )
 
 
 @app.get("/{lang}/hobbies", response_class=HTMLResponse, include_in_schema=False)
@@ -710,5 +721,5 @@ def hobbies(request: Request, lang: str):
     if lang not in SUPPORTED:
         return RedirectResponse("/es/hobbies", status_code=307)
     return templates.TemplateResponse(
-        request=request, name="hobbies.html", context=ctx(lang, hobbies=HOBBIES)
+        request=request, name="hobbies.html", context=ctx(lang, page="hobbies", hobbies=HOBBIES)
     )

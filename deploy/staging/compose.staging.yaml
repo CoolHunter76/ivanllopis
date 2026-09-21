@@ -8,7 +8,7 @@ services:
     env_file:
       - /opt/ivanllopis/staging/shared/.env.cv
     environment:
-      V3_LANDING_ENABLED: "true"
+      V3_PORTAL_ENABLED: "true"
 
     restart: unless-stopped
 
