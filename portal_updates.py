@@ -30,3 +30,23 @@ def load_portal_updates(language: str) -> dict[str, object]:
     data["published"] = published
     data["upcoming"] = upcoming
     return data
+
+
+def portal_update_detail(language: str, update_id: str) -> dict[str, object] | None:
+    data = load_portal_updates(language)
+    items = data["items"]
+    for index, item in enumerate(items):
+        if item["id"] != update_id:
+            continue
+        return {
+            "item": item,
+            "previous": items[index - 1] if index > 0 else None,
+            "next": items[index + 1] if index + 1 < len(items) else None,
+            "copy": data["detail"],
+        }
+    return None
+
+
+def published_update_ids() -> tuple[str, ...]:
+    data = load_portal_updates("es")
+    return tuple(item["id"] for item in data["published"])

@@ -15,7 +15,21 @@
       "category": "EXPERIENCE",
       "status": "active",
       "title": "インパクトのある V3 ランディング",
-      "summary": "没入型の入口、Current Signal、4 つの探索ポータルを追加。"
+      "summary": "没入型の入口、Current Signal、4 つの探索ポータルを追加。",
+      "sections": [
+        {
+          "title": "変更内容",
+          "text": "没入型の入口、Current Signal、4 つの探索ポータルを追加。 This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "影響",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "デリバリー",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
     },
     {
       "id": "neural-navigation",
@@ -24,7 +38,21 @@
       "category": "NAVIGATION",
       "status": "released",
       "title": "グローバル・ニューラルナビゲーション",
-      "summary": "Neural Rail、Neural Dock、Glitch 遷移が全ページを接続。"
+      "summary": "Neural Rail、Neural Dock、Glitch 遷移が全ページを接続。",
+      "sections": [
+        {
+          "title": "変更内容",
+          "text": "Neural Rail、Neural Dock、Glitch 遷移が全ページを接続。 This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "影響",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "デリバリー",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
     },
     {
       "id": "isolated-staging",
@@ -33,7 +61,21 @@
       "category": "DELIVERY",
       "status": "released",
       "title": "分離されたステージング",
-      "summary": "独立環境で production 前の develop を検証。"
+      "summary": "独立環境で production 前の develop を検証。",
+      "sections": [
+        {
+          "title": "変更内容",
+          "text": "独立環境で production 前の develop を検証。 This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "影響",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "デリバリー",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
     },
     {
       "id": "project-world-evolution",
@@ -42,7 +84,21 @@
       "category": "PROJECT WORLD",
       "status": "next",
       "title": "Project World の進化",
-      "summary": "アーキテクチャ、デリバリー、公開アクティビティをより深く可視化。"
+      "summary": "アーキテクチャ、デリバリー、公開アクティビティをより深く可視化。",
+      "sections": [
+        {
+          "title": "変更内容",
+          "text": "アーキテクチャ、デリバリー、公開アクティビティをより深く可視化。 This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "影響",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "デリバリー",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
     }
   ],
   "archive": {
@@ -53,5 +109,19 @@
     "view_all": "履歴をすべて見る",
     "back": "ホームへ戻る",
     "footer": "更新情報"
+  },
+  "detail": {
+    "detail_title": "進化の詳細",
+    "back_archive": "履歴に戻る",
+    "previous": "前へ",
+    "next": "次へ",
+    "published": "公開済み",
+    "planned": "次のシグナル",
+    "overview": "変更内容",
+    "impact": "影響",
+    "delivery": "デリバリー",
+    "overview_text": "This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience.",
+    "impact_text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations.",
+    "delivery_text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
   }
 }

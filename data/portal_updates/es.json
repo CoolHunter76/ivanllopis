@@ -15,7 +15,21 @@
       "category": "EXPERIENCE",
       "status": "active",
       "title": "Landing V3 de alto impacto",
-      "summary": "Nueva entrada inmersiva, Current Signal y cuatro portales de exploracion."
+      "summary": "Nueva entrada inmersiva, Current Signal y cuatro portales de exploracion.",
+      "sections": [
+        {
+          "title": "Qué cambió",
+          "text": "Nueva entrada inmersiva, Current Signal y cuatro portales de exploracion. Este cambio forma parte de la evolución continua de IvanLlopis.net y amplía la experiencia pública del portal."
+        },
+        {
+          "title": "Impacto",
+          "text": "La mejora conecta experiencia, arquitectura y entrega sin alterar los cinco destinos de navegación principales."
+        },
+        {
+          "title": "Entrega",
+          "text": "El cambio se integra con FastAPI, contenido local y pruebas automatizadas para mantener una entrega verificable."
+        }
+      ]
     },
     {
       "id": "neural-navigation",
@@ -24,7 +38,21 @@
       "category": "NAVIGATION",
       "status": "released",
       "title": "Navegacion neural global",
-      "summary": "Neural Rail, Neural Dock y transiciones Glitch conectan todas las paginas."
+      "summary": "Neural Rail, Neural Dock y transiciones Glitch conectan todas las paginas.",
+      "sections": [
+        {
+          "title": "Qué cambió",
+          "text": "Neural Rail, Neural Dock y transiciones Glitch conectan todas las paginas. Este cambio forma parte de la evolución continua de IvanLlopis.net y amplía la experiencia pública del portal."
+        },
+        {
+          "title": "Impacto",
+          "text": "La mejora conecta experiencia, arquitectura y entrega sin alterar los cinco destinos de navegación principales."
+        },
+        {
+          "title": "Entrega",
+          "text": "El cambio se integra con FastAPI, contenido local y pruebas automatizadas para mantener una entrega verificable."
+        }
+      ]
     },
     {
       "id": "isolated-staging",
@@ -33,7 +61,21 @@
       "category": "DELIVERY",
       "status": "released",
       "title": "Staging aislado",
-      "summary": "Entorno independiente para validar develop antes de llegar a produccion."
+      "summary": "Entorno independiente para validar develop antes de llegar a produccion.",
+      "sections": [
+        {
+          "title": "Qué cambió",
+          "text": "Entorno independiente para validar develop antes de llegar a produccion. Este cambio forma parte de la evolución continua de IvanLlopis.net y amplía la experiencia pública del portal."
+        },
+        {
+          "title": "Impacto",
+          "text": "La mejora conecta experiencia, arquitectura y entrega sin alterar los cinco destinos de navegación principales."
+        },
+        {
+          "title": "Entrega",
+          "text": "El cambio se integra con FastAPI, contenido local y pruebas automatizadas para mantener una entrega verificable."
+        }
+      ]
     },
     {
       "id": "project-world-evolution",
@@ -42,7 +84,21 @@
       "category": "PROJECT WORLD",
       "status": "next",
       "title": "Evolucion de Project World",
-      "summary": "Una lectura mas profunda de la arquitectura, la entrega y la actividad publica."
+      "summary": "Una lectura mas profunda de la arquitectura, la entrega y la actividad publica.",
+      "sections": [
+        {
+          "title": "Qué cambió",
+          "text": "Una lectura mas profunda de la arquitectura, la entrega y la actividad publica. Este cambio forma parte de la evolución continua de IvanLlopis.net y amplía la experiencia pública del portal."
+        },
+        {
+          "title": "Impacto",
+          "text": "La mejora conecta experiencia, arquitectura y entrega sin alterar los cinco destinos de navegación principales."
+        },
+        {
+          "title": "Entrega",
+          "text": "El cambio se integra con FastAPI, contenido local y pruebas automatizadas para mantener una entrega verificable."
+        }
+      ]
     }
   ],
   "archive": {
@@ -53,5 +109,19 @@
     "view_all": "Ver todo el historial",
     "back": "Volver al inicio",
     "footer": "Novedades"
+  },
+  "detail": {
+    "detail_title": "Detalle de evolución",
+    "back_archive": "Volver al historial",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "published": "Publicado",
+    "planned": "Próxima señal",
+    "overview": "Qué cambió",
+    "impact": "Impacto",
+    "delivery": "Entrega",
+    "overview_text": "Este cambio forma parte de la evolución continua de IvanLlopis.net y amplía la experiencia pública del portal.",
+    "impact_text": "La mejora conecta experiencia, arquitectura y entrega sin alterar los cinco destinos de navegación principales.",
+    "delivery_text": "El cambio se integra con FastAPI, contenido local y pruebas automatizadas para mantener una entrega verificable."
   }
 }

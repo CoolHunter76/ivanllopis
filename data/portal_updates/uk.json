@@ -15,7 +15,21 @@
       "category": "EXPERIENCE",
       "status": "active",
       "title": "Виразна головна сторінка V3",
-      "summary": "Новий імерсивний вхід, Current Signal і чотири портали для дослідження."
+      "summary": "Новий імерсивний вхід, Current Signal і чотири портали для дослідження.",
+      "sections": [
+        {
+          "title": "Що змінилося",
+          "text": "Новий імерсивний вхід, Current Signal і чотири портали для дослідження. This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "Вплив",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "Впровадження",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
     },
     {
       "id": "neural-navigation",
@@ -24,7 +38,21 @@
       "category": "NAVIGATION",
       "status": "released",
       "title": "Глобальна нейронна навігація",
-      "summary": "Neural Rail, Neural Dock і переходи Glitch поєднують усі сторінки."
+      "summary": "Neural Rail, Neural Dock і переходи Glitch поєднують усі сторінки.",
+      "sections": [
+        {
+          "title": "Що змінилося",
+          "text": "Neural Rail, Neural Dock і переходи Glitch поєднують усі сторінки. This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "Вплив",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "Впровадження",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
     },
     {
       "id": "isolated-staging",
@@ -33,7 +61,21 @@
       "category": "DELIVERY",
       "status": "released",
       "title": "Ізольований staging",
-      "summary": "Незалежне середовище перевіряє develop перед production."
+      "summary": "Незалежне середовище перевіряє develop перед production.",
+      "sections": [
+        {
+          "title": "Що змінилося",
+          "text": "Незалежне середовище перевіряє develop перед production. This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "Вплив",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "Впровадження",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
     },
     {
       "id": "project-world-evolution",
@@ -42,7 +84,21 @@
       "category": "PROJECT WORLD",
       "status": "next",
       "title": "Розвиток Project World",
-      "summary": "Глибший огляд архітектури, впровадження та публічної активності."
+      "summary": "Глибший огляд архітектури, впровадження та публічної активності.",
+      "sections": [
+        {
+          "title": "Що змінилося",
+          "text": "Глибший огляд архітектури, впровадження та публічної активності. This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "Вплив",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "Впровадження",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
     }
   ],
   "archive": {
@@ -53,5 +109,19 @@
     "view_all": "Переглянути всю історію",
     "back": "На головну",
     "footer": "Оновлення"
+  },
+  "detail": {
+    "detail_title": "Деталі розвитку",
+    "back_archive": "Назад до історії",
+    "previous": "Попереднє",
+    "next": "Наступне",
+    "published": "Опубліковано",
+    "planned": "Наступний сигнал",
+    "overview": "Що змінилося",
+    "impact": "Вплив",
+    "delivery": "Впровадження",
+    "overview_text": "This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience.",
+    "impact_text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations.",
+    "delivery_text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
   }
 }

@@ -15,7 +15,21 @@
       "category": "EXPERIENCE",
       "status": "active",
       "title": "Eragin handiko V3 landing-a",
-      "summary": "Sarrera murgiltzailea, Current Signal eta esploraziorako lau atari."
+      "summary": "Sarrera murgiltzailea, Current Signal eta esploraziorako lau atari.",
+      "sections": [
+        {
+          "title": "Zer aldatu da",
+          "text": "Sarrera murgiltzailea, Current Signal eta esploraziorako lau atari. This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "Eragina",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "Entrega",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
     },
     {
       "id": "neural-navigation",
@@ -24,7 +38,21 @@
       "category": "NAVIGATION",
       "status": "released",
       "title": "Nabigazio neural globala",
-      "summary": "Neural Rail, Neural Dock eta Glitch trantsizioek orrialde guztiak lotzen dituzte."
+      "summary": "Neural Rail, Neural Dock eta Glitch trantsizioek orrialde guztiak lotzen dituzte.",
+      "sections": [
+        {
+          "title": "Zer aldatu da",
+          "text": "Neural Rail, Neural Dock eta Glitch trantsizioek orrialde guztiak lotzen dituzte. This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "Eragina",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "Entrega",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
     },
     {
       "id": "isolated-staging",
@@ -33,7 +61,21 @@
       "category": "DELIVERY",
       "status": "released",
       "title": "Staging isolatua",
-      "summary": "Develop produkziora iritsi aurretik baliozkotzeko ingurune independentea."
+      "summary": "Develop produkziora iritsi aurretik baliozkotzeko ingurune independentea.",
+      "sections": [
+        {
+          "title": "Zer aldatu da",
+          "text": "Develop produkziora iritsi aurretik baliozkotzeko ingurune independentea. This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "Eragina",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "Entrega",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
     },
     {
       "id": "project-world-evolution",
@@ -42,7 +84,21 @@
       "category": "PROJECT WORLD",
       "status": "next",
       "title": "Project World-en bilakaera",
-      "summary": "Arkitektura, entrega eta jarduera publikoaren irakurketa sakonagoa."
+      "summary": "Arkitektura, entrega eta jarduera publikoaren irakurketa sakonagoa.",
+      "sections": [
+        {
+          "title": "Zer aldatu da",
+          "text": "Arkitektura, entrega eta jarduera publikoaren irakurketa sakonagoa. This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "Eragina",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "Entrega",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
     }
   ],
   "archive": {
@@ -53,5 +109,19 @@
     "view_all": "Ikusi historia osoa",
     "back": "Itzuli hasierara",
     "footer": "Berritasunak"
+  },
+  "detail": {
+    "detail_title": "Bilakaeraren xehetasuna",
+    "back_archive": "Itzuli historiara",
+    "previous": "Aurrekoa",
+    "next": "Hurrengoa",
+    "published": "Argitaratua",
+    "planned": "Hurrengo seinalea",
+    "overview": "Zer aldatu da",
+    "impact": "Eragina",
+    "delivery": "Entrega",
+    "overview_text": "This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience.",
+    "impact_text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations.",
+    "delivery_text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
   }
 }

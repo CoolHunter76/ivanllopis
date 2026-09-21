@@ -15,7 +15,7 @@ from pydantic import BaseModel, Field
 from resend.exceptions import ResendError
 
 from assistant import configure_assistant
-from portal_updates import load_portal_updates
+from portal_updates import load_portal_updates, portal_update_detail
 from project_github import REPOSITORY_URL, project_world_data
 from seo import configure_seo
 
@@ -661,6 +661,20 @@ def updates(request: Request, lang: str):
         request=request,
         name="updates.html",
         context=ctx(lang, page="updates", portal_updates=load_portal_updates(lang)),
+    )
+
+
+@app.get("/{lang}/updates/{update_id}", response_class=HTMLResponse, include_in_schema=False)
+def update_detail(request: Request, lang: str, update_id: str):
+    if lang not in SUPPORTED:
+        return RedirectResponse(f"/es/updates/{update_id}", status_code=307)
+    detail = portal_update_detail(lang, update_id)
+    if detail is None:
+        raise HTTPException(status_code=404, detail="Portal update not found")
+    return templates.TemplateResponse(
+        request=request,
+        name="update_detail.html",
+        context=ctx(lang, page="updates", update_detail=detail),
     )
 
 

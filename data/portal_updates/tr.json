@@ -15,7 +15,21 @@
       "category": "EXPERIENCE",
       "status": "active",
       "title": "Yuksek etkili V3 acilis sayfasi",
-      "summary": "Yeni bir surukleyici giris, Current Signal ve dort kesif portali."
+      "summary": "Yeni bir surukleyici giris, Current Signal ve dort kesif portali.",
+      "sections": [
+        {
+          "title": "Ne değişti",
+          "text": "Yeni bir surukleyici giris, Current Signal ve dort kesif portali. This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "Etki",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "Teslimat",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
     },
     {
       "id": "neural-navigation",
@@ -24,7 +38,21 @@
       "category": "NAVIGATION",
       "status": "released",
       "title": "Kuresel sinirsel navigasyon",
-      "summary": "Neural Rail, Neural Dock ve Glitch gecisleri tum sayfalari baglar."
+      "summary": "Neural Rail, Neural Dock ve Glitch gecisleri tum sayfalari baglar.",
+      "sections": [
+        {
+          "title": "Ne değişti",
+          "text": "Neural Rail, Neural Dock ve Glitch gecisleri tum sayfalari baglar. This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "Etki",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "Teslimat",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
     },
     {
       "id": "isolated-staging",
@@ -33,7 +61,21 @@
       "category": "DELIVERY",
       "status": "released",
       "title": "Yalitilmis staging",
-      "summary": "Bagimsiz ortam, production oncesinde develop dalini dogrular."
+      "summary": "Bagimsiz ortam, production oncesinde develop dalini dogrular.",
+      "sections": [
+        {
+          "title": "Ne değişti",
+          "text": "Bagimsiz ortam, production oncesinde develop dalini dogrular. This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "Etki",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "Teslimat",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
     },
     {
       "id": "project-world-evolution",
@@ -42,7 +84,21 @@
       "category": "PROJECT WORLD",
       "status": "next",
       "title": "Project World evrimi",
-      "summary": "Mimari, teslimat ve herkese acik etkinlik icin daha derin bir gorunum."
+      "summary": "Mimari, teslimat ve herkese acik etkinlik icin daha derin bir gorunum.",
+      "sections": [
+        {
+          "title": "Ne değişti",
+          "text": "Mimari, teslimat ve herkese acik etkinlik icin daha derin bir gorunum. This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "Etki",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "Teslimat",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
     }
   ],
   "archive": {
@@ -53,5 +109,19 @@
     "view_all": "Tum arsivi gor",
     "back": "Ana sayfaya don",
     "footer": "Guncellemeler"
+  },
+  "detail": {
+    "detail_title": "Gelişim ayrıntısı",
+    "back_archive": "Arşive dön",
+    "previous": "Önceki",
+    "next": "Sonraki",
+    "published": "Yayınlandı",
+    "planned": "Sonraki sinyal",
+    "overview": "Ne değişti",
+    "impact": "Etki",
+    "delivery": "Teslimat",
+    "overview_text": "This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience.",
+    "impact_text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations.",
+    "delivery_text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
   }
 }

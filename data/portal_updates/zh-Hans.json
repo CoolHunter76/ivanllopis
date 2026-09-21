@@ -15,7 +15,21 @@
       "category": "EXPERIENCE",
       "status": "active",
       "title": "高影响力 V3 首页",
-      "summary": "全新的沉浸式入口、Current Signal 与四个探索门户。"
+      "summary": "全新的沉浸式入口、Current Signal 与四个探索门户。",
+      "sections": [
+        {
+          "title": "变更内容",
+          "text": "全新的沉浸式入口、Current Signal 与四个探索门户。 This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "影响",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "交付",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
     },
     {
       "id": "neural-navigation",
@@ -24,7 +38,21 @@
       "category": "NAVIGATION",
       "status": "released",
       "title": "全局神经导航",
-      "summary": "Neural Rail、Neural Dock 与 Glitch 过渡连接所有页面。"
+      "summary": "Neural Rail、Neural Dock 与 Glitch 过渡连接所有页面。",
+      "sections": [
+        {
+          "title": "变更内容",
+          "text": "Neural Rail、Neural Dock 与 Glitch 过渡连接所有页面。 This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "影响",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "交付",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
     },
     {
       "id": "isolated-staging",
@@ -33,7 +61,21 @@
       "category": "DELIVERY",
       "status": "released",
       "title": "隔离的预发布环境",
-      "summary": "独立环境在进入生产前验证 develop。"
+      "summary": "独立环境在进入生产前验证 develop。",
+      "sections": [
+        {
+          "title": "变更内容",
+          "text": "独立环境在进入生产前验证 develop。 This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "影响",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "交付",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
     },
     {
       "id": "project-world-evolution",
@@ -42,7 +84,21 @@
       "category": "PROJECT WORLD",
       "status": "next",
       "title": "Project World 演进",
-      "summary": "更深入地展示架构、交付与公开活动。"
+      "summary": "更深入地展示架构、交付与公开活动。",
+      "sections": [
+        {
+          "title": "变更内容",
+          "text": "更深入地展示架构、交付与公开活动。 This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "影响",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "交付",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
     }
   ],
   "archive": {
@@ -53,5 +109,19 @@
     "view_all": "查看完整档案",
     "back": "返回首页",
     "footer": "更新"
+  },
+  "detail": {
+    "detail_title": "演进详情",
+    "back_archive": "返回档案",
+    "previous": "上一条",
+    "next": "下一条",
+    "published": "已发布",
+    "planned": "下一信号",
+    "overview": "变更内容",
+    "impact": "影响",
+    "delivery": "交付",
+    "overview_text": "This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience.",
+    "impact_text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations.",
+    "delivery_text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
   }
 }
