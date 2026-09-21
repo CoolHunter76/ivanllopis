@@ -21,7 +21,7 @@ from seo import configure_seo
 BASE = Path(__file__).resolve().parent
 SUPPORTED = ("es", "ca", "gl", "oc", "eu", "en", "fr", "uk", "it", "tr", "ru", "zh-Hans", "ja")
 
-app = FastAPI(title="IvanLlopis.net", version="2.0.0")
+app = FastAPI(title="IvanLlopis.net", version="3.0.0.0")
 configure_assistant(app)
 configure_seo(app)
 app.mount("/static", StaticFiles(directory=BASE / "static"), name="static")
@@ -635,7 +635,13 @@ def home(request: Request, lang: str):
     return templates.TemplateResponse(
         request=request,
         name="home.html",
-        context=ctx(lang, technologies=TECHNOLOGIES, ai_engines=AI_ENGINES, projects=PROJECTS),
+        context=ctx(
+            lang,
+            technologies=TECHNOLOGIES,
+            ai_engines=AI_ENGINES,
+            projects=PROJECTS,
+            v3_landing=os.getenv("V3_LANDING_ENABLED", "false").lower() == "true",
+        ),
     )
 
 

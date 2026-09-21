@@ -1,0 +1,15 @@
+:root {
+    --v3-bg: #030806;
+    --v3-panel: rgba(6, 17, 11, 0.86);
+    --v3-panel-strong: rgba(4, 13, 8, 0.96);
+    --v3-accent: #39ff88;
+    --v3-accent-soft: rgba(57, 255, 136, 0.18);
+    --v3-border: rgba(134, 255, 180, 0.18);
+    --v3-muted: #9eb3a5;
+    --v3-header-height: 76px;
+    --v3-dock-height: 76px;
+    --v3-safe-top: env(safe-area-inset-top, 0px);
+    --v3-safe-right: env(safe-area-inset-right, 0px);
+    --v3-safe-bottom: env(safe-area-inset-bottom, 0px);
+    --v3-safe-left: env(safe-area-inset-left, 0px);
+}

@@ -7,6 +7,8 @@ services:
       dockerfile: Dockerfile
     env_file:
       - /opt/ivanllopis/staging/shared/.env.cv
+    environment:
+      V3_LANDING_ENABLED: "true"
 
     restart: unless-stopped
 
