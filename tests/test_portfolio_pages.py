@@ -5,7 +5,7 @@ from fastapi.testclient import TestClient
 from main import SUPPORTED, app
 
 client = TestClient(app)
-PAGES = ("profile", "capabilities", "technologies", "projects", "work-life", "hobbies")
+PAGES = ("technologies", "projects", "work-life", "hobbies")
 
 
 def test_independent_pages_render_for_every_language():
@@ -20,6 +20,15 @@ def test_navigation_is_present_on_every_page():
         html = client.get(f"/es/{page}").text
         for target in PAGES:
             assert f'href="/es/{target}"' in html
+
+
+def test_profile_and_capabilities_are_removed():
+    for language in SUPPORTED:
+        home = client.get(f"/{language}").text
+        assert f'href="/{language}/profile"' not in home
+        assert f'href="/{language}/capabilities"' not in home
+        assert client.get(f"/{language}/profile").status_code == 404
+        assert client.get(f"/{language}/capabilities").status_code == 404
 
 
 def test_flags_and_company_assets_exist():

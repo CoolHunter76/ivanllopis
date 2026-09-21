@@ -9,8 +9,6 @@
   "nav": {
     "menu": "Меню",
     "label": "Головна навігація",
-    "profile": "Профіль",
-    "expertise": "Компетенції",
     "technology": "Технології",
     "projects": "Проєкти",
     "hobbies": "Захоплення",
@@ -310,34 +308,6 @@
     "explore_label": "Explore experience",
     "food_context_title": "Historical context",
     "caixa_context": "Caixa ecosystem"
-  },
-  "profile_page": {
-    "eyebrow": "Профіль",
-    "title": "Професійний профіль",
-    "lead": "Повний огляд досвіду, підходу та способу роботи.",
-    "items": [
-      {
-        "title": "Software & APIs",
-        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
-      },
-      {
-        "title": "Cloud & Data",
-        "text": "Azure, containers and data platforms suited to context and growth."
-      },
-      {
-        "title": "AI Engineering",
-        "text": "Assistants, local models and generative AI workflows."
-      },
-      {
-        "title": "Engineering Delivery",
-        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
-      }
-    ]
-  },
-  "capabilities_page": {
-    "eyebrow": "Компетенції",
-    "title": "Професійні компетенції",
-    "lead": "Технічна глибина, застосована до реальних завдань."
   },
   "cv_request": {
     "eyebrow": "CV",

@@ -9,8 +9,6 @@
   "nav": {
     "menu": "Menú",
     "label": "Navegacion principau",
-    "profile": "Perfil",
-    "expertise": "Capacitats",
     "technology": "Tecnologies",
     "projects": "Projèctes",
     "hobbies": "Aficions",
@@ -310,34 +308,6 @@
     "explore_label": "Explore experience",
     "food_context_title": "Historical context",
     "caixa_context": "Caixa ecosystem"
-  },
-  "profile_page": {
-    "eyebrow": "Perfil",
-    "title": "Perfil professionau",
-    "lead": "Ua vision complèta dera experiéncia, er enfocament e era manèra de trabalhar.",
-    "items": [
-      {
-        "title": "Logiciau e APIs",
-        "text": "Solucions mantengables, servicis e APIs bastides sus bases solides de qualitat."
-      },
-      {
-        "title": "Cloud e donades",
-        "text": "Azure, contenedors e plataformes de donades adaptades ath contèxte e ath creishement."
-      },
-      {
-        "title": "Enginharia d’IA",
-        "text": "Assistents, modèls locaus e fluxes d’intelligéncia artificiau generativa."
-      },
-      {
-        "title": "Liurança d’enginharia",
-        "text": "GitFlow, CI/CD, pròves e automatizacion entà liurances fiables."
-      }
-    ]
-  },
-  "capabilities_page": {
-    "eyebrow": "Capacitats",
-    "title": "Capacitats professionaus",
-    "lead": "Prigondor tecnica aplicada a problèmes reaus."
   },
   "cv_request": {
     "eyebrow": "Curriculum vitae",

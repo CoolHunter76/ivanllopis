@@ -305,13 +305,6 @@ CLIENT_EXPERIENCES = [
     },
 ]
 
-PAGE_TEMPLATES = {
-    "profile": "profile.html",
-    "capabilities": "capabilities.html",
-    "technologies": "technologies.html",
-    "projects": "projects.html",
-}
-
 EMAIL_COPY = {
     "es": (
         "Nueva solicitud de CV - IvanLlopis.net",
@@ -644,20 +637,6 @@ def home(request: Request, lang: str):
         name="home.html",
         context=ctx(lang, technologies=TECHNOLOGIES, ai_engines=AI_ENGINES, projects=PROJECTS),
     )
-
-
-@app.get("/{lang}/profile", response_class=HTMLResponse, include_in_schema=False)
-def profile(request: Request, lang: str):
-    if lang not in SUPPORTED:
-        return RedirectResponse("/es/profile", status_code=307)
-    return templates.TemplateResponse(request=request, name="profile.html", context=ctx(lang))
-
-
-@app.get("/{lang}/capabilities", response_class=HTMLResponse, include_in_schema=False)
-def capabilities(request: Request, lang: str):
-    if lang not in SUPPORTED:
-        return RedirectResponse("/es/capabilities", status_code=307)
-    return templates.TemplateResponse(request=request, name="capabilities.html", context=ctx(lang))
 
 
 @app.get("/{lang}/technologies", response_class=HTMLResponse, include_in_schema=False)

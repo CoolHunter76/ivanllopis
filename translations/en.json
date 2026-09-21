@@ -9,8 +9,6 @@
   "nav": {
     "menu": "Menu",
     "label": "Main navigation",
-    "profile": "Profile",
-    "expertise": "Capabilities",
     "technology": "Technology",
     "projects": "Projects",
     "hobbies": "Hobbies",
@@ -310,34 +308,6 @@
     "explore_label": "Explore experience",
     "food_context_title": "Historical context",
     "caixa_context": "Caixa ecosystem"
-  },
-  "profile_page": {
-    "eyebrow": "Profile",
-    "title": "Professional profile",
-    "lead": "A complete view of experience, approach and ways of working.",
-    "items": [
-      {
-        "title": "Software & APIs",
-        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
-      },
-      {
-        "title": "Cloud & Data",
-        "text": "Azure, containers and data platforms suited to context and growth."
-      },
-      {
-        "title": "AI Engineering",
-        "text": "Assistants, local models and generative AI workflows."
-      },
-      {
-        "title": "Engineering Delivery",
-        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
-      }
-    ]
-  },
-  "capabilities_page": {
-    "eyebrow": "Capabilities",
-    "title": "Professional capabilities",
-    "lead": "Technical depth applied to real problems."
   },
   "cv_request": {
     "eyebrow": "CV",
