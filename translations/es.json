@@ -9,8 +9,6 @@
   "nav": {
     "menu": "Menú",
     "label": "Navegación principal",
-    "profile": "Perfil",
-    "expertise": "Capacidades",
     "technology": "Tecnologías",
     "projects": "Proyectos",
     "hobbies": "Aficiones",
@@ -310,34 +308,6 @@
     "explore_label": "Descubrir experiencia",
     "food_context_title": "Contexto histórico",
     "caixa_context": "Ecosistema Caixa"
-  },
-  "profile_page": {
-    "eyebrow": "Perfil",
-    "title": "Perfil profesional",
-    "lead": "Una visión completa de la experiencia, el enfoque y la forma de trabajar.",
-    "items": [
-      {
-        "title": "Software & APIs",
-        "text": "Soluciones mantenibles, servicios y APIs con bases sólidas de calidad."
-      },
-      {
-        "title": "Cloud & Data",
-        "text": "Azure, contenedores y datos adaptados al contexto y al crecimiento."
-      },
-      {
-        "title": "AI Engineering",
-        "text": "Asistentes, modelos locales y flujos de inteligencia artificial generativa."
-      },
-      {
-        "title": "Engineering Delivery",
-        "text": "GitFlow, CI/CD, pruebas y automatización para entregas confiables."
-      }
-    ]
-  },
-  "capabilities_page": {
-    "eyebrow": "Capacidades",
-    "title": "Capacidades profesionales",
-    "lead": "Profundidad técnica aplicada a problemas reales."
   },
   "cv_request": {
     "eyebrow": "CV",

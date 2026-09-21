@@ -9,8 +9,6 @@
   "nav": {
     "menu": "Menú",
     "label": "Navegación principal",
-    "profile": "Perfil",
-    "expertise": "Capacidades",
     "technology": "Tecnoloxías",
     "projects": "Proxectos",
     "hobbies": "Afeccións",
@@ -310,34 +308,6 @@
     "explore_label": "Explore experience",
     "food_context_title": "Historical context",
     "caixa_context": "Caixa ecosystem"
-  },
-  "profile_page": {
-    "eyebrow": "Perfil",
-    "title": "Perfil profesional",
-    "lead": "Unha visión completa da experiencia, o enfoque e a forma de traballar.",
-    "items": [
-      {
-        "title": "Software e APIs",
-        "text": "Solucións mantibles, servizos e APIs construídos sobre bases sólidas de calidade."
-      },
-      {
-        "title": "Nube e datos",
-        "text": "Azure, contedores e plataformas de datos adaptadas ao contexto e ao crecemento."
-      },
-      {
-        "title": "Enxeñaría de IA",
-        "text": "Asistentes, modelos locais e fluxos de intelixencia artificial xerativa."
-      },
-      {
-        "title": "Entrega de enxeñaría",
-        "text": "GitFlow, CI/CD, probas e automatización para entregas fiables."
-      }
-    ]
-  },
-  "capabilities_page": {
-    "eyebrow": "Capacidades",
-    "title": "Capacidades profesionais",
-    "lead": "Profundidade técnica aplicada a problemas reais."
   },
   "cv_request": {
     "eyebrow": "Curriculum vitae",

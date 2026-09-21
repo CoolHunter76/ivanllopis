@@ -9,8 +9,6 @@
   "nav": {
     "menu": "メニュー",
     "label": "メインナビゲーション",
-    "profile": "プロフィール",
-    "expertise": "専門能力",
     "technology": "技術",
     "projects": "プロジェクト",
     "hobbies": "趣味",
@@ -310,34 +308,6 @@
     "explore_label": "Explore experience",
     "food_context_title": "Historical context",
     "caixa_context": "Caixa ecosystem"
-  },
-  "profile_page": {
-    "eyebrow": "プロフィール",
-    "title": "プロフェッショナルプロフィール",
-    "lead": "経験、アプローチ、働き方を総合的に紹介します。",
-    "items": [
-      {
-        "title": "ソフトウェアと API",
-        "text": "品質を基盤とした保守性の高いソリューション、サービス、API。"
-      },
-      {
-        "title": "クラウドとデータ",
-        "text": "状況と成長に適した Azure、コンテナ、データプラットフォーム。"
-      },
-      {
-        "title": "AI エンジニアリング",
-        "text": "アシスタント、ローカルモデル、生成 AI ワークフロー。"
-      },
-      {
-        "title": "エンジニアリングデリバリー",
-        "text": "GitFlow、CI/CD、テスト、自動化による信頼性の高い提供。"
-      }
-    ]
-  },
-  "capabilities_page": {
-    "eyebrow": "専門能力",
-    "title": "専門能力",
-    "lead": "実際の課題に適用する技術的な深さ。"
   },
   "cv_request": {
     "eyebrow": "CV",

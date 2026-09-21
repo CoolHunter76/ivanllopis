@@ -9,8 +9,6 @@
   "nav": {
     "menu": "Menü",
     "label": "Ana navigasyon",
-    "profile": "Profil",
-    "expertise": "Yetkinlikler",
     "technology": "Teknolojiler",
     "projects": "Projeler",
     "hobbies": "Hobiler",
@@ -310,34 +308,6 @@
     "explore_label": "Explore experience",
     "food_context_title": "Historical context",
     "caixa_context": "Caixa ecosystem"
-  },
-  "profile_page": {
-    "eyebrow": "Profil",
-    "title": "Profesyonel profil",
-    "lead": "Deneyim, yaklaşım ve çalışma biçimine kapsamlı bir bakış.",
-    "items": [
-      {
-        "title": "Software & APIs",
-        "text": "Maintainable solutions, services and APIs built on strong quality foundations."
-      },
-      {
-        "title": "Cloud & Data",
-        "text": "Azure, containers and data platforms suited to context and growth."
-      },
-      {
-        "title": "AI Engineering",
-        "text": "Assistants, local models and generative AI workflows."
-      },
-      {
-        "title": "Engineering Delivery",
-        "text": "GitFlow, CI/CD, testing and automation for reliable delivery."
-      }
-    ]
-  },
-  "capabilities_page": {
-    "eyebrow": "Yetkinlikler",
-    "title": "Profesyonel yetkinlikler",
-    "lead": "Gerçek sorunlara uygulanan teknik derinlik."
   },
   "cv_request": {
     "eyebrow": "CV",
