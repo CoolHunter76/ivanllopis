@@ -123,5 +123,18 @@
     "overview_text": "This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience.",
     "impact_text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations.",
     "delivery_text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+  },
+  "filters": {
+    "search_label": "Search evolution",
+    "search_placeholder": "Search by title, summary or category",
+    "status_label": "Status",
+    "all_statuses": "All statuses",
+    "category_label": "Category",
+    "all_categories": "All categories",
+    "apply": "Apply filters",
+    "reset": "Reset",
+    "results": "results",
+    "empty": "No updates match the selected filters.",
+    "feed": "JSON feed"
   }
 }

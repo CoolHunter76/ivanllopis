@@ -50,3 +50,51 @@ def portal_update_detail(language: str, update_id: str) -> dict[str, object] | N
 def published_update_ids() -> tuple[str, ...]:
     data = load_portal_updates("es")
     return tuple(item["id"] for item in data["published"])
+
+
+def filter_portal_updates(
+    language: str, status: str = "", category: str = "", query: str = ""
+) -> dict[str, object]:
+    data = load_portal_updates(language).copy()
+    normalized_query = query.strip().casefold()
+    normalized_category = category.strip().casefold()
+    filtered = []
+    for item in data["items"]:
+        searchable = " ".join(
+            str(item.get(field, "")) for field in ("title", "summary", "category", "version")
+        ).casefold()
+        if status and item.get("status") != status:
+            continue
+        if normalized_category and str(item.get("category", "")).casefold() != normalized_category:
+            continue
+        if normalized_query and normalized_query not in searchable:
+            continue
+        filtered.append(item)
+    data["filtered"] = filtered
+    data["selected_filters"] = {"status": status, "category": category, "query": query}
+    return data
+
+
+def localized_updates_feed(language: str, origin: str) -> dict[str, object]:
+    data = load_portal_updates(language)
+    items = []
+    for item in data["published"]:
+        items.append(
+            {
+                "id": item["id"],
+                "url": f"{origin}/{language}/updates/{item['id']}",
+                "status": item["status"],
+                "date": item["date"],
+                "version": item["version"],
+                "category": item["category"],
+                "title": item["title"],
+                "summary": item["summary"],
+                "language": language,
+            }
+        )
+    return {
+        "version": "1.0",
+        "language": language,
+        "home_url": f"{origin}/{language}/updates",
+        "items": items,
+    }

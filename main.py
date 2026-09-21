@@ -8,14 +8,19 @@ from pathlib import Path
 
 import resend
 from fastapi import FastAPI, HTTPException, Request
-from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel, Field
 from resend.exceptions import ResendError
 
 from assistant import configure_assistant
-from portal_updates import load_portal_updates, portal_update_detail
+from portal_updates import (
+    filter_portal_updates,
+    load_portal_updates,
+    localized_updates_feed,
+    portal_update_detail,
+)
 from project_github import REPOSITORY_URL, project_world_data
 from seo import configure_seo
 
@@ -657,11 +662,30 @@ def home(request: Request, lang: str):
 def updates(request: Request, lang: str):
     if lang not in SUPPORTED:
         return RedirectResponse("/es/updates", status_code=307)
+    status = request.query_params.get("status", "")
+    category = request.query_params.get("category", "")
+    query = request.query_params.get("q", "")
+    if status not in {"", "released", "active", "next"}:
+        status = ""
+    allowed_categories = {"", "EXPERIENCE", "NAVIGATION", "DELIVERY", "PROJECT WORLD"}
+    if category not in allowed_categories:
+        category = ""
+    updates_data = filter_portal_updates(lang, status, category, query)
     return templates.TemplateResponse(
         request=request,
         name="updates.html",
-        context=ctx(lang, page="updates", portal_updates=load_portal_updates(lang)),
+        context=ctx(lang, page="updates", portal_updates=updates_data),
     )
+
+
+@app.get("/{lang}/updates.json", response_class=JSONResponse, include_in_schema=False)
+def updates_feed(request: Request, lang: str):
+    if lang not in SUPPORTED:
+        return RedirectResponse("/es/updates.json", status_code=307)
+    origin = str(request.base_url).rstrip("/")
+    response = JSONResponse(localized_updates_feed(lang, origin))
+    response.headers["Cache-Control"] = "public, max-age=300"
+    return response
 
 
 @app.get("/{lang}/updates/{update_id}", response_class=HTMLResponse, include_in_schema=False)
