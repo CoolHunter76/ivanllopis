@@ -178,8 +178,6 @@ def sitemap():
         for lang in LANGUAGES
         for suffix in (
             "",
-            "/profile",
-            "/capabilities",
             "/technologies",
             "/projects",
             "/work-life",
