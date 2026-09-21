@@ -1,0 +1,48 @@
+{
+  "eyebrow": "门户演进",
+  "title": "系统持续演进。",
+  "intro": "连接体验、架构与交付的可见变化。",
+  "status_labels": {
+    "released": "已发布",
+    "active": "进行中",
+    "next": "下一信号"
+  },
+  "items": [
+    {
+      "id": "landing-v3",
+      "date": "2026-09-21",
+      "version": "V3",
+      "category": "EXPERIENCE",
+      "status": "active",
+      "title": "高影响力 V3 首页",
+      "summary": "全新的沉浸式入口、Current Signal 与四个探索门户。"
+    },
+    {
+      "id": "neural-navigation",
+      "date": "2026-09-21",
+      "version": "V3",
+      "category": "NAVIGATION",
+      "status": "released",
+      "title": "全局神经导航",
+      "summary": "Neural Rail、Neural Dock 与 Glitch 过渡连接所有页面。"
+    },
+    {
+      "id": "isolated-staging",
+      "date": "2026-09-15",
+      "version": "PLATFORM",
+      "category": "DELIVERY",
+      "status": "released",
+      "title": "隔离的预发布环境",
+      "summary": "独立环境在进入生产前验证 develop。"
+    },
+    {
+      "id": "project-world-evolution",
+      "date": null,
+      "version": "NEXT",
+      "category": "PROJECT WORLD",
+      "status": "next",
+      "title": "Project World 演进",
+      "summary": "更深入地展示架构、交付与公开活动。"
+    }
+  ]
+}

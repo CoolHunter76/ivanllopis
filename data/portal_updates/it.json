@@ -1,0 +1,48 @@
+{
+  "eyebrow": "EVOLUZIONE DEL PORTALE",
+  "title": "Il sistema continua a evolversi.",
+  "intro": "Cambiamenti visibili che collegano esperienza, architettura e delivery.",
+  "status_labels": {
+    "released": "PUBBLICATO",
+    "active": "ATTIVO",
+    "next": "PROSSIMO SEGNALE"
+  },
+  "items": [
+    {
+      "id": "landing-v3",
+      "date": "2026-09-21",
+      "version": "V3",
+      "category": "EXPERIENCE",
+      "status": "active",
+      "title": "Landing V3 ad alto impatto",
+      "summary": "Un nuovo ingresso immersivo, Current Signal e quattro portali di esplorazione."
+    },
+    {
+      "id": "neural-navigation",
+      "date": "2026-09-21",
+      "version": "V3",
+      "category": "NAVIGATION",
+      "status": "released",
+      "title": "Navigazione neurale globale",
+      "summary": "Neural Rail, Neural Dock e transizioni Glitch collegano tutte le pagine."
+    },
+    {
+      "id": "isolated-staging",
+      "date": "2026-09-15",
+      "version": "PLATFORM",
+      "category": "DELIVERY",
+      "status": "released",
+      "title": "Staging isolato",
+      "summary": "Un ambiente indipendente convalida develop prima della produzione."
+    },
+    {
+      "id": "project-world-evolution",
+      "date": null,
+      "version": "NEXT",
+      "category": "PROJECT WORLD",
+      "status": "next",
+      "title": "Evoluzione di Project World",
+      "summary": "Una lettura piu profonda di architettura, delivery e attivita pubblica."
+    }
+  ]
+}

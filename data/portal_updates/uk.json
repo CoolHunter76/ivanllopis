@@ -1,0 +1,48 @@
+{
+  "eyebrow": "ЕВОЛЮЦІЯ ПОРТАЛУ",
+  "title": "Система продовжує розвиватися.",
+  "intro": "Видимі зміни, що поєднують досвід, архітектуру та впровадження.",
+  "status_labels": {
+    "released": "ОПУБЛІКОВАНО",
+    "active": "АКТИВНО",
+    "next": "НАСТУПНИЙ СИГНАЛ"
+  },
+  "items": [
+    {
+      "id": "landing-v3",
+      "date": "2026-09-21",
+      "version": "V3",
+      "category": "EXPERIENCE",
+      "status": "active",
+      "title": "Виразна головна сторінка V3",
+      "summary": "Новий імерсивний вхід, Current Signal і чотири портали для дослідження."
+    },
+    {
+      "id": "neural-navigation",
+      "date": "2026-09-21",
+      "version": "V3",
+      "category": "NAVIGATION",
+      "status": "released",
+      "title": "Глобальна нейронна навігація",
+      "summary": "Neural Rail, Neural Dock і переходи Glitch поєднують усі сторінки."
+    },
+    {
+      "id": "isolated-staging",
+      "date": "2026-09-15",
+      "version": "PLATFORM",
+      "category": "DELIVERY",
+      "status": "released",
+      "title": "Ізольований staging",
+      "summary": "Незалежне середовище перевіряє develop перед production."
+    },
+    {
+      "id": "project-world-evolution",
+      "date": null,
+      "version": "NEXT",
+      "category": "PROJECT WORLD",
+      "status": "next",
+      "title": "Розвиток Project World",
+      "summary": "Глибший огляд архітектури, впровадження та публічної активності."
+    }
+  ]
+}

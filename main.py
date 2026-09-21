@@ -15,6 +15,7 @@ from pydantic import BaseModel, Field
 from resend.exceptions import ResendError
 
 from assistant import configure_assistant
+from portal_updates import load_portal_updates
 from project_github import REPOSITORY_URL, project_world_data
 from seo import configure_seo
 
@@ -645,6 +646,7 @@ def home(request: Request, lang: str):
             technologies=TECHNOLOGIES,
             ai_engines=AI_ENGINES,
             projects=PROJECTS,
+            portal_updates=load_portal_updates(lang),
             page="home",
         ),
     )

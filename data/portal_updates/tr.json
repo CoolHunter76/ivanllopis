@@ -1,0 +1,48 @@
+{
+  "eyebrow": "PORTAL EVRIMI",
+  "title": "Sistem gelismeye devam ediyor.",
+  "intro": "Deneyim, mimari ve teslimati baglayan gorunur degisiklikler.",
+  "status_labels": {
+    "released": "YAYINLANDI",
+    "active": "AKTIF",
+    "next": "SONRAKI SINYAL"
+  },
+  "items": [
+    {
+      "id": "landing-v3",
+      "date": "2026-09-21",
+      "version": "V3",
+      "category": "EXPERIENCE",
+      "status": "active",
+      "title": "Yuksek etkili V3 acilis sayfasi",
+      "summary": "Yeni bir surukleyici giris, Current Signal ve dort kesif portali."
+    },
+    {
+      "id": "neural-navigation",
+      "date": "2026-09-21",
+      "version": "V3",
+      "category": "NAVIGATION",
+      "status": "released",
+      "title": "Kuresel sinirsel navigasyon",
+      "summary": "Neural Rail, Neural Dock ve Glitch gecisleri tum sayfalari baglar."
+    },
+    {
+      "id": "isolated-staging",
+      "date": "2026-09-15",
+      "version": "PLATFORM",
+      "category": "DELIVERY",
+      "status": "released",
+      "title": "Yalitilmis staging",
+      "summary": "Bagimsiz ortam, production oncesinde develop dalini dogrular."
+    },
+    {
+      "id": "project-world-evolution",
+      "date": null,
+      "version": "NEXT",
+      "category": "PROJECT WORLD",
+      "status": "next",
+      "title": "Project World evrimi",
+      "summary": "Mimari, teslimat ve herkese acik etkinlik icin daha derin bir gorunum."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "eyebrow": "EVOLUCION DETH PORTAU",
+  "title": "Eth sistèma contunhe d'evolucionar.",
+  "intro": "Cambis visibles que connècten experiéncia, arquitectura e liurança.",
+  "status_labels": {
+    "released": "PUBLICAT",
+    "active": "ACTIU",
+    "next": "SENHAU SEGUENTA"
+  },
+  "items": [
+    {
+      "id": "landing-v3",
+      "date": "2026-09-21",
+      "version": "V3",
+      "category": "EXPERIENCE",
+      "status": "active",
+      "title": "Landing V3 d’alt impacte",
+      "summary": "Nova entrada immersiva, Current Signal i quatre portals d’exploracio."
+    },
+    {
+      "id": "neural-navigation",
+      "date": "2026-09-21",
+      "version": "V3",
+      "category": "NAVIGATION",
+      "status": "released",
+      "title": "Navegacio neural global",
+      "summary": "Neural Rail, Neural Dock i transicions Glitch connecten totes les pagines."
+    },
+    {
+      "id": "isolated-staging",
+      "date": "2026-09-15",
+      "version": "PLATFORM",
+      "category": "DELIVERY",
+      "status": "released",
+      "title": "Staging aillat",
+      "summary": "Entorn independent per validar develop abans d’arribar a produccio."
+    },
+    {
+      "id": "project-world-evolution",
+      "date": null,
+      "version": "NEXT",
+      "category": "PROJECT WORLD",
+      "status": "next",
+      "title": "Evolucio de Project World",
+      "summary": "Una lectura mes profunda de l’arquitectura, el lliurament i l’activitat publica."
+    }
+  ]
+}

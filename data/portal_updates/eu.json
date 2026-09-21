@@ -1,0 +1,48 @@
+{
+  "eyebrow": "ATARIAREN BILAKAERA",
+  "title": "Sistemak eboluzionatzen jarraitzen du.",
+  "intro": "Esperientzia, arkitektura eta entrega lotzen dituzten aldaketa ikusgarriak.",
+  "status_labels": {
+    "released": "ARGITARATUA",
+    "active": "AKTIBOA",
+    "next": "HURRENGO SEINALEA"
+  },
+  "items": [
+    {
+      "id": "landing-v3",
+      "date": "2026-09-21",
+      "version": "V3",
+      "category": "EXPERIENCE",
+      "status": "active",
+      "title": "Eragin handiko V3 landing-a",
+      "summary": "Sarrera murgiltzailea, Current Signal eta esploraziorako lau atari."
+    },
+    {
+      "id": "neural-navigation",
+      "date": "2026-09-21",
+      "version": "V3",
+      "category": "NAVIGATION",
+      "status": "released",
+      "title": "Nabigazio neural globala",
+      "summary": "Neural Rail, Neural Dock eta Glitch trantsizioek orrialde guztiak lotzen dituzte."
+    },
+    {
+      "id": "isolated-staging",
+      "date": "2026-09-15",
+      "version": "PLATFORM",
+      "category": "DELIVERY",
+      "status": "released",
+      "title": "Staging isolatua",
+      "summary": "Develop produkziora iritsi aurretik baliozkotzeko ingurune independentea."
+    },
+    {
+      "id": "project-world-evolution",
+      "date": null,
+      "version": "NEXT",
+      "category": "PROJECT WORLD",
+      "status": "next",
+      "title": "Project World-en bilakaera",
+      "summary": "Arkitektura, entrega eta jarduera publikoaren irakurketa sakonagoa."
+    }
+  ]
+}

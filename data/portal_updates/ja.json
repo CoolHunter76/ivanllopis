@@ -1,0 +1,48 @@
+{
+  "eyebrow": "ポータルの進化",
+  "title": "システムは進化を続けています。",
+  "intro": "体験、アーキテクチャ、デリバリーをつなぐ変更履歴。",
+  "status_labels": {
+    "released": "公開済み",
+    "active": "進行中",
+    "next": "次のシグナル"
+  },
+  "items": [
+    {
+      "id": "landing-v3",
+      "date": "2026-09-21",
+      "version": "V3",
+      "category": "EXPERIENCE",
+      "status": "active",
+      "title": "インパクトのある V3 ランディング",
+      "summary": "没入型の入口、Current Signal、4 つの探索ポータルを追加。"
+    },
+    {
+      "id": "neural-navigation",
+      "date": "2026-09-21",
+      "version": "V3",
+      "category": "NAVIGATION",
+      "status": "released",
+      "title": "グローバル・ニューラルナビゲーション",
+      "summary": "Neural Rail、Neural Dock、Glitch 遷移が全ページを接続。"
+    },
+    {
+      "id": "isolated-staging",
+      "date": "2026-09-15",
+      "version": "PLATFORM",
+      "category": "DELIVERY",
+      "status": "released",
+      "title": "分離されたステージング",
+      "summary": "独立環境で production 前の develop を検証。"
+    },
+    {
+      "id": "project-world-evolution",
+      "date": null,
+      "version": "NEXT",
+      "category": "PROJECT WORLD",
+      "status": "next",
+      "title": "Project World の進化",
+      "summary": "アーキテクチャ、デリバリー、公開アクティビティをより深く可視化。"
+    }
+  ]
+}
