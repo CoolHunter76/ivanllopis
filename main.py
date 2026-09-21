@@ -45,6 +45,7 @@ def ctx(lang_code: str, page: str = "", **extra: object) -> dict:
         "languages": [{"code": code, **trn(code)["language"]} for code in SUPPORTED],
         "current_page": page,
         "v3_portal": portal_enabled,
+        "portal_updates": load_portal_updates(lang_code),
         **extra,
     }
 
@@ -649,6 +650,17 @@ def home(request: Request, lang: str):
             portal_updates=load_portal_updates(lang),
             page="home",
         ),
+    )
+
+
+@app.get("/{lang}/updates", response_class=HTMLResponse, include_in_schema=False)
+def updates(request: Request, lang: str):
+    if lang not in SUPPORTED:
+        return RedirectResponse("/es/updates", status_code=307)
+    return templates.TemplateResponse(
+        request=request,
+        name="updates.html",
+        context=ctx(lang, page="updates", portal_updates=load_portal_updates(lang)),
     )
 
 

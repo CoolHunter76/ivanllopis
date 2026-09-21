@@ -44,5 +44,14 @@
       "title": "Project World-en bilakaera",
       "summary": "Arkitektura, entrega eta jarduera publikoaren irakurketa sakonagoa."
     }
-  ]
+  ],
+  "archive": {
+    "title": "Bilakaeraren historia",
+    "intro": "Atariaren seinale guztiak, argitaratutako aldaketetatik hurrengo urratsetara.",
+    "published": "Argitaratutako historia",
+    "upcoming": "Hurrengo seinaleak",
+    "view_all": "Ikusi historia osoa",
+    "back": "Itzuli hasierara",
+    "footer": "Berritasunak"
+  }
 }

@@ -73,12 +73,21 @@ def page_info(path):
     page = parts[1] if len(parts) > 1 else ""
     suffix = f"/{page}" if page else ""
     hobbies = page == "hobbies"
-    title = (
-        "Aficiones de Ivan Llopis"
-        if hobbies and lang == "es"
-        else ("Ivan Llopis | Hobbies" if hobbies else "Ivan Llopis | Software Engineer Lead")
-    )
-    description = TEXT[lang][1 if hobbies else 0]
+    updates = page == "updates"
+    if updates:
+        title = "Evolución de IvanLlopis.net" if lang == "es" else "IvanLlopis.net | Updates"
+        description = (
+            "Historial de evolución, cambios publicados y próximas señales de IvanLlopis.net."
+            if lang == "es"
+            else "IvanLlopis.net evolution archive, released changes and next signals."
+        )
+    else:
+        title = (
+            "Aficiones de Ivan Llopis"
+            if hobbies and lang == "es"
+            else ("Ivan Llopis | Hobbies" if hobbies else "Ivan Llopis | Software Engineer Lead")
+        )
+        description = TEXT[lang][1 if hobbies else 0]
     return lang, suffix, title, description
 
 
@@ -184,6 +193,7 @@ def sitemap():
             "/request-cv",
             "/privacy",
             "/hobbies",
+            "/updates",
         )
     )
     xml = f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}\n</urlset>\n'

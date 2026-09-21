@@ -44,5 +44,14 @@
       "title": "Evoluzione di Project World",
       "summary": "Una lettura piu profonda di architettura, delivery e attivita pubblica."
     }
-  ]
+  ],
+  "archive": {
+    "title": "Archivio dell’evoluzione",
+    "intro": "Tutti i segnali del portale, dalle modifiche pubblicate ai prossimi passi.",
+    "published": "Archivio pubblicato",
+    "upcoming": "Prossimi segnali",
+    "view_all": "Vedi tutto l’archivio",
+    "back": "Torna alla home",
+    "footer": "Novità"
+  }
 }

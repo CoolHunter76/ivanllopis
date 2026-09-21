@@ -44,5 +44,14 @@
       "title": "Project World 演进",
       "summary": "更深入地展示架构、交付与公开活动。"
     }
-  ]
+  ],
+  "archive": {
+    "title": "演进档案",
+    "intro": "门户的全部信号，从已发布的变化到后续计划。",
+    "published": "已发布档案",
+    "upcoming": "下一信号",
+    "view_all": "查看完整档案",
+    "back": "返回首页",
+    "footer": "更新"
+  }
 }

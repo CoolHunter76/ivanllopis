@@ -44,5 +44,14 @@
       "title": "Project World evolution",
       "summary": "A deeper view of architecture, delivery and public activity."
     }
-  ]
+  ],
+  "archive": {
+    "title": "Evolution archive",
+    "intro": "Every portal signal, from released changes to what comes next.",
+    "published": "Published archive",
+    "upcoming": "Next signals",
+    "view_all": "View the full archive",
+    "back": "Back to home",
+    "footer": "Updates"
+  }
 }

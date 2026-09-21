@@ -44,5 +44,14 @@
       "title": "Evolucion de Project World",
       "summary": "Unha lectura mais profunda da arquitectura, a entrega e a actividade publica."
     }
-  ]
+  ],
+  "archive": {
+    "title": "Historial de evolución",
+    "intro": "Todos os sinais do portal, desde os cambios publicados ata o que vén despois.",
+    "published": "Historial publicado",
+    "upcoming": "Próximos sinais",
+    "view_all": "Ver todo o historial",
+    "back": "Volver ao inicio",
+    "footer": "Novidades"
+  }
 }

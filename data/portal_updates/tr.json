@@ -44,5 +44,14 @@
       "title": "Project World evrimi",
       "summary": "Mimari, teslimat ve herkese acik etkinlik icin daha derin bir gorunum."
     }
-  ]
+  ],
+  "archive": {
+    "title": "Gelisim arsivi",
+    "intro": "Yayinlanan degisikliklerden sonraki adimlara kadar tum portal sinyalleri.",
+    "published": "Yayinlanan arsiv",
+    "upcoming": "Sonraki sinyaller",
+    "view_all": "Tum arsivi gor",
+    "back": "Ana sayfaya don",
+    "footer": "Guncellemeler"
+  }
 }

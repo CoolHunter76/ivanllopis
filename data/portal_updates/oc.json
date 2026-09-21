@@ -44,5 +44,14 @@
       "title": "Evolucio de Project World",
       "summary": "Una lectura mes profunda de l’arquitectura, el lliurament i l’activitat publica."
     }
-  ]
+  ],
+  "archive": {
+    "title": "Istoric d’evolucion",
+    "intro": "Totes es senhaus deth portau, des cambis publicats enquia çò que vierà dempús.",
+    "published": "Istoric publicat",
+    "upcoming": "Senhaus següentes",
+    "view_all": "Veir tot er istoric",
+    "back": "Tornar ar inici",
+    "footer": "Novetats"
+  }
 }

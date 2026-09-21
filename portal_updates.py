@@ -21,4 +21,12 @@ def load_portal_updates(language: str) -> dict[str, object]:
     for item in items:
         if not isinstance(item, dict) or item.get("status") not in ALLOWED_STATUSES:
             raise ValueError("Portal update has an invalid status")
+    published = sorted(
+        (item for item in items if item.get("status") != "next"),
+        key=lambda item: item.get("date") or "",
+        reverse=True,
+    )
+    upcoming = [item for item in items if item.get("status") == "next"]
+    data["published"] = published
+    data["upcoming"] = upcoming
     return data
