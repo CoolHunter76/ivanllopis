@@ -2,10 +2,6 @@ name: ivanllopis-staging
 
 services:
   web:
-    environment:
-      APP_ENV: "${APP_ENV:-staging}"
-      APP_VERSION: "${APP_VERSION:-3.0.0.0}"
-      APP_COMMIT: "${APP_COMMIT:-unknown}"
     build:
       context: ../..
       dockerfile: Dockerfile
@@ -19,7 +15,9 @@ services:
 
     environment:
       V3_PORTAL_ENABLED: "true"
-      APP_ENV: staging
+      APP_ENV: "${APP_ENV:-staging}"
+      APP_VERSION: "${APP_VERSION:-3.0.0.0}"
+      APP_COMMIT: "${APP_COMMIT:-unknown}"
       AI_ASSISTANT_ENABLED: "true"
       OLLAMA_URL: "http://host.docker.internal:11434"
       OLLAMA_MODEL: "llama3.2:1b"
