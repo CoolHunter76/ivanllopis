@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     environment:
-      name: staging
+      name: ${{ github.ref_name == 'master' && 'production' || 'staging' }}
 
     steps:
       - name: Configure SSH
