@@ -2,6 +2,10 @@ name: ivanllopis-staging
 
 services:
   web:
+    environment:
+      APP_ENV: "${APP_ENV:-staging}"
+      APP_VERSION: "${APP_VERSION:-3.0.0.0}"
+      APP_COMMIT: "${APP_COMMIT:-unknown}"
     build:
       context: ../..
       dockerfile: Dockerfile
