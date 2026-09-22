@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from functools import lru_cache
 from pathlib import Path
+from xml.etree import ElementTree
 
 BASE = Path(__file__).resolve().parent
 UPDATES_DIR = BASE / "data" / "portal_updates"
@@ -98,3 +99,40 @@ def localized_updates_feed(language: str, origin: str) -> dict[str, object]:
         "home_url": f"{origin}/{language}/updates",
         "items": items,
     }
+
+
+def localized_updates_atom(language: str, origin: str) -> str:
+    data = load_portal_updates(language)
+    atom = "http://www.w3.org/2005/Atom"
+    ElementTree.register_namespace("", atom)
+    feed = ElementTree.Element(f"{{{atom}}}feed", {"xml:lang": language})
+
+    def add(parent: ElementTree.Element, name: str, text: str) -> ElementTree.Element:
+        element = ElementTree.SubElement(parent, f"{{{atom}}}{name}")
+        element.text = text
+        return element
+
+    archive_url = f"{origin}/{language}/updates"
+    feed_url = f"{origin}/{language}/updates.atom"
+    add(feed, "id", archive_url)
+    add(feed, "title", str(data["archive"]["title"]))
+    add(feed, "subtitle", str(data["archive"]["intro"]))
+    latest_date = max(str(item["date"]) for item in data["published"] if item.get("date"))
+    add(feed, "updated", f"{latest_date}T00:00:00Z")
+    ElementTree.SubElement(feed, f"{{{atom}}}link", {"rel": "self", "href": feed_url})
+    ElementTree.SubElement(feed, f"{{{atom}}}link", {"rel": "alternate", "href": archive_url})
+
+    for item in data["published"]:
+        item_url = f"{archive_url}/{item['id']}"
+        published = f"{item['date']}T00:00:00Z"
+        entry = ElementTree.SubElement(feed, f"{{{atom}}}entry")
+        add(entry, "id", item_url)
+        add(entry, "title", str(item["title"]))
+        add(entry, "summary", str(item["summary"]))
+        add(entry, "published", published)
+        add(entry, "updated", published)
+        ElementTree.SubElement(entry, f"{{{atom}}}link", {"rel": "alternate", "href": item_url})
+        ElementTree.SubElement(entry, f"{{{atom}}}category", {"term": str(item["category"])})
+
+    document = ElementTree.tostring(feed, encoding="unicode", xml_declaration=False)
+    return f'<?xml version="1.0" encoding="utf-8"?>\n{document}\n'

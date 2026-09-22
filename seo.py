@@ -112,6 +112,8 @@ def seo_head(request):
         for code in LANGUAGES
     )
     alternates += f'\n<link rel="alternate" hreflang="x-default" href="{ORIGIN}/es{suffix}">'
+    if suffix == "/updates":
+        alternates += f'\n<link rel="alternate" type="application/atom+xml" title="IvanLlopis.net Updates" href="{ORIGIN}/{lang}/updates.atom">'
     graph = [
         {
             "@type": "WebSite",
