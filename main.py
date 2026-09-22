@@ -729,10 +729,14 @@ def _cached_feed_response(
     headers = _feed_cache_headers(content, language)
     if _feed_not_modified(request, headers):
         return Response(status_code=304, headers=headers)
+    if request.method == "HEAD":
+        headers["Content-Length"] = str(len(content))
+        return Response(media_type=media_type, headers=headers)
     return Response(content, media_type=media_type, headers=headers)
 
 
 @app.get("/{lang}/updates.json", include_in_schema=False)
+@app.head("/{lang}/updates.json", include_in_schema=False)
 def updates_feed(request: Request, lang: str):
     if lang not in SUPPORTED:
         return RedirectResponse("/es/updates.json", status_code=307)
@@ -744,6 +748,7 @@ def updates_feed(request: Request, lang: str):
 
 
 @app.get("/{lang}/updates.atom", include_in_schema=False)
+@app.head("/{lang}/updates.atom", include_in_schema=False)
 def updates_atom(request: Request, lang: str):
     if lang not in SUPPORTED:
         return RedirectResponse("/es/updates.atom", status_code=307)
