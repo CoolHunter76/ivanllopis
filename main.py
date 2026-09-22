@@ -26,6 +26,7 @@ from portal_updates import (
     portal_update_detail,
 )
 from project_github import REPOSITORY_URL, project_world_data
+from security_headers import configure_security_headers
 from seo import configure_seo
 
 BASE = Path(__file__).resolve().parent
@@ -34,6 +35,7 @@ SUPPORTED = ("es", "ca", "gl", "oc", "eu", "en", "fr", "uk", "it", "tr", "ru", "
 app = FastAPI(title="IvanLlopis.net", version="3.0.0.0")
 configure_assistant(app)
 configure_seo(app)
+configure_security_headers(app)
 app.mount("/static", StaticFiles(directory=BASE / "static"), name="static")
 templates = Jinja2Templates(directory=BASE / "templates")
 
