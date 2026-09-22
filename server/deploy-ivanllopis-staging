@@ -16,6 +16,9 @@ cd "$APP_DIR"
 git fetch --prune origin "$BRANCH"
 git checkout "$BRANCH"
 git reset --hard "origin/$BRANCH"
+export APP_ENV="staging"
+export APP_VERSION="3.0.0.0"
+export APP_COMMIT="$(git rev-parse HEAD)"
 
 docker compose \
   --project-name "$PROJECT_NAME" \

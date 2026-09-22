@@ -1,0 +1,140 @@
+{
+  "eyebrow": "ЭВОЛЮЦИЯ ПОРТАЛА",
+  "title": "Система продолжает развиваться.",
+  "intro": "Видимые изменения, объединяющие опыт, архитектуру и поставку.",
+  "status_labels": {
+    "released": "ОПУБЛИКОВАНО",
+    "active": "АКТИВНО",
+    "next": "СЛЕДУЮЩИЙ СИГНАЛ"
+  },
+  "items": [
+    {
+      "id": "landing-v3",
+      "date": "2026-09-21",
+      "version": "V3",
+      "category": "EXPERIENCE",
+      "status": "active",
+      "title": "Эффектная главная страница V3",
+      "summary": "Новый иммерсивный вход, Current Signal и четыре портала для изучения.",
+      "sections": [
+        {
+          "title": "Что изменилось",
+          "text": "Новый иммерсивный вход, Current Signal и четыре портала для изучения. This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "Влияние",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "Поставка",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
+    },
+    {
+      "id": "neural-navigation",
+      "date": "2026-09-21",
+      "version": "V3",
+      "category": "NAVIGATION",
+      "status": "released",
+      "title": "Глобальная нейронная навигация",
+      "summary": "Neural Rail, Neural Dock и переходы Glitch объединяют все страницы.",
+      "sections": [
+        {
+          "title": "Что изменилось",
+          "text": "Neural Rail, Neural Dock и переходы Glitch объединяют все страницы. This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "Влияние",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "Поставка",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
+    },
+    {
+      "id": "isolated-staging",
+      "date": "2026-09-15",
+      "version": "PLATFORM",
+      "category": "DELIVERY",
+      "status": "released",
+      "title": "Изолированный staging",
+      "summary": "Независимая среда проверяет develop перед production.",
+      "sections": [
+        {
+          "title": "Что изменилось",
+          "text": "Независимая среда проверяет develop перед production. This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "Влияние",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "Поставка",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
+    },
+    {
+      "id": "project-world-evolution",
+      "date": null,
+      "version": "NEXT",
+      "category": "PROJECT WORLD",
+      "status": "next",
+      "title": "Развитие Project World",
+      "summary": "Более глубокий обзор архитектуры, поставки и публичной активности.",
+      "sections": [
+        {
+          "title": "Что изменилось",
+          "text": "Более глубокий обзор архитектуры, поставки и публичной активности. This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "Влияние",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "Поставка",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
+    }
+  ],
+  "archive": {
+    "title": "Архив развития",
+    "intro": "Все сигналы портала, от опубликованных изменений до следующих шагов.",
+    "published": "Опубликованный архив",
+    "upcoming": "Следующие сигналы",
+    "view_all": "Открыть весь архив",
+    "back": "На главную",
+    "footer": "Обновления"
+  },
+  "detail": {
+    "detail_title": "Детали развития",
+    "back_archive": "Назад к архиву",
+    "previous": "Предыдущее",
+    "next": "Следующее",
+    "published": "Опубликовано",
+    "planned": "Следующий сигнал",
+    "overview": "Что изменилось",
+    "impact": "Влияние",
+    "delivery": "Поставка",
+    "overview_text": "This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience.",
+    "impact_text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations.",
+    "delivery_text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+  },
+  "filters": {
+    "search_label": "Search evolution",
+    "search_placeholder": "Search by title, summary or category",
+    "status_label": "Status",
+    "all_statuses": "All statuses",
+    "category_label": "Category",
+    "all_categories": "All categories",
+    "apply": "Apply filters",
+    "reset": "Reset",
+    "results": "results",
+    "empty": "No updates match the selected filters.",
+    "feed": "JSON feed"
+  }
+}

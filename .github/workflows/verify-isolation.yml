@@ -25,7 +25,9 @@ jobs:
   verify:
     name: verify-isolation
     runs-on: ubuntu-latest
-    timeout-minutes: 10    
+    timeout-minutes: 10
+    environment:
+      name: staging
 
     steps:
       - name: Configure SSH

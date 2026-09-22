@@ -1,0 +1,140 @@
+{
+  "eyebrow": "EVOLUCIO DEL PORTAL",
+  "title": "El sistema continua evolucionant.",
+  "intro": "Canvis visibles que connecten experiencia, arquitectura i lliurament.",
+  "status_labels": {
+    "released": "PUBLICAT",
+    "active": "ACTIU",
+    "next": "SEGUENT SENYAL"
+  },
+  "items": [
+    {
+      "id": "landing-v3",
+      "date": "2026-09-21",
+      "version": "V3",
+      "category": "EXPERIENCE",
+      "status": "active",
+      "title": "Landing V3 d’alt impacte",
+      "summary": "Nova entrada immersiva, Current Signal i quatre portals d’exploracio.",
+      "sections": [
+        {
+          "title": "Què ha canviat",
+          "text": "Nova entrada immersiva, Current Signal i quatre portals d’exploracio. This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "Impacte",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "Lliurament",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
+    },
+    {
+      "id": "neural-navigation",
+      "date": "2026-09-21",
+      "version": "V3",
+      "category": "NAVIGATION",
+      "status": "released",
+      "title": "Navegacio neural global",
+      "summary": "Neural Rail, Neural Dock i transicions Glitch connecten totes les pagines.",
+      "sections": [
+        {
+          "title": "Què ha canviat",
+          "text": "Neural Rail, Neural Dock i transicions Glitch connecten totes les pagines. This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "Impacte",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "Lliurament",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
+    },
+    {
+      "id": "isolated-staging",
+      "date": "2026-09-15",
+      "version": "PLATFORM",
+      "category": "DELIVERY",
+      "status": "released",
+      "title": "Staging aillat",
+      "summary": "Entorn independent per validar develop abans d’arribar a produccio.",
+      "sections": [
+        {
+          "title": "Què ha canviat",
+          "text": "Entorn independent per validar develop abans d’arribar a produccio. This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "Impacte",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "Lliurament",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
+    },
+    {
+      "id": "project-world-evolution",
+      "date": null,
+      "version": "NEXT",
+      "category": "PROJECT WORLD",
+      "status": "next",
+      "title": "Evolucio de Project World",
+      "summary": "Una lectura mes profunda de l’arquitectura, el lliurament i l’activitat publica.",
+      "sections": [
+        {
+          "title": "Què ha canviat",
+          "text": "Una lectura mes profunda de l’arquitectura, el lliurament i l’activitat publica. This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience."
+        },
+        {
+          "title": "Impacte",
+          "text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations."
+        },
+        {
+          "title": "Lliurament",
+          "text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+        }
+      ]
+    }
+  ],
+  "archive": {
+    "title": "Historial d’evolució",
+    "intro": "Tots els senyals del portal, des dels canvis publicats fins al que vindrà després.",
+    "published": "Historial publicat",
+    "upcoming": "Senyals següents",
+    "view_all": "Veure tot l’historial",
+    "back": "Tornar a l’inici",
+    "footer": "Novetats"
+  },
+  "detail": {
+    "detail_title": "Detall de l’evolució",
+    "back_archive": "Tornar a l’historial",
+    "previous": "Anterior",
+    "next": "Següent",
+    "published": "Publicat",
+    "planned": "Següent senyal",
+    "overview": "Què ha canviat",
+    "impact": "Impacte",
+    "delivery": "Lliurament",
+    "overview_text": "This change is part of the continuous evolution of IvanLlopis.net and expands the portal public experience.",
+    "impact_text": "The improvement connects experience, architecture and delivery without changing the five primary navigation destinations.",
+    "delivery_text": "The change integrates with FastAPI, local content and automated tests to keep delivery verifiable."
+  },
+  "filters": {
+    "search_label": "Cercar en l’evolució",
+    "search_placeholder": "Cerca per títol, resum o categoria",
+    "status_label": "Estat",
+    "all_statuses": "Tots els estats",
+    "category_label": "Categoria",
+    "all_categories": "Totes les categories",
+    "apply": "Aplicar filtres",
+    "reset": "Restablir",
+    "results": "resultats",
+    "empty": "No hi ha actualitzacions que coincideixin amb els filtres.",
+    "feed": "Feed JSON"
+  }
+}
