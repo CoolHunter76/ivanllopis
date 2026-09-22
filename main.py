@@ -1,14 +1,17 @@
+import hashlib
 import json
 import os
 import re
 import time
 from collections import defaultdict, deque
+from datetime import UTC, datetime
+from email.utils import format_datetime, parsedate_to_datetime
 from html import escape
 from pathlib import Path
 
 import resend
 from fastapi import FastAPI, HTTPException, Request
-from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse, Response
+from fastapi.responses import HTMLResponse, RedirectResponse, Response
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel, Field
@@ -679,14 +682,65 @@ def updates(request: Request, lang: str):
     )
 
 
-@app.get("/{lang}/updates.json", response_class=JSONResponse, include_in_schema=False)
+FEED_CACHE_CONTROL = "public, max-age=300"
+
+
+def _feed_cache_headers(content: bytes, language: str) -> dict[str, str]:
+    published = load_portal_updates(language)["published"]
+    latest_date = max(str(item["date"]) for item in published if item.get("date"))
+    last_modified = datetime.fromisoformat(latest_date).replace(tzinfo=UTC)
+    return {
+        "Cache-Control": FEED_CACHE_CONTROL,
+        "ETag": f'"{hashlib.sha256(content).hexdigest()}"',
+        "Last-Modified": format_datetime(last_modified, usegmt=True),
+    }
+
+
+def _etag_matches(header: str, etag: str) -> bool:
+    if not header:
+        return False
+    expected = etag.removeprefix("W/")
+    return any(
+        candidate == "*" or candidate.removeprefix("W/") == expected
+        for candidate in (value.strip() for value in header.split(","))
+    )
+
+
+def _feed_not_modified(request: Request, headers: dict[str, str]) -> bool:
+    if_none_match = request.headers.get("if-none-match", "")
+    if if_none_match:
+        return _etag_matches(if_none_match, headers["ETag"])
+    if_modified_since = request.headers.get("if-modified-since", "")
+    if not if_modified_since:
+        return False
+    try:
+        requested_date = parsedate_to_datetime(if_modified_since)
+        last_modified = parsedate_to_datetime(headers["Last-Modified"])
+    except (TypeError, ValueError):
+        return False
+    if requested_date.tzinfo is None:
+        requested_date = requested_date.replace(tzinfo=UTC)
+    return last_modified <= requested_date.astimezone(UTC)
+
+
+def _cached_feed_response(
+    request: Request, content: bytes, language: str, media_type: str
+) -> Response:
+    headers = _feed_cache_headers(content, language)
+    if _feed_not_modified(request, headers):
+        return Response(status_code=304, headers=headers)
+    return Response(content, media_type=media_type, headers=headers)
+
+
+@app.get("/{lang}/updates.json", include_in_schema=False)
 def updates_feed(request: Request, lang: str):
     if lang not in SUPPORTED:
         return RedirectResponse("/es/updates.json", status_code=307)
     origin = str(request.base_url).rstrip("/")
-    response = JSONResponse(localized_updates_feed(lang, origin))
-    response.headers["Cache-Control"] = "public, max-age=300"
-    return response
+    content = json.dumps(
+        localized_updates_feed(lang, origin), ensure_ascii=False, separators=(",", ":")
+    ).encode("utf-8")
+    return _cached_feed_response(request, content, lang, "application/json")
 
 
 @app.get("/{lang}/updates.atom", include_in_schema=False)
@@ -694,9 +748,8 @@ def updates_atom(request: Request, lang: str):
     if lang not in SUPPORTED:
         return RedirectResponse("/es/updates.atom", status_code=307)
     origin = str(request.base_url).rstrip("/")
-    response = Response(localized_updates_atom(lang, origin), media_type="application/atom+xml")
-    response.headers["Cache-Control"] = "public, max-age=300"
-    return response
+    content = localized_updates_atom(lang, origin).encode("utf-8")
+    return _cached_feed_response(request, content, lang, "application/atom+xml")
 
 
 @app.get("/{lang}/updates/{update_id}", response_class=HTMLResponse, include_in_schema=False)
