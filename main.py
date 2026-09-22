@@ -18,6 +18,7 @@ from pydantic import BaseModel, Field
 from resend.exceptions import ResendError
 
 from assistant import configure_assistant
+from deployment_info import deployment_metadata
 from portal_updates import (
     filter_portal_updates,
     load_portal_updates,
@@ -638,7 +639,11 @@ def create_cv_request(body: CvRequest, request: Request) -> dict[str, str]:
 
 @app.get("/health", include_in_schema=False)
 def health() -> dict:
-    return {"status": "ok", "languages": SUPPORTED}
+    return {
+        "status": "ok",
+        "languages": SUPPORTED,
+        "deployment": deployment_metadata(app.version),
+    }
 
 
 @app.get("/", include_in_schema=False)
