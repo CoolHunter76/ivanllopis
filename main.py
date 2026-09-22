@@ -8,7 +8,7 @@ from pathlib import Path
 
 import resend
 from fastapi import FastAPI, HTTPException, Request
-from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
+from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse, Response
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel, Field
@@ -18,6 +18,7 @@ from assistant import configure_assistant
 from portal_updates import (
     filter_portal_updates,
     load_portal_updates,
+    localized_updates_atom,
     localized_updates_feed,
     portal_update_detail,
 )
@@ -684,6 +685,16 @@ def updates_feed(request: Request, lang: str):
         return RedirectResponse("/es/updates.json", status_code=307)
     origin = str(request.base_url).rstrip("/")
     response = JSONResponse(localized_updates_feed(lang, origin))
+    response.headers["Cache-Control"] = "public, max-age=300"
+    return response
+
+
+@app.get("/{lang}/updates.atom", include_in_schema=False)
+def updates_atom(request: Request, lang: str):
+    if lang not in SUPPORTED:
+        return RedirectResponse("/es/updates.atom", status_code=307)
+    origin = str(request.base_url).rstrip("/")
+    response = Response(localized_updates_atom(lang, origin), media_type="application/atom+xml")
     response.headers["Cache-Control"] = "public, max-age=300"
     return response
 
