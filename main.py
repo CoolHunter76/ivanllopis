@@ -8,20 +8,26 @@ from pathlib import Path
 
 import resend
 from fastapi import FastAPI, HTTPException, Request
-from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel, Field
 from resend.exceptions import ResendError
 
 from assistant import configure_assistant
+from portal_updates import (
+    filter_portal_updates,
+    load_portal_updates,
+    localized_updates_feed,
+    portal_update_detail,
+)
 from project_github import REPOSITORY_URL, project_world_data
 from seo import configure_seo
 
 BASE = Path(__file__).resolve().parent
 SUPPORTED = ("es", "ca", "gl", "oc", "eu", "en", "fr", "uk", "it", "tr", "ru", "zh-Hans", "ja")
 
-app = FastAPI(title="IvanLlopis.net", version="2.0.0")
+app = FastAPI(title="IvanLlopis.net", version="3.0.0.0")
 configure_assistant(app)
 configure_seo(app)
 app.mount("/static", StaticFiles(directory=BASE / "static"), name="static")
@@ -33,12 +39,18 @@ def trn(lang_code: str) -> dict:
     return json.loads((BASE / "translations" / f"{language}.json").read_text(encoding="utf-8"))
 
 
-def ctx(lang_code: str, **extra: object) -> dict:
+def ctx(lang_code: str, page: str = "", **extra: object) -> dict:
+    portal_enabled = (
+        os.getenv("V3_PORTAL_ENABLED", os.getenv("V3_LANDING_ENABLED", "false")).lower() == "true"
+    )
     return {
         "lang": lang_code,
         "contact_url": os.getenv("PUBLIC_CONTACT_URL", f"/{lang_code}#profile"),
         "t": trn(lang_code),
         "languages": [{"code": code, **trn(code)["language"]} for code in SUPPORTED],
+        "current_page": page,
+        "v3_portal": portal_enabled,
+        "portal_updates": load_portal_updates(lang_code),
         **extra,
     }
 
@@ -635,7 +647,58 @@ def home(request: Request, lang: str):
     return templates.TemplateResponse(
         request=request,
         name="home.html",
-        context=ctx(lang, technologies=TECHNOLOGIES, ai_engines=AI_ENGINES, projects=PROJECTS),
+        context=ctx(
+            lang,
+            technologies=TECHNOLOGIES,
+            ai_engines=AI_ENGINES,
+            projects=PROJECTS,
+            portal_updates=load_portal_updates(lang),
+            page="home",
+        ),
+    )
+
+
+@app.get("/{lang}/updates", response_class=HTMLResponse, include_in_schema=False)
+def updates(request: Request, lang: str):
+    if lang not in SUPPORTED:
+        return RedirectResponse("/es/updates", status_code=307)
+    status = request.query_params.get("status", "")
+    category = request.query_params.get("category", "")
+    query = request.query_params.get("q", "")
+    if status not in {"", "released", "active", "next"}:
+        status = ""
+    allowed_categories = {"", "EXPERIENCE", "NAVIGATION", "DELIVERY", "PROJECT WORLD"}
+    if category not in allowed_categories:
+        category = ""
+    updates_data = filter_portal_updates(lang, status, category, query)
+    return templates.TemplateResponse(
+        request=request,
+        name="updates.html",
+        context=ctx(lang, page="updates", portal_updates=updates_data),
+    )
+
+
+@app.get("/{lang}/updates.json", response_class=JSONResponse, include_in_schema=False)
+def updates_feed(request: Request, lang: str):
+    if lang not in SUPPORTED:
+        return RedirectResponse("/es/updates.json", status_code=307)
+    origin = str(request.base_url).rstrip("/")
+    response = JSONResponse(localized_updates_feed(lang, origin))
+    response.headers["Cache-Control"] = "public, max-age=300"
+    return response
+
+
+@app.get("/{lang}/updates/{update_id}", response_class=HTMLResponse, include_in_schema=False)
+def update_detail(request: Request, lang: str, update_id: str):
+    if lang not in SUPPORTED:
+        return RedirectResponse(f"/es/updates/{update_id}", status_code=307)
+    detail = portal_update_detail(lang, update_id)
+    if detail is None:
+        raise HTTPException(status_code=404, detail="Portal update not found")
+    return templates.TemplateResponse(
+        request=request,
+        name="update_detail.html",
+        context=ctx(lang, page="updates", update_detail=detail),
     )
 
 
@@ -646,7 +709,7 @@ def technologies(request: Request, lang: str):
     return templates.TemplateResponse(
         request=request,
         name="technologies.html",
-        context=ctx(lang, technologies=TECHNOLOGIES, ai_engines=AI_ENGINES),
+        context=ctx(lang, page="technologies", technologies=TECHNOLOGIES, ai_engines=AI_ENGINES),
     )
 
 
@@ -657,7 +720,7 @@ def projects(request: Request, lang: str):
     return templates.TemplateResponse(
         request=request,
         name="projects.html",
-        context=ctx(lang, projects=PROJECTS, github_url=REPOSITORY_URL),
+        context=ctx(lang, page="projects", projects=PROJECTS, github_url=REPOSITORY_URL),
     )
 
 
@@ -672,7 +735,7 @@ def project_world(request: Request, lang: str):
     return templates.TemplateResponse(
         request=request,
         name="project_world.html",
-        context=ctx(lang, project=project_world_data()),
+        context=ctx(lang, page="projects", project=project_world_data()),
     )
 
 
@@ -681,7 +744,9 @@ def work_life(request: Request, lang: str):
     if lang not in SUPPORTED:
         return RedirectResponse("/es/work-life", status_code=307)
     return templates.TemplateResponse(
-        request=request, name="work_life.html", context=ctx(lang, experiences=CLIENT_EXPERIENCES)
+        request=request,
+        name="work_life.html",
+        context=ctx(lang, page="work-life", experiences=CLIENT_EXPERIENCES),
     )
 
 
@@ -689,14 +754,18 @@ def work_life(request: Request, lang: str):
 def request_cv(request: Request, lang: str):
     if lang not in SUPPORTED:
         return RedirectResponse("/es/request-cv", status_code=307)
-    return templates.TemplateResponse(request=request, name="request_cv.html", context=ctx(lang))
+    return templates.TemplateResponse(
+        request=request, name="request_cv.html", context=ctx(lang, page="work-life")
+    )
 
 
 @app.get("/{lang}/privacy", response_class=HTMLResponse, include_in_schema=False)
 def privacy(request: Request, lang: str):
     if lang not in SUPPORTED:
         return RedirectResponse("/es/privacy", status_code=307)
-    return templates.TemplateResponse(request=request, name="privacy.html", context=ctx(lang))
+    return templates.TemplateResponse(
+        request=request, name="privacy.html", context=ctx(lang, page="work-life")
+    )
 
 
 @app.get("/{lang}/hobbies", response_class=HTMLResponse, include_in_schema=False)
@@ -704,5 +773,5 @@ def hobbies(request: Request, lang: str):
     if lang not in SUPPORTED:
         return RedirectResponse("/es/hobbies", status_code=307)
     return templates.TemplateResponse(
-        request=request, name="hobbies.html", context=ctx(lang, hobbies=HOBBIES)
+        request=request, name="hobbies.html", context=ctx(lang, page="hobbies", hobbies=HOBBIES)
     )

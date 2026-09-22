@@ -6,6 +6,8 @@ from fastapi import APIRouter, Request
 from fastapi.responses import PlainTextResponse, Response
 from starlette.middleware.base import BaseHTTPMiddleware
 
+from portal_updates import load_portal_updates, published_update_ids
+
 ORIGIN = "https://ivanllopis.net"
 LANGUAGES = ("es", "ca", "gl", "oc", "eu", "en", "fr", "uk", "it", "tr", "ru", "zh-Hans", "ja")
 IMAGE = f"{ORIGIN}/static/images/ivan-hero-transparent.webp"
@@ -71,19 +73,38 @@ def page_info(path):
     parts = [part for part in path.split("/") if part]
     lang = parts[0] if parts and parts[0] in LANGUAGES else "es"
     page = parts[1] if len(parts) > 1 else ""
-    suffix = f"/{page}" if page else ""
+    suffix = "/" + "/".join(parts[1:]) if len(parts) > 1 else ""
     hobbies = page == "hobbies"
-    title = (
-        "Aficiones de Ivan Llopis"
-        if hobbies and lang == "es"
-        else ("Ivan Llopis | Hobbies" if hobbies else "Ivan Llopis | Software Engineer Lead")
-    )
-    description = TEXT[lang][1 if hobbies else 0]
-    return lang, suffix, title, description
+    updates = page == "updates"
+    update_id = parts[2] if updates and len(parts) > 2 else None
+    update = None
+    if update_id:
+        update = next(
+            (item for item in load_portal_updates(lang)["items"] if item["id"] == update_id),
+            None,
+        )
+    if update:
+        title = f"{update['title']} | IvanLlopis.net"
+        description = update["summary"]
+    elif updates:
+        title = "Evolución de IvanLlopis.net" if lang == "es" else "IvanLlopis.net | Updates"
+        description = (
+            "Historial de evolución, cambios publicados y próximas señales de IvanLlopis.net."
+            if lang == "es"
+            else "IvanLlopis.net evolution archive, released changes and next signals."
+        )
+    else:
+        title = (
+            "Aficiones de Ivan Llopis"
+            if hobbies and lang == "es"
+            else ("Ivan Llopis | Hobbies" if hobbies else "Ivan Llopis | Software Engineer Lead")
+        )
+        description = TEXT[lang][1 if hobbies else 0]
+    return lang, suffix, title, description, update
 
 
 def seo_head(request):
-    lang, suffix, title, description = page_info(request.url.path)
+    lang, suffix, title, description, update = page_info(request.url.path)
     canonical = f"{ORIGIN}/{lang}{suffix}"
     robots = "noindex, nofollow, noarchive" if is_staging(request) else "index, follow"
     alternates = "\n".join(
@@ -91,25 +112,38 @@ def seo_head(request):
         for code in LANGUAGES
     )
     alternates += f'\n<link rel="alternate" hreflang="x-default" href="{ORIGIN}/es{suffix}">'
+    graph = [
+        {
+            "@type": "WebSite",
+            "@id": f"{ORIGIN}/#website",
+            "url": f"{ORIGIN}/",
+            "name": "IvanLlopis.net",
+            "inLanguage": list(LANGUAGES),
+        },
+        {
+            "@type": "Person",
+            "@id": f"{ORIGIN}/#person",
+            "name": "Ivan Llopis",
+            "url": f"{ORIGIN}/",
+            "image": IMAGE,
+            "jobTitle": "Software Engineer Lead",
+        },
+    ]
+    if update:
+        graph.append(
+            {
+                "@type": "Article" if update["status"] != "next" else "WebPage",
+                "headline": update["title"],
+                "description": update["summary"],
+                "url": canonical,
+                "inLanguage": lang,
+                **({"datePublished": update["date"]} if update.get("date") else {}),
+                "author": {"@id": f"{ORIGIN}/#person"},
+            }
+        )
     data = {
         "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "WebSite",
-                "@id": f"{ORIGIN}/#website",
-                "url": f"{ORIGIN}/",
-                "name": "IvanLlopis.net",
-                "inLanguage": list(LANGUAGES),
-            },
-            {
-                "@type": "Person",
-                "@id": f"{ORIGIN}/#person",
-                "name": "Ivan Llopis",
-                "url": f"{ORIGIN}/",
-                "image": IMAGE,
-                "jobTitle": "Software Engineer Lead",
-            },
-        ],
+        "@graph": graph,
     }
     return "\n".join(
         [
@@ -119,7 +153,9 @@ def seo_head(request):
             f'<meta name="robots" content="{robots}">',
             f'<link rel="canonical" href="{canonical}">',
             alternates,
-            '<meta property="og:type" content="website">',
+            '<meta property="og:type" content="article">'
+            if update
+            else '<meta property="og:type" content="website">',
             '<meta property="og:site_name" content="IvanLlopis.net">',
             f'<meta property="og:title" content="{escape(title, quote=True)}">',
             f'<meta property="og:description" content="{escape(description, quote=True)}">',
@@ -184,8 +220,15 @@ def sitemap():
             "/request-cv",
             "/privacy",
             "/hobbies",
+            "/updates",
         )
     )
+    update_urls = "\n".join(
+        f"  <url><loc>{ORIGIN}/{lang}/updates/{update_id}</loc></url>"
+        for lang in LANGUAGES
+        for update_id in published_update_ids()
+    )
+    urls = f"{urls}\n{update_urls}"
     xml = f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}\n</urlset>\n'
     return Response(xml, media_type="application/xml")
 
