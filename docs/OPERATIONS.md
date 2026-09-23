@@ -59,3 +59,23 @@ Uptime Monitor se ejecuta manualmente y mediante programacion. Valida:
 - ETag, Last-Modified, Content-Length y Cache-Control.
 - Respuestas condicionales 304.
 - Cabeceras HTTP globales de seguridad.
+
+
+### Sincronizacion de scripts operativos
+
+La instalacion inicial requiere una unica operacion administrativa para copiar `server/sync-ivanllopis-operational-scripts` a `/usr/local/sbin` e instalar `server/ivanllopis-script-sync.sudoers` mediante `visudo`. A partir de ese momento, CD Staging y CD Production sincronizan las copias autorizadas antes de desplegar.
+
+Comprobacion manual, sin modificar archivos:
+
+```text
+sudo /usr/local/sbin/sync-ivanllopis-operational-scripts staging
+sudo /usr/local/sbin/sync-ivanllopis-operational-scripts production
+```
+
+No se aceptan rutas libres ni el objetivo `all`. Cada entorno usa una ruta de repositorio fija y una lista cerrada de ejecutables.
+
+## Correccion del origen operativo de C15
+
+Antes de leer los scripts versionados, el sincronizador actualiza la ruta autorizada a `origin/develop` para staging o a `origin/master` para produccion. La operacion Git se ejecuta con el propietario real del repositorio y valida la rama resultante.
+
+La primera activacion requiere reinstalar manualmente el sincronizador en `/usr/local/sbin`. Tras esa activacion, las siguientes actualizaciones quedan automatizadas.
