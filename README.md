@@ -1,20 +1,37 @@
-# Logos de empresas - placeholders
+# IvanLlopis.net
 
-Los siete SVG de `static/images/companies/` son archivos SVG válidos pero intencionadamente vacíos.
+Portfolio profesional multilingue construido con FastAPI, Jinja2, Docker y GitHub Actions.
 
-Reemplázalos manualmente conservando exactamente estos nombres:
-- hp.svg
-- repsol.svg
-- mapfre.svg
-- adif.svg
-- energyavm.svg
-- capgemini.svg
-- sogeti.svg
+## Entornos
 
-## Integración
-1. Copia `static/images/companies/` al proyecto.
-2. Copia `static/css/companies.css` o integra sus reglas en `static/css/site.css`.
-3. Copia `templates/companies.html` e inclúyelo desde la landing donde corresponda.
-4. Sustituye cada SVG vacío por el logo oficial manteniendo el mismo nombre.
+- `develop` se despliega en staging.
+- `master` se despliega en produccion.
+- `/health` publica estado e identidad de despliegue sin exponer secretos.
+- El workflow Uptime Monitor valida periodicamente ambos entornos.
 
-El HTML usa `url_for('static', ...)` para evitar rutas absolutas rígidas.
+## Desarrollo local
+
+1. Crea y activa un entorno virtual.
+2. Instala las dependencias de desarrollo con `pip install -r requirements-dev.txt`.
+3. Ejecuta la aplicacion con `uvicorn main:app --reload`.
+4. Abre `http://127.0.0.1:8000/es`.
+
+## Calidad
+
+Ejecuta estas validaciones antes de publicar cambios:
+
+```powershell
+ruff check .
+ruff format --check .
+pytest
+```
+
+## Operacion y configuracion
+
+- [Guia operativa](docs/OPERATIONS.md)
+- [Configuracion y variables](docs/CONFIGURATION.md)
+- [Proceso de release](docs/RELEASE.md)
+
+## Seguridad
+
+Los secretos no se versionan. Usa `.env.cv.example` y `compose.secrets.example.yaml` solo como referencias de estructura. Los valores reales deben permanecer fuera del repositorio.
