@@ -17,6 +17,7 @@ from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel, Field
 from resend.exceptions import ResendError
 
+from app_version import APP_VERSION
 from assistant import configure_assistant
 from deployment_info import deployment_metadata
 from portal_updates import (
@@ -33,7 +34,7 @@ from seo import configure_seo
 BASE = Path(__file__).resolve().parent
 SUPPORTED = ("es", "ca", "gl", "oc", "eu", "en", "fr", "uk", "it", "tr", "ru", "zh-Hans", "ja")
 
-app = FastAPI(title="IvanLlopis.net", version="3.0.0.0")
+app = FastAPI(title="IvanLlopis.net", version=APP_VERSION)
 configure_assistant(app)
 configure_seo(app)
 configure_security_headers(app)

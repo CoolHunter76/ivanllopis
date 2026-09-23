@@ -62,7 +62,11 @@ git fetch --prune origin "$BRANCH"
 git checkout "$BRANCH"
 git reset --hard "origin/$BRANCH"
 export APP_ENV="production"
-export APP_VERSION="3.0.0.0"
+export APP_VERSION="$(tr -d '\r\n' < VERSION)"
+if [[ ! "$APP_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+    echo "Invalid application version in VERSION: $APP_VERSION"
+    exit 1
+fi
 export APP_COMMIT="$(git rev-parse HEAD)"
 
 docker compose build --pull
