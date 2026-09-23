@@ -1,0 +1,89 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+TARGET_GROUP="${1:-}"
+INSTALL_DIR="/usr/local/sbin"
+BACKUP_DIR=""
+UPDATED=0
+
+cleanup() {
+    if [[ -n "$BACKUP_DIR" && -d "$BACKUP_DIR" ]]; then
+        rm -rf "$BACKUP_DIR"
+    fi
+}
+
+rollback() {
+    local status=$?
+    if [[ -n "$BACKUP_DIR" && -d "$BACKUP_DIR" ]]; then
+        for name in deploy-ivanllopis deploy-ivanllopis-staging verify-ivanllopis-isolation sync-ivanllopis-operational-scripts; do
+            if [[ -f "$BACKUP_DIR/$name" ]]; then
+                install -o root -g root -m 0755 "$BACKUP_DIR/$name" "$INSTALL_DIR/$name"
+            fi
+        done
+    fi
+    cleanup
+    exit "$status"
+}
+
+trap rollback ERR
+trap cleanup EXIT
+
+if [[ "$(id -u)" -ne 0 ]]; then
+    echo "Operational script synchronization must run as root."
+    exit 1
+fi
+
+if [[ "$TARGET_GROUP" != "production" && "$TARGET_GROUP" != "staging" ]]; then
+    echo "Usage: sync-ivanllopis-operational-scripts production|staging"
+    exit 1
+fi
+
+case "$TARGET_GROUP" in
+    production)
+        REPOSITORY_DIR="/opt/ivanllopis/app"
+        TARGETS="deploy-ivanllopis verify-ivanllopis-isolation sync-ivanllopis-operational-scripts"
+        ;;
+    staging)
+        REPOSITORY_DIR="/opt/ivanllopis/staging"
+        TARGETS="deploy-ivanllopis-staging verify-ivanllopis-isolation sync-ivanllopis-operational-scripts"
+        ;;
+esac
+
+if [[ ! -d "$REPOSITORY_DIR/.git" ]]; then
+    echo "Authorized repository is missing: $REPOSITORY_DIR"
+    exit 1
+fi
+
+SOURCE_DIR="$REPOSITORY_DIR/server"
+BACKUP_DIR="$(mktemp -d /tmp/ivanllopis-script-sync.XXXXXX)"
+
+for name in $TARGETS; do
+    source_path="$SOURCE_DIR/$name"
+    destination_path="$INSTALL_DIR/$name"
+
+    if [[ ! -f "$source_path" ]]; then
+        echo "Authorized source is missing: $source_path"
+        exit 1
+    fi
+
+    bash -n "$source_path"
+
+    if [[ -f "$destination_path" ]] && cmp --silent "$source_path" "$destination_path"; then
+        echo "UNCHANGED $name"
+        continue
+    fi
+
+    if [[ -f "$destination_path" ]]; then
+        cp --preserve=mode,ownership,timestamps "$destination_path" "$BACKUP_DIR/$name"
+    fi
+
+    install -o root -g root -m 0755 "$source_path" "$destination_path"
+    bash -n "$destination_path"
+    cmp --silent "$source_path" "$destination_path"
+    UPDATED=$((UPDATED + 1))
+    echo "UPDATED $name"
+done
+
+trap - ERR
+printf 'Operational script synchronization completed: %s updated.
+' "$UPDATED"
