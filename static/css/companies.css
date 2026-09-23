@@ -1,9 +1,0 @@
-.companies { padding: 2rem 0; }
-.companies h2 { text-align: center; }
-.company-logos { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1.25rem; align-items: center; }
-.company-logo { min-height: 72px; display: flex; align-items: center; justify-content: center; padding: 12px; }
-.company-logo img { display: block; width: auto; height: 34px; max-width: 140px; object-fit: contain; filter: grayscale(1); opacity: .66; transition: filter .2s ease, opacity .2s ease, transform .2s ease; }
-.company-logo img[alt="HP"] { height: 42px; }
-.company-logo img:hover, .company-logo img:focus { filter: grayscale(0); opacity: 1; transform: translateY(-2px); }
-@media (max-width: 640px) { .company-logos { grid-template-columns: repeat(2, 1fr); gap: .75rem; } .company-logo img { max-width: 120px; height: 28px; } .company-logo img[alt="HP"] { height: 36px; } }
-@media (prefers-reduced-motion: reduce) { .company-logo img { transition: none; } }

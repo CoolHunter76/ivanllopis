@@ -1,16 +1,23 @@
-
 .env
 .env.cv
 .env.*.local
 
-# Python cache
+.venv/
 __pycache__/
-*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 
-# Python cache
-__pycache__/
 *.py[cod]
+*.bak
+*.backup
+*.tmp
+*.log
 
-# Python cache
-__pycache__/
-*.py[cod]
+public-smoke-report.json
+
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

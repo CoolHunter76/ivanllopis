@@ -8,17 +8,30 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: public-smoke-monitoring
+  cancel-in-progress: false
+
 jobs:
   monitor:
     name: monitor-environments
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 8
     steps:
-      - name: Verify production
-        run: |
-          curl --fail --silent --show-error --max-time 20 https://ivanllopis.net/health | tee production-health.json
-          grep -q '"status"[[:space:]]*:[[:space:]]*"ok"' production-health.json
-      - name: Verify staging
-        run: |
-          curl --fail --silent --show-error --max-time 20 https://staging.ivanllopis.net/health | tee staging-health.json
-          grep -q '"status"[[:space:]]*:[[:space:]]*"ok"' staging-health.json
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Run public smoke checks
+        run: python scripts/public_smoke.py --output public-smoke-report.json
+
+      - name: Upload smoke report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-smoke-report
+          path: public-smoke-report.json
+          if-no-files-found: error
+          retention-days: 14
