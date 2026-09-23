@@ -45,22 +45,52 @@ def assert_security_headers(headers: dict[str, str], label: str) -> None:
         assert_equal(f"{label} header {name}", headers.get(name), expected)
 
 
-def verify_health(base_url: str, expected_environment: str) -> dict[str, str]:
+def verify_health(
+    base_url: str,
+    expected_environment: str,
+    expected_version: str,
+    expected_commit: str,
+) -> dict[str, object]:
+    if not COMMIT_PATTERN.fullmatch(expected_commit):
+        raise RuntimeError(f"expected deployment commit is not a full Git SHA: {expected_commit!r}")
+
     response = request(f"{base_url}/health")
     assert_equal("health HTTP status", response.status, 200)
     headers = response_headers(response)
     assert_security_headers(headers, "health")
     payload = json.loads(response.read().decode("utf-8"))
     assert_equal("health status", payload.get("status"), "ok")
+
     deployment = payload.get("deployment", {})
-    assert_equal("deployment environment", deployment.get("environment"), expected_environment)
-    version = deployment.get("version", "")
-    commit = deployment.get("commit", "")
-    if not version or version == "unknown":
-        raise RuntimeError("deployment version is missing or unknown")
-    if not COMMIT_PATTERN.fullmatch(commit):
-        raise RuntimeError(f"deployment commit is not a full Git SHA: {commit!r}")
-    return {"environment": expected_environment, "version": version, "commit": commit}
+    published_environment = deployment.get("environment")
+    published_version = deployment.get("version")
+    published_commit = deployment.get("commit")
+
+    if not COMMIT_PATTERN.fullmatch(published_commit or ""):
+        raise RuntimeError(
+            f"published deployment commit is not a full Git SHA: {published_commit!r}"
+        )
+
+    assert_equal(
+        "deployment environment",
+        published_environment,
+        expected_environment,
+    )
+    assert_equal("deployment version", published_version, expected_version)
+    assert_equal("deployment commit", published_commit, expected_commit)
+
+    return {
+        "expected": {
+            "environment": expected_environment,
+            "version": expected_version,
+            "commit": expected_commit,
+        },
+        "published": {
+            "environment": published_environment,
+            "version": published_version,
+            "commit": published_commit,
+        },
+    }
 
 
 def verify_feed(base_url: str, feed: str, expected_media_type: str) -> dict[str, str]:
@@ -71,7 +101,11 @@ def verify_feed(base_url: str, feed: str, expected_media_type: str) -> dict[str,
     assert_security_headers(headers, f"{feed} HEAD")
     if not headers.get("content-type", "").startswith(expected_media_type):
         raise RuntimeError(f"{feed} has unexpected content type: {headers.get('content-type')!r}")
-    assert_equal(f"{feed} cache control", headers.get("cache-control"), "public, max-age=300")
+    assert_equal(
+        f"{feed} cache control",
+        headers.get("cache-control"),
+        "public, max-age=300",
+    )
     for name in ("etag", "last-modified", "content-length"):
         if not headers.get(name):
             raise RuntimeError(f"{feed} HEAD is missing {name}")
@@ -80,15 +114,30 @@ def verify_feed(base_url: str, feed: str, expected_media_type: str) -> dict[str,
     assert_equal(f"{feed} conditional status", conditional.status, 304)
     conditional_headers = response_headers(conditional)
     assert_security_headers(conditional_headers, f"{feed} 304")
-    assert_equal(f"{feed} conditional ETag", conditional_headers.get("etag"), headers["etag"])
+    assert_equal(
+        f"{feed} conditional ETag",
+        conditional_headers.get("etag"),
+        headers["etag"],
+    )
     return {"etag": headers["etag"], "last_modified": headers["last-modified"]}
 
 
-def verify_environment(name: str, base_url: str, expected_environment: str) -> dict[str, object]:
+def verify_environment(
+    name: str,
+    base_url: str,
+    expected_environment: str,
+    expected_version: str,
+    expected_commit: str,
+) -> dict[str, object]:
     result: dict[str, object] = {
         "name": name,
         "base_url": base_url,
-        "health": verify_health(base_url, expected_environment),
+        "health": verify_health(
+            base_url,
+            expected_environment,
+            expected_version,
+            expected_commit,
+        ),
         "feeds": {},
     }
     feeds = result["feeds"]
@@ -102,29 +151,58 @@ def verify_environment(name: str, base_url: str, expected_environment: str) -> d
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run public smoke checks for IvanLlopis.net")
     parser.add_argument("--output", type=Path, default=Path("public-smoke-report.json"))
+    parser.add_argument("--production-version", required=True)
+    parser.add_argument("--production-commit", required=True)
+    parser.add_argument("--staging-version", required=True)
+    parser.add_argument("--staging-commit", required=True)
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
     environments = (
-        ("production", "https://ivanllopis.net", "production"),
-        ("staging", "https://staging.ivanllopis.net", "staging"),
+        (
+            "production",
+            "https://ivanllopis.net",
+            "production",
+            args.production_version,
+            args.production_commit,
+        ),
+        (
+            "staging",
+            "https://staging.ivanllopis.net",
+            "staging",
+            args.staging_version,
+            args.staging_commit,
+        ),
     )
     report: dict[str, object] = {"status": "ok", "environments": []}
     try:
         results = report["environments"]
         if not isinstance(results, list):
             raise RuntimeError("internal environment result is invalid")
-        for name, base_url, expected_environment in environments:
+        for environment in environments:
+            name, base_url, expected_environment, expected_version, expected_commit = environment
             print(f"Checking {name}: {base_url}")
-            results.append(verify_environment(name, base_url, expected_environment))
+            results.append(
+                verify_environment(
+                    name,
+                    base_url,
+                    expected_environment,
+                    expected_version,
+                    expected_commit,
+                )
+            )
             print(f"PASS {name}")
     except (RuntimeError, ValueError, json.JSONDecodeError) as error:
         report["status"] = "failed"
         report["error"] = str(error)
         print(f"FAIL {error}", file=sys.stderr)
-    args.output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8", newline="\n")
+    args.output.write_text(
+        json.dumps(report, indent=2) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
     return 0 if report["status"] == "ok" else 1
 
 
