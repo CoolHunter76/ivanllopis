@@ -13,7 +13,8 @@
     "projects": "Projects",
     "hobbies": "Hobbies",
     "home": "Home",
-    "work_life": "Career"
+    "work_life": "Career",
+    "talent": "Talent"
   },
   "hero": {
     "eyebrow": "Software Engineering Lead · Barcelona",
@@ -352,5 +353,48 @@
     "rights_title": "Derechos",
     "rights": "Acceso, rectificación, supresión, limitación, oposición, portabilidad y retirada del consentimiento.",
     "note": "Traducción informativa. Las referencias jurídicas oficiales son el RGPD y la Ley Orgánica 3/2018."
+  },
+  "talent": {
+    "eyebrow": "TALENT CLOSE TO HOME",
+    "title": "People I admire. Projects I want to support.",
+    "intro": "A personal selection of people, places and projects that belong to my creative circle.",
+    "explore": "Discover Talent Close to Home",
+    "back": "Back to Hobbies",
+    "manifesto": "I provide the showcase. The talent is theirs.",
+    "closing_kicker": "CLOSE TO HOME",
+    "closing": "People I admire. Projects I want to support.",
+    "watch": "Watch video",
+    "visit": "Visit",
+    "close": "Close",
+    "items": {
+      "neosamurai": {
+        "kind": "TECH · AI · HOMELAB",
+        "story": "Víctor Zurriaga is a close friend of mine from our years studying at Salesianos de Sarrià. Through NeoSamurai, Víctor Zurriaga shares technology, AI, homelab, servers, networks, home automation, hardware, gaming and game development."
+      },
+      "beat-place": {
+        "kind": "MUSIC · DRUMS",
+        "story": "I have known Miguel Cruz, founder of Beat Place, since long before the project. Miguel Cruz was my first drum teacher at the previous academy."
+      },
+      "gabys-club": {
+        "kind": "DANCE · COMMUNITY",
+        "story": "Gaby’s Club is part of my dance environment in Barcelona, connecting music, classes, practice and community."
+      },
+      "gustavo-alonso": {
+        "kind": "SALSA · BACHATA",
+        "story": "Gustavo Alonso Balderrama is my salsa and bachata teacher and also a friend. The connection began through dance and continued beyond the classes."
+      },
+      "monos-voladores": {
+        "kind": "MUSIC · LIVE",
+        "story": "Los Monos Voladores del Sr. Burns are part of this close musical selection. This space is intended to give visibility to the project and its creative proposal."
+      },
+      "wilfredo-lamothe": {
+        "kind": "MUSIC · TEACHING",
+        "story": "Wilfredo Lamothe is a friend of mine, rents me the rehearsal room where I play drums and also teaches at Gaby’s Club."
+      },
+      "dirty-trickers": {
+        "kind": "ROCK · LIVE",
+        "story": "I know Alberto, guitarist of The Dirty Trickers, because we worked together for many years. Here, that professional connection becomes a showcase for music."
+      }
+    }
   }
 }

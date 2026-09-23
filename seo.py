@@ -77,13 +77,25 @@ def page_info(path):
     hobbies = page == "hobbies"
     updates = page == "updates"
     update_id = parts[2] if updates and len(parts) > 2 else None
+    talent = suffix == "/talento-cercano"
     update = None
     if update_id:
         update = next(
             (item for item in load_portal_updates(lang)["items"] if item["id"] == update_id),
             None,
         )
-    if update:
+    if talent:
+        title = (
+            "Talento Cercano | IvanLlopis.net"
+            if lang == "es"
+            else "Talent Close to Home | IvanLlopis.net"
+        )
+        description = (
+            "Personas, espacios y proyectos cercanos que Ivan Llopis quiere ayudar a impulsar."
+            if lang == "es"
+            else "People, places and projects close to Ivan Llopis and worth discovering."
+        )
+    elif update:
         title = f"{update['title']} | IvanLlopis.net"
         description = update["summary"]
     elif updates:
@@ -223,6 +235,7 @@ def sitemap():
             "/privacy",
             "/hobbies",
             "/updates",
+            "/talento-cercano",
         )
     )
     update_urls = "\n".join(

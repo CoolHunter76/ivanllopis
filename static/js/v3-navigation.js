@@ -2,7 +2,7 @@
     "use strict";
 
     const STORAGE_KEY = "ivanllopis.v3.visited.v1";
-    const order = ["home", "technologies", "projects", "work-life", "hobbies"];
+    const order = ["home", "technologies", "projects", "work-life", "hobbies", "talent"];
     const header = document.querySelector("[data-v3-header]");
     const dock = document.querySelector("[data-v3-dock]");
     const progress = document.querySelector("[data-v3-progress]");
