@@ -41,16 +41,34 @@ fi
 case "$TARGET_GROUP" in
     production)
         REPOSITORY_DIR="/opt/ivanllopis/app"
+        BRANCH="master"
         TARGETS="deploy-ivanllopis verify-ivanllopis-isolation sync-ivanllopis-operational-scripts"
         ;;
     staging)
         REPOSITORY_DIR="/opt/ivanllopis/staging"
+        BRANCH="develop"
         TARGETS="deploy-ivanllopis-staging verify-ivanllopis-isolation sync-ivanllopis-operational-scripts"
         ;;
 esac
 
 if [[ ! -d "$REPOSITORY_DIR/.git" ]]; then
     echo "Authorized repository is missing: $REPOSITORY_DIR"
+    exit 1
+fi
+
+REPOSITORY_OWNER="$(stat -c '%U' "$REPOSITORY_DIR")"
+if [[ -z "$REPOSITORY_OWNER" ]]; then
+    echo "Unable to determine repository owner: $REPOSITORY_DIR"
+    exit 1
+fi
+
+runuser -u "$REPOSITORY_OWNER" -- git -C "$REPOSITORY_DIR" fetch --prune origin "$BRANCH"
+runuser -u "$REPOSITORY_OWNER" -- git -C "$REPOSITORY_DIR" checkout "$BRANCH"
+runuser -u "$REPOSITORY_OWNER" -- git -C "$REPOSITORY_DIR" reset --hard "origin/$BRANCH"
+
+ACTUAL_BRANCH="$(runuser -u "$REPOSITORY_OWNER" -- git -C "$REPOSITORY_DIR" branch --show-current)"
+if [[ "$ACTUAL_BRANCH" != "$BRANCH" ]]; then
+    echo "Repository branch mismatch: expected $BRANCH, got $ACTUAL_BRANCH"
     exit 1
 fi
 
@@ -85,5 +103,4 @@ for name in $TARGETS; do
 done
 
 trap - ERR
-printf 'Operational script synchronization completed: %s updated.
-' "$UPDATED"
+printf 'Operational script synchronization completed: %s updated.\n' "$UPDATED"

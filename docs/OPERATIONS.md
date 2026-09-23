@@ -73,3 +73,9 @@ sudo /usr/local/sbin/sync-ivanllopis-operational-scripts production
 ```
 
 No se aceptan rutas libres ni el objetivo `all`. Cada entorno usa una ruta de repositorio fija y una lista cerrada de ejecutables.
+
+## Correccion del origen operativo de C15
+
+Antes de leer los scripts versionados, el sincronizador actualiza la ruta autorizada a `origin/develop` para staging o a `origin/master` para produccion. La operacion Git se ejecuta con el propietario real del repositorio y valida la rama resultante.
+
+La primera activacion requiere reinstalar manualmente el sincronizador en `/usr/local/sbin`. Tras esa activacion, las siguientes actualizaciones quedan automatizadas.
