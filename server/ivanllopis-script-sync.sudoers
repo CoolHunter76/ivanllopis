@@ -1,0 +1,2 @@
+deploy ALL=(root) NOPASSWD: /usr/local/sbin/sync-ivanllopis-operational-scripts production
+deploy ALL=(root) NOPASSWD: /usr/local/sbin/sync-ivanllopis-operational-scripts staging

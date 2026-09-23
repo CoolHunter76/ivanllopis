@@ -23,6 +23,8 @@ REQUIRED_OPERATIONAL_PATHS = (
     "server/deploy-ivanllopis",
     "server/deploy-ivanllopis-staging",
     "server/verify-ivanllopis-isolation",
+    "server/sync-ivanllopis-operational-scripts",
+    "server/ivanllopis-script-sync.sudoers",
 )
 
 
