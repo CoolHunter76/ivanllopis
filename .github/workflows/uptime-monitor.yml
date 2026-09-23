@@ -19,13 +19,34 @@ jobs:
     timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
 
+      - name: Resolve expected deployments
+        shell: bash
+        run: |
+          git fetch --prune origin master develop
+          production_version="$(git show origin/master:VERSION | tr -d '\r\n')"
+          staging_version="$(git show origin/develop:VERSION | tr -d '\r\n')"
+          production_commit="$(git rev-parse origin/master)"
+          staging_commit="$(git rev-parse origin/develop)"
+          echo "PRODUCTION_VERSION=$production_version" >> "$GITHUB_ENV"
+          echo "STAGING_VERSION=$staging_version" >> "$GITHUB_ENV"
+          echo "PRODUCTION_COMMIT=$production_commit" >> "$GITHUB_ENV"
+          echo "STAGING_COMMIT=$staging_commit" >> "$GITHUB_ENV"
+
       - name: Run public smoke checks
-        run: python scripts/public_smoke.py --output public-smoke-report.json
+        run: >-
+          python scripts/public_smoke.py
+          --output public-smoke-report.json
+          --production-version "${{ env.PRODUCTION_VERSION }}"
+          --production-commit "${{ env.PRODUCTION_COMMIT }}"
+          --staging-version "${{ env.STAGING_VERSION }}"
+          --staging-commit "${{ env.STAGING_COMMIT }}"
 
       - name: Upload smoke report
         if: always()
