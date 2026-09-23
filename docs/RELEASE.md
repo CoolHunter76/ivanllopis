@@ -32,12 +32,17 @@ Antes de crear una release estable:
 6. Ejecuta Uptime Monitor sobre el estado publicado.
 7. Crea la etiqueta estable solo cuando toda la validacion sea correcta.
 
-Etiqueta prevista para este cierre:
-
-```text
-v3.0.1
-```
+La etiqueta debe coincidir con el contenido de `VERSION`, precedido por `v`.
 
 ## Reversion
 
 Si produccion falla, restaura mediante Git un commit conocido y vuelve a ejecutar el despliegue autorizado. No uses cambios manuales dentro del contenedor como solucion permanente. Documenta la causa y aplica la correccion desde una rama `bugfix/`.
+
+
+## Actualizacion de version
+
+1. Actualiza exclusivamente `VERSION` en la rama de funcionalidad o release correspondiente.
+2. Ejecuta Ruff y la suite completa.
+3. Valida que `/health` publique la nueva version en staging.
+4. Promueve mediante una rama `release/vX.Y.Z`.
+5. Crea la etiqueta `vX.Y.Z` solo despues de validar produccion.

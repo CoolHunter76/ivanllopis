@@ -3,7 +3,7 @@ services:
     environment:
       V3_PORTAL_ENABLED: "true"
       APP_ENV: "${APP_ENV:-production}"
-      APP_VERSION: "${APP_VERSION:-3.0.0.0}"
+      APP_VERSION: "${APP_VERSION:-}"
       APP_COMMIT: "${APP_COMMIT:-unknown}"
     build: .
     container_name: ivanllopis-web

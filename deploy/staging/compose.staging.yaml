@@ -16,7 +16,7 @@ services:
     environment:
       V3_PORTAL_ENABLED: "true"
       APP_ENV: "${APP_ENV:-staging}"
-      APP_VERSION: "${APP_VERSION:-3.0.0.0}"
+      APP_VERSION: "${APP_VERSION:-}"
       APP_COMMIT: "${APP_COMMIT:-unknown}"
       AI_ASSISTANT_ENABLED: "true"
       OLLAMA_URL: "http://host.docker.internal:11434"
