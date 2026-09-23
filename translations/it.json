@@ -13,7 +13,8 @@
     "projects": "Progetti",
     "hobbies": "Hobby",
     "home": "Home",
-    "work_life": "Carriera"
+    "work_life": "Carriera",
+    "talent": "Talenti"
   },
   "hero": {
     "eyebrow": "Software Engineering Lead · Barcelona",
@@ -352,5 +353,48 @@
     "rights_title": "Derechos",
     "rights": "Acceso, rectificación, supresión, limitación, oposición, portabilidad y retirada del consentimiento.",
     "note": "Traducción informativa. Las referencias jurídicas oficiales son el RGPD y la Ley Orgánica 3/2018."
+  },
+  "talent": {
+    "eyebrow": "TALENTI VICINI",
+    "title": "Persone che ammiro. Progetti che voglio sostenere.",
+    "intro": "Una selezione personale di persone, luoghi e progetti del mio ambiente creativo.",
+    "explore": "Scopri Talenti Vicini",
+    "back": "Torna agli Hobby",
+    "manifesto": "Io offro la vetrina. Il talento è loro.",
+    "closing_kicker": "VICINO A ME",
+    "closing": "Persone che ammiro. Progetti che voglio sostenere.",
+    "watch": "Guarda il video",
+    "visit": "Visita",
+    "close": "Chiudi",
+    "items": {
+      "neosamurai": {
+        "kind": "TECNOLOGÍA · IA · HOMELAB",
+        "story": "Una storia vicina nel mio ambiente creativo: Víctor Zurriaga, mi mejor amigo desde los estudios en Salesianos de Sarrià, comparte en NeoSamurai tecnología, IA, homelab, servidores, redes, domótica, hardware, gaming y desarrollo de videojuegos."
+      },
+      "beat-place": {
+        "kind": "MÚSICA · BATERÍA",
+        "story": "Una storia vicina nel mio ambiente creativo: Miguel Cruz, fundador de Beat Place, fue mi primer profesor de batería en la academia anterior."
+      },
+      "gabys-club": {
+        "kind": "BAILE · COMUNIDAD",
+        "story": "Una storia vicina nel mio ambiente creativo: Gaby’s Club forma parte de mi entorno de baile en Barcelona y conecta música, clases, práctica y comunidad."
+      },
+      "gustavo-alonso": {
+        "kind": "SALSA · BACHATA",
+        "story": "Una storia vicina nel mio ambiente creativo: Gustavo Alonso Balderrama es mi profesor de salsa y bachata y también amigo."
+      },
+      "monos-voladores": {
+        "kind": "MÚSICA · DIRECTO",
+        "story": "Una storia vicina nel mio ambiente creativo: Los Monos Voladores del Sr. Burns forman parte de esta selección musical cercana y este espacio ayuda a dar visibilidad al proyecto."
+      },
+      "wilfredo-lamothe": {
+        "kind": "MÚSICA · ENSEÑANZA",
+        "story": "Una storia vicina nel mio ambiente creativo: Wilfredo Lamothe es amigo mío, me alquila su sala de ensayo para tocar la batería y también da clases en Gaby’s Club."
+      },
+      "dirty-trickers": {
+        "kind": "ROCK · DIRECTO",
+        "story": "Una storia vicina nel mio ambiente creativo: Conozco a Alberto, guitarrista de The Dirty Trickers, porque trabajamos juntos durante muchos años; aquí ese vínculo sirve de escaparate para la música."
+      }
+    }
   }
 }

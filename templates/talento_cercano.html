@@ -1,0 +1,22 @@
+{% extends "base.html" %}{% block content %}
+<main class="talent-page" data-talent-page>
+<section class="talent-hero section">
+<div class="talent-hero-copy"><p class="eyebrow">{{ t.talent.eyebrow }} · SIGNAL 06</p><h1>{{ t.talent.title }}</h1><p class="lead">{{ t.talent.intro }}</p><p class="talent-manifesto">{{ t.talent.manifesto }}</p><a class="talent-enter" href="#talent-universe">{{ t.talent.explore }} ↓</a></div>
+<div class="talent-cloud-field talent-cloud-field-hero" data-talent-cloud-field aria-label="{{ t.talent.explore }}">
+{% for item in talents %}
+<a class="talent-cloud talent-cloud-{{ loop.index }}" href="#{{ item.id }}" data-talent-cloud>
+{% if item.logo %}<img src="{{ item.logo }}" alt="" loading="lazy"{% if item.id == "gustavo-alonso" %} class="talent-person-mark"{% endif %}>{% endif %}
+<span>{{ item.name }}</span><small>NODE://0{{ loop.index }}</small>
+</a>
+{% endfor %}
+</div>
+</section>
+
+<section id="talent-universe" class="talent-universe section">
+<header class="talent-universe-heading"><p class="eyebrow">{{ t.talent.closing_kicker }}</p><h2>{{ t.talent.manifesto }}</h2></header>
+<div class="talent-stream">{% for item in talents %}<article class="talent-scene" id="{{ item.id }}" data-talent-card><div class="talent-visual"><img src="{{ item.image }}" alt="{{ item.name }}" loading="lazy" decoding="async"><span class="talent-number">0{{ loop.index }}</span>{% if item.video %}<button type="button" class="talent-play" data-video="{{ item.video }}" aria-label="{{ t.talent.watch }}: {{ item.name }}">PLAY ↗</button>{% endif %}</div><div class="talent-copy"><div class="talent-signal"><span>NODE://0{{ loop.index }}</span><span>{{ t.talent["items"][item.id].kind }}</span></div>{% if item.logo %}<img class="talent-logo{% if item.id == "gustavo-alonso" %} talent-person-mark{% endif %}" src="{{ item.logo }}" alt="" loading="lazy">{% endif %}<h2>{{ item.name }}</h2><p>{{ t.talent["items"][item.id].story }}</p><div class="talent-links">{% for label, href in item.links %}<a href="{{ href }}" target="_blank" rel="noopener noreferrer">{{ label }} ↗</a>{% endfor %}</div></div></article>{% endfor %}</div>
+</section>
+<section class="talent-finale"><div><span>06 / HUMAN SIGNAL</span><h2>{{ t.talent.closing }}</h2><p>{{ t.talent.intro }}</p></div></section>
+<dialog class="talent-dialog" data-talent-dialog><button type="button" data-talent-close aria-label="{{ t.talent.close }}">×</button><video controls playsinline preload="metadata" data-talent-video></video></dialog>
+</main><link rel="stylesheet" href="/static/css/talento-cercano.css?v=2"><script src="/static/js/talento-cercano.js?v=2" defer></script>
+{% endblock %}

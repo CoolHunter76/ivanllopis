@@ -13,7 +13,8 @@
     "projects": "Projeler",
     "hobbies": "Hobiler",
     "home": "Ana sayfa",
-    "work_life": "Kariyer"
+    "work_life": "Kariyer",
+    "talent": "Yetenek"
   },
   "hero": {
     "eyebrow": "Software Engineering Lead · Barcelona",
@@ -352,5 +353,48 @@
     "rights_title": "Derechos",
     "rights": "Acceso, rectificación, supresión, limitación, oposición, portabilidad y retirada del consentimiento.",
     "note": "Traducción informativa. Las referencias jurídicas oficiales son el RGPD y la Ley Orgánica 3/2018."
+  },
+  "talent": {
+    "eyebrow": "YAKIN YETENEKLER",
+    "title": "Hayran olduğum insanlar. Desteklemek istediğim projeler.",
+    "intro": "Yaratıcı çevremin parçası olan insanlar, mekanlar ve projelerden kişisel bir seçki.",
+    "explore": "Yakın Yetenekleri Keşfet",
+    "back": "Hobilere dön",
+    "manifesto": "Vitrini ben sunuyorum. Yetenek onların.",
+    "closing_kicker": "YAKINIMDA",
+    "closing": "Hayran olduğum insanlar. Desteklemek istediğim projeler.",
+    "watch": "Videoyu izle",
+    "visit": "Ziyaret et",
+    "close": "Kapat",
+    "items": {
+      "neosamurai": {
+        "kind": "TECNOLOGÍA · IA · HOMELAB",
+        "story": "Yaratıcı çevremden yakın bir hikâye: Víctor Zurriaga, mi mejor amigo desde los estudios en Salesianos de Sarrià, comparte en NeoSamurai tecnología, IA, homelab, servidores, redes, domótica, hardware, gaming y desarrollo de videojuegos."
+      },
+      "beat-place": {
+        "kind": "MÚSICA · BATERÍA",
+        "story": "Yaratıcı çevremden yakın bir hikâye: Miguel Cruz, fundador de Beat Place, fue mi primer profesor de batería en la academia anterior."
+      },
+      "gabys-club": {
+        "kind": "BAILE · COMUNIDAD",
+        "story": "Yaratıcı çevremden yakın bir hikâye: Gaby’s Club forma parte de mi entorno de baile en Barcelona y conecta música, clases, práctica y comunidad."
+      },
+      "gustavo-alonso": {
+        "kind": "SALSA · BACHATA",
+        "story": "Yaratıcı çevremden yakın bir hikâye: Gustavo Alonso Balderrama es mi profesor de salsa y bachata y también amigo."
+      },
+      "monos-voladores": {
+        "kind": "MÚSICA · DIRECTO",
+        "story": "Yaratıcı çevremden yakın bir hikâye: Los Monos Voladores del Sr. Burns forman parte de esta selección musical cercana y este espacio ayuda a dar visibilidad al proyecto."
+      },
+      "wilfredo-lamothe": {
+        "kind": "MÚSICA · ENSEÑANZA",
+        "story": "Yaratıcı çevremden yakın bir hikâye: Wilfredo Lamothe es amigo mío, me alquila su sala de ensayo para tocar la batería y también da clases en Gaby’s Club."
+      },
+      "dirty-trickers": {
+        "kind": "ROCK · DIRECTO",
+        "story": "Yaratıcı çevremden yakın bir hikâye: Conozco a Alberto, guitarrista de The Dirty Trickers, porque trabajamos juntos durante muchos años; aquí ese vínculo sirve de escaparate para la música."
+      }
+    }
   }
 }
