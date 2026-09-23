@@ -5,13 +5,14 @@ from fastapi.testclient import TestClient
 from main import SUPPORTED, app
 
 client = TestClient(app)
-PAGES = ("home", "technologies", "projects", "work-life", "hobbies")
+PAGES = ("home", "technologies", "projects", "work-life", "hobbies", "talent")
 SUFFIXES = {
     "home": "",
     "technologies": "/technologies",
     "projects": "/projects",
     "work-life": "/work-life",
     "hobbies": "/hobbies",
+    "talent": "/talento-cercano",
 }
 
 

@@ -213,6 +213,124 @@ HOBBIES = [
         "icon": "/static/icons/hobbies/music.svg",
     },
 ]
+TALENTS = [
+    {
+        "id": "neosamurai",
+        "name": "NeoSamurai",
+        "image": "/static/images/talento-cercano/neosamurai.webp",
+        "logo": "/static/images/talento-cercano/neosamurai-logo.png",
+        "url": "https://www.neosamurai.io",
+        "youtube": "https://www.youtube.com/@NeoSamuraiIO",
+        "links": [
+            ("WEB", "https://www.neosamurai.io"),
+            ("YOUTUBE", "https://www.youtube.com/@NeoSamuraiIO"),
+            ("INSTAGRAM", "https://www.instagram.com/neosamuraiio/"),
+            ("TIKTOK", "https://www.tiktok.com/@neosamurai.io"),
+        ],
+        "video": None,
+    },
+    {
+        "id": "beat-place",
+        "name": "Beat Place",
+        "image": "/static/images/talento-cercano/beat-place.webp",
+        "logo": "/static/images/talento-cercano/beat-place-logo.png",
+        "url": None,
+        "youtube": None,
+        "links": [("VÍDEO", "/static/videos/talento-cercano/beat-place.mp4")],
+        "video": "/static/videos/talento-cercano/beat-place.mp4",
+    },
+    {
+        "id": "gabys-club",
+        "name": "Gaby's Club",
+        "image": "/static/images/talento-cercano/gabys-club.webp",
+        "logo": "/static/images/talento-cercano/gabys-club-logo.png",
+        "url": "https://www.gabysclub.com/",
+        "youtube": "https://www.youtube.com/@gabysclub",
+        "links": [
+            ("WEB", "https://www.gabysclub.com/"),
+            ("LINKTREE", "https://linktr.ee/GabysClub"),
+            ("YOUTUBE", "https://www.youtube.com/@gabysclub"),
+            ("TIKTOK", "https://www.tiktok.com/@gabysclub_24"),
+            ("CONTACTO", "https://www.gabysclub.com/contacto/"),
+        ],
+        "video": None,
+    },
+    {
+        "id": "gustavo-alonso",
+        "name": "Gustavo Alonso Balderrama",
+        "image": "/static/images/talento-cercano/gustavo-alonso.webp",
+        "logo": "/static/images/talento-cercano/gustavo-alonso.webp",
+        "url": "https://www.tusclasesparticulares.com/profesores/gustavo-alonso-balderrama.htm",
+        "youtube": "https://www.youtube.com/channel/UCcTlek8eHm-vHyoyqbbVTig",
+        "links": [
+            ("INSTAGRAM", "https://www.instagram.com/ritmoyvida_b52/"),
+            (
+                "CLASES",
+                "https://www.tusclasesparticulares.com/profesores/gustavo-alonso-balderrama.htm",
+            ),
+            ("YOUTUBE", "https://www.youtube.com/channel/UCcTlek8eHm-vHyoyqbbVTig"),
+        ],
+        "video": None,
+    },
+    {
+        "id": "monos-voladores",
+        "name": "Los Monos Voladores del Sr. Burns",
+        "image": "/static/images/talento-cercano/monos-voladores.webp",
+        "logo": "/static/images/talento-cercano/monos-voladores-logo.png",
+        "url": "https://monosvoladores.com/",
+        "youtube": "https://www.youtube.com/c/LosMonosVoladoresdelSrBurns",
+        "links": [
+            ("WEB", "https://monosvoladores.com/"),
+            ("YOUTUBE", "https://www.youtube.com/c/LosMonosVoladoresdelSrBurns"),
+            ("SPOTIFY", "https://open.spotify.com/artist/5QgmP15x8VjPOHvGIGlNNv"),
+            ("BANDCAMP", "https://monosvoladores.bandcamp.com/"),
+            ("INSTAGRAM", "https://www.instagram.com/monos_voladores/"),
+            ("FACEBOOK", "https://www.facebook.com/LosMonosVoladoresdelSrBurns/"),
+            ("X", "https://x.com/Monos_Voladores"),
+            ("AGENDA", "https://monosvoladores.com/agenda/"),
+            ("CONTACTO", "https://monosvoladores.com/contacto/"),
+        ],
+        "video": None,
+    },
+    {
+        "id": "wilfredo-lamothe",
+        "name": "Wilfredo Lamothe T",
+        "image": "/static/images/talento-cercano/wilfredo-lamothe.webp",
+        "logo": "/static/images/talento-cercano/wilfredo-lamothe-logo.png",
+        "url": "https://open.spotify.com/artist/0VpYHtKfeoyFV1StJsKSF3",
+        "youtube": "https://www.youtube.com/channel/UC-e_EkeYMRYMap-MkwGT4DA",
+        "links": [
+            ("SPOTIFY", "https://open.spotify.com/artist/0VpYHtKfeoyFV1StJsKSF3"),
+            ("YOUTUBE", "https://www.youtube.com/channel/UC-e_EkeYMRYMap-MkwGT4DA"),
+            ("YOUTUBE MUSIC", "https://music.youtube.com/channel/UCHdvditZLFcP2ND7gKDxX2w"),
+            ("SOUNDCLOUD", "https://soundcloud.com/wilfredo-lamothe"),
+            ("INSTAGRAM", "https://www.instagram.com/wilfredolamothet/"),
+            ("FACEBOOK", "https://www.facebook.com/WilfredoLamotheT"),
+        ],
+        "video": None,
+    },
+    {
+        "id": "dirty-trickers",
+        "name": "The Dirty Trickers",
+        "image": "/static/images/talento-cercano/dirty-trickers.webp",
+        "logo": "/static/images/talento-cercano/dirty-trickers-logo.png",
+        "url": "https://fenixmetalrock.org/index.php/2026/05/20/the-dirty-trickers-nueva-propuesta-de-power-trio-cronica-the-dirty-trickers-sabado-16-mayo/",
+        "youtube": None,
+        "links": [
+            ("INSTAGRAM", "https://www.instagram.com/thedirtytrickers/"),
+            (
+                "CRÓNICA",
+                "https://fenixmetalrock.org/index.php/2026/05/20/the-dirty-trickers-nueva-propuesta-de-power-trio-cronica-the-dirty-trickers-sabado-16-mayo/",
+            ),
+            (
+                "MARISKALROCK",
+                "https://mariskalrock.com/actualidad/cronica-de-nurcry-the-dirty-trickers-en-aranjuez-madrid-cuestion-de-heavy-metal/",
+            ),
+        ],
+        "video": "/static/videos/talento-cercano/dirty-trickers.mp4",
+    },
+]
+
 PROJECTS = [
     {"number": "01", "key": "events", "tags": [".NET", "APIs", "SQL", "Azure"]},
     {"number": "02", "key": "ai", "tags": ["Python", "FastAPI", "Ollama", "Copilot"]},
@@ -842,6 +960,21 @@ def privacy(request: Request, lang: str):
         return RedirectResponse("/es/privacy", status_code=307)
     return templates.TemplateResponse(
         request=request, name="privacy.html", context=ctx(lang, page="work-life")
+    )
+
+
+@app.get(
+    "/{lang}/talento-cercano",
+    response_class=HTMLResponse,
+    include_in_schema=False,
+)
+def talento_cercano(request: Request, lang: str):
+    if lang not in SUPPORTED:
+        return RedirectResponse("/es/talento-cercano", status_code=307)
+    return templates.TemplateResponse(
+        request=request,
+        name="talento_cercano.html",
+        context=ctx(lang, page="talent", talents=TALENTS),
     )
 
 

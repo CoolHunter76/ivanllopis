@@ -23,15 +23,12 @@ def security_headers():
     return dict(public_smoke.SECURITY_HEADERS)
 
 
-def test_verify_health_requires_exact_environment_and_full_commit(monkeypatch):
-    payload = {
-        "status": "ok",
-        "deployment": {
-            "environment": "staging",
-            "version": "3.0.0.0",
-            "commit": "a" * 40,
-        },
-    }
+def commit(character):
+    return character.ljust(40, character)
+
+
+def mock_health(monkeypatch, deployment):
+    payload = {"status": "ok", "deployment": deployment}
     monkeypatch.setattr(
         public_smoke,
         "request",
@@ -41,48 +38,149 @@ def test_verify_health_requires_exact_environment_and_full_commit(monkeypatch):
             security_headers(),
         ),
     )
-    assert public_smoke.verify_health("https://example.test", "staging")["commit"] == "a" * 40
 
 
-def test_verify_health_rejects_unknown_commit(monkeypatch):
-    payload = {
-        "status": "ok",
-        "deployment": {
+def test_verify_health_accepts_exact_deployment_identity(monkeypatch):
+    expected_commit = commit("a")
+    deployment = {
+        "environment": "staging",
+        "version": "3.0.3",
+        "commit": expected_commit,
+    }
+    mock_health(monkeypatch, deployment)
+
+    result = public_smoke.verify_health(
+        "https://example.test",
+        "staging",
+        "3.0.3",
+        expected_commit,
+    )
+
+    assert result["expected"] == deployment
+    assert result["published"] == deployment
+
+
+def test_verify_health_rejects_version_mismatch(monkeypatch):
+    expected_commit = commit("a")
+    mock_health(
+        monkeypatch,
+        {
+            "environment": "staging",
+            "version": "3.0.2",
+            "commit": expected_commit,
+        },
+    )
+
+    with pytest.raises(
+        RuntimeError,
+        match="deployment version: expected '3.0.3', got '3.0.2'",
+    ):
+        public_smoke.verify_health(
+            "https://example.test",
+            "staging",
+            "3.0.3",
+            expected_commit,
+        )
+
+
+def test_verify_health_rejects_commit_mismatch(monkeypatch):
+    expected_commit = commit("a")
+    published_commit = commit("b")
+    mock_health(
+        monkeypatch,
+        {
             "environment": "production",
-            "version": "3.0.0.0",
+            "version": "3.0.3",
+            "commit": published_commit,
+        },
+    )
+
+    with pytest.raises(
+        RuntimeError,
+        match=f"deployment commit: expected '{expected_commit}', got '{published_commit}'",
+    ):
+        public_smoke.verify_health(
+            "https://example.test",
+            "production",
+            "3.0.3",
+            expected_commit,
+        )
+
+
+def test_verify_health_rejects_environment_mismatch(monkeypatch):
+    expected_commit = commit("a")
+    mock_health(
+        monkeypatch,
+        {
+            "environment": "production",
+            "version": "3.0.3",
+            "commit": expected_commit,
+        },
+    )
+
+    with pytest.raises(
+        RuntimeError,
+        match="deployment environment: expected 'staging', got 'production'",
+    ):
+        public_smoke.verify_health(
+            "https://example.test",
+            "staging",
+            "3.0.3",
+            expected_commit,
+        )
+
+
+def test_verify_health_rejects_malformed_expected_commit():
+    with pytest.raises(RuntimeError, match="expected deployment commit is not a full Git SHA"):
+        public_smoke.verify_health(
+            "https://example.test",
+            "production",
+            "3.0.3",
+            "short",
+        )
+
+
+def test_verify_health_rejects_malformed_published_commit(monkeypatch):
+    mock_health(
+        monkeypatch,
+        {
+            "environment": "production",
+            "version": "3.0.3",
             "commit": "unknown",
         },
-    }
-    monkeypatch.setattr(
-        public_smoke,
-        "request",
-        lambda url, method="GET", headers=None: Response(
-            200,
-            json.dumps(payload).encode(),
-            security_headers(),
-        ),
     )
-    with pytest.raises(RuntimeError, match="full Git SHA"):
-        public_smoke.verify_health("https://example.test", "production")
+
+    with pytest.raises(
+        RuntimeError,
+        match="published deployment commit is not a full Git SHA",
+    ):
+        public_smoke.verify_health(
+            "https://example.test",
+            "production",
+            "3.0.3",
+            commit("a"),
+        )
 
 
 def test_verify_feed_checks_head_cache_and_conditional_304(monkeypatch):
-    headers = {
-        **security_headers(),
-        "Content-Type": "application/json",
-        "Cache-Control": "public, max-age=300",
-        "ETag": '"feed"',
-        "Last-Modified": "Mon, 21 Sep 2026 00:00:00 GMT",
-        "Content-Length": "42",
-    }
+    headers_for_response = security_headers()
+    headers_for_response.update(
+        {
+            "Content-Type": "application/json",
+            "Cache-Control": "public, max-age=300",
+            "ETag": '"feed"',
+            "Last-Modified": "Mon, 21 Sep 2026 00:00:00 GMT",
+            "Content-Length": "42",
+        }
+    )
 
     def fake_request(url, method="GET", headers=None):
         if headers and headers.get("If-None-Match"):
-            conditional_headers = {**security_headers(), "ETag": '"feed"'}
+            conditional_headers = security_headers()
+            conditional_headers["ETag"] = '"feed"'
             return Response(304, headers=conditional_headers)
         return Response(200, headers=headers_for_response)
 
-    headers_for_response = headers
     monkeypatch.setattr(public_smoke, "request", fake_request)
     result = public_smoke.verify_feed(
         "https://example.test",

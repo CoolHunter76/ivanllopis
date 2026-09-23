@@ -13,7 +13,8 @@
     "projects": "Proxectos",
     "hobbies": "Afeccións",
     "home": "Inicio",
-    "work_life": "Vida laboral"
+    "work_life": "Vida laboral",
+    "talent": "Talento"
   },
   "hero": {
     "eyebrow": "Software Engineering Lead · Barcelona",
@@ -352,5 +353,48 @@
     "rights_title": "Dereitos",
     "rights": "Acceso, rectificación, supresión, limitación, oposición, portabilidade e retirada do consentimento.",
     "note": "Esta tradución é informativa. A referencia xurídica oficial é o RGPD e a Lei orgánica 3/2018 publicada polas autoridades competentes."
+  },
+  "talent": {
+    "eyebrow": "TALENTO PRÓXIMO",
+    "title": "Persoas que admiro. Proxectos que quero impulsar.",
+    "intro": "Unha selección persoal de persoas, espazos e proxectos que forman parte do meu contorno creativo.",
+    "explore": "Descubrir Talento Próximo",
+    "back": "Volver a Afeccións",
+    "manifesto": "Eu poño o escaparate. O talento é seu.",
+    "closing_kicker": "PRETO DE MIN",
+    "closing": "Persoas que admiro. Proxectos que quero impulsar.",
+    "watch": "Ver vídeo",
+    "visit": "Visitar",
+    "close": "Pechar",
+    "items": {
+      "neosamurai": {
+        "kind": "TECNOLOGÍA · IA · HOMELAB",
+        "story": "Unha historia próxima dentro do meu contorno creativo: Víctor Zurriaga, mi mejor amigo desde los estudios en Salesianos de Sarrià, comparte en NeoSamurai tecnología, IA, homelab, servidores, redes, domótica, hardware, gaming y desarrollo de videojuegos."
+      },
+      "beat-place": {
+        "kind": "MÚSICA · BATERÍA",
+        "story": "Unha historia próxima dentro do meu contorno creativo: Miguel Cruz, fundador de Beat Place, fue mi primer profesor de batería en la academia anterior."
+      },
+      "gabys-club": {
+        "kind": "BAILE · COMUNIDAD",
+        "story": "Unha historia próxima dentro do meu contorno creativo: Gaby’s Club forma parte de mi entorno de baile en Barcelona y conecta música, clases, práctica y comunidad."
+      },
+      "gustavo-alonso": {
+        "kind": "SALSA · BACHATA",
+        "story": "Unha historia próxima dentro do meu contorno creativo: Gustavo Alonso Balderrama es mi profesor de salsa y bachata y también amigo."
+      },
+      "monos-voladores": {
+        "kind": "MÚSICA · DIRECTO",
+        "story": "Unha historia próxima dentro do meu contorno creativo: Los Monos Voladores del Sr. Burns forman parte de esta selección musical cercana y este espacio ayuda a dar visibilidad al proyecto."
+      },
+      "wilfredo-lamothe": {
+        "kind": "MÚSICA · ENSEÑANZA",
+        "story": "Unha historia próxima dentro do meu contorno creativo: Wilfredo Lamothe es amigo mío, me alquila su sala de ensayo para tocar la batería y también da clases en Gaby’s Club."
+      },
+      "dirty-trickers": {
+        "kind": "ROCK · DIRECTO",
+        "story": "Unha historia próxima dentro do meu contorno creativo: Conozco a Alberto, guitarrista de The Dirty Trickers, porque trabajamos juntos durante muchos años; aquí ese vínculo sirve de escaparate para la música."
+      }
+    }
   }
 }

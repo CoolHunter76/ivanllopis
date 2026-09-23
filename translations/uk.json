@@ -13,7 +13,8 @@
     "projects": "Проєкти",
     "hobbies": "Захоплення",
     "home": "Головна",
-    "work_life": "Кар’єра"
+    "work_life": "Кар’єра",
+    "talent": "Таланти"
   },
   "hero": {
     "eyebrow": "Software Engineering Lead · Barcelona",
@@ -352,5 +353,48 @@
     "rights_title": "Derechos",
     "rights": "Acceso, rectificación, supresión, limitación, oposición, portabilidad y retirada del consentimiento.",
     "note": "Traducción informativa. Las referencias jurídicas oficiales son el RGPD y la Ley Orgánica 3/2018."
+  },
+  "talent": {
+    "eyebrow": "ТАЛАНТИ ПОРУЧ",
+    "title": "Люди, якими я захоплююся. Проєкти, які хочу підтримати.",
+    "intro": "Особиста добірка людей, місць і проєктів з мого творчого кола.",
+    "explore": "Відкрити Таланти поруч",
+    "back": "Назад до захоплень",
+    "manifesto": "Я надаю вітрину. Талант належить їм.",
+    "closing_kicker": "ПОРУЧ ЗІ МНОЮ",
+    "closing": "Люди, якими я захоплююся. Проєкти, які хочу підтримати.",
+    "watch": "Переглянути відео",
+    "visit": "Відвідати",
+    "close": "Закрити",
+    "items": {
+      "neosamurai": {
+        "kind": "TECNOLOGÍA · IA · HOMELAB",
+        "story": "Близька історія з мого творчого кола: Víctor Zurriaga, mi mejor amigo desde los estudios en Salesianos de Sarrià, comparte en NeoSamurai tecnología, IA, homelab, servidores, redes, domótica, hardware, gaming y desarrollo de videojuegos."
+      },
+      "beat-place": {
+        "kind": "MÚSICA · BATERÍA",
+        "story": "Близька історія з мого творчого кола: Miguel Cruz, fundador de Beat Place, fue mi primer profesor de batería en la academia anterior."
+      },
+      "gabys-club": {
+        "kind": "BAILE · COMUNIDAD",
+        "story": "Близька історія з мого творчого кола: Gaby’s Club forma parte de mi entorno de baile en Barcelona y conecta música, clases, práctica y comunidad."
+      },
+      "gustavo-alonso": {
+        "kind": "SALSA · BACHATA",
+        "story": "Близька історія з мого творчого кола: Gustavo Alonso Balderrama es mi profesor de salsa y bachata y también amigo."
+      },
+      "monos-voladores": {
+        "kind": "MÚSICA · DIRECTO",
+        "story": "Близька історія з мого творчого кола: Los Monos Voladores del Sr. Burns forman parte de esta selección musical cercana y este espacio ayuda a dar visibilidad al proyecto."
+      },
+      "wilfredo-lamothe": {
+        "kind": "MÚSICA · ENSEÑANZA",
+        "story": "Близька історія з мого творчого кола: Wilfredo Lamothe es amigo mío, me alquila su sala de ensayo para tocar la batería y también da clases en Gaby’s Club."
+      },
+      "dirty-trickers": {
+        "kind": "ROCK · DIRECTO",
+        "story": "Близька історія з мого творчого кола: Conozco a Alberto, guitarrista de The Dirty Trickers, porque trabajamos juntos durante muchos años; aquí ese vínculo sirve de escaparate para la música."
+      }
+    }
   }
 }

@@ -13,7 +13,8 @@
     "projects": "Proyectos",
     "hobbies": "Aficiones",
     "home": "Inicio",
-    "work_life": "Vida laboral"
+    "work_life": "Vida laboral",
+    "talent": "Talento"
   },
   "hero": {
     "eyebrow": "Software Engineering Lead · Barcelona",
@@ -352,5 +353,48 @@
     "rights_title": "Derechos",
     "rights": "Acceso, rectificación, supresión, limitación, oposición, portabilidad y retirada del consentimiento.",
     "note": "Traducción informativa. Las referencias jurídicas oficiales son el RGPD y la Ley Orgánica 3/2018."
+  },
+  "talent": {
+    "eyebrow": "TALENTO CERCANO",
+    "title": "Personas que admiro. Proyectos que quiero impulsar.",
+    "intro": "Una selección personal de personas, espacios y proyectos que forman parte de mi entorno creativo.",
+    "explore": "Descubrir Talento Cercano",
+    "back": "Volver a Aficiones",
+    "manifesto": "Yo pongo el escaparate. El talento es suyo.",
+    "closing_kicker": "CERCA DE MÍ",
+    "closing": "Personas que admiro. Proyectos que quiero impulsar.",
+    "watch": "Ver vídeo",
+    "visit": "Visitar",
+    "close": "Cerrar",
+    "items": {
+      "neosamurai": {
+        "kind": "TECNOLOGÍA · IA · HOMELAB",
+        "story": "Víctor Zurriaga es mi mejor amigo desde nuestros estudios en Salesianos de Sarrià. En NeoSamurai comparte tecnología, IA, homelab, servidores, redes, domótica, hardware, gaming y desarrollo de videojuegos."
+      },
+      "beat-place": {
+        "kind": "MÚSICA · BATERÍA",
+        "story": "Conozco a Miguel Cruz, fundador de Beat Place, desde mucho antes del proyecto: fue mi primer profesor de batería en su academia anterior."
+      },
+      "gabys-club": {
+        "kind": "BAILE · COMUNIDAD",
+        "story": "Gaby’s Club forma parte de mi entorno de baile en Barcelona y conecta música, clases, práctica y comunidad."
+      },
+      "gustavo-alonso": {
+        "kind": "SALSA · BACHATA",
+        "story": "Gustavo Alonso Balderrama es mi profesor de salsa y bachata y también amigo. Una conexión nacida del baile y mantenida más allá de las clases."
+      },
+      "monos-voladores": {
+        "kind": "MÚSICA · DIRECTO",
+        "story": "Los Monos Voladores del Sr. Burns forman parte de esta selección musical cercana. Este espacio busca dar visibilidad al proyecto y a su propuesta."
+      },
+      "wilfredo-lamothe": {
+        "kind": "MÚSICA · ENSEÑANZA",
+        "story": "Wilfredo Lamothe es amigo mío, me alquila su sala de ensayo para tocar la batería y también da clases en Gaby’s Club."
+      },
+      "dirty-trickers": {
+        "kind": "ROCK · DIRECTO",
+        "story": "Conozco a Alberto, guitarrista de The Dirty Trickers, porque trabajamos juntos durante muchos años. Aquí el vínculo profesional se convierte en escaparate para la música."
+      }
+    }
   }
 }
