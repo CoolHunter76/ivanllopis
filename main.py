@@ -18,7 +18,6 @@ from pydantic import BaseModel, Field
 from resend.exceptions import ResendError
 
 from app_version import APP_VERSION
-from assistant import configure_assistant
 from deployment_info import deployment_metadata
 from portal_updates import (
     filter_portal_updates,
@@ -35,7 +34,6 @@ BASE = Path(__file__).resolve().parent
 SUPPORTED = ("es", "ca", "gl", "oc", "eu", "en", "fr", "uk", "it", "tr", "ru", "zh-Hans", "ja")
 
 app = FastAPI(title="IvanLlopis.net", version=APP_VERSION)
-configure_assistant(app)
 configure_seo(app)
 configure_security_headers(app)
 app.mount("/static", StaticFiles(directory=BASE / "static"), name="static")
