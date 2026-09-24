@@ -134,30 +134,65 @@
     "intro": "Actividades que aportan equilibrio, creatividad, energía y nuevas perspectivas.",
     "back": "Volver a la página principal",
     "items": {
-      "swimming": {
-        "title": "Natación",
-        "text": "Constancia, técnica y bienestar."
+      "sea": {
+        "title": "Actividades en el Mar",
+        "text": "Paddle Surf · Snorkel · Navegación",
+        "kicker": "MAR · LIBERTAD · HORIZONTE"
       },
       "trekking": {
         "title": "Senderismo",
-        "text": "Naturaleza, exploración y perspectiva."
+        "text": "Naturaleza · Montaña · Exploración",
+        "kicker": "TRAIL · NATURALEZA"
       },
       "gaming": {
-        "title": "Videojuegos",
-        "text": "Estrategia, narrativas y tecnología."
+        "title": "GAMER",
+        "text": "Mundos digitales · Estrategia · Historias",
+        "kicker": "PLAYER 01 · ONLINE"
       },
       "drums": {
         "title": "Batería",
-        "text": "Ritmo, coordinación y creatividad."
+        "text": "Ritmo · Música · Percusión",
+        "kicker": "RHYTHM · DRUMS"
       },
       "travel": {
         "title": "Viajes",
-        "text": "Culturas, lugares y aprendizaje."
+        "text": "Culturas · Lugares · Descubrimiento",
+        "kicker": "EXPLORE · WORLD"
       },
       "dance": {
         "title": "Bailes latinos",
-        "text": "Música, conexión y movimiento."
+        "text": "Música · Movimiento · Cultura",
+        "kicker": "SALSA · BACHATA"
       }
+    },
+    "portal_eyebrow": "HOBBIES · TIEMPO DE OCIO",
+    "portal_title": "Mi mundo fuera del código.",
+    "portal_intro": "Mar, montaña, gaming, música, viajes y baile. Seis puertas para explorar las aficiones que forman parte de mi tiempo libre.",
+    "explore": "EXPLORAR MI MUNDO",
+    "worlds_eyebrow": "SEIS MUNDOS · UNA HISTORIA",
+    "worlds_title": "Elige una puerta.",
+    "worlds_intro": "Cada afición evoluciona hacia su propio espacio visual, preparado para fotografías, vídeos y recuerdos.",
+    "enter": "ENTRAR",
+    "soon": "PRÓXIMAMENTE",
+    "closing_eyebrow": "MÁS ALLÁ DEL CÓDIGO",
+    "closing_title": "Un portal que crecerá conmigo.",
+    "closing_text": "GAMER es el primer mundo abierto. Los demás irán incorporando galerías y experiencias reales sin perder la identidad de IvanLlopis.net.",
+    "subnav_label": "Navegación de Hobbies",
+    "back_portal": "Volver a Hobbies",
+    "gamer": {
+      "status": "ONLINE",
+      "intro": "Videojuegos, mundos digitales y recuerdos de jugador. Este es el primer espacio del nuevo portal de aficiones.",
+      "explore": "EXPLORAR GALERÍA",
+      "gallery_eyebrow": "MI UNIVERSO GAMER",
+      "gallery_title": "Galería en construcción.",
+      "gallery_intro": "La estructura está lista para incorporar imágenes, vídeos y experiencias reales sin inventar contenido personal.",
+      "image_slot": "IMAGEN",
+      "video_slot": "VÍDEO",
+      "memory_slot": "RECUERDO",
+      "next_slot": "PRÓXIMA HISTORIA",
+      "next_eyebrow": "NEXT LEVEL",
+      "next_title": "El contenido lo pondrá la historia real.",
+      "next_text": "Juegos, plataformas, momentos e imágenes se añadirán progresivamente a partir de material real."
     }
   },
   "common": {

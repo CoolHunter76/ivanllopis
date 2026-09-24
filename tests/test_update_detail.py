@@ -60,7 +60,7 @@ def test_sitemap_includes_only_published_update_details():
     locations = [node.text for node in root.findall("s:url/s:loc", namespace)]
     assert f"{ORIGIN}/es/updates/landing-v3" in locations
     assert f"{ORIGIN}/es/updates/project-world-evolution" not in locations
-    assert len(locations) == 156
+    assert len(locations) == 169
 
 
 def test_local_data_has_detail_copy_and_sections():

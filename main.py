@@ -194,23 +194,41 @@ AI_ENGINES = [
     },
 ]
 HOBBIES = [
-    {"id": "swimming", "name": "Natación", "icon": "/static/icons/hobbies/waves.svg"},
+    {
+        "id": "sea",
+        "name": "Actividades en el Mar",
+        "icon": "/static/icons/hobbies/sea-portal.svg",
+        "slug": "sea",
+    },
     {
         "id": "trekking",
         "name": "Senderismo",
-        "icon": "/static/icons/hobbies/mountain.svg",
+        "icon": "/static/icons/hobbies/trekking-portal.svg",
+        "slug": "trekking",
     },
     {
         "id": "gaming",
-        "name": "Videojuegos",
-        "icon": "/static/icons/hobbies/gamepad.svg",
+        "name": "GAMER",
+        "icon": "/static/icons/hobbies/gaming-portal.svg",
+        "slug": "gamer",
     },
-    {"id": "drums", "name": "Batería", "icon": "/static/icons/hobbies/drum.svg"},
-    {"id": "travel", "name": "Viajes", "icon": "/static/icons/hobbies/plane.svg"},
+    {
+        "id": "drums",
+        "name": "Batería",
+        "icon": "/static/icons/hobbies/drums-portal.svg",
+        "slug": "drums",
+    },
+    {
+        "id": "travel",
+        "name": "Viajes",
+        "icon": "/static/icons/hobbies/travel-portal.svg",
+        "slug": "travel",
+    },
     {
         "id": "dance",
         "name": "Bailes latinos",
-        "icon": "/static/icons/hobbies/music.svg",
+        "icon": "/static/icons/hobbies/dance-portal.svg",
+        "slug": "dance",
     },
 ]
 TALENTS = [
@@ -984,4 +1002,13 @@ def hobbies(request: Request, lang: str):
         return RedirectResponse("/es/hobbies", status_code=307)
     return templates.TemplateResponse(
         request=request, name="hobbies.html", context=ctx(lang, page="hobbies", hobbies=HOBBIES)
+    )
+
+
+@app.get("/{lang}/hobbies/gamer", response_class=HTMLResponse, include_in_schema=False)
+def hobby_gamer(request: Request, lang: str):
+    if lang not in SUPPORTED:
+        return RedirectResponse("/es/hobbies/gamer", status_code=307)
+    return templates.TemplateResponse(
+        request=request, name="hobby_gamer.html", context=ctx(lang, page="hobbies")
     )
