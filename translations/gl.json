@@ -134,30 +134,65 @@
     "intro": "Actividades que achegan equilibrio, creatividade, enerxía e novas perspectivas.",
     "back": "Volver á páxina principal",
     "items": {
-      "swimming": {
-        "title": "Natación",
-        "text": "Constancia, técnica e benestar."
+      "sea": {
+        "title": "Sea Activities",
+        "text": "Paddle Surf · Snorkelling · Sailing",
+        "kicker": "SEA · FREEDOM · HORIZON"
       },
       "trekking": {
-        "title": "Sendeirismo",
-        "text": "Natureza, exploración e perspectiva."
+        "title": "Hiking",
+        "text": "Nature · Mountains · Exploration",
+        "kicker": "TRAIL · NATURE"
       },
       "gaming": {
-        "title": "Videoxogos",
-        "text": "Estratexia, narrativas e tecnoloxía."
+        "title": "GAMER",
+        "text": "Digital worlds · Strategy · Stories",
+        "kicker": "PLAYER 01 · ONLINE"
       },
       "drums": {
-        "title": "Batería",
-        "text": "Ritmo, coordinación e creatividade."
+        "title": "Drums",
+        "text": "Rhythm · Music · Percussion",
+        "kicker": "RHYTHM · DRUMS"
       },
       "travel": {
-        "title": "Viaxes",
-        "text": "Culturas, lugares e aprendizaxe."
+        "title": "Travel",
+        "text": "Cultures · Places · Discovery",
+        "kicker": "EXPLORE · WORLD"
       },
       "dance": {
-        "title": "Bailes latinos",
-        "text": "Música, conexión e movemento."
+        "title": "Latin dance",
+        "text": "Music · Movement · Culture",
+        "kicker": "SALSA · BACHATA"
       }
+    },
+    "portal_eyebrow": "HOBBIES · FREE TIME",
+    "portal_title": "My world beyond code.",
+    "portal_intro": "Sea, mountains, gaming, music, travel and dance. Six gateways into the interests that shape my free time.",
+    "explore": "EXPLORE MY WORLD",
+    "worlds_eyebrow": "SIX WORLDS · ONE STORY",
+    "worlds_title": "Choose a gateway.",
+    "worlds_intro": "Each hobby grows into its own visual space for photographs, videos and memories.",
+    "enter": "ENTER",
+    "soon": "COMING SOON",
+    "closing_eyebrow": "BEYOND CODE",
+    "closing_title": "A portal designed to grow with me.",
+    "closing_text": "GAMER is the first open world. The others will progressively gain galleries and real experiences while keeping the IvanLlopis.net identity.",
+    "subnav_label": "Hobbies navigation",
+    "back_portal": "Back to Hobbies",
+    "gamer": {
+      "status": "ONLINE",
+      "intro": "Video games, digital worlds and player memories. This is the first space in the new hobbies portal.",
+      "explore": "EXPLORE GALLERY",
+      "gallery_eyebrow": "MY GAMING UNIVERSE",
+      "gallery_title": "Gallery under construction.",
+      "gallery_intro": "The structure is ready for real images, videos and experiences without inventing personal content.",
+      "image_slot": "IMAGE",
+      "video_slot": "VIDEO",
+      "memory_slot": "MEMORY",
+      "next_slot": "NEXT STORY",
+      "next_eyebrow": "NEXT LEVEL",
+      "next_title": "Real history will provide the content.",
+      "next_text": "Games, platforms, moments and images will be added progressively from real material."
     }
   },
   "common": {

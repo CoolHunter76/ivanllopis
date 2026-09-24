@@ -1,1 +1,9 @@
-{% extends "base.html" %}{% block content %}<section class="section page-hero"><p class="eyebrow">{{ t.personal.eyebrow }}</p><h1>{{ t.hobbies.title }}</h1><p class="lead">{{ t.hobbies.intro }}</p></section><section class="section hobby-grid">{% for hobby in hobbies %}<article class="hobby-card"><span class="hobby-icon"><img src="{{ hobby.icon }}" alt=""></span><h2>{{ t.hobbies["items"][hobby.id].title }}</h2><p>{{ t.hobbies["items"][hobby.id].text }}</p></article>{% endfor %}</section>{% endblock %}
+{% extends "base.html" %}{% block content %}
+<main id="main" class="hobbies-portal" data-hobbies-portal>
+<section class="section hobbies-hero">
+<p class="eyebrow">{{ t.hobbies.portal_eyebrow }}</p><h1>{{ t.hobbies.portal_title }}</h1><p class="lead">{{ t.hobbies.portal_intro }}</p><a class="hobbies-scroll" href="#hobby-worlds">{{ t.hobbies.explore }} <span aria-hidden="true">↓</span></a>
+</section>
+<section id="hobby-worlds" class="section hobby-worlds" aria-labelledby="hobby-worlds-title"><div class="hobby-worlds-heading"><p class="eyebrow">{{ t.hobbies.worlds_eyebrow }}</p><h2 id="hobby-worlds-title">{{ t.hobbies.worlds_title }}</h2><p>{{ t.hobbies.worlds_intro }}</p></div>
+<div class="hobby-portal-grid">{% for hobby in hobbies %}{% set item=t.hobbies["items"][hobby.id] %}<a class="hobby-portal-card hobby-{{ hobby.id }}{% if hobby.id == 'gaming' %} is-live{% endif %}" href="{% if hobby.id == 'gaming' %}/{{ lang }}/hobbies/gamer{% else %}#{{ hobby.id }}{% endif %}" id="{{ hobby.id }}" data-hobby-card><span class="hobby-index">0{{ loop.index }}</span><span class="hobby-icon"><img src="{{ hobby.icon }}" alt=""></span><span class="hobby-copy"><small>{{ item.kicker }}</small><strong>{{ item.title }}</strong><span>{{ item.text }}</span></span><b>{{ t.hobbies.enter if hobby.id == 'gaming' else t.hobbies.soon }} <span aria-hidden="true">↗</span></b></a>{% endfor %}</div></section>
+<section class="section hobbies-manifesto"><p class="eyebrow">{{ t.hobbies.closing_eyebrow }}</p><h2>{{ t.hobbies.closing_title }}</h2><p>{{ t.hobbies.closing_text }}</p></section>
+</main>{% endblock %}
