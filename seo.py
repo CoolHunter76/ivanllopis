@@ -75,6 +75,7 @@ def page_info(path):
     page = parts[1] if len(parts) > 1 else ""
     suffix = "/" + "/".join(parts[1:]) if len(parts) > 1 else ""
     hobbies = page == "hobbies"
+    gamer = suffix == "/hobbies/gamer"
     updates = page == "updates"
     update_id = parts[2] if updates and len(parts) > 2 else None
     talent = suffix == "/talento-cercano"
@@ -84,7 +85,14 @@ def page_info(path):
             (item for item in load_portal_updates(lang)["items"] if item["id"] == update_id),
             None,
         )
-    if talent:
+    if gamer:
+        title = "GAMER | IvanLlopis.net"
+        description = (
+            "Universo gamer personal de Ivan Llopis: galería de imágenes, vídeos y recuerdos de videojuegos."
+            if lang == "es"
+            else "Ivan Llopis gaming world: a gallery for images, videos and gaming memories."
+        )
+    elif talent:
         title = (
             "Talento Cercano | IvanLlopis.net"
             if lang == "es"
@@ -234,6 +242,7 @@ def sitemap():
             "/request-cv",
             "/privacy",
             "/hobbies",
+            "/hobbies/gamer",
             "/updates",
             "/talento-cercano",
         )
