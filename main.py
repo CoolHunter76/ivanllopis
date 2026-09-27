@@ -29,6 +29,7 @@ from portal_updates import (
 from project_github import REPOSITORY_URL, project_world_data
 from security_headers import configure_security_headers
 from seo import configure_seo
+from youtube_gamer import gamer_youtube_data
 
 BASE = Path(__file__).resolve().parent
 SUPPORTED = ("es", "ca", "gl", "oc", "eu", "en", "fr", "uk", "it", "tr", "ru", "zh-Hans", "ja")
@@ -1008,5 +1009,7 @@ def hobby_gamer(request: Request, lang: str):
     if lang not in SUPPORTED:
         return RedirectResponse("/es/hobbies/gamer", status_code=307)
     return templates.TemplateResponse(
-        request=request, name="hobby_gamer.html", context=ctx(lang, page="hobbies")
+        request=request,
+        name="hobby_gamer.html",
+        context=ctx(lang, page="hobbies", youtube=gamer_youtube_data()),
     )
