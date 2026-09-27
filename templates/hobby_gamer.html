@@ -1,7 +1,20 @@
 {% extends "base.html" %}{% block content %}
-<main id="main" class="gamer-world" data-hobbies-portal>
+<main id="main" class="gamer-world gamer-world-v2" data-hobbies-portal data-gamer-page>
 <nav class="hobby-subnav" aria-label="{{ t.hobbies.subnav_label }}"><a href="/{{ lang }}/hobbies">← {{ t.hobbies.back_portal }}</a><span>HOBBIES / GAMER</span></nav>
-<section class="section gamer-hero"><div><p class="eyebrow">PLAYER://IVAN · {{ t.hobbies.gamer.status }}</p><h1>GAMER</h1><p class="lead">{{ t.hobbies.gamer.intro }}</p><a class="button primary" href="#gamer-gallery">{{ t.hobbies.gamer.explore }}</a></div><div class="gamer-console" aria-hidden="true"><span>PLAYER 01</span><b>READY</b><i></i><i></i><i></i></div></section>
+<section class="gamer-hero gamer-hero-v2 gamer-cover">
+<div class="gamer-cover-art" aria-hidden="true"></div><div class="section gamer-hero-copy"><p class="eyebrow">PLAYER://IVAN · {{ t.hobbies.gamer.status }}</p><div class="gamer-title-wrap"><span class="gamer-title-ghost" aria-hidden="true">01</span><h1>GAMER</h1><i class="gamer-title-scan" aria-hidden="true"></i></div><p class="lead">{{ t.hobbies.gamer.intro }}</p><div class="gamer-era-signals" aria-hidden="true"><span>ARCADE</span><i></i><span>RPG</span><i></i><span>RACING</span><i></i><span>ONLINE</span></div></div>
+</section>
+<section class="section gamer-live-stage"><section class="gamer-live" aria-labelledby="gamer-live-title" data-gamer-live data-live="{{ 'true' if youtube.live else 'false' }}">
+<header><div><span class="gamer-live-dot" aria-hidden="true"></span><p class="eyebrow">{{ 'EN DIRECTO' if youtube.live else 'STREAM ARCHIVE' }}</p></div><a href="{{ youtube.channel_url }}" target="_blank" rel="noopener noreferrer">{{ youtube.channel_handle }} ↗</a></header>
+<h2 id="gamer-live-title" class="sr-only">YouTube · {{ youtube.channel_handle }}</h2>
+{% if youtube.live %}
+<div class="gamer-player-shell"><iframe data-gamer-player title="YouTube live · {{ youtube.live.title }}" src="https://www.youtube-nocookie.com/embed/{{ youtube.live.video_id }}?autoplay=1&mute=1&rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><p class="gamer-live-title">{{ youtube.live.title }}</p>
+{% elif youtube.recordings %}
+<div class="gamer-player-shell"><iframe data-gamer-player title="YouTube · {{ youtube.recordings[0].title }}" src="https://www.youtube-nocookie.com/embed/{{ youtube.recordings[0].video_id }}?autoplay=1&mute=1&rel=0&enablejsapi=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="gamer-recording-meta"><p class="gamer-live-title" data-gamer-video-title>{{ youtube.recordings[0].title }}</p><div class="gamer-recording-nav"><button type="button" data-gamer-prev aria-label="Anterior">‹</button><span data-gamer-position>01 / {{ '%02d'|format(youtube.recordings|length) }}</span><button type="button" data-gamer-next aria-label="Siguiente">›</button></div></div><script type="application/json" id="gamer-recordings">{{ youtube.recordings|tojson }}</script>
+{% else %}
+<a class="gamer-youtube-fallback" href="{{ youtube.channel_url }}" target="_blank" rel="noopener noreferrer"><b>YouTube · {{ youtube.channel_handle }}</b><span>Canal disponible · abrir en YouTube ↗</span></a>
+{% endif %}
+</section></section>
 <section id="gamer-gallery" class="section gamer-gallery" aria-labelledby="gamer-gallery-title"><p class="eyebrow">{{ t.hobbies.gamer.gallery_eyebrow }}</p><h2 id="gamer-gallery-title">{{ t.hobbies.gamer.gallery_title }}</h2><p class="lead">{{ t.hobbies.gamer.gallery_intro }}</p><div class="gamer-masonry"><article class="gamer-placeholder wide"><span>01</span><b>{{ t.hobbies.gamer.image_slot }}</b></article><article class="gamer-placeholder"><span>02</span><b>{{ t.hobbies.gamer.video_slot }}</b><i aria-hidden="true">▶</i></article><article class="gamer-placeholder tall"><span>03</span><b>{{ t.hobbies.gamer.memory_slot }}</b></article><article class="gamer-placeholder"><span>04</span><b>{{ t.hobbies.gamer.next_slot }}</b></article></div></section>
 <section class="section gamer-next"><p class="eyebrow">{{ t.hobbies.gamer.next_eyebrow }}</p><h2>{{ t.hobbies.gamer.next_title }}</h2><p>{{ t.hobbies.gamer.next_text }}</p></section>
-</main>{% endblock %}
+</main><script src="/static/js/gamer-live.js?v=1" defer></script>{% endblock %}
