@@ -25,15 +25,6 @@ Este documento enumera nombres y finalidad. No contiene valores secretos.
 
 Los valores reales deben permanecer en el archivo externo configurado por el despliegue y nunca en Git.
 
-## Asistente local
-
-| Variable | Finalidad | Valor predeterminado |
-| --- | --- | --- |
-| `AI_ASSISTANT_ENABLED` | Activa el asistente | `false` |
-| `OLLAMA_URL` | Endpoint local de Ollama | `http://host.docker.internal:11434` |
-| `OLLAMA_MODEL` | Modelo local | `llama3.2:1b` |
-| `OLLAMA_TIMEOUT_SECONDS` | Tiempo maximo de espera | `60` |
-
 ## Integracion con GitHub
 
 | Variable | Finalidad | Sensible |

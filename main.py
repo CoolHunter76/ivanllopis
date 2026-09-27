@@ -18,7 +18,6 @@ from pydantic import BaseModel, Field
 from resend.exceptions import ResendError
 
 from app_version import APP_VERSION
-from assistant import configure_assistant
 from deployment_info import deployment_metadata
 from portal_updates import (
     filter_portal_updates,
@@ -30,12 +29,12 @@ from portal_updates import (
 from project_github import REPOSITORY_URL, project_world_data
 from security_headers import configure_security_headers
 from seo import configure_seo
+from youtube_gamer import gamer_youtube_data
 
 BASE = Path(__file__).resolve().parent
 SUPPORTED = ("es", "ca", "gl", "oc", "eu", "en", "fr", "uk", "it", "tr", "ru", "zh-Hans", "ja")
 
 app = FastAPI(title="IvanLlopis.net", version=APP_VERSION)
-configure_assistant(app)
 configure_seo(app)
 configure_security_headers(app)
 app.mount("/static", StaticFiles(directory=BASE / "static"), name="static")
@@ -1010,5 +1009,7 @@ def hobby_gamer(request: Request, lang: str):
     if lang not in SUPPORTED:
         return RedirectResponse("/es/hobbies/gamer", status_code=307)
     return templates.TemplateResponse(
-        request=request, name="hobby_gamer.html", context=ctx(lang, page="hobbies")
+        request=request,
+        name="hobby_gamer.html",
+        context=ctx(lang, page="hobbies", youtube=gamer_youtube_data()),
     )

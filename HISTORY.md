@@ -19,7 +19,7 @@ Documento vivo de la evolucion tecnica y funcional del portal.
 - Feeds JSON y Atom localizados con cache condicional y soporte HEAD.
 - Cabeceras HTTP globales de seguridad.
 - Staging aislado de produccion y despliegues automatizados.
-- Portfolio multilingue, solicitud de CV y asistente local opcional.
+- Portfolio multilingue, solicitud de CV y asistente local opcional, retirado posteriormente.
 
 ## Career Brand Constellation V2
 

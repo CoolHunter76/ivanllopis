@@ -85,7 +85,7 @@
       },
       "portfolio": {
         "title": "IvanLlopis.net",
-        "text": "Portfolio multilingüe con FastAPI, SEO, CI/CD y asistente local."
+        "text": "Portfolio multilingüe con FastAPI, SEO y CI/CD automatizado."
       }
     },
     "world": {
@@ -259,7 +259,7 @@
       ],
       [
         "IvanLlopis.net",
-        "Multilingual portfolio with SEO, CI/CD and a local assistant."
+        "Multilingual portfolio with SEO and automated CI/CD."
       ]
     ],
     "cta_kicker": "Full profile",
