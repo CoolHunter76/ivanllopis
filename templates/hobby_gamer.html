@@ -1,4 +1,5 @@
 {% extends "base.html" %}{% block content %}
+
 <main id="main" class="gamer-world gamer-world-v2" data-hobbies-portal data-gamer-page>
 <nav class="hobby-subnav" aria-label="{{ t.hobbies.subnav_label }}"><a href="/{{ lang }}/hobbies">← {{ t.hobbies.back_portal }}</a><span>HOBBIES / GAMER</span></nav>
 <section class="gamer-hero gamer-hero-v2 gamer-cover" aria-label="Universo Gamer">
@@ -15,6 +16,14 @@
 <a class="gamer-youtube-fallback" href="{{ youtube.channel_url }}" target="_blank" rel="noopener noreferrer"><b>YouTube · {{ youtube.channel_handle }}</b><span>Canal disponible · abrir en YouTube ↗</span></a>
 {% endif %}
 </section></section>
+
+
+<section class="section arcade76-entry" aria-labelledby="arcade76-entry-title">
+  <p class="eyebrow">IVANLLOPIS.NET // ARCADE SYSTEM 76</p>
+  <h2 id="arcade76-entry-title">ARCADE 76</h2>
+  <p>Entra en el salón recreativo, descubre las máquinas y compite por el récord global de cada juego.</p>
+  <a class="primary" href="/{{ lang }}/hobbies/gamer/arcade">ENTRAR AL SALÓN RECREATIVO →</a>
+</section>
 <section id="gamer-gallery" class="section gamer-gallery" aria-labelledby="gamer-gallery-title"><p class="eyebrow">{{ t.hobbies.gamer.gallery_eyebrow }}</p><h2 id="gamer-gallery-title">{{ t.hobbies.gamer.gallery_title }}</h2><p class="lead">{{ t.hobbies.gamer.gallery_intro }}</p><figure class="gamer-construction"><img src="/static/images/gamer/gamer-under-construction.webp" alt="UNDER CONSTRUCTION" width="1150" height="285"><figcaption class="sr-only">UNDER CONSTRUCTION</figcaption></figure></section>
 <section class="section gamer-next"><p class="eyebrow">{{ t.hobbies.gamer.next_eyebrow }}</p><h2>{{ t.hobbies.gamer.next_title }}</h2><p>{{ t.hobbies.gamer.next_text }}</p></section>
 </main><script src="/static/js/gamer-live.js?v=1" defer></script>
@@ -78,5 +87,6 @@
     {% endfor %}
   </div>
 </section>
+
 
 {% endblock %}

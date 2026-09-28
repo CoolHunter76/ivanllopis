@@ -18,6 +18,7 @@ from pydantic import BaseModel, Field
 from resend.exceptions import ResendError
 
 from app_version import APP_VERSION
+from arcade76 import router as arcade76_router
 from deployment_info import deployment_metadata
 from hobbies_content import HOBBY_SLUGS, load_hobby
 from portal_updates import (
@@ -756,6 +757,9 @@ def send_cv_request(body: CvRequest) -> None:
         raise RuntimeError("The CV request could not be sent") from error
 
 
+app.include_router(arcade76_router)
+
+
 @app.post("/api/cv-request", include_in_schema=False)
 def create_cv_request(body: CvRequest, request: Request) -> dict[str, str]:
     if body.website:
@@ -1018,6 +1022,19 @@ def hobby_gamer(request: Request, lang: str):
             youtube=gamer_youtube_data(),
             hobby=load_hobby("gamer", lang),
         ),
+    )
+
+
+@app.get(
+    "/{lang}/hobbies/gamer/arcade",
+    response_class=HTMLResponse,
+    include_in_schema=False,
+)
+def gamer_arcade_room(request: Request, lang: str):
+    return templates.TemplateResponse(
+        request=request,
+        name="gamer_arcade_room.html",
+        context=ctx(lang, page="hobbies"),
     )
 
 
