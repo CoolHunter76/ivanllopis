@@ -1,0 +1,88 @@
+{
+  "theme": "neon",
+  "hero": {
+    "eyebrow": "PLAYER 01 // EVENT MAP",
+    "title": "GAMER",
+    "lead": "Directos, recuerdos, ferias y eventos donde el videojuego reúne a la comunidad."
+  },
+  "categories": [
+    "Todos",
+    "Directos",
+    "Eventos",
+    "Retro",
+    "PC",
+    "Consolas"
+  ],
+  "media": [
+    {
+      "id": "gamer-live",
+      "kind": "link",
+      "category": "Directos",
+      "title": "Canal en directo",
+      "caption": "Acceso al canal y archivo de streams.",
+      "url": "https://www.youtube.com/@CoolHunter76"
+    },
+    {
+      "id": "gamer-events",
+      "kind": "placeholder",
+      "category": "Eventos",
+      "title": "Eventos visitados",
+      "caption": "Galería preparada para ferias, encuentros y experiencias gaming."
+    },
+    {
+      "id": "gamer-retro",
+      "kind": "placeholder",
+      "category": "Retro",
+      "title": "Memoria gamer",
+      "caption": "Consolas, juegos y momentos que forman parte de la historia personal."
+    }
+  ],
+  "places": [],
+  "events": [
+    {
+      "title": "VIII Retromaniacs Arcandreu",
+      "status": "upcoming",
+      "date_label": "3 y 4 de octubre de 2026",
+      "venue": "Espai Josep Bota · Fabra i Coats · Sant Andreu, Barcelona",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Espai+Josep+Bota+Fabra+i+Coats+Barcelona",
+      "official_url": "https://retromaniacs.es/arcandreu2026/",
+      "instagram_url": "",
+      "description": "Videojuegos, pinballs, arcade, ordenadores, consolas y cultura retro.",
+      "image_url": "/static/images/hobbies/gamer/events/retromaniacs-arcandreu-2026.jpg",
+      "image_alt": "Cartel oficial de VIII Retromaniacs Arcandreu 2026",
+      "image_source_url": "https://retromaniacs.es/wp-content/uploads/2026/09/ARCANDREU-DINA4-scaled.jpg",
+      "image_type": "official_poster",
+      "image_credit": "Associació Retromaniacs.Es",
+      "image_usage": "official_promotional_material"
+    },
+    {
+      "title": "SAGA Barcelona Game Fest",
+      "status": "upcoming",
+      "date_label": "9, 10 y 11 de octubre de 2026",
+      "venue": "Fira Barcelona · Barcelona",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Fira+Barcelona",
+      "official_url": "https://sagabarcelonagamefest.cat/es/",
+      "instagram_url": "",
+      "description": "Videojuegos, puntos de juego, torneos, e-sports, shows, exposición y actividades profesionales.",
+      "image_url": "/static/images/hobbies/gamer/events/saga-barcelona-game-fest-2026.jpg",
+      "image_alt": "Banner promocional de SAGA Barcelona Game Fest 2026",
+      "image_source_url": "https://www.eventsforgamers.com/wp-content/uploads/2026/04/Banner-Barcelona-Game-Fest-2026.jpg",
+      "image_type": "promotional_banner",
+      "image_credit": "Events for Gamers",
+      "image_usage": "public_event_promotion"
+    }
+  ],
+  "slug": "gamer",
+  "locales": {
+    "es": {
+      "eyebrow": "PLAYER 01 // EVENT MAP",
+      "title": "GAMER",
+      "lead": "Directos, recuerdos, ferias y eventos donde el videojuego reúne a la comunidad."
+    },
+    "en": {
+      "eyebrow": "PLAYER 01 // EVENT MAP",
+      "title": "GAMER",
+      "lead": "Directos, recuerdos, ferias y eventos donde el videojuego reúne a la comunidad."
+    }
+  }
+}

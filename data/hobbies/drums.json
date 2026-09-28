@@ -1,0 +1,75 @@
+{
+  "theme": "rhythm",
+  "hero": {
+    "eyebrow": "RHYTHM // PERSONAL ARCHIVE",
+    "title": "Batería",
+    "lead": "Ritmo, aprendizaje y momentos tocando en casa, academias y salas."
+  },
+  "categories": [
+    "Todos",
+    "En casa",
+    "Academias",
+    "Ensayos",
+    "Vídeos"
+  ],
+  "media": [
+    {
+      "id": "drums-home",
+      "kind": "placeholder",
+      "category": "En casa",
+      "title": "Sesiones en casa",
+      "caption": "Galería preparada para fotografías y vídeos personales."
+    },
+    {
+      "id": "drums-class",
+      "kind": "placeholder",
+      "category": "Academias",
+      "title": "Clases y formación",
+      "caption": "DrumsClass Barcelona, Beat Place y nuevos espacios formativos."
+    },
+    {
+      "id": "drums-video",
+      "kind": "placeholder",
+      "category": "Vídeos",
+      "title": "Vídeos tocando",
+      "caption": "Interpretaciones, ejercicios y evolución musical."
+    }
+  ],
+  "places": [
+    {
+      "name": "DrumsClass Barcelona",
+      "kind": "Academia",
+      "description": "Espacio de formación y práctica de batería.",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=DrumsClass+Barcelona",
+      "website_url": ""
+    },
+    {
+      "name": "Beat Place",
+      "kind": "Academia",
+      "description": "Academia vinculada a mi recorrido personal con la batería.",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Beat+Place+Barcelona",
+      "website_url": ""
+    },
+    {
+      "name": "CRAFT Barcelona",
+      "kind": "Música en directo",
+      "description": "Local recomendado para disfrutar música en directo.",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=CRAFT+Barcelona",
+      "website_url": ""
+    }
+  ],
+  "events": [],
+  "slug": "drums",
+  "locales": {
+    "es": {
+      "eyebrow": "RHYTHM // PERSONAL ARCHIVE",
+      "title": "Batería",
+      "lead": "Ritmo, aprendizaje y momentos tocando en casa, academias y salas."
+    },
+    "en": {
+      "eyebrow": "RHYTHM // PERSONAL ARCHIVE",
+      "title": "Batería",
+      "lead": "Ritmo, aprendizaje y momentos tocando en casa, academias y salas."
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}{% block content %}
+<main class="hobby-detail hobby-theme-{{ hobby.theme }}" data-hobby-detail data-hobby-slug="{{ hobby.slug }}">
+  <nav class="hobby-subnav" aria-label="{{ t.hobbies.subnav_label }}"><a href="/{{ lang }}/hobbies">← {{ t.hobbies.back_portal }}</a><span>{{ hobby.copy.eyebrow }}</span></nav>
+  <section class="section hobby-detail-hero">
+    <p class="eyebrow">{{ hobby.copy.eyebrow }}</p>
+    <h1>{{ hobby.copy.title }}</h1>
+    <p class="lead">{{ hobby.copy.lead }}</p>
+    <a class="button primary" href="#hobby-gallery">Explorar contenido</a>
+  </section>
+  <section class="section hobby-content" id="hobby-gallery" aria-labelledby="hobby-gallery-title">
+    <header class="hobby-section-heading"><p class="eyebrow">MEDIA://COLLECTION</p><h2 id="hobby-gallery-title">Galería contextual</h2><p>Imágenes, vídeos y recuerdos organizados por contexto.</p></header>
+    <div class="hobby-filters" role="toolbar" aria-label="Filtros de galería">
+      {% for category in hobby.categories %}<button type="button" data-hobby-filter="{{ category }}" {% if loop.first %}aria-pressed="true"{% else %}aria-pressed="false"{% endif %}>{{ category }}</button>{% endfor %}
+    </div>
+    <div class="hobby-media-grid">
+      {% for item in hobby.media %}<article class="hobby-media-card" data-hobby-item data-category="{{ item.category }}">
+        <div class="hobby-media-visual"><span>0{{ loop.index }}</span><b>{{ item.kind|upper }}</b></div>
+        <div><small>{{ item.category }}</small><h3>{{ item.title }}</h3><p>{{ item.caption }}</p>{% if item.url %}<a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">Abrir contenido ↗</a>{% endif %}</div>
+      </article>{% endfor %}
+    </div>
+  </section>
+  {% if hobby.places %}<section class="section hobby-related" aria-labelledby="hobby-places-title"><header class="hobby-section-heading"><p class="eyebrow">PLACES://CONTEXT</p><h2 id="hobby-places-title">Lugares relacionados</h2></header><div class="hobby-related-grid">{% for place in hobby.places %}<article class="hobby-related-card"><small>{{ place.kind }}</small><h3>{{ place.name }}</h3><p>{{ place.description }}</p><div class="hobby-card-links"><a href="{{ place.maps_url }}" target="_blank" rel="noopener noreferrer">Google Maps ↗</a>{% if place.website_url %}<a href="{{ place.website_url }}" target="_blank" rel="noopener noreferrer">Web oficial ↗</a>{% endif %}</div></article>{% endfor %}</div></section>{% endif %}
+  {% if hobby.events %}<section class="section hobby-related" aria-labelledby="hobby-events-title"><header class="hobby-section-heading"><p class="eyebrow">EVENTS://SIGNAL</p><h2 id="hobby-events-title">Eventos y agenda</h2></header><div class="hobby-related-grid">{% for event in hobby.events %}<article class="hobby-related-card"><small>{{ event.status|upper }}</small><h3>{{ event.title }}</h3><p>{{ event.date_label }} · {{ event.venue }}</p><div class="hobby-card-links"><a href="{{ event.maps_url }}" target="_blank" rel="noopener noreferrer">Ubicación ↗</a>{% if event.official_url %}<a href="{{ event.official_url }}" target="_blank" rel="noopener noreferrer">Web oficial ↗</a>{% endif %}</div></article>{% endfor %}</div></section>{% endif %}
+  {% if hobby.slug == 'sea' %}<aside class="section hobby-safety">Comprueba siempre el estado del mar, la meteorología, las restricciones locales y las recomendaciones oficiales antes de realizar una actividad.</aside>{% endif %}
+</main>
+{% endblock %}
