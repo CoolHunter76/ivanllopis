@@ -1,7 +1,7 @@
 {% extends "base.html" %}{% block content %}
 <main id="main" class="gamer-world gamer-world-v2" data-hobbies-portal data-gamer-page>
 <nav class="hobby-subnav" aria-label="{{ t.hobbies.subnav_label }}"><a href="/{{ lang }}/hobbies">← {{ t.hobbies.back_portal }}</a><span>HOBBIES / GAMER</span></nav>
-<section class="gamer-hero gamer-hero-v2 gamer-cover">
+<section class="gamer-hero gamer-hero-v2 gamer-cover" aria-label="Universo Gamer">
 <div class="gamer-cover-art" aria-hidden="true"></div><div class="section gamer-hero-copy"><p class="eyebrow">PLAYER://IVAN · {{ t.hobbies.gamer.status }}</p><div class="gamer-title-wrap"><span class="gamer-title-ghost" aria-hidden="true">01</span><h1>GAMER</h1><i class="gamer-title-scan" aria-hidden="true"></i></div><p class="lead">{{ t.hobbies.gamer.intro }}</p><div class="gamer-era-signals" aria-hidden="true"><span>ARCADE</span><i></i><span>RPG</span><i></i><span>RACING</span><i></i><span>ONLINE</span></div></div>
 </section>
 <section class="section gamer-live-stage"><section class="gamer-live" aria-labelledby="gamer-live-title" data-gamer-live data-live="{{ 'true' if youtube.live else 'false' }}">
