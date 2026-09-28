@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="/static/css/arcade76.css?v=1">
+<main id="main" class="arcade76" data-arcade-room>
+  <nav class="arcade76-nav"><a href="/{{ lang }}/hobbies/gamer">← GAMER</a><span>IVANLLOPIS.NET // ARCADE SYSTEM 76</span></nav>
+  <header class="arcade76-hero">
+    <p>WELCOME TO</p><h1>ARCADE 76</h1><strong>THE GAME ROOM</strong>
+    <p class="arcade76-lead">Máquinas originales, estética recreativa clásica y récord global por juego.</p>
+  </header>
+  <section class="arcade76-hof" aria-labelledby="hof-title">
+    <div><p>WORLD CHAMPIONS</p><h2 id="hof-title">HALL OF FAME</h2></div>
+    <ol data-arcade-hof><li>CONNECTING TO ARCADE NETWORK...</li></ol>
+  </section>
+  <section class="arcade-floor" aria-label="Salón recreativo">
+    <div class="arcade-neon-sign">IVANLLOPIS.NET <span>ARCADE SYSTEM 76</span></div>
+    <div class="cabinet-row">
+      {% set games = [
+        ("sky-patrol-76","SKY PATROL","AIR STRIKE","cyan","play"),
+        ("block-breaker-76","IVANOID","THE NEON WALL","magenta","play"),
+        ("neon-blocks-76","PEDRIS","BLAUGRANA BLOCKS","violet","play")
+      ] %}
+      {% for slug,title,subtitle,color,status in games %}
+      <button class="arcade-cabinet cabinet-{{ color }}" data-game="{{ slug }}" data-status="{{ status }}" aria-label="{{ title }} 76">
+        <span class="cabinet-marquee"><b>{{ title }}</b><small>76</small></span>
+        <span class="cabinet-screen"><i class="screen-art"></i><em>{{ subtitle }}</em><u>{{ 'PLAY NOW' }}</u></span>
+        <span class="cabinet-controls"><i></i><b></b><b></b></span><span class="coin-door">25¢<i></i></span>
+      </button>
+      {% endfor %}
+    </div>
+  </section>
+</main>
+<div class="arcade-modal" data-arcade-modal hidden>
+  <div class="arcade-modal-machine" role="dialog" aria-modal="true" aria-labelledby="arcade-game-title">
+    <header><div><small>IVANLLOPIS.NET</small><h2 id="arcade-game-title" data-modal-title>ARCADE 76</h2></div><div><span data-modal-record>HI --- 000000</span><button data-modal-close aria-label="Cerrar">×</button></div></header>
+    <div class="arcade-crt" data-arcade-crt>
+      <div class="boot-screen" data-boot-screen>
+        <h3>ARCADE 76</h3><p>IVANLLOPIS.NET ARCADE SYSTEM</p><b data-boot-message>PRESENTS</b>
+      </div>
+      <canvas data-game-canvas width="720" height="960"></canvas>
+      <div class="insert-coin" data-insert-coin hidden><h3 data-title-screen>IVANOID</h3><p>THE NEON WALL</p><button data-coin>INSERT COIN</button><small>CREDIT <b data-credit>0</b></small></div>
+      <div class="initials-screen" data-initials hidden><p>NEW HIGH SCORE</p><h3 data-new-score>000000</h3><span>ENTER YOUR INITIALS</span><div>{% for n in range(3) %}<label><button data-letter-up="{{ n }}">▲</button><b data-letter="{{ n }}">A</b><button data-letter-down="{{ n }}">▼</button></label>{% endfor %}</div><button data-initials-confirm>CONFIRM</button></div>
+    </div>
+    <footer><button data-game-pause>PAUSE</button><button data-game-sound>SOUND OFF</button><button data-game-full>FULL SCREEN</button><button data-game-exit>EXIT GAME</button></footer>
+  </div>
+</div>
+<script src="/static/js/arcade76-room.js?v=5" defer></script>
+{% endblock %}
