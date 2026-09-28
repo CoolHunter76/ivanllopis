@@ -19,6 +19,7 @@ from resend.exceptions import ResendError
 
 from app_version import APP_VERSION
 from deployment_info import deployment_metadata
+from hobbies_content import HOBBY_SLUGS, load_hobby
 from portal_updates import (
     filter_portal_updates,
     load_portal_updates,
@@ -1011,5 +1012,25 @@ def hobby_gamer(request: Request, lang: str):
     return templates.TemplateResponse(
         request=request,
         name="hobby_gamer.html",
-        context=ctx(lang, page="hobbies", youtube=gamer_youtube_data()),
+        context=ctx(
+            lang,
+            page="hobbies",
+            youtube=gamer_youtube_data(),
+            hobby=load_hobby("gamer", lang),
+        ),
+    )
+
+
+@app.get("/{lang}/hobbies/{hobby_slug}", response_class=HTMLResponse, include_in_schema=False)
+def hobby_detail(request: Request, lang: str, hobby_slug: str):
+    if lang not in SUPPORTED:
+        return RedirectResponse(f"/es/hobbies/{hobby_slug}", status_code=307)
+    if hobby_slug not in HOBBY_SLUGS:
+        raise HTTPException(status_code=404, detail="Hobby not found")
+    if hobby_slug == "gamer":
+        return hobby_gamer(request, lang)
+    return templates.TemplateResponse(
+        request=request,
+        name="hobby_detail.html",
+        context=ctx(lang, page="hobbies", hobby=load_hobby(hobby_slug, lang)),
     )

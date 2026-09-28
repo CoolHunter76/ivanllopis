@@ -1,0 +1,98 @@
+{
+  "theme": "tropical",
+  "hero": {
+    "eyebrow": "LATIN DANCE // SOCIAL RHYTHM",
+    "title": "Bailes latinos",
+    "lead": "Fotos, vídeos, talleres y espacios donde la música se convierte en movimiento."
+  },
+  "categories": [
+    "Todos",
+    "Salsa",
+    "Bachata",
+    "Talleres",
+    "Vídeos"
+  ],
+  "media": [
+    {
+      "id": "dance-social",
+      "kind": "placeholder",
+      "category": "Salsa",
+      "title": "Sociales y baile",
+      "caption": "Fotografías y vídeos bailando."
+    },
+    {
+      "id": "dance-workshops",
+      "kind": "placeholder",
+      "category": "Talleres",
+      "title": "Talleres",
+      "caption": "Recuerdos de talleres, clases y encuentros."
+    },
+    {
+      "id": "dance-video",
+      "kind": "placeholder",
+      "category": "Vídeos",
+      "title": "Vídeos de baile",
+      "caption": "Momentos de salsa, bachata y otros estilos latinos."
+    }
+  ],
+  "places": [
+    {
+      "name": "Gaby’s Club",
+      "kind": "Club y escuela",
+      "description": "Música, clases, práctica y comunidad.",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Gabys+Club+Barcelona",
+      "website_url": "https://www.gabysclub.com/"
+    },
+    {
+      "name": "Gràcia Latina",
+      "kind": "Sala",
+      "description": "Espacio de baile latino en Barcelona.",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Gracia+Latina+Barcelona",
+      "website_url": ""
+    },
+    {
+      "name": "Sabor Cubano",
+      "kind": "Sala",
+      "description": "Espacio relacionado con la cultura y el baile cubano.",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Sabor+Cubano+Barcelona",
+      "website_url": ""
+    },
+    {
+      "name": "Sala Vivaldi",
+      "kind": "Sala",
+      "description": "Sala habitual de música y baile.",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Sala+Vivaldi+Barcelona",
+      "website_url": ""
+    },
+    {
+      "name": "Sala La Paloma",
+      "kind": "Sala",
+      "description": "Espacio histórico para música y eventos.",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Sala+La+Paloma+Barcelona",
+      "website_url": ""
+    }
+  ],
+  "events": [
+    {
+      "title": "Agenda de bailes latinos",
+      "status": "habitual",
+      "date_label": "Programación recurrente",
+      "venue": "Barcelona",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Latin+dance+Barcelona",
+      "official_url": ""
+    }
+  ],
+  "slug": "dance",
+  "locales": {
+    "es": {
+      "eyebrow": "LATIN DANCE // SOCIAL RHYTHM",
+      "title": "Bailes latinos",
+      "lead": "Fotos, vídeos, talleres y espacios donde la música se convierte en movimiento."
+    },
+    "en": {
+      "eyebrow": "LATIN DANCE // SOCIAL RHYTHM",
+      "title": "Bailes latinos",
+      "lead": "Fotos, vídeos, talleres y espacios donde la música se convierte en movimiento."
+    }
+  }
+}

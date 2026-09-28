@@ -17,4 +17,66 @@
 </section></section>
 <section id="gamer-gallery" class="section gamer-gallery" aria-labelledby="gamer-gallery-title"><p class="eyebrow">{{ t.hobbies.gamer.gallery_eyebrow }}</p><h2 id="gamer-gallery-title">{{ t.hobbies.gamer.gallery_title }}</h2><p class="lead">{{ t.hobbies.gamer.gallery_intro }}</p><figure class="gamer-construction"><img src="/static/images/gamer/gamer-under-construction.webp" alt="UNDER CONSTRUCTION" width="1150" height="285"><figcaption class="sr-only">UNDER CONSTRUCTION</figcaption></figure></section>
 <section class="section gamer-next"><p class="eyebrow">{{ t.hobbies.gamer.next_eyebrow }}</p><h2>{{ t.hobbies.gamer.next_title }}</h2><p>{{ t.hobbies.gamer.next_text }}</p></section>
-</main><script src="/static/js/gamer-live.js?v=1" defer></script>{% endblock %}
+</main><script src="/static/js/gamer-live.js?v=1" defer></script>
+
+{# GAMER CONTENT FOUNDATION #}
+<section class="section hobby-content gamer-events-gallery" id="gamer-gallery" aria-labelledby="gamer-gallery-title" data-hobby-detail data-hobby-slug="gamer">
+  <header class="hobby-section-heading">
+    <p class="eyebrow">MEDIA://GAMING ARCHIVE</p>
+    <h2 id="gamer-gallery-title">Galería gamer</h2>
+    <p>Directos, eventos, experiencias, equipos y recuerdos de videojuegos.</p>
+  </header>
+  <div class="hobby-filters" role="toolbar" aria-label="Filtros de la galería gamer">
+    {% for category in hobby.categories %}
+    <button type="button" data-hobby-filter="{{ category }}" {% if loop.first %}aria-pressed="true"{% else %}aria-pressed="false"{% endif %}>{{ category }}</button>
+    {% endfor %}
+  </div>
+  <div class="hobby-media-grid">
+    {% for item in hobby.media %}
+    <article class="hobby-media-card" data-hobby-item data-category="{{ item.category }}">
+      <div class="hobby-media-visual"><span>0{{ loop.index }}</span><b>{{ item.kind|upper }}</b></div>
+      <div>
+        <small>{{ item.category }}</small>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.caption }}</p>
+        {% if item.url %}<a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">Abrir contenido ↗</a>{% endif %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section hobby-related gamer-event-list" id="gamer-events" aria-labelledby="gamer-events-title">
+  <header class="hobby-section-heading">
+    <p class="eyebrow">EVENTS://GAMING MAP</p>
+    <h2 id="gamer-events-title">Eventos de gaming</h2>
+    <p>Eventos próximos, habituales o anuales, siempre enlazados con su ubicación y fuente oficial disponible.</p>
+  </header>
+  <div class="hobby-related-grid">
+    {% for event in hobby.events %}
+    <article class="hobby-related-card hobby-event-card">
+      <a class="hobby-event-poster" href="{{ event.image_source_url or event.official_url }}" target="_blank" rel="noopener noreferrer" aria-label="Fuente oficial de {{ event.title }}">
+        <img src="{{ event.image_url }}" alt="{{ event.image_alt }}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='/static/images/gamer/gamer-hero-concept.png'">
+        <span>{{ event.status|upper }}</span>
+      </a>
+      <small>{{ event.status|upper }}</small>
+      <h3>{{ event.title }}</h3>
+      <p>{{ event.date_label }} · {{ event.venue }}</p>
+      <div class="hobby-card-links">
+        <a href="{{ event.maps_url }}" target="_blank" rel="noopener noreferrer">Google Maps ↗</a>
+        {% if event.official_url %}<a href="{{ event.official_url }}" target="_blank" rel="noopener noreferrer">Web oficial ↗</a>{% endif %}
+        {% if event.instagram_url %}<a href="{{ event.instagram_url }}" target="_blank" rel="noopener noreferrer">Instagram ↗</a>{% endif %}
+        <a href="{{ event.image_source_url }}" target="_blank" rel="noopener noreferrer">Fuente del cartel ↗</a>
+      </div>
+    </article>
+    {% else %}
+    <article class="hobby-related-card">
+      <small>AGENDA</small>
+      <h3>Eventos pendientes de incorporar</h3>
+      <p>La estructura está preparada para próximas ediciones y eventos habituales.</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock %}
