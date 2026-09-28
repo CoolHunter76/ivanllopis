@@ -243,6 +243,11 @@ def sitemap():
             "/privacy",
             "/hobbies",
             "/hobbies/gamer",
+            "/hobbies/drums",
+            "/hobbies/travel",
+            "/hobbies/trekking",
+            "/hobbies/dance",
+            "/hobbies/sea",
             "/updates",
             "/talento-cercano",
         )

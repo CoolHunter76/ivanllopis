@@ -1,0 +1,21 @@
+{
+  "slug": "trekking",
+  "theme": "trail",
+  "hero": {"eyebrow": "TREKKING // TRAIL JOURNAL", "title": "Senderismo", "lead": "Rutas, montaña, naturaleza y excursiones a pie organizadas como un diario visual de caminos y lugares."},
+  "categories": ["Todos", "Rutas", "Montaña", "Naturaleza", "Excursiones", "Pendientes"],
+  "media": [
+    {"id": "trekking-routes", "kind": "placeholder", "category": "Rutas", "title": "Rutas realizadas", "caption": "Galerías por recorrido con fotografías, vídeos, ubicación y notas personales."},
+    {"id": "trekking-mountain", "kind": "placeholder", "category": "Montaña", "title": "Montaña y desnivel", "caption": "Caminos de montaña, miradores, cumbres y paisajes del recorrido."},
+    {"id": "trekking-nature", "kind": "placeholder", "category": "Naturaleza", "title": "Naturaleza", "caption": "Bosques, parques naturales y espacios descubiertos durante las excursiones."},
+    {"id": "trekking-next", "kind": "placeholder", "category": "Pendientes", "title": "Próximas rutas", "caption": "Senderos y excursiones pendientes de realizar."}
+  ],
+  "places": [
+    {"name": "Rutas visitadas", "kind": "Diario de senderismo", "description": "Recorridos realizados con ubicación, galería y notas de la experiencia.", "maps_url": "https://www.google.com/maps/search/?api=1&query=senderismo+Catalunya", "website_url": ""},
+    {"name": "Rutas por descubrir", "kind": "Lista pendiente", "description": "Excursiones y espacios naturales preparados para futuras visitas.", "maps_url": "https://www.google.com/maps/search/?api=1&query=rutas+de+montana+Catalunya", "website_url": ""}
+  ],
+  "events": [],
+  "locales": {
+    "es": {"eyebrow": "TREKKING // DIARIO DE RUTAS", "title": "Senderismo", "lead": "Rutas, montaña, naturaleza y excursiones a pie organizadas como un diario visual de caminos y lugares."},
+    "en": {"eyebrow": "TREKKING // TRAIL JOURNAL", "title": "Hiking", "lead": "Routes, mountains, nature and walking excursions organised as a visual journal of trails and places."}
+  }
+}

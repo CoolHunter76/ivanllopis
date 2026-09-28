@@ -1,0 +1,68 @@
+{
+  "theme": "ocean",
+  "hero": {
+    "eyebrow": "SEA // BLUE HORIZON",
+    "title": "Actividades en el mar",
+    "lead": "Paddle surf, natación, calas y lugares donde el mar forma parte de la experiencia."
+  },
+  "categories": [
+    "Todos",
+    "Paddle surf",
+    "Natación",
+    "Calas",
+    "Costa"
+  ],
+  "media": [
+    {
+      "id": "sea-paddle",
+      "kind": "placeholder",
+      "category": "Paddle surf",
+      "title": "Paddle surf",
+      "caption": "Galería de salidas y experiencias sobre la tabla."
+    },
+    {
+      "id": "sea-swim",
+      "kind": "placeholder",
+      "category": "Natación",
+      "title": "Nadar en el mar",
+      "caption": "Momentos de natación y actividad acuática."
+    },
+    {
+      "id": "sea-coves",
+      "kind": "placeholder",
+      "category": "Calas",
+      "title": "Calas y rincones",
+      "caption": "Lugares marítimos para visitar y recordar."
+    }
+  ],
+  "places": [
+    {
+      "name": "Lugares para practicar",
+      "kind": "Actividad",
+      "description": "Playas y bases para paddle surf o natación. Consulta siempre el estado del mar.",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=paddle+surf+Barcelona",
+      "website_url": ""
+    },
+    {
+      "name": "Calas por descubrir",
+      "kind": "Visita",
+      "description": "Rincones de costa visitados o pendientes.",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=calas+Catalunya",
+      "website_url": ""
+    }
+  ],
+  "events": [],
+  "slug": "sea",
+  "locales": {
+    "es": {
+      "eyebrow": "SEA // BLUE HORIZON",
+      "title": "Actividades en el mar",
+      "lead": "Paddle surf, natación, calas y lugares donde el mar forma parte de la experiencia."
+    },
+    "en": {
+      "eyebrow": "SEA // BLUE HORIZON",
+      "title": "Actividades en el mar",
+      "lead": "Paddle surf, natación, calas y lugares donde el mar forma parte de la experiencia."
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "theme": "atlas",
+  "hero": {
+    "eyebrow": "TRAVEL // PERSONAL ATLAS",
+    "title": "Travel",
+    "lead": "Viajes, excursiones, lugares visitados y destinos que quiero descubrir."
+  },
+  "categories": [
+    "Todos",
+    "Viajes",
+    "Excursiones",
+    "Visitados",
+    "Pendientes"
+  ],
+  "media": [
+    {
+      "id": "travel-journeys",
+      "kind": "placeholder",
+      "category": "Viajes",
+      "title": "Viajes",
+      "caption": "Colecciones categorizadas por destino y experiencia."
+    },
+    {
+      "id": "travel-hikes",
+      "kind": "placeholder",
+      "category": "Excursiones",
+      "title": "Excursiones",
+      "caption": "Rutas, escapadas y lugares de interés."
+    },
+    {
+      "id": "travel-next",
+      "kind": "placeholder",
+      "category": "Pendientes",
+      "title": "Próximos destinos",
+      "caption": "Lista visual de lugares pendientes de visitar."
+    }
+  ],
+  "places": [
+    {
+      "name": "Lugares visitados",
+      "kind": "Archivo personal",
+      "description": "Ubicaciones, textos y galerías de experiencias reales.",
+      "maps_url": "https://www.google.com/maps",
+      "website_url": ""
+    },
+    {
+      "name": "Quiero visitarlo",
+      "kind": "Lista de deseos",
+      "description": "Destinos pendientes preparados para crecer con nuevas rutas.",
+      "maps_url": "https://www.google.com/maps",
+      "website_url": ""
+    }
+  ],
+  "events": [],
+  "slug": "travel",
+  "locales": {
+    "es": {
+      "eyebrow": "TRAVEL // PERSONAL ATLAS",
+      "title": "Travel",
+      "lead": "Viajes, excursiones, lugares visitados y destinos que quiero descubrir."
+    },
+    "en": {
+      "eyebrow": "TRAVEL // PERSONAL ATLAS",
+      "title": "Travel",
+      "lead": "Viajes, excursiones, lugares visitados y destinos que quiero descubrir."
+    }
+  }
+}
