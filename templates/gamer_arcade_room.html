@@ -43,7 +43,10 @@
           <button type="button" data-pedris-action="left" aria-label="Mover pieza a la izquierda">◀</button>
           <button type="button" data-pedris-action="right" aria-label="Mover pieza a la derecha">▶</button>
         </div>
-        <button class="pedris-rotate-control" type="button" data-pedris-action="rotate" aria-label="Girar pieza">↻<span>GIRAR</span></button>
+        <div class="pedris-action-controls" aria-label="Acciones de la pieza">
+          <button class="pedris-drop-control" type="button" data-pedris-action="drop" aria-label="Bajar pieza hasta el fondo">▼<span>BAJAR</span></button>
+          <button class="pedris-rotate-control" type="button" data-pedris-action="rotate" aria-label="Girar pieza">↻<span>GIRAR</span></button>
+        </div>
       </div>
       <div class="insert-coin" data-insert-coin hidden><h3 data-title-screen>IVANOID</h3><p>THE NEON WALL</p><button data-coin>INSERT COIN</button><small>CREDIT <b data-credit>0</b></small></div>
       <div class="initials-screen" data-initials hidden><p>NEW HIGH SCORE</p><h3 data-new-score>000000</h3><span>ENTER YOUR INITIALS</span><div>{% for n in range(3) %}<label><button data-letter-up="{{ n }}">▲</button><b data-letter="{{ n }}">A</b><button data-letter-down="{{ n }}">▼</button></label>{% endfor %}</div><button data-initials-confirm>CONFIRM</button></div>
@@ -51,5 +54,5 @@
     <footer><button data-game-pause>PAUSE</button><button data-game-sound>SOUND OFF</button><button data-game-full>FULL SCREEN</button><button data-game-exit>EXIT GAME</button></footer>
   </div>
 </div>
-<script src="/static/js/arcade76-room.js?v=7" defer></script>
+<script src="/static/js/arcade76-room.js?v=8" defer></script>
 {% endblock %}

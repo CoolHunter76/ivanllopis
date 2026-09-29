@@ -223,7 +223,13 @@
     clearedLines += lines;
     spawn(); };
     const rotate = () => { const rotated = piece.shape[0].map((_,i)=>piece.shape.map(row=>row[i]).reverse()); if(!collides(0,0,rotated)) piece.shape=rotated; };
-    const key = e => { if(e.code==='ArrowLeft'&&!collides(-1,0))piece.x--; if(e.code==='ArrowRight'&&!collides(1,0))piece.x++; if(e.code==='ArrowDown'){if(!collides(0,1))piece.y++;else lock();} if(e.code==='ArrowUp'||e.code==='Space')rotate(); };
+    const key = e => { if(e.code==='ArrowLeft'&&!collides(-1,0))piece.x--; if(e.code==='ArrowRight'&&!collides(1,0))piece.x++; if(e.code==='ArrowDown'){if(!collides(0,1))piece.y++;else lock();} if(e.code==='End'){
+      while(!collides(0,1)){
+        piece.y++;
+      }
+      lock();
+    }
+    if(e.code==='ArrowUp'||e.code==='Space')rotate(); };
     listen(document,'keydown',key); listen(canvas,'pointerdown',rotate); let startX=0; listen(canvas,'pointerdown',e=>startX=e.clientX); listen(canvas,'pointerup',e=>{const d=e.clientX-startX;if(Math.abs(d)>30){const dx=d>0?1:-1;if(!collides(dx,0))piece.x+=dx;}}); spawn();
     return {
     update(dt) {
@@ -294,7 +300,12 @@
   modal.querySelector("[data-game-sound]").addEventListener("click",event=>{runtime.sound=!runtime.sound;event.currentTarget.textContent=runtime.sound?"SOUND ON":"SOUND OFF"});
   modal.querySelector("[data-game-full]").addEventListener("click",()=>modal.querySelector(".arcade-modal-machine").requestFullscreen?.());
 
-  const pedrisKeyByAction = {left: "ArrowLeft", right: "ArrowRight", rotate: "ArrowUp"};
+  const pedrisKeyByAction = {
+    left: "ArrowLeft",
+    right: "ArrowRight",
+    drop: "End",
+    rotate: "ArrowUp",
+  };
   let pedrisHoldTimer = 0;
   let pedrisRepeatTimer = 0;
   const dispatchPedrisAction = (action) => {
@@ -314,7 +325,7 @@
       stopPedrisHold();
       const action = button.dataset.pedrisAction;
       dispatchPedrisAction(action);
-      if (action === "rotate") return;
+      if (action === "rotate" || action === "drop") return;
       pedrisHoldTimer = window.setTimeout(() => {
         pedrisRepeatTimer = window.setInterval(() => dispatchPedrisAction(action), 95);
       }, 260);
