@@ -83,7 +83,7 @@ def test_sky_patrol_artwork_and_updated_pedris_background():
         assert asset.stat().st_size > 0
 
     template = Path("templates/gamer_arcade_room.html").read_text(encoding="utf-8")
-    assert "/static/js/arcade76-room.js?v=7" in template
+    assert "/static/js/arcade76-room.js?v=8" in template
 
     script = Path("static/js/arcade76-room.js").read_text(encoding="utf-8")
     assert "sky-patrol-plane.png" in script
@@ -120,3 +120,23 @@ def test_pedris_progressive_speed_is_bounded():
     assert "difficultyProgress" in script
     assert "difficultyProgress * 0.46" in script
     assert "timer >= dropInterval" in script
+
+
+def test_pedris_hard_drop_control():
+    html = client.get("/es/hobbies/gamer/arcade").text
+
+    assert 'data-pedris-action="drop"' in html
+    assert "BAJAR" in html
+    assert "pedris-action-controls" in html
+
+    script = Path("static/js/arcade76-room.js").read_text(encoding="utf-8")
+
+    assert 'drop: "End"' in script
+    assert "while(!collides(0,1))" in script
+    assert 'action === "drop"' in script
+    assert "lock();" in script
+
+    stylesheet = Path("static/css/arcade76.css").read_text(encoding="utf-8")
+
+    assert "PEDRIS hard drop control" in stylesheet
+    assert ".pedris-drop-control" in stylesheet
