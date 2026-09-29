@@ -11,6 +11,7 @@
   const titleScreen = modal.querySelector("[data-title-screen]");
   const creditNode = modal.querySelector("[data-credit]");
   const recordNode = modal.querySelector("[data-modal-record]");
+  const pedrisControls = modal.querySelector("[data-pedris-controls]");
   const names = {
     "gamer-universe-76": "GAMER UNIVERSE 76",
     "sky-patrol-76": "SKY PATROL 76",
@@ -210,14 +211,44 @@
   function neonBlocks() {
     const cols = 10, rows = 20, cell = 34, ox = 190, oy = 130; const board = Array.from({ length: rows }, () => Array(cols).fill(0));
     const shapes = [[[1,1,1,1]],[[1,1],[1,1]],[[0,1,0],[1,1,1]],[[1,0],[1,0],[1,1]],[[0,1],[0,1],[1,1]],[[1,1,0],[0,1,1]],[[0,1,1],[1,1,0]]];
-    let piece, timer = 0; runtime.score = 0;
+    let piece;
+    let timer = 0;
+    let elapsed = 0;
+    let clearedLines = 0;
+    let dropInterval = 0.65;
+    runtime.score = 0;
     const spawn = () => { piece = { shape: shapes[Math.floor(Math.random()*shapes.length)].map(r=>[...r]), x: 3, y: 0, color: 1 + Math.floor(Math.random()*6) }; if (collides(0,0,piece.shape)) finish(runtime.score); };
     const collides = (dx,dy,shape=piece.shape) => shape.some((row,y)=>row.some((v,x)=>v && (piece.x+x+dx<0 || piece.x+x+dx>=cols || piece.y+y+dy>=rows || (piece.y+y+dy>=0 && board[piece.y+y+dy][piece.x+x+dx]))));
-    const lock = () => { piece.shape.forEach((row,y)=>row.forEach((v,x)=>{if(v&&piece.y+y>=0) board[piece.y+y][piece.x+x]=piece.color})); let lines=0; for(let y=rows-1;y>=0;y--) if(board[y].every(Boolean)){board.splice(y,1);board.unshift(Array(cols).fill(0));lines++;y++;} runtime.score += [0,100,300,700,1500][lines]; spawn(); };
+    const lock = () => { piece.shape.forEach((row,y)=>row.forEach((v,x)=>{if(v&&piece.y+y>=0) board[piece.y+y][piece.x+x]=piece.color})); let lines=0; for(let y=rows-1;y>=0;y--) if(board[y].every(Boolean)){board.splice(y,1);board.unshift(Array(cols).fill(0));lines++;y++;} runtime.score += [0,100,300,700,1500][lines];
+    clearedLines += lines;
+    spawn(); };
     const rotate = () => { const rotated = piece.shape[0].map((_,i)=>piece.shape.map(row=>row[i]).reverse()); if(!collides(0,0,rotated)) piece.shape=rotated; };
     const key = e => { if(e.code==='ArrowLeft'&&!collides(-1,0))piece.x--; if(e.code==='ArrowRight'&&!collides(1,0))piece.x++; if(e.code==='ArrowDown'){if(!collides(0,1))piece.y++;else lock();} if(e.code==='ArrowUp'||e.code==='Space')rotate(); };
     listen(document,'keydown',key); listen(canvas,'pointerdown',rotate); let startX=0; listen(canvas,'pointerdown',e=>startX=e.clientX); listen(canvas,'pointerup',e=>{const d=e.clientX-startX;if(Math.abs(d)>30){const dx=d>0?1:-1;if(!collides(dx,0))piece.x+=dx;}}); spawn();
-    return { update(dt){timer+=dt;if(timer>.65){timer=0;if(!collides(0,1))piece.y++;else lock();}}, draw(){
+    return {
+    update(dt) {
+      elapsed += dt;
+      timer += dt;
+
+      const timeProgress = Math.min(elapsed / 420, 1);
+      const lineProgress = Math.min(clearedLines / 60, 1);
+      const difficultyProgress = Math.min(
+        timeProgress * 0.78 + lineProgress * 0.22,
+        1,
+      );
+
+      dropInterval = 0.65 - difficultyProgress * 0.46;
+
+      if (timer >= dropInterval) {
+        timer = 0;
+
+        if (!collides(0, 1)) {
+          piece.y += 1;
+        } else {
+          lock();
+        }
+      }
+    }, draw(){
       const pedrisGradient = ctx.createLinearGradient(0, 0, 720, 960);
       pedrisGradient.addColorStop(0, "#004d98");
       pedrisGradient.addColorStop(.48, "#0a2f75");
@@ -252,8 +283,8 @@
 
   const factories={"gamer-universe-76":pinball,"sky-patrol-76":skyPatrol,"block-breaker-76":blockBreaker,"platform-quest-76":()=>runner('platform'),"metal-command-76":metalCommand,"island-hero-76":()=>runner('island'),"neon-blocks-76":neonBlocks};
 
-  const close=()=>{clearGame();modal.hidden=true;document.body.style.overflow="";};
-  const bootGame=async(button)=>{clearGame();runtime.slug=button.dataset.game;runtime.credit=0;creditNode.textContent="0";modal.hidden=false;document.body.style.overflow="hidden";modal.querySelector("[data-modal-title]").textContent=names[runtime.slug];boot.hidden=false;coin.hidden=true;initials.hidden=true;boot.querySelector("[data-boot-message]").textContent="PRESENTS";ctx.clearRect(0,0,720,960);const data=await fetchJson(`/api/arcade/games/${runtime.slug}/session`,{method:"POST"});runtime.session=data.session_token;recordNode.textContent=`HI ${data.high_score.initials} ${String(data.high_score.score).padStart(6,"0")}`;setTimeout(()=>{if(modal.hidden)return;boot.hidden=true;coin.hidden=false;titleScreen.textContent=names[runtime.slug];titleScreen.nextElementSibling.textContent=subtitles[runtime.slug];},1800)};
+  const close=()=>{clearGame();pedrisControls.hidden=true;modal.hidden=true;document.body.style.overflow="";};
+  const bootGame=async(button)=>{clearGame();runtime.slug=button.dataset.game;pedrisControls.hidden=runtime.slug!=="neon-blocks-76";runtime.credit=0;creditNode.textContent="0";modal.hidden=false;document.body.style.overflow="hidden";modal.querySelector("[data-modal-title]").textContent=names[runtime.slug];boot.hidden=false;coin.hidden=true;initials.hidden=true;boot.querySelector("[data-boot-message]").textContent="PRESENTS";ctx.clearRect(0,0,720,960);const data=await fetchJson(`/api/arcade/games/${runtime.slug}/session`,{method:"POST"});runtime.session=data.session_token;recordNode.textContent=`HI ${data.high_score.initials} ${String(data.high_score.score).padStart(6,"0")}`;setTimeout(()=>{if(modal.hidden)return;boot.hidden=true;coin.hidden=false;titleScreen.textContent=names[runtime.slug];titleScreen.nextElementSibling.textContent=subtitles[runtime.slug];},1800)};
   const start=()=>{runtime.credit=1;creditNode.textContent="1";coin.hidden=true;clearGame();runtime.running=true;runtime.paused=false;runtime.last=performance.now();runtime.game=factories[runtime.slug]();};
   const loop=now=>{const dt=Math.min(.033,(now-(runtime.last||now))/1000);runtime.last=now;if(runtime.running&&!runtime.paused)runtime.game?.update(dt);runtime.game?.draw();runtime.frame=requestAnimationFrame(loop)};runtime.frame=requestAnimationFrame(loop);
   room.querySelectorAll("[data-game]").forEach(button=>button.addEventListener("click",()=>bootGame(button)));
@@ -262,11 +293,42 @@
   modal.querySelector("[data-game-pause]").addEventListener("click",()=>runtime.paused=!runtime.paused);
   modal.querySelector("[data-game-sound]").addEventListener("click",event=>{runtime.sound=!runtime.sound;event.currentTarget.textContent=runtime.sound?"SOUND ON":"SOUND OFF"});
   modal.querySelector("[data-game-full]").addEventListener("click",()=>modal.querySelector(".arcade-modal-machine").requestFullscreen?.());
+
+  const pedrisKeyByAction = {left: "ArrowLeft", right: "ArrowRight", rotate: "ArrowUp"};
+  let pedrisHoldTimer = 0;
+  let pedrisRepeatTimer = 0;
+  const dispatchPedrisAction = (action) => {
+    if (runtime.slug !== "neon-blocks-76" || !runtime.running || runtime.paused) return;
+    const code = pedrisKeyByAction[action];
+    if (code) document.dispatchEvent(new KeyboardEvent("keydown", {code, bubbles: true}));
+  };
+  const stopPedrisHold = () => {
+    window.clearTimeout(pedrisHoldTimer);
+    window.clearInterval(pedrisRepeatTimer);
+    pedrisHoldTimer = 0;
+    pedrisRepeatTimer = 0;
+  };
+  pedrisControls.querySelectorAll("[data-pedris-action]").forEach((button) => {
+    button.addEventListener("pointerdown", (event) => {
+      event.preventDefault();
+      stopPedrisHold();
+      const action = button.dataset.pedrisAction;
+      dispatchPedrisAction(action);
+      if (action === "rotate") return;
+      pedrisHoldTimer = window.setTimeout(() => {
+        pedrisRepeatTimer = window.setInterval(() => dispatchPedrisAction(action), 95);
+      }, 260);
+    });
+    button.addEventListener("pointerup", stopPedrisHold);
+    button.addEventListener("pointercancel", stopPedrisHold);
+    button.addEventListener("pointerleave", stopPedrisHold);
+  });
+
   const chars="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",letters=["A","A","A"];
   modal.querySelectorAll("[data-letter-up]").forEach(button=>button.addEventListener("click",()=>{const i=+button.dataset.letterUp;letters[i]=chars[(chars.indexOf(letters[i])+1)%chars.length];modal.querySelector(`[data-letter="${i}"]`).textContent=letters[i]}));
   modal.querySelectorAll("[data-letter-down]").forEach(button=>button.addEventListener("click",()=>{const i=+button.dataset.letterDown;letters[i]=chars[(chars.indexOf(letters[i])-1+chars.length)%chars.length];modal.querySelector(`[data-letter="${i}"]`).textContent=letters[i]}));
   modal.querySelector("[data-initials-confirm]").addEventListener("click",async()=>{await fetchJson(`/api/arcade/games/${runtime.slug}/high-score`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({initials:letters.join(""),claim_token:runtime.claim})});initials.hidden=true;coin.hidden=false;hallOfFame()});
   document.addEventListener("keydown",event=>{if(event.key==="Escape"&&!modal.hidden)close()});
-  document.addEventListener("visibilitychange",()=>{if(document.hidden&&runtime.running)runtime.paused=true});
+  document.addEventListener("visibilitychange",()=>{if(document.hidden){stopPedrisHold();if(runtime.running)runtime.paused=true}});
   hallOfFame();
 })();

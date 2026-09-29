@@ -29,3 +29,16 @@
   background:rgba(2,8,22,.78);
   text-shadow:0 1px 3px #000;
 }
+
+
+/* PEDRIS mobile controls */
+.pedris-mobile-controls{position:absolute;right:max(12px,env(safe-area-inset-right));bottom:max(12px,env(safe-area-inset-bottom));left:max(12px,env(safe-area-inset-left));z-index:6;display:flex;align-items:flex-end;justify-content:space-between;pointer-events:none;user-select:none;touch-action:none}
+.pedris-mobile-controls[hidden]{display:none}
+.pedris-direction-controls{display:flex;gap:12px}
+.pedris-mobile-controls button{width:68px;height:68px;border:2px solid rgba(255,255,255,.76);border-radius:18px;background:linear-gradient(145deg,rgba(0,77,152,.94),rgba(8,24,67,.96));color:#fff;box-shadow:0 8px 22px rgba(0,0,0,.42),inset 0 0 18px rgba(56,151,255,.34);font:900 28px/1 ui-monospace,monospace;pointer-events:auto;-webkit-tap-highlight-color:transparent}
+.pedris-mobile-controls button:active{transform:translateY(2px) scale(.96);background:linear-gradient(145deg,rgba(165,0,68,.96),rgba(82,0,35,.98))}
+.pedris-mobile-controls button:focus-visible{outline:3px solid #ffe45c;outline-offset:3px}
+.pedris-mobile-controls .pedris-rotate-control{width:82px;background:linear-gradient(145deg,rgba(165,0,68,.96),rgba(67,0,31,.98))}
+.pedris-rotate-control span{display:block;margin-top:5px;font-size:10px;letter-spacing:.12em}
+@media(max-width:560px){.pedris-mobile-controls button{width:62px;height:62px;border-radius:16px;font-size:25px}.pedris-mobile-controls .pedris-rotate-control{width:76px}}
+@media(prefers-reduced-motion:reduce){.pedris-mobile-controls button:active{transform:none}}
