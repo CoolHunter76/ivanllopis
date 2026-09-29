@@ -137,3 +137,10 @@
 
 /* ARCADE 76 entry */
 .arcade76-entry{margin-top:1rem;margin-bottom:4rem;padding:clamp(1.5rem,5vw,4rem);overflow:hidden;border:1px solid rgba(85,236,255,.32);border-radius:28px;background:radial-gradient(circle at 80% 20%,rgba(255,79,200,.18),transparent 30%),linear-gradient(135deg,#111a3a,#080b16);box-shadow:0 30px 80px rgba(0,0,0,.35)}.arcade76-entry h2{margin:.3rem 0;font:900 clamp(3.5rem,10vw,8rem)/.82 "Space Grotesk";letter-spacing:-.08em;background:linear-gradient(100deg,#fff,#65efff 45%,#9d72ff 70%,#ff55d7);background-clip:text;color:transparent}.arcade76-entry p:not(.eyebrow){max-width:650px;color:var(--muted)}.arcade76-entry .primary{display:inline-block;margin-top:1rem}
+
+
+/* Gamer continuous construction notice */
+.gamer-under-construction{
+  margin-top:clamp(4rem,10vw,8rem);
+  margin-bottom:clamp(2rem,6vw,5rem);
+}
