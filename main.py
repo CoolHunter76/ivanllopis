@@ -276,7 +276,7 @@ TALENTS = [
     },
     {
         "id": "gustavo-alonso",
-        "name": "Gustavo Alonso Balderrama",
+        "name": "Gustavo B52s",
         "image": "/static/images/talento-cercano/gustavo-alonso.webp",
         "logo": "/static/images/talento-cercano/gustavo-alonso.webp",
         "url": "https://www.tusclasesparticulares.com/profesores/gustavo-alonso-balderrama.htm",
