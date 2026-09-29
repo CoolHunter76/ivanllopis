@@ -83,7 +83,7 @@ def test_sky_patrol_artwork_and_updated_pedris_background():
         assert asset.stat().st_size > 0
 
     template = Path("templates/gamer_arcade_room.html").read_text(encoding="utf-8")
-    assert "/static/js/arcade76-room.js?v=5" in template
+    assert "/static/js/arcade76-room.js?v=7" in template
 
     script = Path("static/js/arcade76-room.js").read_text(encoding="utf-8")
     assert "sky-patrol-plane.png" in script
@@ -92,3 +92,31 @@ def test_sky_patrol_artwork_and_updated_pedris_background():
 
     stylesheet = Path("static/css/arcade76.css").read_text(encoding="utf-8")
     assert "sky-patrol-cover.png" in stylesheet
+
+
+def test_pedris_mobile_controls_are_available():
+    html = client.get("/es/hobbies/gamer/arcade").text
+    assert "data-pedris-controls" in html
+    assert 'data-pedris-action="left"' in html
+    assert 'data-pedris-action="right"' in html
+    assert 'data-pedris-action="rotate"' in html
+
+    script = Path("static/js/arcade76-room.js").read_text(encoding="utf-8")
+    assert "const pedrisKeyByAction" in script
+    assert "stopPedrisHold" in script
+
+    stylesheet = Path("static/css/arcade76.css").read_text(encoding="utf-8")
+    assert "/* PEDRIS mobile controls */" in stylesheet
+    assert "safe-area-inset-bottom" in stylesheet
+
+
+def test_pedris_progressive_speed_is_bounded():
+    script = Path("static/js/arcade76-room.js").read_text(encoding="utf-8")
+
+    assert "let dropInterval = 0.65" in script
+    assert "elapsed / 420" in script
+    assert "clearedLines / 60" in script
+    assert "dropInterval = 0.65" in script
+    assert "difficultyProgress" in script
+    assert "difficultyProgress * 0.46" in script
+    assert "timer >= dropInterval" in script
